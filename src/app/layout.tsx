@@ -13,8 +13,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Danilo Escobar — AI Engineer",
+
   description:
     "AI Engineer building intelligent systems, software products and operational AI solutions.",
+
+  icons: {
+    icon: [
+      {
+        url: "/images/escobar-portrait.png",
+        type: "image/png",
+      },
+    ],
+
+    shortcut:
+      "/images/escobar-portrait.png",
+
+    apple:
+      "/images/escobar-portrait.png",
+  },
 };
 
 const themeScript = `
