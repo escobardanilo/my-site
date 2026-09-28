@@ -128,7 +128,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     hero: {
-      eyebrow: "AI ENGINEER / SOFTWARE ENGINEERING",
+      eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
       description:
         "Projeto e desenvolvo sistemas inteligentes que conectam IA, software, dados e fluxos operacionais em produtos fiáveis.",
       selectedWork: "Ver projetos",
@@ -326,7 +326,7 @@ export const translations: Record<Language, SiteCopy> = {
     contact: {
       eyebrow: "CONTACTO",
       titleLineOne: "Vamos construir",
-      titleLineTwo: "algo útil.",
+      titleLineTwo: "algo juntos.",
       description:
         "Disponível para conversas sobre AI Engineering, sistemas de software, produtos inteligentes e tecnologia aplicada a operações.",
     },
@@ -354,7 +354,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     hero: {
-      eyebrow: "AI ENGINEER / SOFTWARE ENGINEERING",
+      eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
       description:
         "Diseño y desarrollo sistemas inteligentes que conectan IA, software, datos y flujos operativos en productos fiables.",
       selectedWork: "Ver proyectos",
@@ -552,7 +552,7 @@ export const translations: Record<Language, SiteCopy> = {
     contact: {
       eyebrow: "CONTACTO",
       titleLineOne: "Construyamos",
-      titleLineTwo: "algo útil.",
+      titleLineTwo: "algo juntos.",
       description:
         "Disponible para conversaciones sobre AI Engineering, sistemas de software, productos inteligentes y tecnología aplicada a operaciones.",
     },
@@ -580,7 +580,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     hero: {
-      eyebrow: "AI ENGINEER / SOFTWARE ENGINEERING",
+      eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
       description:
         "I design and build intelligent systems that connect AI, software, data and operational workflows into reliable products.",
       selectedWork: "Selected work",
@@ -778,7 +778,7 @@ export const translations: Record<Language, SiteCopy> = {
     contact: {
       eyebrow: "CONTACT",
       titleLineOne: "Let's build",
-      titleLineTwo: "something useful.",
+      titleLineTwo: "something together.",
       description:
         "Open to conversations around AI engineering, software systems, intelligent products and operational technology.",
     },
@@ -806,7 +806,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     hero: {
-      eyebrow: "AI ENGINEER / SOFTWARE ENGINEERING",
+      eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
       description:
         "Ich entwickle intelligente Systeme, die KI, Software, Daten und operative Workflows zu zuverlässigen Produkten verbinden.",
       selectedWork: "Projekte ansehen",
@@ -1004,7 +1004,7 @@ export const translations: Record<Language, SiteCopy> = {
     contact: {
       eyebrow: "KONTAKT",
       titleLineOne: "Lassen Sie uns",
-      titleLineTwo: "etwas Nützliches bauen.",
+      titleLineTwo: "gemeinsam etwas bauen.",
       description:
         "Offen für Gespräche über AI Engineering, Softwaresysteme, intelligente Produkte und operative Technologie.",
     },

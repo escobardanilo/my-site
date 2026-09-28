@@ -12,116 +12,174 @@ import {
 import {
   translations,
   type Language,
-  type SiteCopy,
 } from "@/lib/translations";
 
-export type Theme = "light" | "dark";
+export type Theme =
+  | "light"
+  | "dark";
 
 type SitePreferencesContextValue = {
   language: Language;
   theme: Theme;
-  copy: SiteCopy;
-  setLanguage: (language: Language) => void;
+  copy: (typeof translations)[Language];
+  setLanguage: (
+    language: Language,
+  ) => void;
+  setTheme: (
+    theme: Theme,
+  ) => void;
   toggleTheme: () => void;
 };
 
 const SitePreferencesContext =
-  createContext<SitePreferencesContextValue | null>(null);
+  createContext<
+    SitePreferencesContextValue | undefined
+  >(undefined);
 
-const languageStorageKey = "portfolio-language";
-const themeStorageKey = "portfolio-theme";
+const LANGUAGE_STORAGE_KEY =
+  "portfolio-language";
 
-function isLanguage(value: string | null): value is Language {
-  return (
-    value === "pt" ||
-    value === "es" ||
-    value === "en" ||
-    value === "de"
-  );
-}
+const THEME_STORAGE_KEY =
+  "portfolio-theme";
 
-function isTheme(value: string | null): value is Theme {
-  return value === "light" || value === "dark";
-}
+const VALID_LANGUAGES: Language[] = [
+  "pt",
+  "es",
+  "en",
+  "de",
+];
+
+const VALID_THEMES: Theme[] = [
+  "light",
+  "dark",
+];
+
+type SitePreferencesProviderProps = {
+  children: ReactNode;
+};
 
 export function SitePreferencesProvider({
   children,
-}: {
-  children: ReactNode;
-}) {
-  const [language, setLanguageState] = useState<Language>("pt");
-  const [theme, setTheme] = useState<Theme>("light");
+}: SitePreferencesProviderProps) {
+  const [
+    language,
+    setLanguageState,
+  ] = useState<Language>("en");
+
+  const [
+    theme,
+    setThemeState,
+  ] = useState<Theme>("light");
 
   useEffect(() => {
-    const savedLanguage = window.localStorage.getItem(languageStorageKey);
-    const savedTheme = window.localStorage.getItem(themeStorageKey);
+    const storedLanguage =
+      window.localStorage.getItem(
+        LANGUAGE_STORAGE_KEY,
+      );
 
-    const resolvedLanguage: Language = isLanguage(savedLanguage)
-      ? savedLanguage
-      : "pt";
+    if (
+      storedLanguage &&
+      VALID_LANGUAGES.includes(
+        storedLanguage as Language,
+      )
+    ) {
+      setLanguageState(
+        storedLanguage as Language,
+      );
+    } else {
+      setLanguageState("en");
+    }
 
-    const resolvedTheme: Theme = isTheme(savedTheme)
-      ? savedTheme
-      : "light";
+    const storedTheme =
+      window.localStorage.getItem(
+        THEME_STORAGE_KEY,
+      );
 
-    setLanguageState(resolvedLanguage);
-    setTheme(resolvedTheme);
-
-    document.documentElement.lang = resolvedLanguage;
-    document.documentElement.dataset.theme = resolvedTheme;
+    if (
+      storedTheme &&
+      VALID_THEMES.includes(
+        storedTheme as Theme,
+      )
+    ) {
+      setThemeState(
+        storedTheme as Theme,
+      );
+    }
   }, []);
 
-  function setLanguage(nextLanguage: Language) {
+  useEffect(() => {
+    document.documentElement.dataset.theme =
+      theme;
+
+    document.documentElement.style.colorScheme =
+      theme;
+  }, [theme]);
+
+  function setLanguage(
+    nextLanguage: Language,
+  ) {
     setLanguageState(nextLanguage);
 
     window.localStorage.setItem(
-      languageStorageKey,
+      LANGUAGE_STORAGE_KEY,
       nextLanguage,
     );
+  }
 
-    document.documentElement.lang = nextLanguage;
+  function setTheme(
+    nextTheme: Theme,
+  ) {
+    setThemeState(nextTheme);
+
+    window.localStorage.setItem(
+      THEME_STORAGE_KEY,
+      nextTheme,
+    );
   }
 
   function toggleTheme() {
-    setTheme((currentTheme) => {
-      const nextTheme: Theme =
-        currentTheme === "light" ? "dark" : "light";
+    const nextTheme =
+      theme === "light"
+        ? "dark"
+        : "light";
 
-      window.localStorage.setItem(
-        themeStorageKey,
-        nextTheme,
-      );
-
-      document.documentElement.dataset.theme = nextTheme;
-
-      return nextTheme;
-    });
+    setTheme(nextTheme);
   }
 
   const value = useMemo(
     () => ({
       language,
       theme,
-      copy: translations[language],
+      copy:
+        translations[language],
       setLanguage,
+      setTheme,
       toggleTheme,
     }),
-    [language, theme],
+    [
+      language,
+      theme,
+    ],
   );
 
   return (
-    <SitePreferencesContext.Provider value={value}>
+    <SitePreferencesContext.Provider
+      value={value}
+    >
       {children}
     </SitePreferencesContext.Provider>
   );
 }
 
 export function useSitePreferences() {
-  const context = useContext(SitePreferencesContext);
+  const context =
+    useContext(
+      SitePreferencesContext,
+    );
 
   if (!context) {
     throw new Error(
-      "useSitePreferences must be used inside SitePreferencesProvider",
+      "useSitePreferences must be used inside SitePreferencesProvider.",
     );
   }
 

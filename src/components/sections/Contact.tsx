@@ -6,10 +6,7 @@ export function Contact() {
   const { copy } = useSitePreferences();
 
   return (
-    <section
-      className="contact"
-      id="contact"
-    >
+    <section className="contact" id="contact">
       <div className="container">
         <div className="contact__top">
           <span className="contact__index">
@@ -35,11 +32,11 @@ export function Contact() {
 
         <div className="contact__actions">
           <a
+            href="mailto:d.escobar-016@hotmail.com"
             className="contact__primary"
-            href="mailto:your-email@example.com"
           >
             <span>
-              your-email@example.com
+              d.escobar-016@hotmail.com
             </span>
 
             <span aria-hidden="true">
@@ -53,7 +50,8 @@ export function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              LinkedIn
+              <span>LinkedIn</span>
+
               <span aria-hidden="true">
                 ↗
               </span>
@@ -64,7 +62,8 @@ export function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              GitHub
+              <span>GitHub</span>
+
               <span aria-hidden="true">
                 ↗
               </span>

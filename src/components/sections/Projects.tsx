@@ -1,9 +1,48 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
+
 import { useSitePreferences } from "@/context/SitePreferencesProvider";
+import {
+  getProjectContent,
+  projectSlugs,
+} from "@/lib/projects";
+
+import type { Language } from "@/lib/translations";
+
+const sonCardDescriptions: Record<
+  Language,
+  string
+> = {
+  pt:
+    "Sistema de assistência operacional para ambiente industrial, combinando IA, contexto técnico e supervisão para apoiar diagnóstico, orientação e tomada de decisão no trabalho de campo.",
+
+  en:
+    "Operational assistance system for industrial environments, combining AI, technical context and supervision to support diagnostics, guidance and decision-making in field work.",
+
+  es:
+    "Sistema de asistencia operativa para entornos industriales, combinando IA, contexto técnico y supervisión para apoyar diagnóstico, orientación y toma de decisiones en el trabajo de campo.",
+
+  de:
+    "Operatives Assistenzsystem für industrielle Umgebungen, das KI, technischen Kontext und Aufsicht kombiniert, um Diagnose, Orientierung und Entscheidungsfindung im operativen Einsatz zu unterstützen.",
+};
 
 export function Projects() {
-  const { copy } = useSitePreferences();
+  const {
+    copy,
+    language,
+  } = useSitePreferences();
+
+  const projects =
+    projectSlugs.map((slug) => ({
+      slug,
+      content:
+        getProjectContent(
+          slug,
+          language,
+        ),
+    }));
 
   return (
     <section
@@ -32,58 +71,137 @@ export function Projects() {
         </div>
 
         <div className="projects__list">
-          {copy.projects.items.map((project) => (
-            <article
-              className="project-card"
-              key={project.number}
-            >
-              <div className="project-card__visual">
-                <div className="project-card__visual-top">
-                  <span>{project.number}</span>
+          {projects.map(
+            ({
+              slug,
+              content,
+            }) => {
+              const preview =
+                content.product
+                  .visuals[0];
 
-                  <span>{project.category}</span>
-                </div>
+              const description =
+                slug ===
+                "project-02"
+                  ? sonCardDescriptions[
+                      language
+                    ]
+                  : content.card
+                      .description;
 
-                <div className="project-card__visual-center">
-                  <span>
-                    {copy.projects.visual}
-                  </span>
-                </div>
-              </div>
-
-              <div className="project-card__content">
-                <div className="project-card__heading">
-                  <span className="project-card__number">
-                    {project.number}
-                  </span>
-
-                  <h3>{project.title}</h3>
-                </div>
-
-                <div className="project-card__details">
-                  <p>{project.description}</p>
-
-                  <div className="project-card__tags">
-                    {project.tags.map((tag) => (
-                      <span key={tag}>
-                        {tag}
+              return (
+                <article
+                  className="project-card"
+                  key={slug}
+                >
+                  <Link
+                    href={`/projects/${slug}`}
+                    className="project-card__visual"
+                  >
+                    <div className="project-card__visual-top">
+                      <span>
+                        {
+                          content.number
+                        }
                       </span>
-                    ))}
-                  </div>
+                    </div>
 
-                  <div className="project-card__action">
-                    <span>
-                      {copy.projects.viewCase}
-                    </span>
+                    <div className="project-card__visual-center">
+                      {preview?.image ? (
+                        <Image
+                          src={
+                            preview.image
+                          }
+                          alt={
+                            preview.alt
+                          }
+                          width={1600}
+                          height={1000}
+                          style={{
+                            width:
+                              "100%",
+                            height:
+                              "100%",
+                            objectFit:
+                              "contain",
+                            display:
+                              "block",
+                          }}
+                        />
+                      ) : (
+                        <span>
+                          {
+                            copy
+                              .projects
+                              .visual
+                          }
+                        </span>
+                      )}
+                    </div>
+                  </Link>
 
-                    <span aria-hidden="true">
-                      ↗
-                    </span>
+                  <div className="project-card__content">
+                    <div className="project-card__heading">
+                      <span className="project-card__number">
+                        {
+                          content.number
+                        }
+                      </span>
+
+                      <h3>
+                        {
+                          content.title
+                        }
+                      </h3>
+                    </div>
+
+                    <div className="project-card__details">
+                      <p>
+                        {description}
+                      </p>
+
+                      <div className="project-card__tags">
+                        {content.card.tags.map(
+                          (
+                            tag,
+                          ) => (
+                            <span
+                              key={
+                                tag
+                              }
+                            >
+                              {
+                                tag
+                              }
+                            </span>
+                          ),
+                        )}
+                      </div>
+
+                      <Link
+                        href={`/projects/${slug}`}
+                        className="project-card__action"
+                      >
+                        <span>
+                          {
+                            copy
+                              .projects
+                              .viewCase
+                          }
+                        </span>
+
+                        <span
+                          aria-hidden="true"
+                        >
+                          ↗
+                        </span>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </article>
-          ))}
+                </article>
+              );
+            },
+          )}
         </div>
       </div>
     </section>
