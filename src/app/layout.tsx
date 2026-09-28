@@ -20,16 +20,16 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/images/escobar-portrait.png",
+        url: "/images/escobar-02.png",
         type: "image/png",
       },
     ],
 
     shortcut:
-      "/images/escobar-portrait.png",
+      "/images/escobar-02.png",
 
     apple:
-      "/images/escobar-portrait.png",
+      "/images/escobar-02.png",
   },
 };
 
