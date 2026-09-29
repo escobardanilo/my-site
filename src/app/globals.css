@@ -476,6 +476,9 @@ button {
 
   max-width: 760px;
 
+  margin-left: auto;
+  margin-right: auto;
+
   display: flex;
   flex-direction: column;
 
@@ -488,6 +491,8 @@ button {
   line-height: 1.62;
 
   letter-spacing: -0.015em;
+
+  text-align: right;
 
   color: var(--muted);
 }
@@ -1684,7 +1689,7 @@ button {
 
     font-size: 20px;
 
-    text-align: left;
+    text-align: center;
   }
 
   .hero__manifesto-copy {
