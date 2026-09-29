@@ -474,7 +474,7 @@ const payPart: Record<
       github:
         "https://github.com/escobardanilo/paypart",
       live:
-        "https://paypart.vercel.app/dashboard",
+        "https://paypart.vercel.app/",
     },
   },
 
@@ -732,7 +732,7 @@ const payPart: Record<
       github:
         "https://github.com/escobardanilo/paypart",
       live:
-        "https://paypart.vercel.app/dashboard",
+        "https://paypart.vercel.app/",
     },
   },
 
@@ -990,7 +990,7 @@ const payPart: Record<
       github:
         "https://github.com/escobardanilo/paypart",
       live:
-        "https://paypart.vercel.app/dashboard",
+        "https://paypart.vercel.app/",
     },
   },
 
@@ -1248,7 +1248,7 @@ const payPart: Record<
       github:
         "https://github.com/escobardanilo/paypart",
       live:
-        "https://paypart.vercel.app/dashboard",
+        "https://paypart.vercel.app/",
     },
   },
 };
