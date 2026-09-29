@@ -80,13 +80,19 @@ export function Hero() {
         </div>
 
         <div className="hero__manifesto">
-          {heroManifesto[language].map(
-            (paragraph) => (
-              <p key={paragraph}>
-                {paragraph}
-              </p>
-            ),
-          )}
+          <h2 className="hero__manifesto-title">
+            {heroManifesto[language][0]}
+          </h2>
+
+          <div className="hero__manifesto-copy">
+            {heroManifesto[language]
+              .slice(1)
+              .map((paragraph) => (
+                <p key={paragraph}>
+                  {paragraph}
+                </p>
+              ))}
+          </div>
         </div>
 
         <div className="hero__footer">
