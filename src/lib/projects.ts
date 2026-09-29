@@ -2492,7 +2492,7 @@ const alta: Record<
       type:
         "Clinical AI / Agentic Workspace",
       status:
-        "Arquitetura de produto / MVP em preparação",
+        "Em desenvolvimento",
     },
 
     problem: {
@@ -2834,7 +2834,7 @@ const alta: Record<
       type:
         "Clinical AI / Agentic Workspace",
       status:
-        "Arquitectura de producto / MVP en preparación",
+        "En desarrollo",
     },
 
     problem: {
@@ -3144,7 +3144,7 @@ const alta: Record<
       type:
         "Clinical AI / Agentic Workspace",
       status:
-        "Product architecture / MVP in preparation",
+        "In development",
     },
 
     problem: {
@@ -3454,7 +3454,7 @@ const alta: Record<
       type:
         "Clinical AI / Agentic Workspace",
       status:
-        "Produktarchitektur / MVP in Vorbereitung",
+        "In Entwicklung",
     },
 
     problem: {
