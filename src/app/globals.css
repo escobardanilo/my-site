@@ -492,7 +492,7 @@ button {
 
   letter-spacing: -0.015em;
 
-  text-align: right;
+  text-align: left;
 
   color: var(--muted);
 }
