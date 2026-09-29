@@ -441,34 +441,55 @@ button {
 }
 
 .hero__manifesto {
-  width: min(100%, 980px);
+  width: min(100%, 860px);
 
   margin-top: clamp(42px, 5vh, 64px);
 
-  display: grid;
+  display: flex;
+  flex-direction: column;
 
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 14px 34px;
+  align-items: center;
 }
 
-.hero__manifesto p {
-  font-size: 12px;
+.hero__manifesto-title {
+  width: 100%;
 
-  line-height: 1.58;
+  max-width: 760px;
 
-  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+
+  text-align: center;
+
+  font-size: clamp(20px, 1.5vw, 22px);
+
+  line-height: 1.25;
+
+  font-weight: 500;
+
+  letter-spacing: -0.025em;
+
+  color: var(--foreground);
+}
+
+.hero__manifesto-copy {
+  width: 100%;
+
+  max-width: 760px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.hero__manifesto-copy p {
+  font-size: 16px;
+
+  line-height: 1.62;
+
+  letter-spacing: -0.015em;
 
   color: var(--muted);
-}
-
-.hero__manifesto p:first-child,
-.hero__manifesto p:nth-child(4),
-.hero__manifesto p:nth-child(8),
-.hero__manifesto p:nth-child(9),
-.hero__manifesto p:nth-child(10) {
-  color: var(--foreground);
 }
 
 .hero__footer {
@@ -1458,11 +1479,12 @@ button {
   }
 
   .hero__manifesto {
-    grid-template-columns: 1fr;
-
     width: min(100%, 720px);
+  }
 
-    gap: 12px;
+  .hero__manifesto-title,
+  .hero__manifesto-copy {
+    max-width: 680px;
   }
 
   .hero__footer {
@@ -1655,16 +1677,24 @@ button {
 
   .hero__manifesto {
     margin-top: 34px;
-
-    grid-template-columns: 1fr;
-
-    gap: 11px;
   }
 
-  .hero__manifesto p {
-    font-size: 11px;
+  .hero__manifesto-title {
+    margin-bottom: 22px;
 
-    line-height: 1.55;
+    font-size: 20px;
+
+    text-align: left;
+  }
+
+  .hero__manifesto-copy {
+    gap: 16px;
+  }
+
+  .hero__manifesto-copy p {
+    font-size: 15px;
+
+    line-height: 1.6;
   }
 
   .hero__footer {
