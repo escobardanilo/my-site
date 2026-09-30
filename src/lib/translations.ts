@@ -121,7 +121,7 @@ export const translations: Record<Language, SiteCopy> = {
     header: {
       stack: "Stack",
       expertise: "Especialização",
-      experience: "Experiência",
+      experience: "Atuação",
       projects: "Projetos",
       about: "Sobre",
       contact: "Contacto",
@@ -220,16 +220,16 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     work: {
-      eyebrow: "EXPERIÊNCIA",
+      eyebrow: "ATUAÇÃO",
       title: "Engenharia moldada pela operação.",
       description:
-        "A minha experiência combina contexto operacional com software e AI Engineering, proporcionando uma perspetiva prática sobre como os sistemas precisam funcionar para além da camada técnica.",
+        "O meu trabalho combina contexto operacional com software e AI Engineering, trazendo uma perspetiva prática sobre como os sistemas precisam funcionar para além da camada técnica.",
       items: [
         {
           number: "01",
-          period: "ATUAL",
+          period: "ENGENHARIA APLICADA",
           role: "AI & Software Engineering",
-          context: "Projetos Independentes",
+          context: "PRODUTOS & SISTEMAS",
           description:
             "Desenvolvimento de produtos baseados em IA que combinam modelos de linguagem, APIs, dados estruturados, validação e lógica determinística de software.",
           focus: [
@@ -241,9 +241,9 @@ export const translations: Record<Language, SiteCopy> = {
         },
         {
           number: "02",
-          period: "EXPERIÊNCIA PROFISSIONAL",
+          period: "CONTEXTO OPERACIONAL",
           role: "Operações & Sistemas",
-          context: "Ambientes Operacionais",
+          context: "PROCESSOS & OPERAÇÕES",
           description:
             "Trabalho com processos operacionais, sistemas e fluxos estruturados, transformando requisitos reais de negócio em formas de trabalho mais claras, controladas e mensuráveis.",
           focus: [
@@ -347,7 +347,7 @@ export const translations: Record<Language, SiteCopy> = {
     header: {
       stack: "Stack",
       expertise: "Especialización",
-      experience: "Experiencia",
+      experience: "Áreas de actuación",
       projects: "Proyectos",
       about: "Sobre mí",
       contact: "Contacto",
@@ -446,16 +446,16 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     work: {
-      eyebrow: "EXPERIENCIA",
+      eyebrow: "ÁREAS DE ACTUACIÓN",
       title: "Ingeniería moldeada por la operación.",
       description:
-        "Mi experiencia combina contexto operativo con software y AI Engineering, aportando una perspectiva práctica sobre cómo deben funcionar los sistemas más allá de la capa técnica.",
+        "Mi trabajo combina contexto operativo con software y AI Engineering, aportando una perspectiva práctica sobre cómo deben funcionar los sistemas más allá de la capa técnica.",
       items: [
         {
           number: "01",
-          period: "ACTUAL",
+          period: "INGENIERÍA APLICADA",
           role: "AI & Software Engineering",
-          context: "Proyectos Independientes",
+          context: "PRODUCTOS & SISTEMAS",
           description:
             "Desarrollo de productos basados en IA que combinan modelos de lenguaje, APIs, datos estructurados, validación y lógica determinista.",
           focus: [
@@ -467,9 +467,9 @@ export const translations: Record<Language, SiteCopy> = {
         },
         {
           number: "02",
-          period: "EXPERIENCIA PROFESIONAL",
+          period: "CONTEXTO OPERATIVO",
           role: "Operaciones & Sistemas",
-          context: "Entornos Operativos",
+          context: "PROCESOS & OPERACIONES",
           description:
             "Trabajo con procesos operativos, sistemas y flujos estructurados, convirtiendo requisitos reales de negocio en formas de trabajo más claras, controladas y medibles.",
           focus: [
@@ -573,7 +573,7 @@ export const translations: Record<Language, SiteCopy> = {
     header: {
       stack: "Stack",
       expertise: "Expertise",
-      experience: "Experience",
+      experience: "Practice",
       projects: "Projects",
       about: "About",
       contact: "Contact",
@@ -672,16 +672,16 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     work: {
-      eyebrow: "WORK HISTORY",
+      eyebrow: "PRACTICE",
       title: "Engineering shaped by operations.",
       description:
-        "My background combines operational experience with software and AI engineering, giving me a practical perspective on how systems need to work beyond the technical layer.",
+        "My work combines operational context with software and AI engineering, giving me a practical perspective on how systems need to work beyond the technical layer.",
       items: [
         {
           number: "01",
-          period: "CURRENT",
+          period: "APPLIED ENGINEERING",
           role: "AI & Software Engineering",
-          context: "Independent Projects",
+          context: "PRODUCTS & SYSTEMS",
           description:
             "Designing and building AI-powered products that combine language models, APIs, structured data, validation and deterministic software logic.",
           focus: [
@@ -693,9 +693,9 @@ export const translations: Record<Language, SiteCopy> = {
         },
         {
           number: "02",
-          period: "PROFESSIONAL EXPERIENCE",
+          period: "OPERATIONAL CONTEXT",
           role: "Operations & Systems",
-          context: "Operational Environments",
+          context: "PROCESSES & OPERATIONS",
           description:
             "Working with operational processes, systems and structured workflows, translating real business requirements into clearer, more controlled and measurable ways of working.",
           focus: [
@@ -799,7 +799,7 @@ export const translations: Record<Language, SiteCopy> = {
     header: {
       stack: "Stack",
       expertise: "Expertise",
-      experience: "Erfahrung",
+      experience: "Arbeitsfelder",
       projects: "Projekte",
       about: "Über mich",
       contact: "Kontakt",
@@ -898,16 +898,16 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     work: {
-      eyebrow: "BERUFSERFAHRUNG",
+      eyebrow: "ARBEITSFELDER",
       title: "Engineering geprägt durch Operations.",
       description:
-        "Mein Hintergrund verbindet operative Erfahrung mit Software und AI Engineering und schafft eine praktische Perspektive darauf, wie Systeme jenseits der technischen Ebene funktionieren müssen.",
+        "Meine Arbeit verbindet operativen Kontext mit Software und AI Engineering und schafft eine praktische Perspektive darauf, wie Systeme jenseits der technischen Ebene funktionieren müssen.",
       items: [
         {
           number: "01",
-          period: "AKTUELL",
+          period: "ANGEWANDTES ENGINEERING",
           role: "AI & Software Engineering",
-          context: "Unabhängige Projekte",
+          context: "PRODUKTE & SYSTEME",
           description:
             "Entwicklung KI-gestützter Produkte, die Sprachmodelle, APIs, strukturierte Daten, Validierung und deterministische Softwarelogik kombinieren.",
           focus: [
@@ -919,9 +919,9 @@ export const translations: Record<Language, SiteCopy> = {
         },
         {
           number: "02",
-          period: "BERUFSERFAHRUNG",
+          period: "OPERATIVER KONTEXT",
           role: "Operations & Systeme",
-          context: "Operative Umgebungen",
+          context: "PROZESSE & OPERATIONS",
           description:
             "Arbeit mit operativen Prozessen, Systemen und strukturierten Workflows, um reale Geschäftsanforderungen in klarere, kontrollierbare und messbare Abläufe zu überführen.",
           focus: [
