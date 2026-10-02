@@ -513,14 +513,34 @@
 
   overflow: hidden;
 
+  padding: 12px;
+
   border: 1px solid var(--border);
 
   background: var(--background);
+
+  cursor: zoom-in;
 }
 
 .project-visual__gallery-image {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+
+  padding: 10px;
+}
+
+.project-visual__gallery-item
+  .project-visual__expand {
+  opacity: 0;
+
+  transform: translateY(5px);
+}
+
+.project-visual__gallery-item:hover
+  .project-visual__expand {
+  opacity: 1;
+
+  transform: translateY(0);
 }
 
 @media (max-width: 760px) {
