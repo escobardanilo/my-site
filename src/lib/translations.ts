@@ -325,8 +325,8 @@ export const translations: Record<Language, SiteCopy> = {
 
     contact: {
       eyebrow: "CONTACTO",
-      titleLineOne: "Sistemas de IA precisam",
-      titleLineTwo: "funcionar fora da demo.",
+      titleLineOne: "Vamos construir",
+      titleLineTwo: "algo juntos.",
       description:
         "Disponível para projetos e oportunidades relacionados com AI Engineering, MarTech, Automation, sistemas de software e integração de IA em processos de negócio e operação.",
     },
@@ -551,8 +551,8 @@ export const translations: Record<Language, SiteCopy> = {
 
     contact: {
       eyebrow: "CONTACTO",
-      titleLineOne: "Los sistemas de IA deben",
-      titleLineTwo: "funcionar fuera de la demo.",
+      titleLineOne: "Construyamos",
+      titleLineTwo: "algo juntos.",
       description:
         "Disponible para proyectos y oportunidades relacionados con AI Engineering, MarTech, Automation, sistemas de software e integración de IA en procesos de negocio y operación.",
     },
@@ -777,8 +777,8 @@ export const translations: Record<Language, SiteCopy> = {
 
     contact: {
       eyebrow: "CONTACT",
-      titleLineOne: "AI systems need to",
-      titleLineTwo: "work beyond the demo.",
+      titleLineOne: "Let's build",
+      titleLineTwo: "something together.",
       description:
         "Open to projects and opportunities in AI Engineering, MarTech, Automation, software systems and the integration of AI into business and operational processes.",
     },
@@ -1003,8 +1003,8 @@ export const translations: Record<Language, SiteCopy> = {
 
     contact: {
       eyebrow: "KONTAKT",
-      titleLineOne: "KI-Systeme müssen",
-      titleLineTwo: "außerhalb der Demo funktionieren.",
+      titleLineOne: "Lassen Sie uns",
+      titleLineTwo: "gemeinsam etwas bauen.",
       description:
         "Offen für Projekte und Möglichkeiten in AI Engineering, MarTech, Automation, Softwaresystemen und der Integration von KI in Business- und operative Prozesse.",
     },
