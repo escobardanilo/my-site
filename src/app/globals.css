@@ -546,11 +546,7 @@ button {
 }
 
 .hero__button--secondary {
-  background: color-mix(
-    in srgb,
-    var(--foreground) 8%,
-    transparent
-  );
+  background: rgba(0, 0, 0, 0.01);
 
   color: var(--foreground);
 
