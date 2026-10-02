@@ -24,11 +24,17 @@ export function ProjectVisual({
   project,
   labels,
 }: ProjectVisualProps) {
-  const [activeVisual, setActiveVisual] =
-    useState<Visual | null>(null);
+  const [activeMedia, setActiveMedia] =
+    useState<{
+      src: string;
+      alt: string;
+      label: string;
+      description: string;
+      number: string;
+    } | null>(null);
 
   useEffect(() => {
-    if (!activeVisual) {
+    if (!activeMedia) {
       return;
     }
 
@@ -42,7 +48,7 @@ export function ProjectVisual({
       event: KeyboardEvent,
     ) {
       if (event.key === "Escape") {
-        setActiveVisual(null);
+        setActiveMedia(null);
       }
     }
 
@@ -60,7 +66,7 @@ export function ProjectVisual({
         handleKeyDown,
       );
     };
-  }, [activeVisual]);
+  }, [activeMedia]);
 
   return (
     <>
@@ -110,9 +116,25 @@ export function ProjectVisual({
                             image,
                             index,
                           ) => (
-                            <div
+                            <button
+                              type="button"
                               className="project-visual__gallery-item"
                               key={image}
+                              onClick={() =>
+                                setActiveMedia({
+                                  src: image,
+                                  alt:
+                                    visual.galleryAlts?.[
+                                      index
+                                    ] ?? visual.alt,
+                                  label: visual.label,
+                                  description:
+                                    visual.description,
+                                  number:
+                                    `${visual.number}.${index + 1}`,
+                                })
+                              }
+                              aria-label={`Ampliar imagem ${index + 1} de ${visual.label}`}
                             >
                               <Image
                                 src={image}
@@ -126,7 +148,11 @@ export function ProjectVisual({
                                 sizes="(max-width: 700px) 100vw, 33vw"
                                 className="project-visual__gallery-image"
                               />
-                            </div>
+
+                              <span className="project-visual__expand">
+                                ↗
+                              </span>
+                            </button>
                           ),
                         )}
                       </div>
@@ -135,9 +161,14 @@ export function ProjectVisual({
                         type="button"
                         className="project-visual__image-button"
                         onClick={() =>
-                          setActiveVisual(
-                            visual,
-                          )
+                          setActiveMedia({
+                            src: visual.image as string,
+                            alt: visual.alt,
+                            label: visual.label,
+                            description:
+                              visual.description,
+                            number: visual.number,
+                          })
                         }
                         aria-label={`Ampliar ${visual.label}`}
                       >
@@ -174,17 +205,16 @@ export function ProjectVisual({
         </div>
       </section>
 
-      {activeVisual &&
-        activeVisual.image && (
+      {activeMedia && (
           <div
             className="project-lightbox"
             role="dialog"
             aria-modal="true"
             aria-label={
-              activeVisual.label
+              activeMedia.label
             }
             onClick={() =>
-              setActiveVisual(null)
+              setActiveMedia(null)
             }
           >
             <div
@@ -196,11 +226,11 @@ export function ProjectVisual({
               <div className="project-lightbox__header">
                 <div>
                   <span>
-                    {activeVisual.number}
+                    {activeMedia.number}
                   </span>
 
                   <span>
-                    {activeVisual.label}
+                    {activeMedia.label}
                   </span>
                 </div>
 
@@ -208,7 +238,7 @@ export function ProjectVisual({
                   type="button"
                   className="project-lightbox__close"
                   onClick={() =>
-                    setActiveVisual(null)
+                    setActiveMedia(null)
                   }
                   aria-label="Fechar imagem"
                 >
@@ -219,9 +249,9 @@ export function ProjectVisual({
               <div className="project-lightbox__image-wrapper">
                 <Image
                   src={
-                    activeVisual.image
+                    activeMedia.src
                   }
-                  alt={activeVisual.alt}
+                  alt={activeMedia.alt}
                   fill
                   sizes="95vw"
                   className="project-lightbox__image"
@@ -231,7 +261,7 @@ export function ProjectVisual({
 
               <p className="project-lightbox__caption">
                 {
-                  activeVisual.description
+                  activeMedia.description
                 }
               </p>
             </div>
