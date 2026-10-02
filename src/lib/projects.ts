@@ -218,9 +218,10 @@ const payPart: Record<
       description:
         "Workspace que conecta pedidos, aprovações, transações, exceções e atividade operacional num fluxo rastreável e controlado.",
       tags: [
-        "Payment Operations",
-        "AI",
-        "Full-stack",
+        "AI Systems",
+        "Automation",
+        "Workflow Engineering",
+        "Payments",
       ],
     },
 
@@ -484,9 +485,10 @@ const payPart: Record<
       description:
         "Workspace que conecta solicitudes, aprobaciones, transacciones, excepciones y actividad operativa en un flujo trazable y controlado.",
       tags: [
-        "Payment Operations",
-        "AI",
-        "Full-stack",
+        "AI Systems",
+        "Automation",
+        "Workflow Engineering",
+        "Payments",
       ],
     },
 
@@ -742,9 +744,10 @@ const payPart: Record<
       description:
         "A workspace connecting payment requests, approvals, transactions, exceptions and operational activity into one controlled, traceable flow.",
       tags: [
-        "Payment Operations",
-        "AI",
-        "Full-stack",
+        "AI Systems",
+        "Automation",
+        "Workflow Engineering",
+        "Payments",
       ],
     },
 
@@ -1000,9 +1003,10 @@ const payPart: Record<
       description:
         "Ein Workspace für Zahlungsanfragen, Freigaben, Transaktionen, Ausnahmen und operative Aktivitäten.",
       tags: [
-        "Payment Operations",
-        "AI",
-        "Full-stack",
+        "AI Systems",
+        "Automation",
+        "Workflow Engineering",
+        "Payments",
       ],
     },
 
@@ -1264,8 +1268,9 @@ const son: Record<
         "Assistente industrial de IA que classifica pedidos, avalia respostas antes da entrega e mantém a autoridade operacional fora do modelo.",
       tags: [
         "Industrial AI",
-        "RAG",
         "Operational Intelligence",
+        "AI Assistance",
+        "Human-in-the-loop",
       ],
     },
 
@@ -1585,8 +1590,9 @@ const son: Record<
         "Asistente industrial de IA que clasifica solicitudes, evalúa respuestas antes de entregarlas y mantiene la autoridad operativa fuera del modelo.",
       tags: [
         "Industrial AI",
-        "RAG",
         "Operational Intelligence",
+        "AI Assistance",
+        "Human-in-the-loop",
       ],
     },
 
@@ -1878,8 +1884,9 @@ const son: Record<
         "Industrial AI assistant that classifies requests, evaluates responses before delivery and keeps operational authority outside the model.",
       tags: [
         "Industrial AI",
-        "RAG",
         "Operational Intelligence",
+        "AI Assistance",
+        "Human-in-the-loop",
       ],
     },
 
@@ -2171,8 +2178,9 @@ const son: Record<
         "Industrieller KI-Assistent, der Anfragen klassifiziert, Antworten vor der Ausgabe bewertet und operative Autorität außerhalb des Modells hält.",
       tags: [
         "Industrial AI",
-        "RAG",
         "Operational Intelligence",
+        "AI Assistance",
+        "Human-in-the-loop",
       ],
     },
 
@@ -2469,9 +2477,9 @@ const alta: Record<
         "Plataforma de inteligência clínica com agente de IA que transforma contexto fragmentado em investigação estruturada, evidência e trabalho preparado para revisão profissional.",
       tags: [
         "Clinical AI",
-        "Agentic AI",
-        "Python",
+        "Agents",
         "RAG",
+        "Python",
       ],
     },
 
@@ -2811,9 +2819,9 @@ const alta: Record<
         "Plataforma de inteligencia clínica con agente de IA que transforma contexto fragmentado en investigación estructurada, evidencia y trabajo preparado para revisión profesional.",
       tags: [
         "Clinical AI",
-        "Agentic AI",
-        "Python",
+        "Agents",
         "RAG",
+        "Python",
       ],
     },
 
@@ -3121,9 +3129,9 @@ const alta: Record<
         "Clinical intelligence platform with an AI agent that turns fragmented context into structured investigation, evidence and work prepared for professional review.",
       tags: [
         "Clinical AI",
-        "Agentic AI",
-        "Python",
+        "Agents",
         "RAG",
+        "Python",
       ],
     },
 
@@ -3431,9 +3439,9 @@ const alta: Record<
         "Plattform für klinische Intelligenz mit KI-Agent, die fragmentierten Kontext in strukturierte Untersuchung, Evidenz und professionell zu prüfende Arbeit überführt.",
       tags: [
         "Clinical AI",
-        "Agentic AI",
-        "Python",
+        "Agents",
         "RAG",
+        "Python",
       ],
     },
 
