@@ -481,6 +481,54 @@
   color: var(--muted);
 }
 
+
+.project-visual--full {
+  grid-column: 1 / -1;
+}
+
+.project-visual--full .project-visual__canvas {
+  aspect-ratio: auto;
+}
+
+.project-visual__gallery {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+}
+
+.project-visual__gallery--three-by-two {
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+}
+
+.project-visual__gallery-item {
+  position: relative;
+
+  min-width: 0;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+
+  background: var(--background);
+}
+
+.project-visual__gallery-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 760px) {
+  .project-visual__gallery--three-by-two {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* =========================================================
    LIGHTBOX
    ========================================================= */
