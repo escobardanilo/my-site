@@ -86,7 +86,7 @@ export function ProjectVisual({
             {project.product.visuals.map(
               (visual) => (
                 <article
-                  className="project-visual"
+                  className={`project-visual${visual.fullWidth ? " project-visual--full" : ""}`}
                   key={visual.number}
                 >
                   <div className="project-visual__top">
@@ -100,7 +100,37 @@ export function ProjectVisual({
                   </div>
 
                   <div className="project-visual__canvas">
-                    {visual.image ? (
+                    {visual.gallery &&
+                    visual.gallery.length > 0 ? (
+                      <div
+                        className={`project-visual__gallery${visual.galleryLayout === "three-by-two" ? " project-visual__gallery--three-by-two" : ""}`}
+                      >
+                        {visual.gallery.map(
+                          (
+                            image,
+                            index,
+                          ) => (
+                            <div
+                              className="project-visual__gallery-item"
+                              key={image}
+                            >
+                              <Image
+                                src={image}
+                                alt={
+                                  visual.galleryAlts?.[
+                                    index
+                                  ] ??
+                                  visual.alt
+                                }
+                                fill
+                                sizes="(max-width: 700px) 100vw, 33vw"
+                                className="project-visual__gallery-image"
+                              />
+                            </div>
+                          ),
+                        )}
+                      </div>
+                    ) : visual.image ? (
                       <button
                         type="button"
                         className="project-visual__image-button"
