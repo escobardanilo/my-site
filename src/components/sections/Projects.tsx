@@ -65,10 +65,7 @@ export function Projects() {
                 content.card.description;
 
               const previewImage =
-                slug ===
-                "project-02"
-                  ? "/images/typographyedita-brand-logo-bon.png"
-                  : preview?.image;
+                preview?.image;
 
               return (
                 <article
