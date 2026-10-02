@@ -1026,14 +1026,14 @@ button {
 }
 
 .project-card__visual-center--diaction {
-  padding: clamp(46px, 6vw, 96px);
+  padding: clamp(24px, 3vw, 42px);
 }
 
 .project-card__visual-center--diaction
   .project-card__image {
-  width: min(58%, 560px);
+  width: min(82%, 760px);
   height: auto;
-  max-height: 58%;
+  max-height: 82%;
 
   object-fit: contain;
 }
@@ -1877,13 +1877,13 @@ button {
   }
 
   .project-card__visual-center--diaction {
-    padding: 34px;
+    padding: 20px;
   }
 
   .project-card__visual-center--diaction
     .project-card__image {
-    width: min(72%, 360px);
-    max-height: 64%;
+    width: min(86%, 460px);
+    max-height: 84%;
   }
 
   .project-card__heading {
