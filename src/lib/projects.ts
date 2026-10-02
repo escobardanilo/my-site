@@ -1325,7 +1325,7 @@ const diaction: Record<
             "Identidade utilizada como capa do projeto no portfólio.",
 
           image:
-            "/images/logotipo-diaction.png?v=20261002-2",
+            "/images/diaction.png",
 
           alt:
             "Logotipo da diaction",
@@ -1642,7 +1642,7 @@ const diaction: Record<
           description:
             "Identidad utilizada como portada del proyecto en el portfolio.",
           image:
-            "/images/logotipo-diaction.png?v=20261002-2",
+            "/images/diaction.png",
           alt:
             "Logotipo de diaction",
         },
@@ -1930,7 +1930,7 @@ const diaction: Record<
           description:
             "Brand identity used as the project cover in the portfolio.",
           image:
-            "/images/logotipo-diaction.png?v=20261002-2",
+            "/images/diaction.png",
           alt:
             "diaction logo",
         },
@@ -2218,7 +2218,7 @@ const diaction: Record<
           description:
             "Markenidentität als Cover des Projekts im Portfolio.",
           image:
-            "/images/logotipo-diaction.png?v=20261002-2",
+            "/images/diaction.png",
           alt:
             "diaction Logo",
         },
