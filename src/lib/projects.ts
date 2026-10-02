@@ -66,6 +66,10 @@ export type ProjectContent = {
       description: string;
       image: string | null;
       alt: string;
+      gallery?: string[];
+      galleryAlts?: string[];
+      galleryLayout?: "three-by-two";
+      fullWidth?: boolean;
     }[];
   };
 
@@ -1257,7 +1261,7 @@ const payPart: Record<
   },
 };
 
-const son: Record<
+const diaction: Record<
   Language,
   Omit<ProjectContent, "number">
 > = {
@@ -1265,321 +1269,319 @@ const son: Record<
     card: {
       category: "",
       description:
-        "Assistente industrial de IA que classifica pedidos, avalia respostas antes da entrega e mantém a autoridade operacional fora do modelo.",
+        "Trabalho de MarTech e Website Marketing na diaction, ligando SEO, CRO, conteúdo, social media, UTM e IA à aquisição e conversão.",
       tags: [
-        "Industrial AI",
-        "Operational Intelligence",
-        "AI Assistance",
-        "Human-in-the-loop",
+        "MarTech",
+        "SEO & CRO",
+        "Social Media",
+        "Automation",
       ],
     },
 
     eyebrow:
-      "INDUSTRIAL AI / OPERATIONAL INTELLIGENCE",
+      "MARTECH / WEBSITE MARKETING / SOCIAL MEDIA",
 
-    title: "SON",
+    title: "diaction",
 
     subtitle:
-      "Assistência operacional com geração, avaliação e autoridade tratadas como responsabilidades separadas.",
+      "Performance web, conteúdo e automação conectados à aquisição e conversão.",
 
     summary:
-      "SON — System Operations Navigator — é um assistente operacional de IA para operadores, técnicos e supervisores. O sistema explica conceitos técnicos, conduz investigações passo a passo, verifica observações fornecidas pelo operador e escala situações que exigem uma função humana autorizada.",
+      "Na diaction atuei como Sênior, Marketing de Sites, com responsabilidade sobre desempenho digital, SEO, CRO e jornadas na web. O trabalho incluiu landing page orientada à conversão, tracking por UTM, geração de leads através de CTA, conteúdo e copywriting, redação e edição diária do jornal da marca, expansão para novas redes sociais e integração de IA através do Opinsy.",
 
     overview: {
       role:
-        "AI Engineering / Full-stack",
+        "Sênior, Marketing de Sites",
       type:
-        "Industrial AI / Operational Intelligence",
+        "MarTech / Website Marketing / Social Media",
       status:
-        "Protótipo funcional / frontend publicado",
+        "Trabalho profissional",
     },
 
     problem: {
       title:
-        "Um LLM não deve decidir sozinho o que é seguro devolver a um operador.",
+        "Marketing digital perde eficiência quando descoberta, conteúdo e conversão funcionam como partes separadas.",
 
       description:
-        "Em contexto industrial, uma resposta plausível pode ultrapassar limites de autoridade, inventar procedimentos ou transformar orientação em intervenção. O SON foi estruturado para separar geração de aceitação: o modelo produz uma resposta candidata, enquanto software, políticas e avaliação determinam se ela pode chegar ao operador.",
+        "O trabalho exigia tratar o site e os canais digitais como um sistema: melhorar descoberta orgânica, reduzir fricção nas jornadas, estruturar páginas para conversão, identificar origem de tráfego, manter produção editorial diária e ampliar a presença da marca sem perder consistência.",
     },
 
     product: {
       title:
-        "Um workspace operacional construído à volta do assistente.",
+        "Um sistema de aquisição, conteúdo e presença digital.",
 
       description:
-        "O SON não existe como chat isolado. O assistente está inserido num produto com contexto operacional, ativos, conhecimento, atividade, reporting e visão de supervisão. As superfícies públicas utilizam dados demonstrativos quando não existe integração industrial real.",
+        "A atuação combinou Website Marketing, Social Media e MarTech. A capa apresenta a identidade da diaction; a sequência visual reúne peças e páginas do trabalho, incluindo um frame único com seis imagens organizadas em duas filas de três.",
 
       visuals: [
         {
           number: "01",
           label:
-            "SON / OPERATIONAL ASSISTANT",
+            "DIACTION / BRAND",
 
-          title: "SON",
+          title: "diaction",
 
           description:
-            "Assistente operacional com contexto de sessão, aviso de segurança e orientação baseada nos modos EXPLAIN, GUIDE e VERIFY.",
+            "Identidade utilizada como capa do projeto no portfólio.",
 
-          image: "/images/son-two.png",
+          image:
+            "/images/logotipo-diaction.png",
 
           alt:
-            "Assistente operacional industrial SON",
+            "Logotipo da diaction",
         },
 
         {
           number: "02",
           label:
-            "SON / SUPERVISOR",
+            "DIACTION / BRAND SYSTEM",
 
-          title: "SON",
+          title: "diaction",
 
           description:
-            "Visão de supervisão com sessões, operadores, equipamentos, alertas, escalamentos e atividade documental demonstrativa.",
+            "Elemento visual complementar da identidade e comunicação da marca.",
 
-          image: "/images/son-tree.png",
+          image:
+            "/images/typographyedita-brand-logo-bon.png",
 
           alt:
-            "Dashboard de supervisão do SON",
+            "Sistema tipográfico e visual da diaction",
         },
 
         {
           number: "03",
           label:
-            "SON / EQUIPMENT",
+            "DIACTION / WEB + SOCIAL",
 
-          title: "SON",
-
-          description:
-            "Diretório de ativos com equipamento, área, estado operacional, atividade recente e documentação associada.",
-
-          image: "/images/son-one.png",
-
-          alt:
-            "Diretório de equipamentos do SON",
-        },
-
-        {
-          number: "04",
-          label:
-            "SON / REPORT ISSUE",
-
-          title: "SON",
+          title: "diaction",
 
           description:
-            "Registo demonstrativo de observações operacionais com equipamento, categoria e descrição para revisão do supervisor.",
+            "Landing pages, conteúdo e materiais digitais reunidos num único frame visual.",
 
-          image: "/images/son-four.png",
+          image: null,
 
           alt:
-            "Formulário de observação operacional do SON",
+            "Conjunto de seis imagens do trabalho realizado na diaction",
+
+          gallery: [
+            "/images/40.png",
+            "/images/41.png",
+            "/images/42.png",
+            "/images/43.png",
+            "/images/44.png",
+            "/images/45.png",
+          ],
+
+          galleryAlts: [
+            "Diaction visual 40",
+            "Diaction visual 41",
+            "Diaction visual 42",
+            "Diaction visual 43",
+            "Diaction visual 44",
+            "Diaction visual 45",
+          ],
+
+          galleryLayout:
+            "three-by-two",
+
+          fullWidth: true,
         },
       ],
     },
 
     architecture: {
       title:
-        "A resposta do modelo nunca segue diretamente para o operador.",
+        "Da descoberta ao lead, o percurso precisa manter contexto.",
 
       description:
-        "A sessão entra pela API server-side, é classificada por comportamento operacional, pode receber evidência recuperada pelo RAG, passa pela geração no Groq e depois por uma avaliação independente. Uma resposta rejeitada pode ser regenerada uma única vez; se continuar fora dos critérios, o sistema entrega um fallback determinístico e localizado.",
-
+        "SEO e conteúdo criam descoberta; a landing page concentra a proposta e o CTA; UTM identifica a origem da visita; a conversão transforma interesse em lead; análise e conteúdo alimentam a próxima decisão. O Opinsy entra como camada de IA para apoiar leitura, produção e consistência operacional.",
       flow: [
-        "Input + locale",
-        "EXPLAIN / GUIDE / VERIFY",
-        "RAG opcional",
-        "Groq / geração",
-        "Avaliação + fallback",
+        "SEO + Conteúdo",
+        "Landing Page",
+        "UTM + CTA",
+        "Lead",
+        "Análise",
+        "Opinsy / AI",
       ],
     },
 
     process: {
       title:
-        "Geração e aceitação são dois processos diferentes.",
+        "Performance, conteúdo e distribuição trabalhados como um mesmo ciclo.",
 
       description:
-        "O percurso da mensagem foi construído para que a utilidade do modelo não determine, por si só, o que é aceite pelo sistema.",
+        "O trabalho foi estruturado em frentes conectadas, evitando tratar site, social media, conteúdo e IA como iniciativas isoladas.",
 
       steps: [
         {
           number: "01",
-          title: "Input",
+          title:
+            "SEO + CRO",
           description:
-            "O cliente envia o idioma selecionado e até 30 mensagens recentes e não vazias da sessão.",
+            "Responsabilidade pelo desempenho digital da diaction, com atenção à visibilidade orgânica, páginas, jornadas, pontos de fricção e conversão.",
         },
 
         {
           number: "02",
-          title: "Classificação",
+          title:
+            "Landing page",
           description:
-            "O pedido é interpretado como EXPLAIN, GUIDE ou VERIFY e o contexto operacional atual é recuperado.",
+            "Criação de landing page orientada à conversão, com hierarquia de conteúdo e CTA definidos para transformar tráfego em oportunidade.",
         },
 
         {
           number: "03",
-          title: "Retrieval",
+          title:
+            "UTM + origem",
           description:
-            "Quando o serviço RAG está disponível, são recuperados chunks relevantes e metadata das fontes antes da geração.",
+            "Estruturação de URLs com UTM para distinguir origem e campanha, permitindo relacionar tráfego com a captação de leads.",
         },
 
         {
           number: "04",
-          title: "Geração",
+          title:
+            "Conteúdo + copy",
           description:
-            "Groq produz uma resposta candidata usando política operacional, idioma, histórico da conversa e evidência recuperada quando existente.",
+            "Criação de conteúdos e copywriting para site e comunicação digital, alinhando clareza da mensagem com objetivos de navegação e conversão.",
         },
 
         {
           number: "05",
-          title: "Avaliação",
+          title:
+            "Jornal diário",
           description:
-            "Um avaliador independente verifica segurança, autoridade, evidência, utilidade, comportamento, número de passos e necessidade de escalamento.",
+            "Redação e edição diária de notícias para o jornal da diaction, com temas ligados a saúde, alimentação e assuntos relevantes para a audiência.",
         },
 
         {
           number: "06",
-          title: "Recuperação",
+          title:
+            "Social media",
           description:
-            "Uma resposta rejeitada pode receber uma única nova geração com contexto privado de correção.",
+            "Desenvolvimento de estratégia para ampliar a marca em outras redes, adaptar formatos por canal, reaproveitar conteúdo de forma consistente e criar novos pontos de entrada para audiência.",
         },
 
         {
           number: "07",
-          title: "Fallback",
+          title:
+            "Opinsy + IA",
           description:
-            "Se a resposta corrigida continuar a falhar, o SON devolve texto determinístico e seguro no idioma selecionado.",
-        },
-
-        {
-          number: "08",
-          title: "Output",
-          description:
-            "A resposta aceite é sanitizada e apenas apresenta fontes realmente recuperadas quando existe evidência.",
+            "Integração do meu sistema Opinsy como apoio à análise, produção e organização de conteúdo, ligando IA ao fluxo de Marketing em vez de utilizá-la como ferramenta isolada.",
         },
       ],
     },
 
     decisions: {
       title:
-        "A resposta do modelo é apenas uma candidata.",
+        "Decisões orientadas por jornada, distribuição e contexto.",
 
       description:
-        "As decisões centrais do SON estão no contrato entre modelo, software, evidência e autoridade humana — não apenas no prompt ou na interface.",
+        "A prioridade foi conectar aquisição, conteúdo e conversão. Cada elemento precisava ter função clara no percurso do utilizador e produzir informação útil para a próxima ação.",
 
       items: [
         {
           number: "01",
           title:
-            "Classificar antes de responder",
+            "Conversão antes de decoração",
           description:
-            "Cada pedido é interpretado como EXPLAIN, GUIDE ou VERIFY para que diferentes tipos de assistência tenham regras operacionais explícitas.",
+            "A landing page foi estruturada a partir da ação esperada do utilizador, com mensagem, hierarquia e CTA a servir esse objetivo.",
         },
 
         {
           number: "02",
           title:
-            "Gerador ≠ avaliador",
+            "UTM antes de distribuir",
           description:
-            "A geração da resposta e a decisão de aceitá-la não dependem da mesma chamada ou do mesmo papel do modelo.",
+            "Campanhas e links precisam preservar origem para que o tráfego possa ser lido no contexto correto depois da visita.",
         },
 
         {
           number: "03",
           title:
-            "Software mantém autoridade",
+            "Conteúdo como sistema",
           description:
-            "Limites operacionais, claims de evidência, número de passos e fallback são controlados fora do prompt.",
+            "O jornal, o site e as redes sociais foram tratados como superfícies conectadas, com possibilidade de adaptação e redistribuição por canal.",
         },
 
         {
           number: "04",
           title:
-            "Recuperação limitada",
+            "Expansão por canal",
           description:
-            "O SON permite apenas uma tentativa de correção antes de interromper a geração e utilizar um fallback determinístico.",
+            "A estratégia social considerou adequação de formato, frequência, distribuição e coerência de marca em vez de replicar a mesma peça em todas as redes.",
         },
 
         {
           number: "05",
           title:
-            "Evidência nunca é inventada",
+            "IA dentro do processo",
           description:
-            "O RAG pode enriquecer respostas quando encontra chunks reais; ausência de retrieval não autoriza claims específicos sobre documentos ou procedimentos.",
-        },
-
-        {
-          number: "06",
-          title:
-            "Autoridade humana explícita",
-          description:
-            "O SON informa e orienta. Intervenções físicas, autorizações e decisões críticas continuam sob responsabilidade de funções humanas autorizadas.",
+            "Opinsy foi integrado como infraestrutura de apoio à análise e conteúdo, mantendo decisão editorial e direção de Marketing sob controlo humano.",
         },
       ],
     },
 
     stack: {
       title:
-        "Do LLM ao retrieval, cada camada tem uma responsabilidade definida.",
+        "MarTech aplicado a performance, conteúdo e execução.",
 
       description:
-        "A implementação combina aplicação full-stack, geração e avaliação server-side, contratos tipados, validação estruturada e uma camada RAG separada para conhecimento industrial.",
-
+        "A stack deste trabalho é menos sobre uma ferramenta única e mais sobre o conjunto de práticas e sistemas que conectam descoberta, conversão, tracking, conteúdo e automação.",
       items: [
-        "Next.js 16.3.5 + React 19.2.8",
-        "TypeScript 5",
-        "Groq SDK 1.6",
-        "Zod 4.6",
-        "Python",
-        "FastAPI",
-        "Sentence Transformers",
-        "Supabase + pgvector",
+        "SEO",
+        "CRO",
+        "Landing Pages",
+        "UTM Tracking",
+        "CTA / Lead Generation",
+        "Social Media",
+        "Copywriting",
+        "Content Operations",
+        "Opinsy / AI",
       ],
     },
 
     results: {
       title:
-        "Evidências técnicas já verificadas.",
+        "Escopo entregue e capacidades aplicadas.",
 
       description:
-        "O protótipo público demonstra a arquitetura operacional, avaliação, multilingualidade e interação do produto. O RAG foi validado localmente sem ser apresentado como integração industrial de produção.",
-
+        "Sem recorrer a métricas artificiais, o projeto demonstra trabalho real sobre aquisição, conversão, conteúdo, distribuição e integração de IA no contexto de Marketing.",
       items: [
         {
-          value: "3 MODOS",
+          value: "SEO + CRO",
           label:
-            "EXPLAIN, GUIDE e VERIFY",
+            "Desempenho digital, jornadas web e otimização orientada à conversão",
         },
 
         {
-          value: "4 IDIOMAS",
+          value: "UTM + CTA",
           label:
-            "PT, EN, ES e DE validados no fluxo",
+            "Landing page preparada para atribuição de origem e geração de leads",
         },
 
         {
-          value: "25 TESTES",
+          value: "EDITORIAL",
           label:
-            "Node aprovados após a integração RAG",
+            "Redação, edição diária, conteúdo e copywriting para a comunicação da marca",
         },
 
         {
-          value: "13 TESTES",
+          value: "MULTICHANNEL",
           label:
-            "Python aprovados para o serviço RAG",
+            "Estratégia de expansão da marca para novas redes sociais e formatos",
         },
 
         {
-          value: "1 RETRY",
+          value: "OPINSY",
           label:
-            "Tentativa máxima de regeneração antes do fallback seguro",
+            "IA integrada ao fluxo de Marketing para apoiar análise e operação de conteúdo",
         },
       ],
     },
 
     links: {
-      github:
-        "https://github.com/escobardanilo/liio",
-      live:
-        "https://son-industry.vercel.app",
+      github: null,
+      live: null,
     },
   },
 
@@ -1587,293 +1589,287 @@ const son: Record<
     card: {
       category: "",
       description:
-        "Asistente industrial de IA que clasifica solicitudes, evalúa respuestas antes de entregarlas y mantiene la autoridad operativa fuera del modelo.",
+        "Trabajo de MarTech y Website Marketing en diaction, conectando SEO, CRO, contenido, social media, UTM e IA con adquisición y conversión.",
       tags: [
-        "Industrial AI",
-        "Operational Intelligence",
-        "AI Assistance",
-        "Human-in-the-loop",
+        "MarTech",
+        "SEO & CRO",
+        "Social Media",
+        "Automation",
       ],
     },
 
     eyebrow:
-      "INDUSTRIAL AI / OPERATIONAL INTELLIGENCE",
+      "MARTECH / WEBSITE MARKETING / SOCIAL MEDIA",
 
-    title: "SON",
+    title: "diaction",
 
     subtitle:
-      "Asistencia operativa con generación, evaluación y autoridad tratadas como responsabilidades separadas.",
+      "Performance web, contenido y automatización conectados con adquisición y conversión.",
 
     summary:
-      "SON — System Operations Navigator — es un asistente operativo de IA para operadores, técnicos y supervisores. Explica conceptos técnicos, guía investigaciones paso a paso, verifica observaciones y escala situaciones que requieren una función humana autorizada.",
+      "En diaction trabajé como Senior, Marketing de Sitios, con responsabilidad sobre rendimiento digital, SEO, CRO y recorridos web. El trabajo incluyó una landing page orientada a conversión, tracking por UTM, generación de leads mediante CTA, contenido y copywriting, redacción y edición diaria del periódico de la marca, expansión a nuevas redes sociales e integración de IA mediante Opinsy.",
 
     overview: {
       role:
-        "AI Engineering / Full-stack",
+        "Senior, Marketing de Sitios",
       type:
-        "Industrial AI / Operational Intelligence",
+        "MarTech / Website Marketing / Social Media",
       status:
-        "Prototipo funcional / frontend publicado",
+        "Trabajo profesional",
     },
 
     problem: {
       title:
-        "Un LLM no debe decidir por sí solo qué es seguro entregar a un operador.",
+        "El Marketing digital pierde eficiencia cuando descubrimiento, contenido y conversión funcionan por separado.",
 
       description:
-        "En un contexto industrial, una respuesta plausible puede superar límites de autoridad, inventar procedimientos o convertir orientación en intervención. SON separa generación y aceptación para mantener el control en el software.",
+        "El trabajo exigía tratar el sitio y los canales digitales como un sistema: mejorar descubrimiento orgánico, reducir fricción en los recorridos, estructurar páginas para conversión, identificar origen del tráfico, mantener producción editorial diaria y ampliar la presencia de marca sin perder consistencia.",
     },
 
     product: {
       title:
-        "Un workspace operativo construido alrededor del asistente.",
+        "Un sistema de adquisición, contenido y presencia digital.",
 
       description:
-        "SON no funciona como un chat aislado. El asistente forma parte de un producto con contexto operativo, activos, conocimiento, actividad, reporting y supervisión.",
+        "El trabajo combinó Website Marketing, Social Media y MarTech. La portada presenta la identidad de diaction y la secuencia visual reúne piezas y páginas del trabajo, incluyendo un único frame con seis imágenes organizadas en dos filas de tres.",
 
       visuals: [
         {
           number: "01",
           label:
-            "SON / OPERATIONAL ASSISTANT",
-          title: "SON",
+            "DIACTION / BRAND",
+          title: "diaction",
           description:
-            "Asistente operativo con contexto de sesión, aviso de seguridad y modos EXPLAIN, GUIDE y VERIFY.",
-          image: "/images/son-two.png",
+            "Identidad utilizada como portada del proyecto en el portfolio.",
+          image:
+            "/images/logotipo-diaction.png",
           alt:
-            "Asistente operativo industrial SON",
+            "Logotipo de diaction",
         },
 
         {
           number: "02",
           label:
-            "SON / SUPERVISOR",
-          title: "SON",
+            "DIACTION / BRAND SYSTEM",
+          title: "diaction",
           description:
-            "Vista de supervisión con sesiones, operadores, equipos, alertas, escalaciones y actividad documental.",
-          image: "/images/son-tree.png",
+            "Elemento visual complementario de la identidad y comunicación de marca.",
+          image:
+            "/images/typographyedita-brand-logo-bon.png",
           alt:
-            "Dashboard de supervisión de SON",
+            "Sistema tipográfico y visual de diaction",
         },
 
         {
           number: "03",
           label:
-            "SON / EQUIPMENT",
-          title: "SON",
+            "DIACTION / WEB + SOCIAL",
+          title: "diaction",
           description:
-            "Directorio de activos con equipo, área, estado, actividad reciente y documentación.",
-          image: "/images/son-one.png",
+            "Landing pages, contenido y materiales digitales reunidos en un único frame visual.",
+          image: null,
           alt:
-            "Directorio de equipos de SON",
-        },
-
-        {
-          number: "04",
-          label:
-            "SON / REPORT ISSUE",
-          title: "SON",
-          description:
-            "Formulario demostrativo para registrar observaciones operativas y enviarlas a revisión.",
-          image: "/images/son-four.png",
-          alt:
-            "Formulario de observación operativa de SON",
+            "Conjunto de seis imágenes del trabajo realizado en diaction",
+          gallery: [
+            "/images/40.png",
+            "/images/41.png",
+            "/images/42.png",
+            "/images/43.png",
+            "/images/44.png",
+            "/images/45.png",
+          ],
+          galleryAlts: [
+            "Diaction visual 40",
+            "Diaction visual 41",
+            "Diaction visual 42",
+            "Diaction visual 43",
+            "Diaction visual 44",
+            "Diaction visual 45",
+          ],
+          galleryLayout:
+            "three-by-two",
+          fullWidth: true,
         },
       ],
     },
 
     architecture: {
       title:
-        "La respuesta del modelo nunca va directamente al operador.",
+        "Desde el descubrimiento hasta el lead, el recorrido necesita conservar contexto.",
 
       description:
-        "La sesión entra por una API server-side, se clasifica, puede incorporar evidencia RAG, se genera con Groq y pasa por una evaluación independiente antes de ser aceptada.",
-
+        "SEO y contenido generan descubrimiento; la landing page concentra propuesta y CTA; UTM identifica el origen; la conversión transforma interés en lead; análisis y contenido alimentan la siguiente decisión. Opinsy entra como capa de IA para apoyar lectura, producción y consistencia operativa.",
       flow: [
-        "Input + locale",
-        "EXPLAIN / GUIDE / VERIFY",
-        "RAG opcional",
-        "Groq / generación",
-        "Evaluación + fallback",
+        "SEO + Contenido",
+        "Landing Page",
+        "UTM + CTA",
+        "Lead",
+        "Análisis",
+        "Opinsy / AI",
       ],
     },
 
     process: {
       title:
-        "Generación y aceptación son procesos diferentes.",
+        "Performance, contenido y distribución trabajados como un mismo ciclo.",
 
       description:
-        "El flujo mantiene separados el contenido producido por el modelo y la decisión del sistema de entregarlo.",
+        "El trabajo se estructuró en frentes conectados, evitando tratar sitio, social media, contenido e IA como iniciativas aisladas.",
 
       steps: [
         {
           number: "01",
-          title: "Input",
+          title:
+            "SEO + CRO",
           description:
-            "El cliente envía el idioma y hasta 30 mensajes recientes.",
+            "Responsabilidad sobre rendimiento digital, visibilidad orgánica, páginas, recorridos, fricción y conversión.",
         },
         {
           number: "02",
-          title: "Clasificación",
+          title:
+            "Landing page",
           description:
-            "La solicitud se interpreta como EXPLAIN, GUIDE o VERIFY.",
+            "Creación de landing page orientada a conversión, con jerarquía de contenido y CTA definidos.",
         },
         {
           number: "03",
-          title: "Retrieval",
+          title:
+            "UTM + origen",
           description:
-            "Cuando RAG está disponible se recupera evidencia relevante.",
+            "Estructuración de URLs con UTM para distinguir origen y campaña y relacionar tráfico con captación de leads.",
         },
         {
           number: "04",
-          title: "Generación",
+          title:
+            "Contenido + copy",
           description:
-            "Groq genera una respuesta candidata con política, contexto y evidencia.",
+            "Creación de contenidos y copywriting para sitio y comunicación digital.",
         },
         {
           number: "05",
-          title: "Evaluación",
+          title:
+            "Periódico diario",
           description:
-            "Un evaluador independiente comprueba seguridad, autoridad y límites de evidencia.",
+            "Redacción y edición diaria de noticias sobre salud, alimentación y temas relevantes para la audiencia.",
         },
         {
           number: "06",
-          title: "Recuperación",
+          title:
+            "Social media",
           description:
-            "Una respuesta rechazada puede regenerarse una única vez.",
+            "Estrategia para ampliar la marca en otras redes, adaptar formatos por canal, reutilizar contenido con consistencia y crear nuevas entradas de audiencia.",
         },
         {
           number: "07",
-          title: "Fallback",
+          title:
+            "Opinsy + IA",
           description:
-            "Si vuelve a fallar, SON devuelve un fallback determinista.",
-        },
-        {
-          number: "08",
-          title: "Output",
-          description:
-            "La respuesta aceptada es sanitizada antes de entregarse.",
+            "Integración de Opinsy como apoyo al análisis, producción y organización de contenido dentro del flujo de Marketing.",
         },
       ],
     },
 
     decisions: {
       title:
-        "La respuesta del modelo es solo una candidata.",
+        "Decisiones orientadas por recorrido, distribución y contexto.",
 
       description:
-        "Las decisiones principales de SON existen entre modelo, software, evidencia y autoridad humana.",
+        "La prioridad fue conectar adquisición, contenido y conversión con funciones claras a lo largo del recorrido del usuario.",
 
       items: [
         {
           number: "01",
           title:
-            "Clasificar antes de responder",
+            "Conversión antes que decoración",
           description:
-            "EXPLAIN, GUIDE y VERIFY tienen reglas operativas diferentes.",
+            "La landing page fue estructurada a partir de la acción esperada, con mensaje, jerarquía y CTA al servicio del objetivo.",
         },
         {
           number: "02",
           title:
-            "Generador ≠ evaluador",
+            "UTM antes de distribuir",
           description:
-            "La generación y la decisión de aceptación están separadas.",
+            "Campañas y enlaces preservan origen para poder interpretar correctamente el tráfico después de la visita.",
         },
         {
           number: "03",
           title:
-            "El software mantiene autoridad",
+            "Contenido como sistema",
           description:
-            "Los límites operativos se aplican fuera del prompt.",
+            "Periódico, sitio y redes se trataron como superficies conectadas, adaptables y redistribuibles por canal.",
         },
         {
           number: "04",
           title:
-            "Recuperación limitada",
+            "Expansión por canal",
           description:
-            "Solo existe una regeneración antes del fallback.",
+            "La estrategia social consideró formato, frecuencia, distribución y coherencia de marca.",
         },
         {
           number: "05",
           title:
-            "La evidencia no se inventa",
+            "IA dentro del proceso",
           description:
-            "Sin retrieval real no se permiten claims específicos sobre documentos.",
-        },
-        {
-          number: "06",
-          title:
-            "Autoridad humana explícita",
-          description:
-            "Intervenciones y decisiones críticas siguen siendo humanas.",
+            "Opinsy se integró como infraestructura de apoyo al análisis y contenido con control editorial humano.",
         },
       ],
     },
 
     stack: {
       title:
-        "Cada capa tiene una responsabilidad definida.",
-
+        "MarTech aplicado a performance, contenido y ejecución.",
       description:
-        "Aplicación full-stack, IA server-side, validación estructurada y retrieval industrial separado.",
-
+        "Un conjunto de prácticas y sistemas que conectan descubrimiento, conversión, tracking, contenido y automatización.",
       items: [
-        "Next.js 16.3.5 + React 19.2.8",
-        "TypeScript 5",
-        "Groq SDK 1.6",
-        "Zod 4.6",
-        "Python",
-        "FastAPI",
-        "Sentence Transformers",
-        "Supabase + pgvector",
+        "SEO",
+        "CRO",
+        "Landing Pages",
+        "UTM Tracking",
+        "CTA / Lead Generation",
+        "Social Media",
+        "Copywriting",
+        "Content Operations",
+        "Opinsy / AI",
       ],
     },
 
     results: {
       title:
-        "Evidencias técnicas verificadas.",
-
+        "Alcance entregado y capacidades aplicadas.",
       description:
-        "El producto demuestra el núcleo operativo mientras RAG permanece claramente identificado como una capa validada localmente.",
-
+        "El proyecto muestra trabajo real sobre adquisición, conversión, contenido, distribución e integración de IA sin recurrir a métricas artificiales.",
       items: [
         {
-          value: "3 MODOS",
+          value: "SEO + CRO",
           label:
-            "EXPLAIN, GUIDE y VERIFY",
+            "Rendimiento digital, recorridos web y optimización orientada a conversión",
         },
-
         {
-          value: "4 IDIOMAS",
+          value: "UTM + CTA",
           label:
-            "PT, EN, ES y DE validados en el flujo",
+            "Landing page preparada para atribución de origen y generación de leads",
         },
-
         {
-          value: "25 TESTS",
+          value: "EDITORIAL",
           label:
-            "Node aprobados después de la integración RAG",
+            "Redacción, edición diaria, contenido y copywriting",
         },
-
         {
-          value: "13 TESTS",
+          value: "MULTICHANNEL",
           label:
-            "Python aprobados para el servicio RAG",
+            "Estrategia de expansión de marca hacia nuevas redes y formatos",
         },
-
         {
-          value: "1 REINTENTO",
+          value: "OPINSY",
           label:
-            "Máximo antes de activar el fallback seguro",
+            "IA integrada al flujo de Marketing para apoyar análisis y operación de contenido",
         },
       ],
     },
 
     links: {
-      github:
-        "https://github.com/escobardanilo/liio",
-      live:
-        "https://son-industry.vercel.app",
+      github: null,
+      live: null,
     },
   },
 
@@ -1881,293 +1877,287 @@ const son: Record<
     card: {
       category: "",
       description:
-        "Industrial AI assistant that classifies requests, evaluates responses before delivery and keeps operational authority outside the model.",
+        "MarTech and Website Marketing work at diaction, connecting SEO, CRO, content, social media, UTM and AI to acquisition and conversion.",
       tags: [
-        "Industrial AI",
-        "Operational Intelligence",
-        "AI Assistance",
-        "Human-in-the-loop",
+        "MarTech",
+        "SEO & CRO",
+        "Social Media",
+        "Automation",
       ],
     },
 
     eyebrow:
-      "INDUSTRIAL AI / OPERATIONAL INTELLIGENCE",
+      "MARTECH / WEBSITE MARKETING / SOCIAL MEDIA",
 
-    title: "SON",
+    title: "diaction",
 
     subtitle:
-      "Operational assistance with generation, evaluation and authority treated as separate responsibilities.",
+      "Web performance, content and automation connected to acquisition and conversion.",
 
     summary:
-      "SON — System Operations Navigator — is an industrial AI operations assistant for operators, technicians and supervisors. It explains technical concepts, guides investigations step by step, verifies supplied observations and escalates situations requiring an authorized human role.",
+      "At diaction I worked as Senior, Website Marketing, responsible for digital performance, SEO, CRO and web journeys. The work included a conversion-oriented landing page, UTM tracking, lead generation through CTA, content and copywriting, daily writing and editing for the brand journal, expansion into additional social networks and AI integration through Opinsy.",
 
     overview: {
       role:
-        "AI Engineering / Full-stack",
+        "Senior, Website Marketing",
       type:
-        "Industrial AI / Operational Intelligence",
+        "MarTech / Website Marketing / Social Media",
       status:
-        "Functional prototype / deployed frontend",
+        "Professional work",
     },
 
     problem: {
       title:
-        "An LLM should not decide on its own what is safe to return to an operator.",
+        "Digital Marketing loses efficiency when discovery, content and conversion operate as separate parts.",
 
       description:
-        "In an industrial environment, a plausible answer can cross authority boundaries, invent procedures or turn guidance into intervention. SON separates generation from acceptance so software remains responsible for what reaches the operator.",
+        "The work required treating the website and digital channels as a system: improving organic discovery, reducing friction across journeys, structuring pages for conversion, identifying traffic origin, maintaining daily editorial production and expanding brand presence without losing consistency.",
     },
 
     product: {
       title:
-        "An operational workspace built around the assistant.",
+        "A system for acquisition, content and digital presence.",
 
       description:
-        "SON is not an isolated chat interface. The assistant sits inside a product with operational context, assets, knowledge, activity, reporting and supervisor surfaces.",
+        "The work combined Website Marketing, Social Media and MarTech. The cover presents diaction's identity, while the visual sequence brings together pages and assets from the work, including one frame with six images arranged in two rows of three.",
 
       visuals: [
         {
           number: "01",
           label:
-            "SON / OPERATIONAL ASSISTANT",
-          title: "SON",
+            "DIACTION / BRAND",
+          title: "diaction",
           description:
-            "Operational assistant with session context, safety notice and EXPLAIN, GUIDE and VERIFY behaviors.",
-          image: "/images/son-two.png",
+            "Brand identity used as the project cover in the portfolio.",
+          image:
+            "/images/logotipo-diaction.png",
           alt:
-            "SON industrial operational assistant",
+            "diaction logo",
         },
 
         {
           number: "02",
           label:
-            "SON / SUPERVISOR",
-          title: "SON",
+            "DIACTION / BRAND SYSTEM",
+          title: "diaction",
           description:
-            "Supervisor view for sessions, operators, equipment, alerts, escalations and document activity.",
-          image: "/images/son-tree.png",
+            "Complementary visual element from the brand identity and communication system.",
+          image:
+            "/images/typographyedita-brand-logo-bon.png",
           alt:
-            "SON supervisor dashboard",
+            "diaction typography and visual system",
         },
 
         {
           number: "03",
           label:
-            "SON / EQUIPMENT",
-          title: "SON",
+            "DIACTION / WEB + SOCIAL",
+          title: "diaction",
           description:
-            "Asset directory exposing equipment, area, operational state, recent activity and related documentation.",
-          image: "/images/son-one.png",
+            "Landing pages, content and digital materials grouped into one visual frame.",
+          image: null,
           alt:
-            "SON equipment directory",
-        },
-
-        {
-          number: "04",
-          label:
-            "SON / REPORT ISSUE",
-          title: "SON",
-          description:
-            "Demonstration surface for recording an operational observation for supervisor review.",
-          image: "/images/son-four.png",
-          alt:
-            "SON operational issue report form",
+            "Six-image collection from the work completed at diaction",
+          gallery: [
+            "/images/40.png",
+            "/images/41.png",
+            "/images/42.png",
+            "/images/43.png",
+            "/images/44.png",
+            "/images/45.png",
+          ],
+          galleryAlts: [
+            "Diaction visual 40",
+            "Diaction visual 41",
+            "Diaction visual 42",
+            "Diaction visual 43",
+            "Diaction visual 44",
+            "Diaction visual 45",
+          ],
+          galleryLayout:
+            "three-by-two",
+          fullWidth: true,
         },
       ],
     },
 
     architecture: {
       title:
-        "Model output never goes directly to the operator.",
+        "From discovery to lead, the journey needs to preserve context.",
 
       description:
-        "The session enters through a server-side API, is classified by operational behavior, may receive retrieved evidence, is generated with Groq and then evaluated independently. A rejected candidate may be regenerated once before a deterministic localized fallback is returned.",
-
+        "SEO and content create discovery; the landing page concentrates proposition and CTA; UTM identifies origin; conversion turns interest into a lead; analysis and content inform the next decision. Opinsy acts as the AI layer supporting reading, production and operational consistency.",
       flow: [
-        "Input + locale",
-        "EXPLAIN / GUIDE / VERIFY",
-        "Optional RAG",
-        "Groq / generation",
-        "Evaluation + fallback",
+        "SEO + Content",
+        "Landing Page",
+        "UTM + CTA",
+        "Lead",
+        "Analysis",
+        "Opinsy / AI",
       ],
     },
 
     process: {
       title:
-        "Generation and acceptance are different processes.",
+        "Performance, content and distribution handled as one cycle.",
 
       description:
-        "The message path separates what the model generates from what the application accepts for delivery.",
+        "The work was structured across connected workstreams rather than treating website, social media, content and AI as isolated initiatives.",
 
       steps: [
         {
           number: "01",
-          title: "Input",
+          title:
+            "SEO + CRO",
           description:
-            "The client sends the selected locale and up to 30 recent conversation messages.",
+            "Responsibility for digital performance, organic visibility, pages, journeys, friction points and conversion.",
         },
         {
           number: "02",
-          title: "Classification",
+          title:
+            "Landing page",
           description:
-            "The request is classified as EXPLAIN, GUIDE or VERIFY.",
+            "Built a conversion-oriented landing page with content hierarchy and CTA defined around the intended user action.",
         },
         {
           number: "03",
-          title: "Retrieval",
+          title:
+            "UTM + source",
           description:
-            "Relevant evidence is retrieved when the optional RAG service is available.",
+            "Structured UTM URLs to distinguish source and campaign and connect traffic with lead capture.",
         },
         {
           number: "04",
-          title: "Generation",
+          title:
+            "Content + copy",
           description:
-            "Groq generates a candidate response using policy, context and available evidence.",
+            "Created content and copywriting for website and digital communication.",
         },
         {
           number: "05",
-          title: "Evaluation",
+          title:
+            "Daily journal",
           description:
-            "An independent evaluator checks safety, authority, evidence and behavioral alignment.",
+            "Daily writing and editing of news around health, food and topics relevant to the audience.",
         },
         {
           number: "06",
-          title: "Recovery",
+          title:
+            "Social media",
           description:
-            "A rejected candidate may receive one corrected generation attempt.",
+            "Developed a strategy to expand the brand into additional networks, adapt formats by channel, reuse content consistently and create new audience entry points.",
         },
         {
           number: "07",
-          title: "Fallback",
+          title:
+            "Opinsy + AI",
           description:
-            "A deterministic localized fallback is returned if correction still fails.",
-        },
-        {
-          number: "08",
-          title: "Output",
-          description:
-            "Accepted output is sanitized before it reaches the operator.",
+            "Integrated Opinsy as support for analysis, content production and organization within the Marketing workflow.",
         },
       ],
     },
 
     decisions: {
       title:
-        "Model output is only a candidate.",
+        "Decisions driven by journey, distribution and context.",
 
       description:
-        "SON's key decisions live in the contract between model, software, evidence and human authority.",
+        "The priority was to connect acquisition, content and conversion, with each element serving a clear function in the user journey.",
 
       items: [
         {
           number: "01",
           title:
-            "Classify before responding",
+            "Conversion before decoration",
           description:
-            "EXPLAIN, GUIDE and VERIFY receive explicit operational rules.",
+            "The landing page was structured around the intended action, with message, hierarchy and CTA serving that objective.",
         },
         {
           number: "02",
           title:
-            "Generator ≠ evaluator",
+            "UTM before distribution",
           description:
-            "Generation and acceptance do not depend on the same role.",
+            "Campaign links preserve source so traffic can be interpreted in the correct context after the visit.",
         },
         {
           number: "03",
           title:
-            "Software keeps authority",
+            "Content as a system",
           description:
-            "Operational boundaries are enforced outside the prompt.",
+            "Journal, website and social networks were treated as connected surfaces that could be adapted and redistributed by channel.",
         },
         {
           number: "04",
           title:
-            "Bounded recovery",
+            "Channel-specific expansion",
           description:
-            "Only one corrected generation is allowed before fallback.",
+            "The social strategy considered format, cadence, distribution and brand consistency rather than duplicating the same asset everywhere.",
         },
         {
           number: "05",
           title:
-            "Evidence is never invented",
+            "AI inside the process",
           description:
-            "Missing retrieval never permits fabricated company-specific claims.",
-        },
-        {
-          number: "06",
-          title:
-            "Human authority stays explicit",
-          description:
-            "Physical intervention and safety-critical decisions remain human responsibilities.",
+            "Opinsy was integrated as infrastructure supporting analysis and content while editorial and Marketing direction remained human-controlled.",
         },
       ],
     },
 
     stack: {
       title:
-        "Each layer has a defined responsibility.",
-
+        "MarTech applied to performance, content and execution.",
       description:
-        "Full-stack application engineering, server-side generation and evaluation, structured validation and a separate industrial retrieval layer.",
-
+        "A set of practices and systems connecting discovery, conversion, tracking, content and automation.",
       items: [
-        "Next.js 16.3.5 + React 19.2.8",
-        "TypeScript 5",
-        "Groq SDK 1.6",
-        "Zod 4.6",
-        "Python",
-        "FastAPI",
-        "Sentence Transformers",
-        "Supabase + pgvector",
+        "SEO",
+        "CRO",
+        "Landing Pages",
+        "UTM Tracking",
+        "CTA / Lead Generation",
+        "Social Media",
+        "Copywriting",
+        "Content Operations",
+        "Opinsy / AI",
       ],
     },
 
     results: {
       title:
-        "Verified technical evidence.",
-
+        "Delivered scope and applied capabilities.",
       description:
-        "The public prototype demonstrates the operational architecture while the RAG layer remains accurately scoped as locally validated infrastructure.",
-
+        "The project demonstrates real work across acquisition, conversion, content, distribution and AI integration without relying on invented metrics.",
       items: [
         {
-          value: "3 MODES",
+          value: "SEO + CRO",
           label:
-            "EXPLAIN, GUIDE and VERIFY",
+            "Digital performance, web journeys and conversion-oriented optimization",
         },
-
         {
-          value: "4 LANGUAGES",
+          value: "UTM + CTA",
           label:
-            "PT, EN, ES and DE validated across the flow",
+            "Landing page prepared for source attribution and lead generation",
         },
-
         {
-          value: "25 TESTS",
+          value: "EDITORIAL",
           label:
-            "Node tests passed after RAG integration",
+            "Daily writing, editing, content and copywriting",
         },
-
         {
-          value: "13 TESTS",
+          value: "MULTICHANNEL",
           label:
-            "Python tests passed for the RAG service",
+            "Brand expansion strategy across additional networks and formats",
         },
-
         {
-          value: "1 RETRY",
+          value: "OPINSY",
           label:
-            "Maximum regeneration attempt before safe fallback",
+            "AI integrated into the Marketing workflow to support analysis and content operations",
         },
       ],
     },
 
     links: {
-      github:
-        "https://github.com/escobardanilo/liio",
-      live:
-        "https://son-industry.vercel.app",
+      github: null,
+      live: null,
     },
   },
 
@@ -2175,293 +2165,287 @@ const son: Record<
     card: {
       category: "",
       description:
-        "Industrieller KI-Assistent, der Anfragen klassifiziert, Antworten vor der Ausgabe bewertet und operative Autorität außerhalb des Modells hält.",
+        "MarTech- und Website-Marketing-Arbeit bei diaction, die SEO, CRO, Content, Social Media, UTM und KI mit Akquisition und Conversion verbindet.",
       tags: [
-        "Industrial AI",
-        "Operational Intelligence",
-        "AI Assistance",
-        "Human-in-the-loop",
+        "MarTech",
+        "SEO & CRO",
+        "Social Media",
+        "Automation",
       ],
     },
 
     eyebrow:
-      "INDUSTRIAL AI / OPERATIONAL INTELLIGENCE",
+      "MARTECH / WEBSITE MARKETING / SOCIAL MEDIA",
 
-    title: "SON",
+    title: "diaction",
 
     subtitle:
-      "Operative Assistenz mit getrennten Verantwortlichkeiten für Generierung, Bewertung und Autorität.",
+      "Web-Performance, Content und Automatisierung verbunden mit Akquisition und Conversion.",
 
     summary:
-      "SON — System Operations Navigator — ist ein industrieller KI-Assistent für Operatoren, Techniker und Supervisoren. Er erklärt technische Konzepte, begleitet Untersuchungen schrittweise, prüft Beobachtungen und eskaliert Situationen, die eine autorisierte menschliche Rolle erfordern.",
+      "Bei diaction arbeitete ich als Senior, Website Marketing, mit Verantwortung für digitale Performance, SEO, CRO und Web Journeys. Dazu gehörten eine conversion-orientierte Landing Page, UTM-Tracking, Lead-Generierung über CTA, Content und Copywriting, tägliche Redaktion des Markenjournals, Expansion in weitere soziale Netzwerke und KI-Integration über Opinsy.",
 
     overview: {
       role:
-        "AI Engineering / Full-stack",
+        "Senior, Website Marketing",
       type:
-        "Industrial AI / Operational Intelligence",
+        "MarTech / Website Marketing / Social Media",
       status:
-        "Funktionsfähiger Prototyp / Frontend deployed",
+        "Professionelle Arbeit",
     },
 
     problem: {
       title:
-        "Ein LLM sollte nicht allein entscheiden, was an einen Operator ausgegeben werden darf.",
+        "Digitales Marketing verliert Effizienz, wenn Discovery, Content und Conversion getrennt voneinander arbeiten.",
 
       description:
-        "In industriellen Umgebungen können plausible Antworten Autoritätsgrenzen überschreiten oder Verfahren erfinden. SON trennt Generierung und Akzeptanz, damit die Software die Kontrolle behält.",
+        "Die Aufgabe erforderte, Website und digitale Kanäle als System zu behandeln: organische Auffindbarkeit verbessern, Reibung in Journeys reduzieren, Seiten auf Conversion ausrichten, Traffic-Ursprung identifizieren, tägliche redaktionelle Produktion sicherstellen und Markenpräsenz konsistent erweitern.",
     },
 
     product: {
       title:
-        "Ein operativer Workspace rund um den Assistenten.",
+        "Ein System für Akquisition, Content und digitale Präsenz.",
 
       description:
-        "SON ist kein isolierter Chat. Der Assistent ist Teil eines Produkts mit operativem Kontext, Assets, Wissen, Aktivität, Reporting und Supervisor-Oberflächen.",
+        "Die Arbeit verband Website Marketing, Social Media und MarTech. Das Cover zeigt die diaction-Identität; die visuelle Sequenz vereint Seiten und Materialien aus der Arbeit, einschließlich eines Frames mit sechs Bildern in zwei Reihen zu je drei.",
 
       visuals: [
         {
           number: "01",
           label:
-            "SON / OPERATIONAL ASSISTANT",
-          title: "SON",
+            "DIACTION / BRAND",
+          title: "diaction",
           description:
-            "Operativer Assistent mit Sitzungskontext, Sicherheitshinweis und EXPLAIN-, GUIDE- und VERIFY-Verhalten.",
-          image: "/images/son-two.png",
+            "Markenidentität als Cover des Projekts im Portfolio.",
+          image:
+            "/images/logotipo-diaction.png",
           alt:
-            "Industrieller SON Operations Assistant",
+            "diaction Logo",
         },
 
         {
           number: "02",
           label:
-            "SON / SUPERVISOR",
-          title: "SON",
+            "DIACTION / BRAND SYSTEM",
+          title: "diaction",
           description:
-            "Supervisor-Ansicht für Sitzungen, Operatoren, Geräte, Warnungen, Eskalationen und Dokumentaktivität.",
-          image: "/images/son-tree.png",
+            "Ergänzendes visuelles Element der Markenidentität und Kommunikation.",
+          image:
+            "/images/typographyedita-brand-logo-bon.png",
           alt:
-            "SON Supervisor Dashboard",
+            "Typografie- und visuelles System von diaction",
         },
 
         {
           number: "03",
           label:
-            "SON / EQUIPMENT",
-          title: "SON",
+            "DIACTION / WEB + SOCIAL",
+          title: "diaction",
           description:
-            "Asset-Verzeichnis mit Geräten, Bereich, Status, letzter Aktivität und Dokumentation.",
-          image: "/images/son-one.png",
+            "Landing Pages, Content und digitale Materialien in einem gemeinsamen visuellen Frame.",
+          image: null,
           alt:
-            "SON Equipment Directory",
-        },
-
-        {
-          number: "04",
-          label:
-            "SON / REPORT ISSUE",
-          title: "SON",
-          description:
-            "Demonstrationsoberfläche zur Erfassung operativer Beobachtungen für die Supervisor-Prüfung.",
-          image: "/images/son-four.png",
-          alt:
-            "SON Formular für operative Beobachtungen",
+            "Sechs Bilder der Arbeit für diaction",
+          gallery: [
+            "/images/40.png",
+            "/images/41.png",
+            "/images/42.png",
+            "/images/43.png",
+            "/images/44.png",
+            "/images/45.png",
+          ],
+          galleryAlts: [
+            "Diaction Visual 40",
+            "Diaction Visual 41",
+            "Diaction Visual 42",
+            "Diaction Visual 43",
+            "Diaction Visual 44",
+            "Diaction Visual 45",
+          ],
+          galleryLayout:
+            "three-by-two",
+          fullWidth: true,
         },
       ],
     },
 
     architecture: {
       title:
-        "Modellantworten gehen niemals direkt an den Operator.",
+        "Von Discovery bis Lead muss die Journey Kontext erhalten.",
 
       description:
-        "Die Sitzung wird serverseitig klassifiziert, kann RAG-Evidenz erhalten, wird mit Groq generiert und anschließend unabhängig bewertet. Ein abgelehnter Kandidat darf einmal korrigiert werden, bevor ein deterministischer Fallback verwendet wird.",
-
+        "SEO und Content erzeugen Discovery; die Landing Page bündelt Proposition und CTA; UTM identifiziert den Ursprung; Conversion macht Interesse zum Lead; Analyse und Content informieren die nächste Entscheidung. Opinsy dient als KI-Schicht für Analyse, Produktion und operative Konsistenz.",
       flow: [
-        "Input + Locale",
-        "EXPLAIN / GUIDE / VERIFY",
-        "Optionales RAG",
-        "Groq / Generierung",
-        "Bewertung + Fallback",
+        "SEO + Content",
+        "Landing Page",
+        "UTM + CTA",
+        "Lead",
+        "Analyse",
+        "Opinsy / AI",
       ],
     },
 
     process: {
       title:
-        "Generierung und Akzeptanz sind getrennte Prozesse.",
+        "Performance, Content und Distribution als ein gemeinsamer Zyklus.",
 
       description:
-        "Der Ablauf trennt Modelloutput von der Entscheidung der Anwendung, diesen Output auszuliefern.",
+        "Die Arbeit wurde als verbundene Workstreams strukturiert, statt Website, Social Media, Content und KI als isolierte Initiativen zu behandeln.",
 
       steps: [
         {
           number: "01",
-          title: "Input",
+          title:
+            "SEO + CRO",
           description:
-            "Der Client sendet Locale und den aktuellen Gesprächskontext.",
+            "Verantwortung für digitale Performance, organische Sichtbarkeit, Seiten, Journeys, Reibungspunkte und Conversion.",
         },
         {
           number: "02",
-          title: "Klassifizierung",
+          title:
+            "Landing Page",
           description:
-            "Die Anfrage wird als EXPLAIN, GUIDE oder VERIFY klassifiziert.",
+            "Entwicklung einer conversion-orientierten Landing Page mit klarer Inhaltshierarchie und CTA.",
         },
         {
           number: "03",
-          title: "Retrieval",
+          title:
+            "UTM + Herkunft",
           description:
-            "Bei verfügbarem RAG werden relevante Evidenz-Chunks abgerufen.",
+            "Strukturierung von UTM-URLs zur Unterscheidung von Quelle und Kampagne und zur Verbindung von Traffic mit Lead-Erfassung.",
         },
         {
           number: "04",
-          title: "Generierung",
+          title:
+            "Content + Copy",
           description:
-            "Groq erzeugt eine Antwortkandidatin aus Policy, Kontext und Evidenz.",
+            "Erstellung von Content und Copywriting für Website und digitale Kommunikation.",
         },
         {
           number: "05",
-          title: "Bewertung",
+          title:
+            "Tägliches Journal",
           description:
-            "Ein unabhängiger Evaluator prüft Sicherheit, Autorität und Evidenzgrenzen.",
+            "Tägliche Redaktion von Nachrichten zu Gesundheit, Ernährung und relevanten Themen für die Zielgruppe.",
         },
         {
           number: "06",
-          title: "Recovery",
+          title:
+            "Social Media",
           description:
-            "Ein abgelehnter Kandidat kann einmal korrigiert werden.",
+            "Strategie zur Expansion in weitere Netzwerke, zur Anpassung von Formaten pro Kanal, zur konsistenten Wiederverwendung von Content und für neue Audience-Einstiegspunkte.",
         },
         {
           number: "07",
-          title: "Fallback",
+          title:
+            "Opinsy + KI",
           description:
-            "Bei erneutem Fehler wird deterministischer lokalisierter Text geliefert.",
-        },
-        {
-          number: "08",
-          title: "Output",
-          description:
-            "Akzeptierter Output wird vor der Ausgabe sanitisiert.",
+            "Integration von Opinsy als Unterstützung für Analyse, Content-Produktion und Organisation innerhalb des Marketing-Workflows.",
         },
       ],
     },
 
     decisions: {
       title:
-        "Modelloutput ist nur ein Kandidat.",
+        "Entscheidungen entlang von Journey, Distribution und Kontext.",
 
       description:
-        "Die wichtigsten Entscheidungen liegen zwischen Modell, Software, Evidenz und menschlicher Autorität.",
+        "Priorität war die Verbindung von Akquisition, Content und Conversion mit klaren Funktionen entlang der User Journey.",
 
       items: [
         {
           number: "01",
           title:
-            "Vor der Antwort klassifizieren",
+            "Conversion vor Dekoration",
           description:
-            "EXPLAIN, GUIDE und VERIFY besitzen eigene operative Regeln.",
+            "Die Landing Page wurde von der gewünschten Nutzeraktion aus strukturiert; Botschaft, Hierarchie und CTA dienen diesem Ziel.",
         },
         {
           number: "02",
           title:
-            "Generator ≠ Evaluator",
+            "UTM vor Distribution",
           description:
-            "Generierung und Akzeptanz sind voneinander getrennt.",
+            "Kampagnenlinks bewahren die Herkunft, damit Traffic nach dem Besuch im richtigen Kontext gelesen werden kann.",
         },
         {
           number: "03",
           title:
-            "Software behält Autorität",
+            "Content als System",
           description:
-            "Operative Grenzen werden außerhalb des Prompts erzwungen.",
+            "Journal, Website und Social Networks wurden als verbundene Flächen behandelt, die je Kanal angepasst und verteilt werden können.",
         },
         {
           number: "04",
           title:
-            "Begrenzte Recovery",
+            "Kanalspezifische Expansion",
           description:
-            "Nur eine Korrekturgenerierung ist vor dem Fallback erlaubt.",
+            "Die Social-Strategie berücksichtigte Format, Frequenz, Distribution und Markenkonsistenz.",
         },
         {
           number: "05",
           title:
-            "Evidenz wird nicht erfunden",
+            "KI im Prozess",
           description:
-            "Fehlendes Retrieval erlaubt keine erfundenen dokumentbezogenen Aussagen.",
-        },
-        {
-          number: "06",
-          title:
-            "Menschliche Autorität bleibt explizit",
-          description:
-            "Physische Eingriffe und kritische Entscheidungen bleiben menschliche Verantwortung.",
+            "Opinsy wurde als Infrastruktur für Analyse und Content integriert, während redaktionelle und Marketing-Entscheidungen unter menschlicher Kontrolle blieben.",
         },
       ],
     },
 
     stack: {
       title:
-        "Jede Schicht besitzt eine definierte Verantwortung.",
-
+        "MarTech angewendet auf Performance, Content und Ausführung.",
       description:
-        "Full-stack Anwendung, serverseitige KI, strukturierte Validierung und eine separate Retrieval-Schicht.",
-
+        "Ein Set aus Praktiken und Systemen, das Discovery, Conversion, Tracking, Content und Automatisierung verbindet.",
       items: [
-        "Next.js 16.3.5 + React 19.2.8",
-        "TypeScript 5",
-        "Groq SDK 1.6",
-        "Zod 4.6",
-        "Python",
-        "FastAPI",
-        "Sentence Transformers",
-        "Supabase + pgvector",
+        "SEO",
+        "CRO",
+        "Landing Pages",
+        "UTM Tracking",
+        "CTA / Lead Generation",
+        "Social Media",
+        "Copywriting",
+        "Content Operations",
+        "Opinsy / AI",
       ],
     },
 
     results: {
       title:
-        "Verifizierte technische Ergebnisse.",
-
+        "Gelieferter Umfang und eingesetzte Fähigkeiten.",
       description:
-        "Der öffentliche Prototyp demonstriert die operative Architektur; RAG bleibt korrekt als lokal validierte Schicht ausgewiesen.",
-
+        "Das Projekt zeigt reale Arbeit in Akquisition, Conversion, Content, Distribution und KI-Integration ohne erfundene Kennzahlen.",
       items: [
         {
-          value: "3 MODI",
+          value: "SEO + CRO",
           label:
-            "EXPLAIN, GUIDE und VERIFY",
+            "Digitale Performance, Web Journeys und conversion-orientierte Optimierung",
         },
-
         {
-          value: "4 SPRACHEN",
+          value: "UTM + CTA",
           label:
-            "PT, EN, ES und DE im Ablauf validiert",
+            "Landing Page für Herkunftszuordnung und Lead-Generierung",
         },
-
         {
-          value: "25 TESTS",
+          value: "EDITORIAL",
           label:
-            "Node-Tests nach der RAG-Integration bestanden",
+            "Tägliche Redaktion, Content und Copywriting",
         },
-
         {
-          value: "13 TESTS",
+          value: "MULTICHANNEL",
           label:
-            "Python-Tests für den RAG-Service bestanden",
+            "Strategie zur Markenexpansion über weitere Netzwerke und Formate",
         },
-
         {
-          value: "1 VERSUCH",
+          value: "OPINSY",
           label:
-            "Maximale Regenerierung vor dem sicheren Fallback",
+            "KI im Marketing-Workflow zur Unterstützung von Analyse und Content Operations",
         },
       ],
     },
 
     links: {
-      github:
-        "https://github.com/escobardanilo/liio",
-      live:
-        "https://son-industry.vercel.app",
+      github: null,
+      live: null,
     },
   },
 };
@@ -3786,7 +3770,7 @@ export function getProjectContent(
   if (slug === "project-02") {
     return {
       number: "02",
-      ...son[language],
+      ...diaction[language],
     };
   }
 
