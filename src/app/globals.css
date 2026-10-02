@@ -397,44 +397,13 @@ button {
 
   align-items: center;
 
-  padding-top: clamp(46px, 6vh, 72px);
-  padding-bottom: clamp(34px, 5vh, 52px);
+  padding-top: clamp(48px, 6vh, 76px);
+  padding-bottom: clamp(34px, 5vh, 54px);
 }
 
-.hero__top {
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 9px;
-
-  text-align: center;
-}
-
-.hero__eyebrow,
-.hero__secondary {
-  font-size: 10px;
-  line-height: 1.35;
-
-  font-weight: 600;
-
-  letter-spacing: 0.16em;
-}
-
-.hero__eyebrow {
-  color: var(--foreground);
-}
-
-.hero__secondary {
-  color: var(--muted);
-}
-
+.hero__top,
 .hero__main {
   width: 100%;
-
-  margin-top: clamp(24px, 3vh, 34px);
 
   display: flex;
   justify-content: center;
@@ -442,10 +411,27 @@ button {
   text-align: center;
 }
 
+.hero__eyebrow {
+  max-width: 760px;
+
+  font-size: 10px;
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  color: var(--muted);
+}
+
+.hero__main {
+  margin-top: clamp(26px, 3vh, 38px);
+}
+
 .hero__title {
   max-width: 980px;
 
-  font-size: clamp(64px, 7vw, 112px);
+  font-size: clamp(64px, 7vw, 118px);
 
   line-height: 0.88;
 
@@ -454,10 +440,10 @@ button {
   letter-spacing: -0.065em;
 }
 
-.hero__positioning {
-  width: min(100%, 820px);
+.hero__manifesto {
+  width: min(100%, 860px);
 
-  margin-top: clamp(38px, 4.5vh, 56px);
+  margin-top: clamp(42px, 5vh, 64px);
 
   display: flex;
   flex-direction: column;
@@ -465,25 +451,41 @@ button {
   align-items: center;
 }
 
-.hero__positioning-title {
+.hero__manifesto-title {
+  width: 100%;
+
   max-width: 760px;
+
+  margin-bottom: 28px;
 
   text-align: center;
 
   font-size: clamp(20px, 1.5vw, 22px);
 
-  line-height: 1.3;
+  line-height: 1.25;
 
   font-weight: 500;
 
   letter-spacing: -0.025em;
+
+  color: var(--foreground);
 }
 
-.hero__positioning-copy {
+.hero__manifesto-copy {
+  width: 100%;
+
   max-width: 760px;
 
-  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
 
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.hero__manifesto-copy p {
   font-size: 16px;
 
   line-height: 1.62;
@@ -496,63 +498,41 @@ button {
 }
 
 .hero__footer {
-  width: min(100%, 820px);
+  width: min(100%, 980px);
 
-  margin-top: 34px;
+  margin-top: 38px;
 
-  padding-top: 20px;
+  padding-top: 22px;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 12px;
+  justify-content: flex-end;
 }
 
-.hero__button {
-  min-width: 176px;
-  min-height: 46px;
+.hero__link {
+  width: min(240px, 100%);
 
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  padding: 0 22px;
+  gap: 34px;
 
-  border-radius: 0;
+  padding-bottom: 10px;
 
-  font-size: 12px;
-  font-weight: 500;
+  border-bottom: 1px solid var(--foreground);
+
+  font-size: 11px;
   line-height: 1;
 
-  transition:
-    background-color 180ms ease,
-    color 180ms ease,
-    border-color 180ms ease;
+  transition: opacity 180ms ease;
 }
 
-.hero__button--primary {
-  background: #111111;
-  color: #ffffff;
-
-  border: 1px solid #111111;
+.hero__link:hover {
+  opacity: 0.58;
 }
 
-.hero__button--primary:hover {
-  background: #ffffff;
-  color: #111111;
-
-  border-color: #111111;
-}
-
-.hero__button--secondary {
-  background: rgba(0, 0, 0, 0.01);
-
-  color: var(--foreground);
-
-  border: 1px solid transparent;
-
-  transition: none;
+.hero__link span:last-child {
+  font-size: 15px;
 }
 
 /* =========================================================
@@ -1013,29 +993,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-
-.project-card__image {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: contain;
-}
-
-.project-card__visual-center--diaction {
-  padding: clamp(24px, 3vw, 42px);
-}
-
-.project-card__visual-center--diaction
-  .project-card__image {
-  width: min(82%, 760px);
-  height: auto;
-  max-height: 82%;
-
-  object-fit: contain;
 }
 
 .project-card__visual-center span {
@@ -1526,14 +1483,17 @@ button {
     font-size: clamp(58px, 11vw, 92px);
   }
 
-  .hero__positioning,
-  .hero__footer {
+  .hero__manifesto {
     width: min(100%, 720px);
   }
 
-  .hero__positioning-title,
-  .hero__positioning-copy {
+  .hero__manifesto-title,
+  .hero__manifesto-copy {
     max-width: 680px;
+  }
+
+  .hero__footer {
+    width: min(100%, 720px);
   }
 
   .section-intro {
@@ -1696,9 +1656,8 @@ button {
     padding-bottom: 28px;
   }
 
-  .hero__eyebrow,
-  .hero__secondary {
-    max-width: 320px;
+  .hero__eyebrow {
+    max-width: 310px;
 
     font-size: 8px;
 
@@ -1721,36 +1680,38 @@ button {
     letter-spacing: -0.06em;
   }
 
-  .hero__positioning {
-    margin-top: 32px;
+  .hero__manifesto {
+    margin-top: 34px;
   }
 
-  .hero__positioning-title {
+  .hero__manifesto-title {
+    margin-bottom: 22px;
+
     font-size: 20px;
+
+    text-align: center;
   }
 
-  .hero__positioning-copy {
-    margin-top: 20px;
+  .hero__manifesto-copy {
+    gap: 16px;
+  }
 
+  .hero__manifesto-copy p {
     font-size: 15px;
 
     line-height: 1.6;
   }
 
   .hero__footer {
-    margin-top: 28px;
+    margin-top: 30px;
 
     padding-top: 18px;
-
-    flex-direction: column;
-
-    gap: 10px;
   }
 
-  .hero__button {
+  .hero__link {
     width: 100%;
 
-    max-width: 280px;
+    max-width: 210px;
   }
 
   .tech-stack,
@@ -1874,16 +1835,6 @@ button {
 
   .project-card__visual-center span {
     font-size: 26px;
-  }
-
-  .project-card__visual-center--diaction {
-    padding: 20px;
-  }
-
-  .project-card__visual-center--diaction
-    .project-card__image {
-    width: min(86%, 460px);
-    max-height: 84%;
   }
 
   .project-card__heading {

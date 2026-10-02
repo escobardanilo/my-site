@@ -128,92 +128,92 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     hero: {
-      eyebrow: "AI ENGINEER",
+      eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
       description:
-        "Desenvolvo sistemas que conectam IA, software, dados, APIs e workflows para analisar informação, automatizar processos e apoiar decisões em Marketing, negócio e operação.",
+        "Projeto e desenvolvo sistemas inteligentes que conectam IA, software, dados e fluxos operacionais em produtos fiáveis.",
       selectedWork: "Ver projetos",
     },
 
     stack: {
-      eyebrow: "ENGENHARIA & SISTEMAS",
-      title: "Tecnologia ligada ao trabalho que precisa executar.",
+      eyebrow: "TECH STACK",
+      title: "Engenharia de sistemas em torno da IA.",
       description:
-        "IA, software, dados, integrações e automação tratados como partes do mesmo sistema, com responsabilidades claras entre interpretação, execução e controlo.",
+        "As capacidades de engenharia que utilizo para transformar modelos de IA, software, dados e requisitos operacionais em aplicações fiáveis.",
       capabilities: [
         {
           number: "01",
-          title: "AI Systems",
+          title: "Sistemas de IA",
           description:
-            "LLMs, agentes, RAG, ferramentas e outputs estruturados integrados em aplicações com contexto, validação e limites explícitos.",
+            "Desenvolvimento de aplicações baseadas em IA que conectam modelos, dados estruturados, lógica de software e fluxos reais de produto.",
         },
         {
           number: "02",
-          title: "Automation & Orchestration",
+          title: "Integração de LLMs",
           description:
-            "APIs, agentes, workflows, triggers e regras de negócio conectados para reduzir trabalho manual e coordenar execução entre sistemas.",
+            "Integração de modelos de linguagem com APIs, ferramentas, camadas de validação e lógica determinística de aplicação.",
         },
         {
           number: "03",
-          title: "MarTech Systems",
+          title: "Backend & APIs",
           description:
-            "Sistemas e dados aplicados a CRM, analytics, comportamento, segmentação, campanhas, personalização e apoio à decisão.",
+            "Construção de backends e APIs que garantem comunicação fiável entre IA, produtos e sistemas externos.",
         },
         {
           number: "04",
-          title: "Data & Decision Systems",
+          title: "Dados & Validação",
           description:
-            "Estruturação e cruzamento de dados para identificar padrões, acompanhar comportamento e melhorar o contexto disponível para decisão.",
+            "Estruturação de dados, validação de outputs de modelos e criação de limites previsíveis entre IA e software.",
         },
         {
           number: "05",
-          title: "Software & APIs",
+          title: "Product Engineering",
           description:
-            "Aplicações, backends, integrações, bases de dados e contratos tipados que sustentam a camada de IA e conectam sistemas externos.",
+            "Transformação de capacidades técnicas em produtos utilizáveis, com arquitetura clara, fluxos de interação e código sustentável.",
         },
         {
           number: "06",
-          title: "Control & Validation",
+          title: "Automação Operacional",
           description:
-            "Regras determinísticas, permissões, auditabilidade e human-in-the-loop para manter decisões e ações críticas sob controlo.",
+            "Engenharia de sistemas que automatizam fluxos operacionais preservando controlo, rastreabilidade e supervisão humana.",
         },
       ],
     },
 
     expertise: {
-      eyebrow: "ÁREAS DE ESPECIALIZAÇÃO",
-      title: "IA como eixo. MarTech e Automation como aplicação.",
+      eyebrow: "ESPECIALIZAÇÃO PROFISSIONAL",
+      title: "Da capacidade de IA ao software em produção.",
       description:
-        "Trabalho na interseção entre AI Engineering, software, Marketing e operação, usando IA como infraestrutura integrada a dados, sistemas e processos reais.",
+        "O meu trabalho encontra-se entre inteligência artificial, engenharia de software e sistemas operacionais, transformando capacidades técnicas em produtos capazes de funcionar de forma fiável em ambientes reais.",
       items: [
         {
           number: "01",
           title: "AI Engineering",
           description:
-            "Construção de sistemas onde modelos participam de processos reais através de contexto, ferramentas, dados, APIs, regras e validação.",
+            "Conceção e implementação de sistemas de software baseados em IA que combinam modelos de linguagem, lógica de aplicação, outputs estruturados e fluxos de produção.",
           capabilities: [
-            "LLMs & agentes",
-            "RAG & ferramentas",
+            "Aplicações com LLMs",
             "Outputs estruturados",
-            "Validação",
+            "Fluxos assistidos por IA",
+            "Integração de modelos",
           ],
         },
         {
           number: "02",
-          title: "MarTech & Data",
+          title: "Software Engineering",
           description:
-            "Aplicação de software, IA e dados a comportamento, CRM, analytics, segmentação, campanhas, personalização e suporte à decisão.",
-          capabilities: ["CRM & analytics", "Segmentação", "Campanhas", "Personalização"],
+            "Desenvolvimento de produtos de software fiáveis com arquitetura clara, interfaces tipadas, APIs e lógica de aplicação sustentável.",
+          capabilities: ["TypeScript", "Next.js", "React", "FastAPI"],
         },
         {
           number: "03",
-          title: "Automation & Operations",
+          title: "Inteligência Operacional",
           description:
-            "Integração de sistemas, agentes, APIs e workflows para reduzir trabalho manual, coordenar processos e tornar execução e decisão mais rastreáveis.",
+            "Transformação de requisitos operacionais em fluxos de software controlados, com rastreabilidade, validação e camadas determinísticas de decisão.",
           capabilities: [
-            "Workflow automation",
-            "APIs & integrações",
-            "Agentes",
-            "Processos operacionais",
+            "Automação de workflows",
+            "Regras de negócio",
+            "Validação",
+            "Auditabilidade",
           ],
         },
       ],
@@ -221,9 +221,9 @@ export const translations: Record<Language, SiteCopy> = {
 
     work: {
       eyebrow: "ATUAÇÃO",
-      title: "Engenharia aplicada onde dados, decisões e execução se encontram.",
+      title: "Engenharia moldada pela operação.",
       description:
-        "O trabalho parte do processo real: que informação existe, que decisão precisa de contexto, que sistemas precisam comunicar e o que pode ser automatizado sem perder controlo.",
+        "O meu trabalho combina contexto operacional com software e AI Engineering, trazendo uma perspetiva prática sobre como os sistemas precisam funcionar para além da camada técnica.",
       items: [
         {
           number: "01",
@@ -241,16 +241,16 @@ export const translations: Record<Language, SiteCopy> = {
         },
         {
           number: "02",
-          period: "SISTEMAS APLICADOS",
-          role: "MarTech & Automation",
-          context: "MARKETING & OPERAÇÃO",
+          period: "CONTEXTO OPERACIONAL",
+          role: "Operações & Sistemas",
+          context: "PROCESSOS & OPERAÇÕES",
           description:
-            "Aplicação de dados, integrações e automação a processos de Marketing e operação — de CRM, analytics e comportamento a workflows, sistemas internos e execução entre ferramentas.",
+            "Trabalho com processos operacionais, sistemas e fluxos estruturados, transformando requisitos reais de negócio em formas de trabalho mais claras, controladas e mensuráveis.",
           focus: [
-            "CRM & Analytics",
-            "Segmentação & campanhas",
-            "Workflows & APIs",
-            "Automação de processos",
+            "Operações",
+            "Análise de processos",
+            "Design de workflows",
+            "Inteligência operacional",
           ],
         },
       ],
@@ -258,9 +258,9 @@ export const translations: Record<Language, SiteCopy> = {
 
     projects: {
       eyebrow: "PROJETOS SELECIONADOS",
-      title: "IA aplicada dentro de sistemas, não ao lado deles.",
+      title: "Sistemas concebidos para resolver problemas reais.",
       description:
-        "Projetos onde modelos, dados, software e workflows fazem parte da mesma arquitetura — em operações financeiras, ambiente industrial e contexto clínico.",
+        "Uma seleção de projetos de engenharia focados em IA, sistemas de software, fluxos operacionais e desenvolvimento de produto.",
       visual: "VISUAL DO PROJETO",
       viewCase: "Ver case study",
       items: [
@@ -293,9 +293,9 @@ export const translations: Record<Language, SiteCopy> = {
 
     about: {
       eyebrow: "SOBRE",
-      title: "IA como parte da infraestrutura do trabalho.",
+      title: "IA, software e operações no mesmo sistema.",
       statement:
-        "Trabalho na ligação entre AI Engineering, software, dados, Marketing e operação, com modelos inseridos em arquiteturas maiores e controladas.",
+        "Trabalho na interseção entre AI Engineering, desenvolvimento de software e sistemas operacionais, construindo produtos onde os modelos são apenas uma parte de uma arquitetura maior e controlada.",
       approach: "ABORDAGEM",
       paragraphs: [
         "O meu trabalho concentra-se em transformar capacidades técnicas em sistemas funcionais. Isso significa conectar modelos com dados, APIs, interfaces, regras determinísticas e camadas de validação, em vez de tratar a IA como um componente isolado.",
@@ -328,7 +328,7 @@ export const translations: Record<Language, SiteCopy> = {
       titleLineOne: "Vamos construir",
       titleLineTwo: "algo juntos.",
       description:
-        "Disponível para projetos e oportunidades relacionados com AI Engineering, MarTech, Automation, sistemas de software e integração de IA em processos de negócio e operação.",
+        "Disponível para conversas sobre AI Engineering, sistemas de software, produtos inteligentes e tecnologia aplicada a operações.",
     },
 
     footer: {
@@ -356,90 +356,90 @@ export const translations: Record<Language, SiteCopy> = {
     hero: {
       eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
       description:
-        "Desarrollo sistemas que conectan IA, software, datos, APIs y workflows para analizar información, automatizar procesos y apoyar decisiones en Marketing, negocio y operación.",
+        "Diseño y desarrollo sistemas inteligentes que conectan IA, software, datos y flujos operativos en productos fiables.",
       selectedWork: "Ver proyectos",
     },
 
     stack: {
-      eyebrow: "INGENIERÍA & SISTEMAS",
-      title: "Tecnología conectada al trabajo que debe ejecutar.",
+      eyebrow: "TECH STACK",
+      title: "Ingeniería de sistemas alrededor de la IA.",
       description:
-        "IA, software, datos, integraciones y automatización tratados como partes del mismo sistema, con responsabilidades claras entre interpretación, ejecución y control.",
+        "Las capacidades de ingeniería que utilizo para convertir modelos de IA, software, datos y requisitos operativos en aplicaciones fiables.",
       capabilities: [
         {
           number: "01",
-          title: "AI Systems",
+          title: "Sistemas de IA",
           description:
-            "LLMs, agentes, RAG, herramientas y outputs estructurados integrados en aplicaciones con contexto, validación y límites explícitos.",
+            "Desarrollo de aplicaciones impulsadas por IA que conectan modelos, datos estructurados, lógica de software y flujos reales de producto.",
         },
         {
           number: "02",
-          title: "Automation & Orchestration",
+          title: "Integración de LLMs",
           description:
-            "APIs, agentes, workflows, triggers y reglas de negocio conectados para reducir trabajo manual y coordinar la ejecución entre sistemas.",
+            "Integración de modelos de lenguaje con APIs, herramientas, capas de validación y lógica determinista de aplicación.",
         },
         {
           number: "03",
-          title: "MarTech Systems",
+          title: "Backend & APIs",
           description:
-            "Sistemas y datos aplicados a CRM, analytics, comportamiento, segmentación, campañas, personalización y apoyo a la decisión.",
+            "Construcción de backends y APIs que permiten una comunicación fiable entre IA, productos y sistemas externos.",
         },
         {
           number: "04",
-          title: "Data & Decision Systems",
+          title: "Datos & Validación",
           description:
-            "Estructuración y cruce de datos para identificar patrones, seguir comportamiento y mejorar el contexto disponible para decidir.",
+            "Estructuración de datos, validación de outputs y creación de límites predecibles entre IA y software.",
         },
         {
           number: "05",
-          title: "Software & APIs",
+          title: "Product Engineering",
           description:
-            "Aplicaciones, backends, integraciones, bases de datos y contratos tipados que sostienen la capa de IA y conectan sistemas externos.",
+            "Transformación de capacidades técnicas en productos utilizables con arquitectura clara, flujos de interacción y código mantenible.",
         },
         {
           number: "06",
-          title: "Control & Validation",
+          title: "Automatización Operativa",
           description:
-            "Reglas deterministas, permisos, auditabilidad y human-in-the-loop para mantener decisiones y acciones críticas bajo control.",
+            "Ingeniería de sistemas que automatizan flujos operativos preservando control, trazabilidad y supervisión humana.",
         },
       ],
     },
 
     expertise: {
-      eyebrow: "ÁREAS DE ESPECIALIZACIÓN",
-      title: "IA como eje. MarTech y Automation como aplicación.",
+      eyebrow: "ESPECIALIZACIÓN PROFESIONAL",
+      title: "De la capacidad de IA al software en producción.",
       description:
-        "Trabajo en la intersección entre AI Engineering, software, Marketing y operación, usando IA como infraestructura conectada a datos, sistemas y procesos reales.",
+        "Mi trabajo se sitúa entre inteligencia artificial, ingeniería de software y sistemas operativos, transformando capacidades técnicas en productos fiables para entornos reales.",
       items: [
         {
           number: "01",
           title: "AI Engineering",
           description:
-            "Construcción de sistemas donde los modelos participan en procesos reales mediante contexto, herramientas, datos, APIs, reglas y validación.",
+            "Diseño e implementación de sistemas de software basados en IA que combinan modelos de lenguaje, lógica de aplicación, outputs estructurados y flujos de producción.",
           capabilities: [
-            "LLMs & agentes",
-            "RAG & herramientas",
+            "Aplicaciones con LLMs",
             "Outputs estructurados",
-            "Validación",
+            "Flujos asistidos por IA",
+            "Integración de modelos",
           ],
         },
         {
           number: "02",
-          title: "MarTech & Data",
+          title: "Software Engineering",
           description:
-            "Aplicación de software, IA y datos a comportamiento, CRM, analytics, segmentación, campañas, personalización y apoyo a la decisión.",
-          capabilities: ["CRM & analytics", "Segmentación", "Campañas", "Personalización"],
+            "Desarrollo de productos de software fiables con arquitectura clara, interfaces tipadas, APIs y lógica mantenible.",
+          capabilities: ["TypeScript", "Next.js", "React", "FastAPI"],
         },
         {
           number: "03",
-          title: "Automation & Operations",
+          title: "Inteligencia Operativa",
           description:
-            "Integración de sistemas, agentes, APIs y workflows para reducir trabajo manual, coordinar procesos y hacer la ejecución y la decisión más trazables.",
+            "Transformación de requisitos operativos en flujos controlados con trazabilidad, validación y capas deterministas de decisión.",
           capabilities: [
-            "Workflow automation",
-            "APIs & integraciones",
-            "Agentes",
-            "Procesos operativos",
+            "Automatización de workflows",
+            "Reglas de negocio",
+            "Validación",
+            "Auditabilidad",
           ],
         },
       ],
@@ -447,9 +447,9 @@ export const translations: Record<Language, SiteCopy> = {
 
     work: {
       eyebrow: "ÁREAS DE ACTUACIÓN",
-      title: "Ingeniería aplicada donde se encuentran datos, decisiones y ejecución.",
+      title: "Ingeniería moldeada por la operación.",
       description:
-        "El trabajo parte del proceso real: qué información existe, qué decisión necesita contexto, qué sistemas deben comunicarse y qué puede automatizarse sin perder control.",
+        "Mi trabajo combina contexto operativo con software y AI Engineering, aportando una perspectiva práctica sobre cómo deben funcionar los sistemas más allá de la capa técnica.",
       items: [
         {
           number: "01",
@@ -467,16 +467,16 @@ export const translations: Record<Language, SiteCopy> = {
         },
         {
           number: "02",
-          period: "SISTEMAS APLICADOS",
-          role: "MarTech & Automation",
-          context: "MARKETING & OPERACIÓN",
+          period: "CONTEXTO OPERATIVO",
+          role: "Operaciones & Sistemas",
+          context: "PROCESOS & OPERACIONES",
           description:
-            "Aplicación de datos, integraciones y automatización a procesos de Marketing y operación, desde CRM, analytics y comportamiento hasta workflows, sistemas internos y ejecución entre herramientas.",
+            "Trabajo con procesos operativos, sistemas y flujos estructurados, convirtiendo requisitos reales de negocio en formas de trabajo más claras, controladas y medibles.",
           focus: [
-            "CRM & Analytics",
-            "Segmentación & campañas",
-            "Workflows & APIs",
-            "Automatización de procesos",
+            "Operaciones",
+            "Análisis de procesos",
+            "Diseño de workflows",
+            "Inteligencia operativa",
           ],
         },
       ],
@@ -484,9 +484,9 @@ export const translations: Record<Language, SiteCopy> = {
 
     projects: {
       eyebrow: "PROYECTOS SELECCIONADOS",
-      title: "IA aplicada dentro de sistemas, no al lado de ellos.",
+      title: "Sistemas diseñados para resolver problemas reales.",
       description:
-        "Proyectos donde modelos, datos, software y workflows forman parte de la misma arquitectura: operaciones financieras, entorno industrial y contexto clínico.",
+        "Una selección de proyectos de ingeniería centrados en IA, sistemas de software, flujos operativos y desarrollo de producto.",
       visual: "VISUAL DEL PROYECTO",
       viewCase: "Ver case study",
       items: [
@@ -519,7 +519,7 @@ export const translations: Record<Language, SiteCopy> = {
 
     about: {
       eyebrow: "SOBRE MÍ",
-      title: "IA como parte de la infraestructura del trabajo.",
+      title: "IA, software y operaciones en el mismo sistema.",
       statement:
         "Trabajo en la intersección entre AI Engineering, desarrollo de software y sistemas operativos, construyendo productos donde los modelos son solo una parte de una arquitectura mayor y controlada.",
       approach: "ENFOQUE",
@@ -554,7 +554,7 @@ export const translations: Record<Language, SiteCopy> = {
       titleLineOne: "Construyamos",
       titleLineTwo: "algo juntos.",
       description:
-        "Disponible para proyectos y oportunidades relacionados con AI Engineering, MarTech, Automation, sistemas de software e integración de IA en procesos de negocio y operación.",
+        "Disponible para conversaciones sobre AI Engineering, sistemas de software, productos inteligentes y tecnología aplicada a operaciones.",
     },
 
     footer: {
@@ -582,90 +582,90 @@ export const translations: Record<Language, SiteCopy> = {
     hero: {
       eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
       description:
-        "I build systems that connect AI, software, data, APIs and workflows to analyze information, automate processes and support decisions across Marketing, business and operations.",
+        "I design and build intelligent systems that connect AI, software, data and operational workflows into reliable products.",
       selectedWork: "Selected work",
     },
 
     stack: {
-      eyebrow: "ENGINEERING & SYSTEMS",
-      title: "Technology connected to the work it needs to execute.",
+      eyebrow: "MY TECH STACK",
+      title: "Engineering systems around AI.",
       description:
-        "AI, software, data, integrations and automation treated as parts of the same system, with clear boundaries between interpretation, execution and control.",
+        "The engineering capabilities I use to turn AI models, software, data and operational requirements into reliable applications.",
       capabilities: [
         {
           number: "01",
           title: "AI Systems",
           description:
-            "LLMs, agents, RAG, tools and structured outputs integrated into applications with context, validation and explicit boundaries.",
+            "Designing AI-powered applications that connect models, structured data, software logic and real product workflows.",
         },
         {
           number: "02",
-          title: "Automation & Orchestration",
+          title: "LLM Integration",
           description:
-            "APIs, agents, workflows, triggers and business rules connected to reduce manual work and coordinate execution across systems.",
+            "Integrating large language models with APIs, tools, validation layers and deterministic application logic.",
         },
         {
           number: "03",
-          title: "MarTech Systems",
+          title: "Backend & APIs",
           description:
-            "Systems and data applied to CRM, analytics, behavior, segmentation, campaigns, personalization and decision support.",
+            "Building application backends and APIs that provide reliable communication between AI, products and external systems.",
         },
         {
           number: "04",
-          title: "Data & Decision Systems",
+          title: "Data & Validation",
           description:
-            "Structuring and combining data to identify patterns, track behavior and improve the context available for decisions.",
+            "Structuring application data, validating model outputs and creating predictable boundaries between AI and software.",
         },
         {
           number: "05",
-          title: "Software & APIs",
+          title: "Product Engineering",
           description:
-            "Applications, backends, integrations, databases and typed contracts that support the AI layer and connect external systems.",
+            "Turning technical capabilities into usable software products with clear architecture, interaction flows and maintainable code.",
         },
         {
           number: "06",
-          title: "Control & Validation",
+          title: "Operational Automation",
           description:
-            "Deterministic rules, permissions, auditability and human-in-the-loop controls for critical decisions and actions.",
+            "Engineering systems that automate operational workflows while preserving control, traceability and human oversight.",
         },
       ],
     },
 
     expertise: {
-      eyebrow: "AREAS OF EXPERTISE",
-      title: "AI as the core. MarTech and Automation as applied systems.",
+      eyebrow: "PROFESSIONAL EXPERTISE",
+      title: "From AI capability to production software.",
       description:
-        "I work across AI engineering, software, Marketing and operations, using AI as infrastructure connected to data, systems and real processes.",
+        "My work sits between artificial intelligence, software engineering and operational systems — transforming technical capabilities into products that can operate reliably in real environments.",
       items: [
         {
           number: "01",
           title: "AI Engineering",
           description:
-            "Building systems where models participate in real processes through context, tools, data, APIs, rules and validation.",
+            "Design and implementation of AI-powered software systems that combine language models, application logic, structured outputs and production workflows.",
           capabilities: [
-            "LLMs & agents",
-            "RAG & tools",
+            "LLM applications",
             "Structured outputs",
-            "Validation",
+            "AI-assisted workflows",
+            "Model integration",
           ],
         },
         {
           number: "02",
-          title: "MarTech & Data",
+          title: "Software Engineering",
           description:
-            "Applying software, AI and data to behavior, CRM, analytics, segmentation, campaigns, personalization and decision support.",
-          capabilities: ["CRM & analytics", "Segmentation", "Campaigns", "Personalization"],
+            "Development of reliable software products with clear architecture, typed interfaces, APIs and maintainable application logic.",
+          capabilities: ["TypeScript", "Next.js", "React", "FastAPI"],
         },
         {
           number: "03",
-          title: "Automation & Operations",
+          title: "Operational Intelligence",
           description:
-            "Connecting systems, agents, APIs and workflows to reduce manual work, coordinate processes and make execution and decisions more traceable.",
+            "Turning operational requirements into controlled software workflows with traceability, validation and deterministic decision layers.",
           capabilities: [
             "Workflow automation",
-            "APIs & integrations",
-            "Agents",
-            "Operational processes",
+            "Business rules",
+            "Validation",
+            "Auditability",
           ],
         },
       ],
@@ -673,9 +673,9 @@ export const translations: Record<Language, SiteCopy> = {
 
     work: {
       eyebrow: "PRACTICE",
-      title: "Applied engineering where data, decisions and execution meet.",
+      title: "Engineering shaped by operations.",
       description:
-        "The work starts with the real process: what information exists, which decision needs context, which systems must communicate and what can be automated without losing control.",
+        "My work combines operational context with software and AI engineering, giving me a practical perspective on how systems need to work beyond the technical layer.",
       items: [
         {
           number: "01",
@@ -693,16 +693,16 @@ export const translations: Record<Language, SiteCopy> = {
         },
         {
           number: "02",
-          period: "APPLIED SYSTEMS",
-          role: "MarTech & Automation",
-          context: "MARKETING & OPERATIONS",
+          period: "OPERATIONAL CONTEXT",
+          role: "Operations & Systems",
+          context: "PROCESSES & OPERATIONS",
           description:
-            "Applying data, integrations and automation to Marketing and operational processes, from CRM, analytics and behavior to workflows, internal systems and execution across tools.",
+            "Working with operational processes, systems and structured workflows, translating real business requirements into clearer, more controlled and measurable ways of working.",
           focus: [
-            "CRM & Analytics",
-            "Segmentation & campaigns",
-            "Workflows & APIs",
-            "Process automation",
+            "Operations",
+            "Process analysis",
+            "Workflow design",
+            "Operational intelligence",
           ],
         },
       ],
@@ -710,9 +710,9 @@ export const translations: Record<Language, SiteCopy> = {
 
     projects: {
       eyebrow: "SELECTED PROJECTS",
-      title: "AI applied inside systems, not beside them.",
+      title: "Systems designed to solve real problems.",
       description:
-        "Projects where models, data, software and workflows belong to the same architecture — across payment operations, industrial environments and clinical context.",
+        "A selection of engineering projects focused on AI, software systems, operational workflows and product development.",
       visual: "PROJECT VISUAL",
       viewCase: "View case study",
       items: [
@@ -745,7 +745,7 @@ export const translations: Record<Language, SiteCopy> = {
 
     about: {
       eyebrow: "ABOUT",
-      title: "AI as part of the infrastructure of work.",
+      title: "AI, software and operations in the same system.",
       statement:
         "I work at the intersection of AI engineering, software development and operational systems, building products where models are only one part of a larger and controlled architecture.",
       approach: "APPROACH",
@@ -780,7 +780,7 @@ export const translations: Record<Language, SiteCopy> = {
       titleLineOne: "Let's build",
       titleLineTwo: "something together.",
       description:
-        "Open to projects and opportunities in AI Engineering, MarTech, Automation, software systems and the integration of AI into business and operational processes.",
+        "Open to conversations around AI engineering, software systems, intelligent products and operational technology.",
     },
 
     footer: {
@@ -808,90 +808,90 @@ export const translations: Record<Language, SiteCopy> = {
     hero: {
       eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
       description:
-        "Ich entwickle Systeme, die KI, Software, Daten, APIs und Workflows verbinden, um Informationen zu analysieren, Prozesse zu automatisieren und Entscheidungen in Marketing, Business und Operations zu unterstützen.",
+        "Ich entwickle intelligente Systeme, die KI, Software, Daten und operative Workflows zu zuverlässigen Produkten verbinden.",
       selectedWork: "Projekte ansehen",
     },
 
     stack: {
-      eyebrow: "ENGINEERING & SYSTEME",
-      title: "Technologie verbunden mit der Arbeit, die sie ausführen soll.",
+      eyebrow: "TECH STACK",
+      title: "Systementwicklung rund um KI.",
       description:
-        "KI, Software, Daten, Integrationen und Automatisierung als Teile desselben Systems, mit klaren Grenzen zwischen Interpretation, Ausführung und Kontrolle.",
+        "Die Engineering-Kompetenzen, mit denen ich KI-Modelle, Software, Daten und operative Anforderungen in zuverlässige Anwendungen überführe.",
       capabilities: [
         {
           number: "01",
-          title: "AI Systems",
+          title: "KI-Systeme",
           description:
-            "LLMs, Agenten, RAG, Tools und strukturierte Outputs integriert in Anwendungen mit Kontext, Validierung und klaren Grenzen.",
+            "Entwicklung KI-gestützter Anwendungen, die Modelle, strukturierte Daten, Softwarelogik und reale Produktabläufe verbinden.",
         },
         {
           number: "02",
-          title: "Automation & Orchestration",
+          title: "LLM-Integration",
           description:
-            "APIs, Agenten, Workflows, Trigger und Geschäftsregeln verbunden, um manuelle Arbeit zu reduzieren und Ausführung zwischen Systemen zu koordinieren.",
+            "Integration großer Sprachmodelle mit APIs, Tools, Validierungsschichten und deterministischer Anwendungslogik.",
         },
         {
           number: "03",
-          title: "MarTech Systems",
+          title: "Backend & APIs",
           description:
-            "Systeme und Daten für CRM, Analytics, Verhalten, Segmentierung, Kampagnen, Personalisierung und Entscheidungsunterstützung.",
+            "Entwicklung von Backends und APIs für eine zuverlässige Kommunikation zwischen KI, Produkten und externen Systemen.",
         },
         {
           number: "04",
-          title: "Data & Decision Systems",
+          title: "Daten & Validierung",
           description:
-            "Daten strukturieren und verbinden, um Muster zu erkennen, Verhalten zu verfolgen und den Kontext für Entscheidungen zu verbessern.",
+            "Strukturierung von Anwendungsdaten, Validierung von Modellausgaben und klare Grenzen zwischen KI und Software.",
         },
         {
           number: "05",
-          title: "Software & APIs",
+          title: "Product Engineering",
           description:
-            "Anwendungen, Backends, Integrationen, Datenbanken und typisierte Verträge, die die KI-Schicht tragen und externe Systeme verbinden.",
+            "Überführung technischer Fähigkeiten in nutzbare Softwareprodukte mit klarer Architektur und wartbarem Code.",
         },
         {
           number: "06",
-          title: "Control & Validation",
+          title: "Operative Automatisierung",
           description:
-            "Deterministische Regeln, Berechtigungen, Auditierbarkeit und Human-in-the-loop für kritische Entscheidungen und Aktionen.",
+            "Entwicklung von Systemen zur Automatisierung operativer Workflows unter Wahrung von Kontrolle, Nachvollziehbarkeit und menschlicher Aufsicht.",
         },
       ],
     },
 
     expertise: {
-      eyebrow: "SPEZIALISIERUNG",
-      title: "KI als Kern. MarTech und Automation als Anwendung.",
+      eyebrow: "PROFESSIONELLE EXPERTISE",
+      title: "Von KI-Fähigkeiten zu produktiver Software.",
       description:
-        "Ich arbeite an der Schnittstelle von AI Engineering, Software, Marketing und Operations und nutze KI als Infrastruktur für Daten, Systeme und reale Prozesse.",
+        "Meine Arbeit verbindet künstliche Intelligenz, Software Engineering und operative Systeme und überführt technische Fähigkeiten in zuverlässige Produkte für reale Umgebungen.",
       items: [
         {
           number: "01",
           title: "AI Engineering",
           description:
-            "Entwicklung von Systemen, in denen Modelle über Kontext, Tools, Daten, APIs, Regeln und Validierung an realen Prozessen teilnehmen.",
+            "Konzeption und Implementierung KI-gestützter Softwaresysteme mit Sprachmodellen, Anwendungslogik, strukturierten Outputs und Produktionsworkflows.",
           capabilities: [
-            "LLMs & Agenten",
-            "RAG & Tools",
+            "LLM-Anwendungen",
             "Strukturierte Outputs",
-            "Validierung",
+            "KI-gestützte Workflows",
+            "Modellintegration",
           ],
         },
         {
           number: "02",
-          title: "MarTech & Data",
+          title: "Software Engineering",
           description:
-            "Anwendung von Software, KI und Daten auf Verhalten, CRM, Analytics, Segmentierung, Kampagnen, Personalisierung und Entscheidungsunterstützung.",
-          capabilities: ["CRM & Analytics", "Segmentierung", "Kampagnen", "Personalisierung"],
+            "Entwicklung zuverlässiger Softwareprodukte mit klarer Architektur, typisierten Schnittstellen, APIs und wartbarer Anwendungslogik.",
+          capabilities: ["TypeScript", "Next.js", "React", "FastAPI"],
         },
         {
           number: "03",
-          title: "Automation & Operations",
+          title: "Operational Intelligence",
           description:
-            "Verbindung von Systemen, Agenten, APIs und Workflows, um manuelle Arbeit zu reduzieren, Prozesse zu koordinieren und Ausführung und Entscheidungen nachvollziehbarer zu machen.",
+            "Überführung operativer Anforderungen in kontrollierte Software-Workflows mit Nachvollziehbarkeit, Validierung und deterministischen Entscheidungsschichten.",
           capabilities: [
-            "Workflow-Automation",
-            "APIs & Integrationen",
-            "Agenten",
-            "Operative Prozesse",
+            "Workflow-Automatisierung",
+            "Geschäftsregeln",
+            "Validierung",
+            "Auditierbarkeit",
           ],
         },
       ],
@@ -899,9 +899,9 @@ export const translations: Record<Language, SiteCopy> = {
 
     work: {
       eyebrow: "ARBEITSFELDER",
-      title: "Angewandtes Engineering, wo Daten, Entscheidungen und Ausführung zusammenkommen.",
+      title: "Engineering geprägt durch Operations.",
       description:
-        "Die Arbeit beginnt mit dem realen Prozess: Welche Informationen existieren, welche Entscheidung Kontext benötigt, welche Systeme kommunizieren müssen und was sich automatisieren lässt, ohne Kontrolle zu verlieren.",
+        "Meine Arbeit verbindet operativen Kontext mit Software und AI Engineering und schafft eine praktische Perspektive darauf, wie Systeme jenseits der technischen Ebene funktionieren müssen.",
       items: [
         {
           number: "01",
@@ -919,16 +919,16 @@ export const translations: Record<Language, SiteCopy> = {
         },
         {
           number: "02",
-          period: "ANGEWANDTE SYSTEME",
-          role: "MarTech & Automation",
-          context: "MARKETING & OPERATIONS",
+          period: "OPERATIVER KONTEXT",
+          role: "Operations & Systeme",
+          context: "PROZESSE & OPERATIONS",
           description:
-            "Anwendung von Daten, Integrationen und Automatisierung auf Marketing- und operative Prozesse — von CRM, Analytics und Verhalten bis zu Workflows, internen Systemen und Ausführung zwischen Tools.",
+            "Arbeit mit operativen Prozessen, Systemen und strukturierten Workflows, um reale Geschäftsanforderungen in klarere, kontrollierbare und messbare Abläufe zu überführen.",
           focus: [
-            "CRM & Analytics",
-            "Segmentierung & Kampagnen",
-            "Workflows & APIs",
-            "Prozessautomatisierung",
+            "Operations",
+            "Prozessanalyse",
+            "Workflow Design",
+            "Operational Intelligence",
           ],
         },
       ],
@@ -936,9 +936,9 @@ export const translations: Record<Language, SiteCopy> = {
 
     projects: {
       eyebrow: "AUSGEWÄHLTE PROJEKTE",
-      title: "KI innerhalb von Systemen, nicht daneben.",
+      title: "Systeme zur Lösung realer Probleme.",
       description:
-        "Projekte, in denen Modelle, Daten, Software und Workflows Teil derselben Architektur sind — in Payment Operations, Industrie und klinischem Kontext.",
+        "Eine Auswahl von Engineering-Projekten mit Fokus auf KI, Softwaresysteme, operative Workflows und Produktentwicklung.",
       visual: "PROJEKT VISUAL",
       viewCase: "Case Study ansehen",
       items: [
@@ -971,7 +971,7 @@ export const translations: Record<Language, SiteCopy> = {
 
     about: {
       eyebrow: "ÜBER MICH",
-      title: "KI als Teil der Infrastruktur von Arbeit.",
+      title: "KI, Software und Operations in einem System.",
       statement:
         "Ich arbeite an der Schnittstelle von AI Engineering, Softwareentwicklung und operativen Systemen und entwickle Produkte, in denen Modelle nur ein Teil einer größeren kontrollierten Architektur sind.",
       approach: "ANSATZ",
@@ -1006,7 +1006,7 @@ export const translations: Record<Language, SiteCopy> = {
       titleLineOne: "Lassen Sie uns",
       titleLineTwo: "gemeinsam etwas bauen.",
       description:
-        "Offen für Projekte und Möglichkeiten in AI Engineering, MarTech, Automation, Softwaresystemen und der Integration von KI in Business- und operative Prozesse.",
+        "Offen für Gespräche über AI Engineering, Softwaresysteme, intelligente Produkte und operative Technologie.",
     },
 
     footer: {

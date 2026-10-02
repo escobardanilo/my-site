@@ -9,6 +9,25 @@ import {
   projectSlugs,
 } from "@/lib/projects";
 
+import type { Language } from "@/lib/translations";
+
+const sonCardDescriptions: Record<
+  Language,
+  string
+> = {
+  pt:
+    "Sistema de assistência operacional para ambiente industrial, combinando IA, contexto técnico e supervisão para apoiar diagnóstico, orientação e tomada de decisão no trabalho de campo.",
+
+  en:
+    "Operational assistance system for industrial environments, combining AI, technical context and supervision to support diagnostics, guidance and decision-making in field work.",
+
+  es:
+    "Sistema de asistencia operativa para entornos industriales, combinando IA, contexto técnico y supervisión para apoyar diagnóstico, orientación y toma de decisiones en el trabajo de campo.",
+
+  de:
+    "Operatives Assistenzsystem für industrielle Umgebungen, das KI, technischen Kontext und Aufsicht kombiniert, um Diagnose, Orientierung und Entscheidungsfindung im operativen Einsatz zu unterstützen.",
+};
+
 export function Projects() {
   const {
     copy,
@@ -62,10 +81,13 @@ export function Projects() {
                   .visuals[0];
 
               const description =
-                content.card.description;
-
-              const previewImage =
-                preview?.image;
+                slug ===
+                "project-02"
+                  ? sonCardDescriptions[
+                      language
+                    ]
+                  : content.card
+                      .description;
 
               return (
                 <article
@@ -84,21 +106,27 @@ export function Projects() {
                       </span>
                     </div>
 
-                    <div
-                      className={`project-card__visual-center${slug === "project-02" ? " project-card__visual-center--diaction" : ""}`}
-                    >
-                      {previewImage ? (
+                    <div className="project-card__visual-center">
+                      {preview?.image ? (
                         <Image
                           src={
-                            previewImage
+                            preview.image
                           }
                           alt={
-                            preview?.alt ??
-                            content.title
+                            preview.alt
                           }
                           width={1600}
                           height={1000}
-                          className="project-card__image"
+                          style={{
+                            width:
+                              "100%",
+                            height:
+                              "100%",
+                            objectFit:
+                              "contain",
+                            display:
+                              "block",
+                          }}
                         />
                       ) : (
                         <span>

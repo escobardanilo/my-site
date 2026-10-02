@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-
 import { useSitePreferences } from "@/context/SitePreferencesProvider";
 import type { Language } from "@/lib/translations";
 
@@ -9,56 +8,58 @@ const aboutCopy: Record<
   Language,
   {
     role: string;
-    paragraphs: string[];
-    emphasis: string;
+    intro: string;
+    second: string;
+    thirdBefore: string;
+    thirdEmphasis: string;
   }
 > = {
   pt: {
-    role: "AI Engineer",
-    paragraphs: [
-      "Trabalho na ligação entre inteligência artificial, software, dados e processos. Interessa-me menos o modelo isolado e mais o sistema que existe à sua volta: de onde vem a informação, que ferramentas podem ser utilizadas, que regras precisam de ser respeitadas e o que acontece depois de uma resposta ser gerada.",
-      "Essa abordagem também se estende ao Marketing. MarTech, para mim, não é apenas utilizar ferramentas de Marketing, mas construir e conectar a infraestrutura por trás delas — CRM, analytics, comportamento, segmentação, campanhas, dados e modelos capazes de transformar sinais dispersos em contexto para decisão.",
-      "Em Automation, o princípio é semelhante: agentes, APIs, workflows, dados e sistemas precisam trabalhar em conjunto para reduzir tarefas repetitivas, coordenar operações e permitir que pessoas intervenham onde julgamento, responsabilidade ou contexto realmente importam.",
-      "A minha experiência em Marketing e operações industriais influencia diretamente essa forma de trabalhar. Antes de automatizar um processo, procuro entender como ele funciona, onde a informação circula, quem decide, onde surgem erros e quais partes realmente beneficiam de software ou IA.",
-    ],
-    emphasis:
-      "É nesse espaço entre tecnologia, Marketing e operação que estou a construir o meu trabalho.",
-  },
-
-  es: {
-    role: "AI Engineer",
-    paragraphs: [
-      "Trabajo en la conexión entre inteligencia artificial, software, datos y procesos. Me interesa menos el modelo aislado y más el sistema que existe a su alrededor: de dónde viene la información, qué herramientas pueden utilizarse, qué reglas deben respetarse y qué ocurre después de generar una respuesta.",
-      "Ese enfoque también se extiende al Marketing. Para mí, MarTech no significa simplemente utilizar herramientas de Marketing, sino construir y conectar la infraestructura que hay detrás: CRM, analytics, comportamiento, segmentación, campañas, datos y modelos capaces de transformar señales dispersas en contexto para decidir.",
-      "En Automation, el principio es similar: agentes, APIs, workflows, datos y sistemas deben trabajar juntos para reducir tareas repetitivas, coordinar operaciones y permitir que las personas intervengan donde el juicio, la responsabilidad o el contexto realmente importan.",
-      "Mi experiencia en Marketing y operaciones industriales influye directamente en esta forma de trabajar. Antes de automatizar un proceso, busco entender cómo funciona, por dónde circula la información, quién decide, dónde aparecen errores y qué partes realmente se benefician de software o IA.",
-    ],
-    emphasis:
-      "Es en ese espacio entre tecnología, Marketing y operación donde estoy construyendo mi trabajo.",
+    role: "AI Engineer e Augmented Software Engineer",
+    intro:
+      "O meu trabalho parte de uma pergunta simples: o que pode ser feito melhor quando software e inteligência artificial deixam de ser apenas ferramentas e passam a participar do próprio trabalho?",
+    second:
+      "É a partir daí que desenvolvo produtos que ajudam pessoas a investigar, decidir, executar e compreender melhor processos complexos. Alguns exigem IA, outros exigem regras, dados, automação ou simplesmente uma arquitetura de software bem pensada. O importante é que cada componente tenha uma função clara e produza valor real no uso.",
+    thirdBefore:
+      "A minha experiência em operações industriais trouxe-me uma visão que levo para a engenharia: tecnologia não existe isolada. Ela entra em processos que já têm pessoas, responsabilidades, restrições, erros e decisões. É nesse espaço que procuro construir — ",
+    thirdEmphasis:
+      "entre o que o software consegue fazer e o que realmente melhora a forma de trabalhar.",
   },
 
   en: {
-    role: "AI Engineer",
-    paragraphs: [
-      "I work at the intersection of artificial intelligence, software, data and processes. I am less interested in the model in isolation than in the system around it: where information comes from, which tools can be used, which rules must be enforced and what happens after a response is generated.",
-      "That approach also extends to Marketing. For me, MarTech is not simply about using Marketing tools; it is about building and connecting the infrastructure behind them — CRM, analytics, behavior, segmentation, campaigns, data and models that turn scattered signals into decision context.",
-      "Automation follows the same principle: agents, APIs, workflows, data and systems need to work together to reduce repetitive work, coordinate operations and let people step in where judgment, responsibility or context actually matter.",
-      "My experience in Marketing and industrial operations directly shapes how I approach this work. Before automating a process, I try to understand how it works, where information moves, who decides, where errors appear and which parts genuinely benefit from software or AI.",
-    ],
-    emphasis:
-      "That space between technology, Marketing and operations is where I am building my work.",
+    role: "AI Engineer and Augmented Software Engineer",
+    intro:
+      "My work starts with a simple question: what can be done better when software and artificial intelligence stop being just tools and start taking part in the work itself?",
+    second:
+      "From there, I build products that help people investigate, decide, execute and better understand complex processes. Some require AI, others require rules, data, automation or simply well-designed software architecture. What matters is that each component has a clear function and creates real value in use.",
+    thirdBefore:
+      "My experience in industrial operations has shaped a perspective that I bring into engineering: technology does not exist in isolation. It enters processes that already involve people, responsibilities, constraints, errors and decisions. That is the space where I choose to build — ",
+    thirdEmphasis:
+      "between what software can do and what actually improves the way people work.",
+  },
+
+  es: {
+    role: "AI Engineer y Augmented Software Engineer",
+    intro:
+      "Mi trabajo parte de una pregunta simple: ¿qué puede hacerse mejor cuando el software y la inteligencia artificial dejan de ser solo herramientas y pasan a formar parte del propio trabajo?",
+    second:
+      "A partir de ahí desarrollo productos que ayudan a las personas a investigar, decidir, ejecutar y comprender mejor procesos complejos. Algunos requieren IA, otros reglas, datos, automatización o simplemente una arquitectura de software bien diseñada. Lo importante es que cada componente tenga una función clara y produzca valor real en su uso.",
+    thirdBefore:
+      "Mi experiencia en operaciones industriales me ha dado una perspectiva que llevo a la ingeniería: la tecnología no existe de forma aislada. Entra en procesos que ya tienen personas, responsabilidades, restricciones, errores y decisiones. Es en ese espacio donde busco construir — ",
+    thirdEmphasis:
+      "entre lo que el software puede hacer y lo que realmente mejora la forma de trabajar.",
   },
 
   de: {
-    role: "AI Engineer",
-    paragraphs: [
-      "Ich arbeite an der Verbindung von künstlicher Intelligenz, Software, Daten und Prozessen. Mich interessiert weniger das isolierte Modell als das System darum herum: Woher Informationen kommen, welche Tools genutzt werden dürfen, welche Regeln gelten und was nach einer generierten Antwort passiert.",
-      "Dieser Ansatz gilt auch für Marketing. MarTech bedeutet für mich nicht nur, Marketing-Tools zu nutzen, sondern die Infrastruktur dahinter zu bauen und zu verbinden — CRM, Analytics, Verhalten, Segmentierung, Kampagnen, Daten und Modelle, die verteilte Signale in Entscheidungskontext überführen.",
-      "Bei Automation gilt dasselbe Prinzip: Agenten, APIs, Workflows, Daten und Systeme müssen zusammenspielen, um repetitive Arbeit zu reduzieren, Abläufe zu koordinieren und Menschen dort einzubeziehen, wo Urteil, Verantwortung oder Kontext entscheidend sind.",
-      "Meine Erfahrung in Marketing und industriellen Abläufen prägt diese Arbeitsweise direkt. Bevor ich einen Prozess automatisiere, versuche ich zu verstehen, wie er funktioniert, wo Informationen fließen, wer entscheidet, wo Fehler entstehen und welche Teile tatsächlich von Software oder KI profitieren.",
-    ],
-    emphasis:
-      "Genau in diesem Raum zwischen Technologie, Marketing und Operations entwickle ich meine Arbeit weiter.",
+    role: "AI Engineer und Augmented Software Engineer",
+    intro:
+      "Meine Arbeit beginnt mit einer einfachen Frage: Was lässt sich besser machen, wenn Software und künstliche Intelligenz nicht mehr nur Werkzeuge sind, sondern Teil der eigentlichen Arbeit werden?",
+    second:
+      "Von dort aus entwickle ich Produkte, die Menschen dabei unterstützen, komplexe Prozesse zu untersuchen, Entscheidungen zu treffen, Aufgaben auszuführen und Zusammenhänge besser zu verstehen. Manche benötigen KI, andere Regeln, Daten, Automatisierung oder einfach eine gut durchdachte Softwarearchitektur. Entscheidend ist, dass jede Komponente eine klare Funktion erfüllt und im realen Einsatz einen konkreten Wert schafft.",
+    thirdBefore:
+      "Meine Erfahrung in industriellen Abläufen prägt meine Arbeit als Engineer: Technologie existiert nicht isoliert. Sie wird Teil von Prozessen, in denen bereits Menschen, Verantwortlichkeiten, Einschränkungen, Fehler und Entscheidungen existieren. Genau in diesem Raum möchte ich Systeme entwickeln — ",
+    thirdEmphasis:
+      "zwischen dem, was Software leisten kann, und dem, was die Art zu arbeiten tatsächlich verbessert.",
   },
 };
 
@@ -89,41 +90,47 @@ export function About() {
 
         <div className="about__layout">
           <div className="about__content">
-            <h2 className="about__title">
-              {
-                copy.about.title
-              }
-            </h2>
-
             <div className="about__copy">
               <p className="about__lead">
-                {language === "pt"
-                  ? "Sou "
-                  : language === "es"
-                    ? "Soy "
-                    : language === "en"
-                      ? "I'm an "
-                      : "Ich bin "}
-                <strong>
-                  {about.role}
-                </strong>
-                .
+                Sou{" "}
+                {language === "pt" ? (
+                  <strong>
+                    {about.role}
+                  </strong>
+                ) : language === "en" ? (
+                  <>
+                    I&apos;m an{" "}
+                    <strong>
+                      {about.role}
+                    </strong>
+                  </>
+                ) : language === "es" ? (
+                  <>
+                    Soy{" "}
+                    <strong>
+                      {about.role}
+                    </strong>
+                  </>
+                ) : (
+                  <>
+                    Ich bin{" "}
+                    <strong>
+                      {about.role}
+                    </strong>
+                  </>
+                )}
+                .{" "}
+                {about.intro}
               </p>
 
-              {about.paragraphs.map(
-                (paragraph) => (
-                  <p
-                    className="about__paragraph"
-                    key={paragraph}
-                  >
-                    {paragraph}
-                  </p>
-                ),
-              )}
+              <p className="about__paragraph">
+                {about.second}
+              </p>
 
               <p className="about__paragraph">
+                {about.thirdBefore}
                 <strong>
-                  {about.emphasis}
+                  {about.thirdEmphasis}
                 </strong>
               </p>
             </div>
@@ -133,10 +140,7 @@ export function About() {
               href="#projects"
             >
               <span>
-                {
-                  copy.hero
-                    .selectedWork
-                }
+                {copy.hero.selectedWork}
               </span>
 
               <span aria-hidden="true">

@@ -24,17 +24,11 @@ export function ProjectVisual({
   project,
   labels,
 }: ProjectVisualProps) {
-  const [activeMedia, setActiveMedia] =
-    useState<{
-      src: string;
-      alt: string;
-      label: string;
-      description: string;
-      number: string;
-    } | null>(null);
+  const [activeVisual, setActiveVisual] =
+    useState<Visual | null>(null);
 
   useEffect(() => {
-    if (!activeMedia) {
+    if (!activeVisual) {
       return;
     }
 
@@ -48,7 +42,7 @@ export function ProjectVisual({
       event: KeyboardEvent,
     ) {
       if (event.key === "Escape") {
-        setActiveMedia(null);
+        setActiveVisual(null);
       }
     }
 
@@ -66,7 +60,7 @@ export function ProjectVisual({
         handleKeyDown,
       );
     };
-  }, [activeMedia]);
+  }, [activeVisual]);
 
   return (
     <>
@@ -92,7 +86,7 @@ export function ProjectVisual({
             {project.product.visuals.map(
               (visual) => (
                 <article
-                  className={`project-visual${visual.fullWidth ? " project-visual--full" : ""}`}
+                  className="project-visual"
                   key={visual.number}
                 >
                   <div className="project-visual__top">
@@ -106,69 +100,14 @@ export function ProjectVisual({
                   </div>
 
                   <div className="project-visual__canvas">
-                    {visual.gallery &&
-                    visual.gallery.length > 0 ? (
-                      <div
-                        className={`project-visual__gallery${visual.galleryLayout === "three-by-two" ? " project-visual__gallery--three-by-two" : ""}`}
-                      >
-                        {visual.gallery.map(
-                          (
-                            image,
-                            index,
-                          ) => (
-                            <button
-                              type="button"
-                              className="project-visual__gallery-item"
-                              key={image}
-                              onClick={() =>
-                                setActiveMedia({
-                                  src: image,
-                                  alt:
-                                    visual.galleryAlts?.[
-                                      index
-                                    ] ?? visual.alt,
-                                  label: visual.label,
-                                  description:
-                                    visual.description,
-                                  number:
-                                    `${visual.number}.${index + 1}`,
-                                })
-                              }
-                              aria-label={`Ampliar imagem ${index + 1} de ${visual.label}`}
-                            >
-                              <Image
-                                src={image}
-                                alt={
-                                  visual.galleryAlts?.[
-                                    index
-                                  ] ??
-                                  visual.alt
-                                }
-                                fill
-                                sizes="(max-width: 700px) 100vw, 33vw"
-                                className="project-visual__gallery-image"
-                              />
-
-                              <span className="project-visual__expand">
-                                ↗
-                              </span>
-                            </button>
-                          ),
-                        )}
-                      </div>
-                    ) : visual.image ? (
+                    {visual.image ? (
                       <button
                         type="button"
                         className="project-visual__image-button"
                         onClick={() =>
-                          setActiveMedia({
-                            src: visual.image as string,
-                            alt: visual.alt,
-                            label: visual.label,
-                            description:
-                              visual.description,
-                            number: visual.number,
-                          })
+                          setActiveVisual(
+                            visual,
+                          )
                         }
                         aria-label={`Ampliar ${visual.label}`}
                       >
@@ -205,16 +144,17 @@ export function ProjectVisual({
         </div>
       </section>
 
-      {activeMedia && (
+      {activeVisual &&
+        activeVisual.image && (
           <div
             className="project-lightbox"
             role="dialog"
             aria-modal="true"
             aria-label={
-              activeMedia.label
+              activeVisual.label
             }
             onClick={() =>
-              setActiveMedia(null)
+              setActiveVisual(null)
             }
           >
             <div
@@ -226,11 +166,11 @@ export function ProjectVisual({
               <div className="project-lightbox__header">
                 <div>
                   <span>
-                    {activeMedia.number}
+                    {activeVisual.number}
                   </span>
 
                   <span>
-                    {activeMedia.label}
+                    {activeVisual.label}
                   </span>
                 </div>
 
@@ -238,7 +178,7 @@ export function ProjectVisual({
                   type="button"
                   className="project-lightbox__close"
                   onClick={() =>
-                    setActiveMedia(null)
+                    setActiveVisual(null)
                   }
                   aria-label="Fechar imagem"
                 >
@@ -249,9 +189,9 @@ export function ProjectVisual({
               <div className="project-lightbox__image-wrapper">
                 <Image
                   src={
-                    activeMedia.src
+                    activeVisual.image
                   }
-                  alt={activeMedia.alt}
+                  alt={activeVisual.alt}
                   fill
                   sizes="95vw"
                   className="project-lightbox__image"
@@ -261,7 +201,7 @@ export function ProjectVisual({
 
               <p className="project-lightbox__caption">
                 {
-                  activeMedia.description
+                  activeVisual.description
                 }
               </p>
             </div>
