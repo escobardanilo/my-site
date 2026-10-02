@@ -64,6 +64,12 @@ export function Projects() {
               const description =
                 content.card.description;
 
+              const previewImage =
+                slug ===
+                "project-02"
+                  ? "/images/typographyedita-brand-logo-bon.png"
+                  : preview?.image;
+
               return (
                 <article
                   className="project-card"
@@ -81,27 +87,21 @@ export function Projects() {
                       </span>
                     </div>
 
-                    <div className="project-card__visual-center">
-                      {preview?.image ? (
+                    <div
+                      className={`project-card__visual-center${slug === "project-02" ? " project-card__visual-center--diaction" : ""}`}
+                    >
+                      {previewImage ? (
                         <Image
                           src={
-                            preview.image
+                            previewImage
                           }
                           alt={
-                            preview.alt
+                            preview?.alt ??
+                            content.title
                           }
                           width={1600}
                           height={1000}
-                          style={{
-                            width:
-                              "100%",
-                            height:
-                              "100%",
-                            objectFit:
-                              "contain",
-                            display:
-                              "block",
-                          }}
+                          className="project-card__image"
                         />
                       ) : (
                         <span>
