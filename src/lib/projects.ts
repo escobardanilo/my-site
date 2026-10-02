@@ -1311,7 +1311,7 @@ const diaction: Record<
         "Um sistema de aquisição, conteúdo e presença digital.",
 
       description:
-        "A atuação combinou Website Marketing, Social Media e MarTech. A capa apresenta a identidade da diaction; a sequência visual reúne peças e páginas do trabalho, incluindo um frame único com seis imagens organizadas em duas filas de três.",
+        "Website, social media e conteúdo foram tratados como um único sistema de aquisição. SEO e CRO melhoram descoberta e conversão; UTM preserva a origem do tráfego; landing pages e CTA transformam interesse em lead; o Opinsy apoia análise, produção e consistência de conteúdo.",
 
       visuals: [
         {
@@ -1631,7 +1631,7 @@ const diaction: Record<
         "Un sistema de adquisición, contenido y presencia digital.",
 
       description:
-        "El trabajo combinó Website Marketing, Social Media y MarTech. La portada presenta la identidad de diaction y la secuencia visual reúne piezas y páginas del trabajo, incluyendo un único frame con seis imágenes organizadas en dos filas de tres.",
+        "Website, social media y contenido se trabajaron como un único sistema de adquisición. SEO y CRO mejoran descubrimiento y conversión; UTM preserva el origen del tráfico; landing pages y CTA convierten interés en lead; Opinsy apoya análisis, producción y consistencia de contenido.",
 
       visuals: [
         {
@@ -1919,7 +1919,7 @@ const diaction: Record<
         "A system for acquisition, content and digital presence.",
 
       description:
-        "The work combined Website Marketing, Social Media and MarTech. The cover presents diaction's identity, while the visual sequence brings together pages and assets from the work, including one frame with six images arranged in two rows of three.",
+        "Website, social media and content were treated as one acquisition system. SEO and CRO improve discovery and conversion; UTM preserves traffic source; landing pages and CTAs turn interest into leads; Opinsy supports analysis, production and content consistency.",
 
       visuals: [
         {
@@ -2207,7 +2207,7 @@ const diaction: Record<
         "Ein System für Akquisition, Content und digitale Präsenz.",
 
       description:
-        "Die Arbeit verband Website Marketing, Social Media und MarTech. Das Cover zeigt die diaction-Identität; die visuelle Sequenz vereint Seiten und Materialien aus der Arbeit, einschließlich eines Frames mit sechs Bildern in zwei Reihen zu je drei.",
+        "Website, Social Media und Content wurden als ein gemeinsames Akquisitionssystem behandelt. SEO und CRO verbessern Discovery und Conversion; UTM bewahrt die Traffic-Herkunft; Landing Pages und CTAs machen Interesse zu Leads; Opinsy unterstützt Analyse, Produktion und Content-Konsistenz.",
 
       visuals: [
         {
