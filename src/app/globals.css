@@ -503,34 +503,60 @@ button {
   padding-top: 20px;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
 }
 
-.hero__link {
-  width: min(240px, 100%);
+.hero__button {
+  min-width: 176px;
+  min-height: 46px;
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
-  gap: 34px;
+  padding: 0 22px;
 
-  padding-bottom: 10px;
-
-  border-bottom: 1px solid var(--foreground);
+  border-radius: 0;
 
   font-size: 11px;
+  font-weight: 500;
   line-height: 1;
 
-  transition: opacity 180ms ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
 }
 
-.hero__link:hover {
-  opacity: 0.58;
+.hero__button--primary {
+  background: #111111;
+  color: #ffffff;
+
+  border: 1px solid #111111;
 }
 
-.hero__link span:last-child {
-  font-size: 15px;
+.hero__button--primary:hover {
+  background: #ffffff;
+  color: #111111;
+
+  border-color: #111111;
+}
+
+.hero__button--secondary {
+  background: color-mix(
+    in srgb,
+    var(--foreground) 8%,
+    transparent
+  );
+
+  color: var(--foreground);
+
+  border: 1px solid transparent;
+
+  transition: none;
 }
 
 /* =========================================================
@@ -1696,12 +1722,16 @@ button {
     margin-top: 28px;
 
     padding-top: 18px;
+
+    flex-direction: column;
+
+    gap: 10px;
   }
 
-  .hero__link {
+  .hero__button {
     width: 100%;
 
-    max-width: 210px;
+    max-width: 280px;
   }
 
   .tech-stack,
