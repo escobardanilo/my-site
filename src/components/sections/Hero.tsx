@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useSitePreferences } from "@/context/SitePreferencesProvider";
 import type { Language } from "@/lib/translations";
 
@@ -57,6 +59,13 @@ const heroManifesto: Record<Language, string[]> = {
   ],
 };
 
+const manifestoLabel: Record<Language, string> = {
+  pt: "MANIFESTO",
+  es: "MANIFIESTO",
+  en: "MANIFESTO",
+  de: "MANIFEST",
+};
+
 export function Hero() {
   const { copy, language } =
     useSitePreferences();
@@ -66,25 +75,106 @@ export function Hero() {
       className="hero"
       id="home"
     >
-      <div className="container hero__inner">
-        <div className="hero__top">
-          <p className="hero__eyebrow">
-            {copy.hero.eyebrow}
-          </p>
+      <div className="container hero__frame">
+        <div className="hero__primary">
+          <div className="hero__copy">
+            <p className="hero__eyebrow">
+              {copy.hero.eyebrow}
+            </p>
+
+            <h1 className="hero__title">
+              <span>AI Engineer.</span>
+              <em>
+                Augmented Software Engineer.
+              </em>
+            </h1>
+
+            <p className="hero__lead">
+              {copy.hero.description}
+            </p>
+
+            <a
+              href="/#projects"
+              className="hero__cta"
+            >
+              <span>
+                {
+                  copy.hero
+                    .selectedWork
+                }
+              </span>
+
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          </div>
+
+          <div className="hero__visual">
+            <div className="hero__portrait">
+              <Image
+                src="/images/escobar-portrait.png"
+                alt="Danilo Escobar"
+                fill
+                priority
+                sizes="(max-width: 900px) 100vw, 50vw"
+                className="hero__portrait-image"
+              />
+            </div>
+
+            <div className="hero__project-card">
+              <div className="hero__project-card-top">
+                <span>
+                  {copy.projects.eyebrow}
+                </span>
+
+                <span aria-hidden="true">
+                  01 — 03
+                </span>
+              </div>
+
+              <strong>
+                PayPart · SON · ALTA
+              </strong>
+
+              <a href="/#projects">
+                <span>
+                  {
+                    copy.hero
+                      .selectedWork
+                  }
+                </span>
+
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div className="hero__main">
-          <h1 className="hero__title">
-            Danilo Escobar
-          </h1>
-        </div>
+        <div className="hero__manifesto-grid">
+          <div className="hero__manifesto-label">
+            <span>00</span>
 
-        <div className="hero__manifesto">
-          <h2 className="hero__manifesto-title">
-            {heroManifesto[language][0]}
-          </h2>
+            <span>
+              {
+                manifestoLabel[
+                  language
+                ]
+              }
+            </span>
+          </div>
 
           <div className="hero__manifesto-copy">
+            <h2>
+              {
+                heroManifesto[
+                  language
+                ][0]
+              }
+            </h2>
+
             {heroManifesto[language]
               .slice(1)
               .map((paragraph) => (
@@ -93,22 +183,6 @@ export function Hero() {
                 </p>
               ))}
           </div>
-        </div>
-
-        <div className="hero__footer">
-          <a
-            href="/#projects"
-            className="hero__link"
-          >
-            {
-              copy.hero
-                .selectedWork
-            }
-
-            <span aria-hidden="true">
-              ↘
-            </span>
-          </a>
         </div>
       </div>
     </section>
