@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-
+import { DitherPortrait } from "@/components/hero/DitherPortrait";
 import { useSitePreferences } from "@/context/SitePreferencesProvider";
 import type { Language } from "@/lib/translations";
 
@@ -111,16 +110,10 @@ export function Hero() {
           </div>
 
           <div className="hero__visual">
-            <div className="hero__portrait">
-              <Image
-                src="/images/escobar-portrait.png"
-                alt="Danilo Escobar"
-                fill
-                priority
-                sizes="(max-width: 900px) 100vw, 50vw"
-                className="hero__portrait-image"
-              />
-            </div>
+            <DitherPortrait
+              src="/images/escobar-portrait.png"
+              alt="Danilo Escobar"
+            />
 
             <div className="hero__project-card">
               <div className="hero__project-card-top">
