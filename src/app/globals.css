@@ -585,74 +585,6 @@ button {
   display: block;
 }
 
-.hero__project-card {
-  position: absolute;
-
-  left: clamp(30px, 4vw, 64px);
-  bottom: clamp(30px, 4vw, 58px);
-
-  width: min(390px, calc(100% - 60px));
-
-  padding: 18px 20px;
-
-  border: 1px solid var(--foreground);
-  border-radius: 18px;
-
-  background: color-mix(
-    in srgb,
-    var(--background) 90%,
-    transparent
-  );
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  z-index: 2;
-}
-
-.hero__project-card-top,
-.hero__project-card a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 24px;
-}
-
-.hero__project-card-top {
-  margin-bottom: 16px;
-
-  font-size: 9px;
-  font-weight: 600;
-
-  letter-spacing: 0.13em;
-
-  color: var(--muted);
-}
-
-.hero__project-card strong {
-  display: block;
-
-  padding-bottom: 18px;
-
-  font-size: 18px;
-
-  line-height: 1.2;
-
-  font-weight: 600;
-
-  letter-spacing: -0.03em;
-}
-
-.hero__project-card a {
-  padding-top: 15px;
-
-  border-top: 1px solid var(--border);
-
-  font-size: 12px;
-  font-weight: 600;
-}
-
 .hero__manifesto-grid {
   display: grid;
 
@@ -1894,14 +1826,6 @@ button {
 
   .hero__visual {
     min-height: 560px;
-  }
-
-  .hero__project-card {
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
-
-    width: auto;
   }
 
   .hero__manifesto-label {
