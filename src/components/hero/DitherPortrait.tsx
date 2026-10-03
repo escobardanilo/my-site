@@ -10,12 +10,17 @@ type DitherPortraitProps = {
   alt: string;
 };
 
-type Dot = {
+type Particle = {
+  baseX: number;
+  baseY: number;
   x: number;
   y: number;
   radius: number;
   alpha: number;
   depth: number;
+  angle: number;
+  distance: number;
+  phase: number;
 };
 
 type Bounds = {
@@ -134,6 +139,16 @@ function getSubjectBounds(
   };
 }
 
+function easeInOutCubic(
+  value: number,
+) {
+  return value < 0.5
+    ? 4 * value * value * value
+    : 1 -
+        Math.pow(-2 * value + 2, 3) /
+          2;
+}
+
 export function DitherPortrait({
   src,
   alt,
@@ -153,19 +168,26 @@ export function DitherPortrait({
 
     let cancelled = false;
     let animationFrame = 0;
-    let dots: Dot[] = [];
+    let particles: Particle[] = [];
+
+    const reduceMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
 
     let pointerX = 0;
     let pointerY = 0;
-    let currentX = 0;
-    let currentY = 0;
+    let currentPointerX = 0;
+    let currentPointerY = 0;
 
     const image = new window.Image();
 
     image.decoding = "async";
     image.src = src;
 
-    const render = () => {
+    let startTime = performance.now();
+
+    const setupParticles = () => {
       if (
         cancelled ||
         !image.complete ||
@@ -194,22 +216,6 @@ export function DitherPortrait({
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
 
-      const context =
-        canvas.getContext("2d");
-
-      if (!context) {
-        return;
-      }
-
-      context.setTransform(
-        pixelRatio,
-        0,
-        0,
-        pixelRatio,
-        0,
-        0,
-      );
-
       const sourceBounds =
         getSubjectBounds(image);
 
@@ -236,8 +242,8 @@ export function DitherPortrait({
       const targetHeight =
         height *
         (width < 640
-          ? 0.88
-          : 0.9);
+          ? 0.9
+          : 0.94);
 
       const aspect =
         sourceBounds.width /
@@ -250,7 +256,7 @@ export function DitherPortrait({
         width *
         (width < 640
           ? 0.54
-          : 0.57);
+          : 0.59);
 
       const targetX =
         centerX - targetWidth / 2;
@@ -285,10 +291,13 @@ export function DitherPortrait({
           sampleCanvas.height,
         ).data;
 
-      dots = [];
+      particles = [];
 
       const gap =
-        width < 640 ? 5 : 5.5;
+        width < 640 ? 4.5 : 4.8;
+
+      const originX = width * 0.58;
+      const originY = height * 0.48;
 
       for (
         let y = 0;
@@ -332,7 +341,7 @@ export function DitherPortrait({
             green * 0.7152 +
             blue * 0.0722;
 
-          if (luminance > 247) {
+          if (luminance > 248) {
             continue;
           }
 
@@ -340,38 +349,63 @@ export function DitherPortrait({
             0,
             Math.min(
               1,
-              (247 - luminance) / 247,
+              (248 - luminance) / 248,
             ),
           );
 
-          const subjectStrength =
+          const strength =
             Math.max(
-              0.18,
+              0.14,
               darkness,
             ) * alpha;
 
-          dots.push({
+          const angle =
+            Math.atan2(
+              y - originY,
+              x - originX,
+            );
+
+          const radialBoost =
+            34 +
+            strength * 96;
+
+          const phase =
+            Math.random() *
+            Math.PI *
+            2;
+
+          particles.push({
+            baseX: x,
+            baseY: y,
             x,
             y,
             radius:
-              0.42 +
-              subjectStrength * 1.08,
+              0.35 +
+              strength * 1.1,
             alpha:
-              0.24 +
-              subjectStrength * 0.72,
+              0.22 +
+              strength * 0.75,
             depth:
-              0.2 +
-              subjectStrength * 0.8,
+              0.3 +
+              strength * 0.7,
+            angle,
+            distance:
+              radialBoost +
+              Math.random() * 36,
+            phase,
           });
         }
       }
 
-      draw();
+      startTime = performance.now();
     };
 
-    const draw = () => {
-      const width = wrapper.clientWidth;
-      const height = wrapper.clientHeight;
+    const draw = (
+      timestamp: number,
+    ) => {
+      if (cancelled) {
+        return;
+      }
 
       const context =
         canvas.getContext("2d");
@@ -379,6 +413,9 @@ export function DitherPortrait({
       if (!context) {
         return;
       }
+
+      const width = wrapper.clientWidth;
+      const height = wrapper.clientHeight;
 
       const pixelRatio = Math.min(
         window.devicePixelRatio || 1,
@@ -412,20 +449,106 @@ export function DitherPortrait({
 
       context.fillStyle = foreground;
 
-      for (const dot of dots) {
+      const elapsed =
+        timestamp - startTime;
+
+      const duration = 7600;
+      const progress =
+        reduceMotion
+          ? 0
+          : (elapsed % duration) /
+            duration;
+
+      let dissolve = 0;
+
+      if (!reduceMotion) {
+        if (progress < 0.28) {
+          dissolve = 0;
+        } else if (progress < 0.46) {
+          dissolve =
+            easeInOutCubic(
+              (progress - 0.28) /
+                0.18,
+            );
+        } else if (progress < 0.64) {
+          dissolve = 1;
+        } else if (progress < 0.84) {
+          dissolve =
+            1 -
+            easeInOutCubic(
+              (progress - 0.64) /
+                0.2,
+            );
+        } else {
+          dissolve = 0;
+        }
+      }
+
+      currentPointerX +=
+        (pointerX -
+          currentPointerX) *
+        0.08;
+
+      currentPointerY +=
+        (pointerY -
+          currentPointerY) *
+        0.08;
+
+      for (const particle of particles) {
+        const wave =
+          Math.sin(
+            elapsed * 0.0015 +
+              particle.phase,
+          );
+
+        const drift =
+          particle.distance *
+          dissolve;
+
+        const disperseX =
+          Math.cos(particle.angle) *
+            drift +
+          wave *
+            5 *
+            dissolve;
+
+        const disperseY =
+          Math.sin(particle.angle) *
+            drift *
+            0.72 +
+          Math.cos(
+            elapsed * 0.0011 +
+              particle.phase,
+          ) *
+            4 *
+            dissolve;
+
+        const pointerInfluenceX =
+          currentPointerX *
+          particle.depth;
+
+        const pointerInfluenceY =
+          currentPointerY *
+          particle.depth;
+
+        const fade =
+          1 - dissolve * 0.58;
+
         context.globalAlpha =
-          dot.alpha;
+          particle.alpha * fade;
 
         context.beginPath();
 
         context.arc(
-          dot.x +
-            currentX *
-              dot.depth,
-          dot.y +
-            currentY *
-              dot.depth,
-          dot.radius,
+          particle.baseX +
+            disperseX +
+            pointerInfluenceX,
+          particle.baseY +
+            disperseY +
+            pointerInfluenceY,
+          particle.radius *
+            (1 +
+              dissolve * 0.22),
           0,
           Math.PI * 2,
         );
@@ -434,31 +557,9 @@ export function DitherPortrait({
       }
 
       context.globalAlpha = 1;
-    };
 
-    const animatePointer = () => {
-      currentX +=
-        (pointerX - currentX) *
-        0.11;
-
-      currentY +=
-        (pointerY - currentY) *
-        0.11;
-
-      draw();
-
-      const stillMoving =
-        Math.abs(pointerX - currentX) >
-          0.04 ||
-        Math.abs(pointerY - currentY) >
-          0.04;
-
-      if (stillMoving) {
-        animationFrame =
-          requestAnimationFrame(
-            animatePointer,
-          );
-      }
+      animationFrame =
+        requestAnimationFrame(draw);
     };
 
     const handlePointerMove = (
@@ -467,55 +568,45 @@ export function DitherPortrait({
       const rect =
         wrapper.getBoundingClientRect();
 
-      const normalizedX =
-        (event.clientX - rect.left) /
+      pointerX =
+        ((event.clientX -
+          rect.left) /
           rect.width -
-        0.5;
+          0.5) *
+        9;
 
-      const normalizedY =
-        (event.clientY - rect.top) /
+      pointerY =
+        ((event.clientY -
+          rect.top) /
           rect.height -
-        0.5;
-
-      pointerX = normalizedX * 10;
-      pointerY = normalizedY * 7;
-
-      cancelAnimationFrame(
-        animationFrame,
-      );
-
-      animationFrame =
-        requestAnimationFrame(
-          animatePointer,
-        );
+          0.5) *
+        7;
     };
 
     const handlePointerLeave = () => {
       pointerX = 0;
       pointerY = 0;
+    };
+
+    const resizeObserver =
+      new ResizeObserver(() => {
+        setupParticles();
+      });
+
+    const themeObserver =
+      new MutationObserver(() => {
+        startTime = performance.now();
+      });
+
+    image.onload = () => {
+      setupParticles();
 
       cancelAnimationFrame(
         animationFrame,
       );
 
       animationFrame =
-        requestAnimationFrame(
-          animatePointer,
-        );
-    };
-
-    const resizeObserver =
-      new ResizeObserver(() => {
-        render();
-      });
-
-    const themeObserver =
-      new MutationObserver(() => {
-        draw();
-      });
-
-    image.onload = () => {
-      render();
+        requestAnimationFrame(draw);
     };
 
     resizeObserver.observe(wrapper);
