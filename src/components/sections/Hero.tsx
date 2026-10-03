@@ -115,34 +115,6 @@ export function Hero() {
               alt="Danilo Escobar"
             />
 
-            <div className="hero__project-card">
-              <div className="hero__project-card-top">
-                <span>
-                  {copy.projects.eyebrow}
-                </span>
-
-                <span aria-hidden="true">
-                  01 — 03
-                </span>
-              </div>
-
-              <strong>
-                PayPart · SON · ALTA
-              </strong>
-
-              <a href="/#projects">
-                <span>
-                  {
-                    copy.hero
-                      .selectedWork
-                  }
-                </span>
-
-                <span aria-hidden="true">
-                  ↗
-                </span>
-              </a>
-            </div>
           </div>
         </div>
 
