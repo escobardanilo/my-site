@@ -71,6 +71,7 @@ const aboutCopy: Record<
     role: string;
     intro: string;
     second: string;
+    digital: string;
     thirdBefore: string;
     thirdEmphasis: string;
     contactCta: string;
@@ -82,6 +83,8 @@ const aboutCopy: Record<
       "O meu trabalho parte de uma pergunta simples: o que pode ser feito melhor quando software e inteligência artificial deixam de ser apenas ferramentas e passam a participar do próprio trabalho?",
     second:
       "É a partir daí que desenvolvo produtos que ajudam pessoas a investigar, decidir, executar e compreender melhor processos complexos. Alguns exigem IA, outros exigem regras, dados, automação ou simplesmente uma arquitetura de software bem pensada. O importante é que cada componente tenha uma função clara e produza valor real no uso.",
+    digital:
+      "Também trabalhei no desenvolvimento de websites, landing pages e aplicações, envolvendo estrutura, experiência de utilização, integração com dados, APIs, automações e fluxos de conversão. Essa experiência reforçou a forma como penso produto: tecnologia, comunicação e experiência precisam funcionar em conjunto para que uma solução seja não apenas tecnicamente sólida, mas também clara, utilizável e orientada a um objetivo concreto.",
     thirdBefore:
       "A minha experiência em operações industriais trouxe-me uma visão que levo para a engenharia: tecnologia não existe isolada. Ela entra em processos que já têm pessoas, responsabilidades, restrições, erros e decisões. É nesse espaço que procuro construir — ",
     thirdEmphasis:
@@ -94,6 +97,8 @@ const aboutCopy: Record<
       "My work starts with a simple question: what can be done better when software and artificial intelligence stop being just tools and start taking part in the work itself?",
     second:
       "From there, I build products that help people investigate, decide, execute and better understand complex processes. Some require AI, others require rules, data, automation or simply well-designed software architecture. What matters is that each component has a clear function and creates real value in use.",
+    digital:
+      "I have also worked on websites, landing pages and applications, covering structure, user experience, integrations with data and APIs, automation and conversion flows. That experience strengthened the way I think about products: technology, communication and experience need to work together so a solution is not only technically solid, but also clear, usable and tied to a concrete objective.",
     thirdBefore:
       "My experience in industrial operations has shaped a perspective that I bring into engineering: technology does not exist in isolation. It enters processes that already involve people, responsibilities, constraints, errors and decisions. That is the space where I choose to build — ",
     thirdEmphasis:
@@ -106,6 +111,8 @@ const aboutCopy: Record<
       "Mi trabajo parte de una pregunta simple: ¿qué puede hacerse mejor cuando el software y la inteligencia artificial dejan de ser solo herramientas y pasan a formar parte del propio trabajo?",
     second:
       "A partir de ahí desarrollo productos que ayudan a las personas a investigar, decidir, ejecutar y comprender mejor procesos complejos. Algunos requieren IA, otros reglas, datos, automatización o simplemente una arquitectura de software bien diseñada. Lo importante es que cada componente tenga una función clara y produzca valor real en su uso.",
+    digital:
+      "También he trabajado en el desarrollo de sitios web, landing pages y aplicaciones, abordando estructura, experiencia de usuario, integración con datos y APIs, automatizaciones y flujos de conversión. Esa experiencia reforzó mi forma de pensar producto: tecnología, comunicación y experiencia deben funcionar juntas para que una solución no solo sea técnicamente sólida, sino también clara, utilizable y orientada a un objetivo concreto.",
     thirdBefore:
       "Mi experiencia en operaciones industriales me ha dado una perspectiva que llevo a la ingeniería: la tecnología no existe de forma aislada. Entra en procesos que ya tienen personas, responsabilidades, restricciones, errores y decisiones. Es en ese espacio donde busco construir — ",
     thirdEmphasis:
@@ -118,6 +125,8 @@ const aboutCopy: Record<
       "Meine Arbeit beginnt mit einer einfachen Frage: Was lässt sich besser machen, wenn Software und künstliche Intelligenz nicht mehr nur Werkzeuge sind, sondern Teil der eigentlichen Arbeit werden?",
     second:
       "Von dort aus entwickle ich Produkte, die Menschen dabei unterstützen, komplexe Prozesse zu untersuchen, Entscheidungen zu treffen, Aufgaben auszuführen und Zusammenhänge besser zu verstehen. Manche benötigen KI, andere Regeln, Daten, Automatisierung oder einfach eine gut durchdachte Softwarearchitektur. Entscheidend ist, dass jede Komponente eine klare Funktion erfüllt und im realen Einsatz einen konkreten Wert schafft.",
+    digital:
+      "Ich habe außerdem Websites, Landingpages und Anwendungen entwickelt und dabei Struktur, Nutzererlebnis, Daten- und API-Integrationen, Automatisierungen sowie Conversion-Flows miteinander verbunden. Diese Erfahrung hat meine Produktperspektive geprägt: Technologie, Kommunikation und Experience müssen zusammenspielen, damit eine Lösung nicht nur technisch solide, sondern auch klar, nutzbar und auf ein konkretes Ziel ausgerichtet ist.",
     thirdBefore:
       "Meine Erfahrung in industriellen Abläufen prägt meine Arbeit als Engineer: Technologie existiert nicht isoliert. Sie wird Teil von Prozessen, in denen bereits Menschen, Verantwortlichkeiten, Einschränkungen, Fehler und Entscheidungen existieren. Genau in diesem Raum möchte ich Systeme entwickeln — ",
     thirdEmphasis:
@@ -203,6 +212,10 @@ export function About() {
 
             <p className="about__paragraph">
               {about.second}
+            </p>
+
+            <p className="about__paragraph">
+              {about.digital}
             </p>
 
               <p className="about__paragraph">
