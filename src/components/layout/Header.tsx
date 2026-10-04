@@ -1,7 +1,13 @@
 "use client";
 
 import { useSitePreferences } from "@/context/SitePreferencesProvider";
+import type { SectionId } from "@/lib/navigation";
 import type { Language } from "@/lib/translations";
+
+type HeaderProps = {
+  activeSection: SectionId;
+  onNavigate: (section: SectionId) => void;
+};
 
 const navigationCopy: Record<
   Language,
@@ -22,7 +28,6 @@ const navigationCopy: Record<
     about: "Sobre",
     contact: "Contacto",
   },
-
   en: {
     stack: "Stack",
     expertise: "Expertise",
@@ -31,7 +36,6 @@ const navigationCopy: Record<
     about: "About",
     contact: "Contact",
   },
-
   es: {
     stack: "Stack",
     expertise: "Especialización",
@@ -40,7 +44,6 @@ const navigationCopy: Record<
     about: "Sobre",
     contact: "Contacto",
   },
-
   de: {
     stack: "Stack",
     expertise: "Spezialisierung",
@@ -58,7 +61,35 @@ const languages: Language[] = [
   "de",
 ];
 
-export function Header() {
+const navItems: Array<{
+  id: Exclude<SectionId, "home" | "contact">;
+  key:
+    | "stack"
+    | "expertise"
+    | "experience"
+    | "projects"
+    | "about";
+}> = [
+  { id: "stack", key: "stack" },
+  {
+    id: "expertise",
+    key: "expertise",
+  },
+  {
+    id: "experience",
+    key: "experience",
+  },
+  {
+    id: "projects",
+    key: "projects",
+  },
+  { id: "about", key: "about" },
+];
+
+export function Header({
+  activeSection,
+  onNavigate,
+}: HeaderProps) {
   const {
     language,
     theme,
@@ -69,131 +100,42 @@ export function Header() {
   const navigation =
     navigationCopy[language];
 
-  function handleSectionNavigation(
-    event: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string,
-  ) {
-    if (
-      window.location.pathname !== "/"
-    ) {
-      return;
-    }
-
-    const section =
-      document.getElementById(sectionId);
-
-    if (!section) {
-      return;
-    }
-
-    event.preventDefault();
-
-    const header =
-      document.querySelector(
-        ".header",
-      ) as HTMLElement | null;
-
-    const headerHeight =
-      header?.offsetHeight ?? 0;
-
-    const targetPosition =
-      section.getBoundingClientRect()
-        .top +
-      window.scrollY -
-      headerHeight;
-
-    window.history.pushState(
-      null,
-      "",
-      `/#${sectionId}`,
-    );
-
-    window.scrollTo({
-      top: targetPosition,
-      behavior: "smooth",
-    });
-  }
-
   return (
     <header className="header">
       <div className="container header__inner">
-        <a
-          href="/#home"
+        <button
+          type="button"
           className="header__brand"
           aria-label="Danilo Escobar"
-          onClick={(event) =>
-            handleSectionNavigation(
-              event,
-              "home",
-            )
+          onClick={() =>
+            onNavigate("home")
           }
         >
           Danilo Escobar
-        </a>
+        </button>
 
         <nav
           className="header__nav"
           aria-label="Main navigation"
         >
-          <a
-            href="/#stack"
-            onClick={(event) =>
-              handleSectionNavigation(
-                event,
-                "stack",
-              )
-            }
-          >
-            {navigation.stack}
-          </a>
-
-          <a
-            href="/#expertise"
-            onClick={(event) =>
-              handleSectionNavigation(
-                event,
-                "expertise",
-              )
-            }
-          >
-            {navigation.expertise}
-          </a>
-
-          <a
-            href="/#experience"
-            onClick={(event) =>
-              handleSectionNavigation(
-                event,
-                "experience",
-              )
-            }
-          >
-            {navigation.experience}
-          </a>
-
-          <a
-            href="/#projects"
-            onClick={(event) =>
-              handleSectionNavigation(
-                event,
-                "projects",
-              )
-            }
-          >
-            {navigation.projects}
-          </a>
-
-          <a
-            href="/#about"
-            onClick={(event) =>
-              handleSectionNavigation(
-                event,
-                "about",
-              )
-            }
-          >
-            {navigation.about}
-          </a>
+          {navItems.map(
+            ({ id, key }) => (
+              <button
+                key={id}
+                type="button"
+                className={
+                  activeSection === id
+                    ? "header__nav-link header__nav-link--active"
+                    : "header__nav-link"
+                }
+                onClick={() =>
+                  onNavigate(id)
+                }
+              >
+                {navigation[key]}
+              </button>
+            ),
+          )}
         </nav>
 
         <div className="header__actions">
@@ -206,11 +148,7 @@ export function Header() {
                 <button
                   key={item}
                   type="button"
-                  className={`language-switcher__button ${
-                    language === item
-                      ? "language-switcher__button--active"
-                      : ""
-                  }`}
+                  className={`language-switcher__button ${language === item ? "language-switcher__button--active" : ""}`}
                   onClick={() =>
                     setLanguage(item)
                   }
@@ -300,18 +238,20 @@ export function Header() {
             )}
           </button>
 
-          <a
-            href="/#contact"
-            className="header__contact"
-            onClick={(event) =>
-              handleSectionNavigation(
-                event,
-                "contact",
-              )
+          <button
+            type="button"
+            className={
+              activeSection ===
+              "contact"
+                ? "header__contact header__contact--active"
+                : "header__contact"
+            }
+            onClick={() =>
+              onNavigate("contact")
             }
           >
             {navigation.contact}
-          </a>
+          </button>
         </div>
       </div>
     </header>
