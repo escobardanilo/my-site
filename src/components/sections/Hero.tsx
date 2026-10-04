@@ -34,11 +34,11 @@ export function Hero() {
             </p>
 
             <a
-              href="mailto:d.escobar-016@hotmail.com"
+              href="/#projects"
               className="hero__cta"
             >
               <span>
-                {copy.header.contact}
+                {copy.hero.selectedWork}
               </span>
 
               <span aria-hidden="true">
