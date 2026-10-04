@@ -14,7 +14,6 @@ import { Hero } from "@/components/sections/Hero";
 import { ProfessionalExpertise } from "@/components/sections/ProfessionalExpertise";
 import { Projects } from "@/components/sections/Projects";
 import { TechStack } from "@/components/sections/TechStack";
-import { WorkHistory } from "@/components/sections/WorkHistory";
 import {
   isSectionId,
   type SectionId,
@@ -139,11 +138,6 @@ export function SiteShell() {
           {activeSection ===
             "expertise" && (
             <ProfessionalExpertise />
-          )}
-
-          {activeSection ===
-            "experience" && (
-            <WorkHistory />
           )}
 
           {activeSection ===
