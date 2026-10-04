@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useSitePreferences } from "@/context/SitePreferencesProvider";
 import type { Language } from "@/lib/translations";
 
@@ -170,15 +171,16 @@ export function About() {
         </div>
 
         <div className="about-combined__about">
-          <div className="about-combined__meta">
-            <span>05</span>
-            <span>
-              {copy.about.eyebrow}
-            </span>
-          </div>
+          <div className="about-combined__about-text">
+            <div className="about-combined__meta">
+              <span>05</span>
+              <span>
+                {copy.about.eyebrow}
+              </span>
+            </div>
 
-          <div className="about__copy">
-            <p className="about__lead">
+            <div className="about__copy">
+              <p className="about__lead">
               {language === "pt" ? (
                 <>
                   Sou{" "}
@@ -222,26 +224,37 @@ export function About() {
               {about.second}
             </p>
 
-            <p className="about__paragraph">
-              {about.thirdBefore}
-              <strong>
-                {about.thirdEmphasis}
-              </strong>
-            </p>
+              <p className="about__paragraph">
+                {about.thirdBefore}
+                <strong>
+                  {about.thirdEmphasis}
+                </strong>
+              </p>
+            </div>
+
+            <a
+              className="about__cta"
+              href="mailto:d.escobar-016@hotmail.com"
+            >
+              <span>
+                {about.contactCta}
+              </span>
+
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </a>
           </div>
 
-          <a
-            className="about__cta"
-            href="mailto:d.escobar-016@hotmail.com"
-          >
-            <span>
-              {about.contactCta}
-            </span>
-
-            <span aria-hidden="true">
-              ↗
-            </span>
-          </a>
+          <div className="about-combined__portrait">
+            <Image
+              src="/images/escobar-portrait.png"
+              alt="Danilo Escobar"
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+              className="about-combined__image"
+            />
+          </div>
         </div>
       </div>
     </section>
