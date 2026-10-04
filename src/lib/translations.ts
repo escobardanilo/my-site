@@ -128,7 +128,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     hero: {
-      eyebrow: "AI AUGMENTED SOFTWARE ENGINEER",
+      eyebrow: "AUGMENTED SOFTWARE ENGINEER",
       description:
         "Atuo na interseção entre IA e engenharia de software, construindo sistemas que conectam modelos, dados, APIs e processos reais de operação. O foco está em transformar tarefas manuais e fluxos fragmentados em aplicações mais rápidas, consistentes e controláveis, usando TypeScript, React, Next.js, Node.js, sistemas em tempo real e infraestrutura na edge — com automação onde faz sentido e supervisão humana onde a decisão exige contexto.",
       selectedWork: "Ver projetos",
@@ -354,7 +354,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     hero: {
-      eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
+      eyebrow: "AUGMENTED SOFTWARE ENGINEER",
       description:
         "Trabajo en la intersección entre IA e ingeniería de software, construyendo sistemas que conectan modelos, datos, APIs y procesos reales de operación. El foco está en transformar tareas manuales y flujos fragmentados en aplicaciones más rápidas, consistentes y controlables, usando TypeScript, React, Next.js, Node.js, sistemas en tiempo real e infraestructura edge — con automatización donde tiene sentido y supervisión humana donde la decisión exige contexto.",
       selectedWork: "Ver proyectos",
@@ -580,7 +580,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     hero: {
-      eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
+      eyebrow: "AUGMENTED SOFTWARE ENGINEER",
       description:
         "I work at the intersection of AI and software engineering, building systems that connect models, data, APIs and real operational processes. The focus is on turning manual tasks and fragmented workflows into faster, more consistent and controllable applications using TypeScript, React, Next.js, Node.js, real-time systems and edge infrastructure — with automation where it makes sense and human oversight where decisions require context.",
       selectedWork: "Selected work",
@@ -806,7 +806,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     hero: {
-      eyebrow: "AI ENGINEER / AUGMENTED SOFTWARE ENGINEER",
+      eyebrow: "AUGMENTED SOFTWARE ENGINEER",
       description:
         "Ich arbeite an der Schnittstelle von KI und Software Engineering und entwickle Systeme, die Modelle, Daten, APIs und reale operative Prozesse verbinden. Der Fokus liegt darauf, manuelle Aufgaben und fragmentierte Abläufe in schnellere, konsistentere und kontrollierbare Anwendungen zu überführen — mit TypeScript, React, Next.js, Node.js, Echtzeitsystemen und Edge-Infrastruktur sowie Automatisierung dort, wo sie sinnvoll ist, und menschlicher Aufsicht dort, wo Entscheidungen Kontext erfordern.",
       selectedWork: "Projekte ansehen",
