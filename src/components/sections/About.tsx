@@ -12,6 +12,7 @@ const aboutCopy: Record<
     second: string;
     thirdBefore: string;
     thirdEmphasis: string;
+    contactCta: string;
   }
 > = {
   pt: {
@@ -24,6 +25,7 @@ const aboutCopy: Record<
       "A minha experiência em operações industriais trouxe-me uma visão que levo para a engenharia: tecnologia não existe isolada. Ela entra em processos que já têm pessoas, responsabilidades, restrições, erros e decisões. É nesse espaço que procuro construir — ",
     thirdEmphasis:
       "entre o que o software consegue fazer e o que realmente melhora a forma de trabalhar.",
+    contactCta: "Contacte-me",
   },
 
   en: {
@@ -36,6 +38,7 @@ const aboutCopy: Record<
       "My experience in industrial operations has shaped a perspective that I bring into engineering: technology does not exist in isolation. It enters processes that already involve people, responsibilities, constraints, errors and decisions. That is the space where I choose to build — ",
     thirdEmphasis:
       "between what software can do and what actually improves the way people work.",
+    contactCta: "Get in touch",
   },
 
   es: {
@@ -48,6 +51,7 @@ const aboutCopy: Record<
       "Mi experiencia en operaciones industriales me ha dado una perspectiva que llevo a la ingeniería: la tecnología no existe de forma aislada. Entra en procesos que ya tienen personas, responsabilidades, restricciones, errores y decisiones. Es en ese espacio donde busco construir — ",
     thirdEmphasis:
       "entre lo que el software puede hacer y lo que realmente mejora la forma de trabajar.",
+    contactCta: "Contactar",
   },
 
   de: {
@@ -60,6 +64,7 @@ const aboutCopy: Record<
       "Meine Erfahrung in industriellen Abläufen prägt meine Arbeit als Engineer: Technologie existiert nicht isoliert. Sie wird Teil von Prozessen, in denen bereits Menschen, Verantwortlichkeiten, Einschränkungen, Fehler und Entscheidungen existieren. Genau in diesem Raum möchte ich Systeme entwickeln — ",
     thirdEmphasis:
       "zwischen dem, was Software leisten kann, und dem, was die Art zu arbeiten tatsächlich verbessert.",
+    contactCta: "Kontakt aufnehmen",
   },
 };
 
@@ -137,10 +142,10 @@ export function About() {
 
             <a
               className="about__cta"
-              href="#projects"
+              href="mailto:d.escobar-016@hotmail.com"
             >
               <span>
-                {copy.hero.selectedWork}
+                {about.contactCta}
               </span>
 
               <span aria-hidden="true">
