@@ -41,10 +41,6 @@ export function WorkHistory() {
                 <span className="work-history__number">
                   {experience.number}
                 </span>
-
-                <span className="work-history__period">
-                  {experience.period}
-                </span>
               </div>
 
               <div className="work-history__content">
