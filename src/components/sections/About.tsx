@@ -7,13 +7,11 @@ import type { Language } from "@/lib/translations";
 const manifestoCopy: Record<
   Language,
   {
-    label: string;
     title: string;
     paragraphs: string[];
   }
 > = {
   pt: {
-    label: "MANIFESTO",
     title:
       "Eu persigo problemas que ainda não têm uma solução óbvia.",
     paragraphs: [
@@ -27,7 +25,6 @@ const manifestoCopy: Record<
     ],
   },
   en: {
-    label: "MANIFESTO",
     title:
       "I pursue problems that do not yet have an obvious solution.",
     paragraphs: [
@@ -41,7 +38,6 @@ const manifestoCopy: Record<
     ],
   },
   es: {
-    label: "MANIFIESTO",
     title:
       "Persigo problemas que todavía no tienen una solución obvia.",
     paragraphs: [
@@ -55,7 +51,6 @@ const manifestoCopy: Record<
     ],
   },
   de: {
-    label: "MANIFEST",
     title:
       "Ich verfolge Probleme, für die es noch keine offensichtliche Lösung gibt.",
     paragraphs: [
@@ -132,10 +127,8 @@ const aboutCopy: Record<
 };
 
 export function About() {
-  const {
-    copy,
-    language,
-  } = useSitePreferences();
+  const { language } =
+    useSitePreferences();
 
   const about =
     aboutCopy[language];
@@ -150,11 +143,6 @@ export function About() {
     >
       <div className="container about-combined__container">
         <div className="about-combined__manifesto">
-          <div className="about-combined__meta">
-            <span>00</span>
-            <span>{manifesto.label}</span>
-          </div>
-
           <h2 className="about-combined__manifesto-title">
             {manifesto.title}
           </h2>
@@ -172,13 +160,6 @@ export function About() {
 
         <div className="about-combined__about">
           <div className="about-combined__about-text">
-            <div className="about-combined__meta">
-              <span>05</span>
-              <span>
-                {copy.about.eyebrow}
-              </span>
-            </div>
-
             <div className="about__copy">
               <p className="about__lead">
               {language === "pt" ? (
