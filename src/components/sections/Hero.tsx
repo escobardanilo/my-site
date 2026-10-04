@@ -38,7 +38,7 @@ export function Hero() {
               className="hero__cta"
             >
               <span>
-                Contacto
+                {copy.header.contact}
               </span>
 
               <span aria-hidden="true">
