@@ -37,10 +37,10 @@ const SitePreferencesContext =
   >(undefined);
 
 const LANGUAGE_STORAGE_KEY =
-  "portfolio-language";
+  "portfolio-language-v2";
 
 const THEME_STORAGE_KEY =
-  "portfolio-theme";
+  "portfolio-theme-v2";
 
 const VALID_LANGUAGES: Language[] = [
   "pt",
@@ -69,7 +69,7 @@ export function SitePreferencesProvider({
   const [
     theme,
     setThemeState,
-  ] = useState<Theme>("light");
+  ] = useState<Theme>("dark");
 
   useEffect(() => {
     const storedLanguage =
@@ -104,6 +104,8 @@ export function SitePreferencesProvider({
       setThemeState(
         storedTheme as Theme,
       );
+    } else {
+      setThemeState("dark");
     }
   }, []);
 
