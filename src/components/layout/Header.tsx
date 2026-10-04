@@ -14,7 +14,6 @@ const navigationCopy: Record<
   {
     stack: string;
     expertise: string;
-    experience: string;
     projects: string;
     about: string;
     contact: string;
@@ -23,7 +22,6 @@ const navigationCopy: Record<
   pt: {
     stack: "Stack",
     expertise: "Especialização",
-    experience: "Experiência",
     projects: "Projetos",
     about: "Sobre",
     contact: "Contacto",
@@ -31,7 +29,6 @@ const navigationCopy: Record<
   en: {
     stack: "Stack",
     expertise: "Expertise",
-    experience: "Experience",
     projects: "Projects",
     about: "About",
     contact: "Contact",
@@ -39,7 +36,6 @@ const navigationCopy: Record<
   es: {
     stack: "Stack",
     expertise: "Especialización",
-    experience: "Experiencia",
     projects: "Proyectos",
     about: "Sobre",
     contact: "Contacto",
@@ -47,7 +43,6 @@ const navigationCopy: Record<
   de: {
     stack: "Stack",
     expertise: "Spezialisierung",
-    experience: "Erfahrung",
     projects: "Projekte",
     about: "Über mich",
     contact: "Kontakt",
@@ -66,7 +61,6 @@ const navItems: Array<{
   key:
     | "stack"
     | "expertise"
-    | "experience"
     | "projects"
     | "about";
 }> = [
@@ -74,10 +68,6 @@ const navItems: Array<{
   {
     id: "expertise",
     key: "expertise",
-  },
-  {
-    id: "experience",
-    key: "experience",
   },
   {
     id: "projects",
