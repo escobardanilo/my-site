@@ -36,13 +36,15 @@ export const metadata: Metadata = {
 const themeScript = `
 (function () {
   try {
-    var theme = localStorage.getItem("portfolio-theme");
+    var theme = localStorage.getItem("portfolio-theme-v2");
 
     if (theme === "dark" || theme === "light") {
       document.documentElement.dataset.theme = theme;
+    } else {
+      document.documentElement.dataset.theme = "dark";
     }
 
-    var language = localStorage.getItem("portfolio-language");
+    var language = localStorage.getItem("portfolio-language-v2");
 
     if (
       language === "pt" ||
@@ -51,6 +53,8 @@ const themeScript = `
       language === "de"
     ) {
       document.documentElement.lang = language;
+    } else {
+      document.documentElement.lang = "en";
     }
   } catch (error) {}
 })();
@@ -63,7 +67,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="pt"
+      lang="en"
+      data-theme="dark"
       suppressHydrationWarning
     >
       <head>
