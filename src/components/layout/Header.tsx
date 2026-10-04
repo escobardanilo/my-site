@@ -5,8 +5,8 @@ import type { SectionId } from "@/lib/navigation";
 import type { Language } from "@/lib/translations";
 
 type HeaderProps = {
-  activeSection: SectionId;
-  onNavigate: (section: SectionId) => void;
+  activeSection?: SectionId;
+  onNavigate?: (section: SectionId) => void;
 };
 
 const navigationCopy: Record<
@@ -87,9 +87,9 @@ const navItems: Array<{
 ];
 
 export function Header({
-  activeSection,
+  activeSection = "home",
   onNavigate,
-}: HeaderProps) {
+}: HeaderProps = {}) {
   const {
     language,
     theme,
@@ -100,6 +100,20 @@ export function Header({
   const navigation =
     navigationCopy[language];
 
+  function handleNavigate(
+    section: SectionId,
+  ) {
+    if (onNavigate) {
+      onNavigate(section);
+      return;
+    }
+
+    window.location.href =
+      section === "home"
+        ? "/"
+        : `/#${section}`;
+  }
+
   return (
     <header className="header">
       <div className="container header__inner">
@@ -108,7 +122,7 @@ export function Header({
           className="header__brand"
           aria-label="Danilo Escobar"
           onClick={() =>
-            onNavigate("home")
+            handleNavigate("home")
           }
         >
           Danilo Escobar
@@ -129,7 +143,7 @@ export function Header({
                     : "header__nav-link"
                 }
                 onClick={() =>
-                  onNavigate(id)
+                  handleNavigate(id)
                 }
               >
                 {navigation[key]}
@@ -247,7 +261,7 @@ export function Header({
                 : "header__contact"
             }
             onClick={() =>
-              onNavigate("contact")
+              handleNavigate("contact")
             }
           >
             {navigation.contact}
