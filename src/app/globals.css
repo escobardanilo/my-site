@@ -2456,6 +2456,9 @@ body.single-screen-site .header {
 .single-screen-site .project-card__content {
   min-height: 0;
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .single-screen-site .project-card__heading {
@@ -2473,8 +2476,14 @@ body.single-screen-site .header {
 }
 
 .single-screen-site .project-card__details {
+  flex: 1;
+  min-height: 0;
+
   margin-top: 14px;
   padding-top: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .single-screen-site .project-card__details > p {
@@ -2494,6 +2503,8 @@ body.single-screen-site .header {
 }
 
 .single-screen-site .project-card__action {
+  margin-top: auto;
+
   padding: 10px 0;
   font-size: 10px;
 }
