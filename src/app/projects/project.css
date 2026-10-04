@@ -32,7 +32,7 @@
 
   gap: 12px;
 
-  font-size: 11px;
+  font-size: 13px;
 
   color: var(--muted);
 
@@ -44,7 +44,7 @@
 }
 
 .project-hero__number {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
 
   letter-spacing: 0.14em;
@@ -65,7 +65,7 @@
 .project-hero__eyebrow {
   margin-bottom: 30px;
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
 
   letter-spacing: 0.16em;
@@ -125,7 +125,7 @@
 .project-hero__bottom > p {
   max-width: 700px;
 
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.65;
 
   color: var(--muted);
@@ -137,7 +137,7 @@
 
   gap: 18px;
 
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
 
   letter-spacing: 0.14em;
@@ -169,7 +169,7 @@
 
 .project-section__heading span,
 .project-section__heading p {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
 
   line-height: 1;
@@ -210,7 +210,7 @@
 }
 
 .project-section__intro p {
-  font-size: 13px;
+  font-size: 16px;
 
   line-height: 1.6;
 
@@ -273,7 +273,7 @@
 }
 
 .project-overview__metadata span {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
 
   letter-spacing: 0.12em;
@@ -282,9 +282,9 @@
 }
 
 .project-overview__metadata p {
-  font-size: 12px;
+  font-size: 14px;
 
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* =========================================================
@@ -316,7 +316,7 @@
 
   margin-top: 52px;
 
-  font-size: 13px;
+  font-size: 16px;
 
   line-height: 1.6;
 
@@ -364,7 +364,7 @@
 }
 
 .project-visual__top span {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
 
   letter-spacing: 0.12em;
@@ -474,7 +474,7 @@
 
   margin-top: 22px;
 
-  font-size: 13px;
+  font-size: 15px;
 
   line-height: 1.6;
 
@@ -624,7 +624,7 @@
 
   border-top: 1px solid var(--border);
 
-  font-size: 12px;
+  font-size: 14px;
 
   line-height: 1.6;
 
@@ -675,7 +675,7 @@
 }
 
 .project-architecture__item strong {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
 
   letter-spacing: -0.03em;
@@ -703,7 +703,7 @@
 
   background: var(--background);
 
-  font-size: 11px;
+  font-size: 13px;
 }
 
 /* =========================================================
@@ -741,7 +741,7 @@
 }
 
 .project-process__item h3 {
-  font-size: 24px;
+  font-size: 28px;
 
   line-height: 1;
 
@@ -804,7 +804,7 @@
 .project-decision h3 {
   margin-bottom: 18px;
 
-  font-size: 22px;
+  font-size: 26px;
 
   line-height: 1.05;
 
@@ -863,7 +863,7 @@
 }
 
 .project-stack__item strong {
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 500;
 }
 
@@ -915,7 +915,7 @@
 .project-result strong {
   display: block;
 
-  font-size: 11px;
+  font-size: 12px;
 
   line-height: 1;
 
@@ -1008,13 +1008,13 @@
 }
 
 .project-links span {
-  font-size: 13px;
+  font-size: 15px;
 
   font-weight: 500;
 }
 
 .project-links small {
-  font-size: 10px;
+  font-size: 11px;
 
   letter-spacing: 0.08em;
 
@@ -1061,7 +1061,7 @@
 }
 
 .project-navigation__item span {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
 
   letter-spacing: 0.13em;
@@ -1417,5 +1417,141 @@
 
   .project-lightbox__caption {
     padding: 14px;
+  }
+}
+
+/* =========================================================
+   PROJECT PAGE — READABILITY PASS
+   ========================================================= */
+
+.project-back-link {
+  font-size: 13px;
+}
+
+.project-hero__number,
+.project-hero__eyebrow,
+.project-section__heading span,
+.project-section__heading p {
+  font-size: 12px;
+}
+
+.project-hero__bottom > p {
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+.project-hero__scroll {
+  font-size: 11px;
+}
+
+.project-section__intro p,
+.project-problem p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.project-overview__metadata span {
+  font-size: 12px;
+}
+
+.project-overview__metadata p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.project-visual__top span {
+  font-size: 11px;
+}
+
+.project-visual > p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.project-architecture__item > span:first-child {
+  font-size: 11px;
+}
+
+.project-architecture__item strong {
+  font-size: 20px;
+}
+
+.project-process__item > span {
+  font-size: 12px;
+}
+
+.project-process__item h3 {
+  font-size: 28px;
+}
+
+.project-process__item p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.project-decision > span {
+  font-size: 12px;
+}
+
+.project-decision h3 {
+  font-size: 26px;
+}
+
+.project-decision p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.project-stack__item span {
+  font-size: 11px;
+}
+
+.project-stack__item strong {
+  font-size: 19px;
+}
+
+.project-result strong {
+  font-size: 12px;
+}
+
+.project-links span {
+  font-size: 15px;
+}
+
+.project-links small {
+  font-size: 11px;
+}
+
+.project-navigation__item span {
+  font-size: 11px;
+}
+
+.project-navigation__all {
+  font-size: 13px;
+}
+
+.project-lightbox__header span {
+  font-size: 11px;
+}
+
+.project-lightbox__caption {
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  .project-hero__bottom > p,
+  .project-section__intro p,
+  .project-problem p,
+  .project-process__item p,
+  .project-decision p,
+  .project-visual > p {
+    font-size: 15px;
+  }
+
+  .project-section__heading span,
+  .project-section__heading p,
+  .project-hero__eyebrow,
+  .project-hero__number {
+    font-size: 11px;
   }
 }
