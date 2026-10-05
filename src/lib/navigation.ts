@@ -2,6 +2,7 @@ export const sectionIds = [
   "home",
   "stack",
   "expertise",
+  "experience",
   "projects",
   "about",
   "contact",
