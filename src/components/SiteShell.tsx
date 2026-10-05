@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  useCallback,
   useEffect,
   useState,
 } from "react";
@@ -14,22 +13,20 @@ import { Hero } from "@/components/sections/Hero";
 import { ProfessionalExpertise } from "@/components/sections/ProfessionalExpertise";
 import { Projects } from "@/components/sections/Projects";
 import { TechStack } from "@/components/sections/TechStack";
+import { WorkHistory } from "@/components/sections/WorkHistory";
 import {
   isSectionId,
+  sectionIds,
   type SectionId,
 } from "@/lib/navigation";
 
-function getSectionFromHash():
-  SectionId {
+function getHashSection(): SectionId {
   if (typeof window === "undefined") {
     return "home";
   }
 
   const value =
-    window.location.hash.replace(
-      "#",
-      "",
-    );
+    window.location.hash.slice(1);
 
   return isSectionId(value)
     ? value
@@ -42,75 +39,87 @@ export function SiteShell() {
     setActiveSection,
   ] = useState<SectionId>("home");
 
-  const navigate = useCallback(
-    (
-      section: SectionId,
-      push = true,
-    ) => {
-      setActiveSection(section);
-
-      if (
-        typeof window ===
-        "undefined"
-      ) {
-        return;
-      }
-
-      const url =
-        section === "home"
-          ? "/"
-          : `/#${section}`;
-
-      if (push) {
-        window.history.pushState(
-          { section },
-          "",
-          url,
-        );
-      }
-    },
-    [],
-  );
-
   useEffect(() => {
     document.body.classList.add(
-      "single-screen-site",
+      "portfolio-site",
     );
 
     setActiveSection(
-      getSectionFromHash(),
+      getHashSection(),
     );
 
-    const handleLocationChange =
-      () => {
-        setActiveSection(
-          getSectionFromHash(),
-        );
-      };
+    const targets = sectionIds
+      .map((id) =>
+        document.getElementById(id),
+      )
+      .filter(
+        (
+          element,
+        ): element is HTMLElement =>
+          Boolean(element),
+      );
 
-    window.addEventListener(
-      "popstate",
-      handleLocationChange,
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter(
+              (entry) =>
+                entry.isIntersecting,
+            )
+            .sort(
+              (a, b) =>
+                b.intersectionRatio -
+                a.intersectionRatio,
+            );
+
+          const id =
+            visible[0]?.target.id;
+
+          if (
+            id &&
+            isSectionId(id)
+          ) {
+            setActiveSection(id);
+          }
+        },
+        {
+          rootMargin:
+            "-22% 0px -62% 0px",
+          threshold: [
+            0.08,
+            0.2,
+            0.4,
+            0.65,
+          ],
+        },
+      );
+
+    targets.forEach((target) =>
+      observer.observe(target),
     );
+
+    const handleHashChange = () => {
+      setActiveSection(
+        getHashSection(),
+      );
+    };
 
     window.addEventListener(
       "hashchange",
-      handleLocationChange,
+      handleHashChange,
     );
 
     return () => {
-      document.body.classList.remove(
-        "single-screen-site",
-      );
-
-      window.removeEventListener(
-        "popstate",
-        handleLocationChange,
-      );
+      observer.disconnect();
 
       window.removeEventListener(
         "hashchange",
-        handleLocationChange,
+        handleHashChange,
+      );
+
+      document.body.classList.remove(
+        "portfolio-site",
       );
     };
   }, []);
@@ -121,40 +130,22 @@ export function SiteShell() {
         activeSection={
           activeSection
         }
-        onNavigate={navigate}
       />
 
-      <main className="single-screen-main">
-        <div
-          key={activeSection}
-          className="site-screen site-screen--active"
-        >
-          {activeSection ===
-            "home" && <Hero />}
-
-          {activeSection ===
-            "stack" && <TechStack />}
-
-          {activeSection ===
-            "expertise" && (
-            <ProfessionalExpertise />
-          )}
-
-          {activeSection ===
-            "projects" && <Projects />}
-
-          {activeSection ===
-            "about" && <About />}
-
-          {activeSection ===
-            "contact" && (
-            <div className="contact-screen">
-              <Contact />
-              <Footer />
-            </div>
-          )}
-        </div>
+      <main
+        id="main-content"
+        className="portfolio-main"
+      >
+        <Hero />
+        <TechStack />
+        <ProfessionalExpertise />
+        <WorkHistory />
+        <Projects />
+        <About />
+        <Contact />
       </main>
+
+      <Footer />
     </>
   );
 }
