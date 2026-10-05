@@ -82,7 +82,7 @@ export function Projects() {
 
               const description =
                 slug ===
-                "project-02"
+                "son"
                   ? sonCardDescriptions[
                       language
                     ]
