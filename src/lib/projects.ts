@@ -1,9 +1,9 @@
 import type { Language } from "@/lib/translations";
 
 export const projectSlugs = [
-  "project-01",
-  "project-02",
-  "project-03",
+  "paypart",
+  "son",
+  "alta",
 ] as const;
 
 export type ProjectSlug =
@@ -3739,9 +3739,9 @@ const projectNumbers: Record<
   ProjectSlug,
   string
 > = {
-  "project-01": "01",
-  "project-02": "02",
-  "project-03": "03",
+  paypart: "01",
+  son: "02",
+  alta: "03",
 };
 
 export function isProjectSlug(
@@ -3768,14 +3768,14 @@ export function getProjectContent(
   slug: ProjectSlug,
   language: Language,
 ): ProjectContent {
-  if (slug === "project-01") {
+  if (slug === "paypart") {
     return {
       number: "01",
       ...payPart[language],
     };
   }
 
-  if (slug === "project-02") {
+  if (slug === "son") {
     return {
       number: "02",
       ...son[language],
