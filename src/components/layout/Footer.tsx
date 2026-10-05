@@ -3,7 +3,8 @@
 import { useSitePreferences } from "@/context/SitePreferencesProvider";
 
 export function Footer() {
-  const { copy } = useSitePreferences();
+  const { copy } =
+    useSitePreferences();
 
   return (
     <footer className="footer">
@@ -12,7 +13,7 @@ export function Footer() {
           <span>Danilo Escobar</span>
 
           <span>
-            {copy.footer.role}
+            AI Engineer / Software Engineer
           </span>
         </div>
 
