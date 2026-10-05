@@ -11,11 +11,48 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl =
+  "https://daniloescobar.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Danilo Escobar — AI Engineer",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default:
+      "Danilo Escobar — AI Engineer & Software Engineer",
+    template:
+      "%s | Danilo Escobar",
+  },
 
   description:
-    "AI Engineer building intelligent systems, software products and operational AI solutions.",
+    "AI Engineer and Software Engineer building full-stack products and AI systems connected to data, APIs and real operational workflows.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Danilo Escobar",
+    title:
+      "Danilo Escobar — AI Engineer & Software Engineer",
+    description:
+      "Full-stack products and AI systems connected to data, APIs and real operational workflows.",
+  },
+
+  twitter: {
+    card: "summary",
+    title:
+      "Danilo Escobar — AI Engineer & Software Engineer",
+    description:
+      "Full-stack products and AI systems connected to data, APIs and real operational workflows.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 
   icons: {
     icon: [
