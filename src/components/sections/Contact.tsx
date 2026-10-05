@@ -3,10 +3,15 @@
 import { useSitePreferences } from "@/context/SitePreferencesProvider";
 
 export function Contact() {
-  const { copy } = useSitePreferences();
+  const { copy } =
+    useSitePreferences();
 
   return (
-    <section className="contact" id="contact">
+    <section
+      className="contact"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
       <div className="container">
         <div className="contact__top">
           <span className="contact__index">
@@ -19,7 +24,7 @@ export function Contact() {
         </div>
 
         <div className="contact__main">
-          <h2>
+          <h2 id="contact-title">
             {copy.contact.titleLineOne}
             <br />
             {copy.contact.titleLineTwo}
@@ -46,7 +51,7 @@ export function Contact() {
 
           <div className="contact__links">
             <a
-              href="#"
+              href="https://linkedin.com/in/escobardanilo/"
               target="_blank"
               rel="noreferrer"
             >
@@ -58,7 +63,7 @@ export function Contact() {
             </a>
 
             <a
-              href="#"
+              href="https://github.com/escobardanilo"
               target="_blank"
               rel="noreferrer"
             >
