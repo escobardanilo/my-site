@@ -36,10 +36,10 @@ const SitePreferencesContext =
   >(undefined);
 
 const LANGUAGE_STORAGE_KEY =
-  "portfolio-language-v2";
+  "portfolio-language-v3";
 
 const THEME_STORAGE_KEY =
-  "portfolio-theme-v2";
+  "portfolio-theme-v3";
 
 const VALID_LANGUAGES: Language[] = [
   "pt",
