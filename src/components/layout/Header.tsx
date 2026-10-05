@@ -1,12 +1,13 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
 import { useSitePreferences } from "@/context/SitePreferencesProvider";
 import type { SectionId } from "@/lib/navigation";
 import type { Language } from "@/lib/translations";
 
 type HeaderProps = {
   activeSection?: SectionId;
-  onNavigate?: (section: SectionId) => void;
 };
 
 const navigationCopy: Record<
@@ -14,6 +15,7 @@ const navigationCopy: Record<
   {
     stack: string;
     expertise: string;
+    experience: string;
     projects: string;
     about: string;
     contact: string;
@@ -22,6 +24,7 @@ const navigationCopy: Record<
   pt: {
     stack: "Stack",
     expertise: "Especialização",
+    experience: "Experiência",
     projects: "Projetos",
     about: "Sobre",
     contact: "Contacto",
@@ -29,6 +32,7 @@ const navigationCopy: Record<
   en: {
     stack: "Stack",
     expertise: "Expertise",
+    experience: "Experience",
     projects: "Projects",
     about: "About",
     contact: "Contact",
@@ -36,13 +40,15 @@ const navigationCopy: Record<
   es: {
     stack: "Stack",
     expertise: "Especialización",
+    experience: "Experiencia",
     projects: "Proyectos",
     about: "Sobre",
     contact: "Contacto",
   },
   de: {
     stack: "Stack",
-    expertise: "Spezialisierung",
+    expertise: "Expertise",
+    experience: "Erfahrung",
     projects: "Projekte",
     about: "Über mich",
     contact: "Kontakt",
@@ -57,29 +63,44 @@ const languages: Language[] = [
 ];
 
 const navItems: Array<{
-  id: Exclude<SectionId, "home" | "contact">;
+  id: Exclude<
+    SectionId,
+    "home" | "contact"
+  >;
   key:
     | "stack"
     | "expertise"
+    | "experience"
     | "projects"
     | "about";
 }> = [
-  { id: "stack", key: "stack" },
+  {
+    id: "stack",
+    key: "stack",
+  },
   {
     id: "expertise",
     key: "expertise",
   },
   {
+    id: "experience",
+    key: "experience",
+  },
+  {
     id: "projects",
     key: "projects",
   },
-  { id: "about", key: "about" },
+  {
+    id: "about",
+    key: "about",
+  },
 ];
 
 export function Header({
-  activeSection = "home",
-  onNavigate,
+  activeSection,
 }: HeaderProps = {}) {
+  const pathname = usePathname();
+
   const {
     language,
     theme,
@@ -90,33 +111,33 @@ export function Header({
   const navigation =
     navigationCopy[language];
 
-  function handleNavigate(
+  const isHome =
+    pathname === "/";
+
+  function hrefFor(
     section: SectionId,
   ) {
-    if (onNavigate) {
-      onNavigate(section);
-      return;
+    if (section === "home") {
+      return isHome
+        ? "#home"
+        : "/";
     }
 
-    window.location.href =
-      section === "home"
-        ? "/"
-        : `/#${section}`;
+    return isHome
+      ? `#${section}`
+      : `/#${section}`;
   }
 
   return (
     <header className="header">
       <div className="container header__inner">
-        <button
-          type="button"
+        <a
+          href={hrefFor("home")}
           className="header__brand"
-          aria-label="Danilo Escobar"
-          onClick={() =>
-            handleNavigate("home")
-          }
+          aria-label="Danilo Escobar — Home"
         >
           Danilo Escobar
-        </button>
+        </a>
 
         <nav
           className="header__nav"
@@ -124,20 +145,22 @@ export function Header({
         >
           {navItems.map(
             ({ id, key }) => (
-              <button
+              <a
                 key={id}
-                type="button"
+                href={hrefFor(id)}
                 className={
                   activeSection === id
                     ? "header__nav-link header__nav-link--active"
                     : "header__nav-link"
                 }
-                onClick={() =>
-                  handleNavigate(id)
+                aria-current={
+                  activeSection === id
+                    ? "page"
+                    : undefined
                 }
               >
                 {navigation[key]}
-              </button>
+              </a>
             ),
           )}
         </nav>
@@ -202,60 +225,28 @@ export function Header({
             }
           >
             {theme === "light" ? (
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M20.5 14.6A7.7 7.7 0 0 1 9.4 3.5 8.5 8.5 0 1 0 20.5 14.6Z"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20.5 14.6A7.7 7.7 0 0 1 9.4 3.5 8.5 8.5 0 1 0 20.5 14.6Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             ) : (
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="4"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <path
-                  d="M12 2V4M12 20V22M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07M2 12H4M20 12H22M4.93 19.07L6.34 17.66M17.66 6.34L19.07 4.93"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
+                <path d="M12 2V4M12 20V22M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07M2 12H4M20 12H22M4.93 19.07L6.34 17.66M17.66 6.34L19.07 4.93" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
             )}
           </button>
 
-          <button
-            type="button"
+          <a
             className={
               activeSection ===
               "contact"
                 ? "header__contact header__contact--active"
                 : "header__contact"
             }
-            onClick={() =>
-              handleNavigate("contact")
-            }
+            href={hrefFor("contact")}
           >
             {navigation.contact}
-          </button>
+          </a>
         </div>
       </div>
     </header>
