@@ -32,7 +32,7 @@ const experienceCopy: Record<
         number: "01",
         label:
           "FREELANCE / BRASIL",
-        company: "Núcleo — Brasil",
+        company: "Nucleo — Brasil",
         role:
           "Freelance Software Engineer",
         description:
@@ -74,7 +74,7 @@ const experienceCopy: Record<
         number: "01",
         label:
           "FREELANCE / BRAZIL",
-        company: "Núcleo — Brazil",
+        company: "Nucleo — Brazil",
         role:
           "Freelance Software Engineer",
         description:
@@ -116,7 +116,7 @@ const experienceCopy: Record<
         number: "01",
         label:
           "FREELANCE / BRASIL",
-        company: "Núcleo — Brasil",
+        company: "Nucleo — Brasil",
         role:
           "Freelance Software Engineer",
         description:
@@ -159,7 +159,7 @@ const experienceCopy: Record<
         label:
           "FREELANCE / BRASILIEN",
         company:
-          "Núcleo — Brasilien",
+          "Nucleo — Brasilien",
         role:
           "Freelance Software Engineer",
         description:
