@@ -73,7 +73,7 @@ export const metadata: Metadata = {
 const themeScript = `
 (function () {
   try {
-    var theme = localStorage.getItem("portfolio-theme-v2");
+    var theme = localStorage.getItem("portfolio-theme-v3");
 
     if (theme === "dark" || theme === "light") {
       document.documentElement.dataset.theme = theme;
@@ -81,7 +81,7 @@ const themeScript = `
       document.documentElement.dataset.theme = "dark";
     }
 
-    var language = localStorage.getItem("portfolio-language-v2");
+    var language = localStorage.getItem("portfolio-language-v3");
 
     if (
       language === "pt" ||
