@@ -4,7 +4,6 @@ import {
   createContext,
   useContext,
   useEffect,
-  useMemo,
   useState,
   type ReactNode,
 } from "react";
@@ -77,36 +76,34 @@ export function SitePreferencesProvider({
         LANGUAGE_STORAGE_KEY,
       );
 
-    if (
-      storedLanguage &&
-      VALID_LANGUAGES.includes(
-        storedLanguage as Language,
-      )
-    ) {
-      setLanguageState(
-        storedLanguage as Language,
-      );
-    } else {
-      setLanguageState("en");
-    }
-
     const storedTheme =
       window.localStorage.getItem(
         THEME_STORAGE_KEY,
       );
 
-    if (
-      storedTheme &&
-      VALID_THEMES.includes(
-        storedTheme as Theme,
-      )
-    ) {
-      setThemeState(
-        storedTheme as Theme,
-      );
-    } else {
-      setThemeState("dark");
-    }
+    queueMicrotask(() => {
+      if (
+        storedLanguage &&
+        VALID_LANGUAGES.includes(
+          storedLanguage as Language,
+        )
+      ) {
+        setLanguageState(
+          storedLanguage as Language,
+        );
+      }
+
+      if (
+        storedTheme &&
+        VALID_THEMES.includes(
+          storedTheme as Theme,
+        )
+      ) {
+        setThemeState(
+          storedTheme as Theme,
+        );
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -148,21 +145,15 @@ export function SitePreferencesProvider({
     setTheme(nextTheme);
   }
 
-  const value = useMemo(
-    () => ({
-      language,
-      theme,
-      copy:
-        translations[language],
-      setLanguage,
-      setTheme,
-      toggleTheme,
-    }),
-    [
-      language,
-      theme,
-    ],
-  );
+  const value: SitePreferencesContextValue = {
+    language,
+    theme,
+    copy:
+      translations[language],
+    setLanguage,
+    setTheme,
+    toggleTheme,
+  };
 
   return (
     <SitePreferencesContext.Provider
