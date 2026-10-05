@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ProjectCaseStudy } from "@/components/project/ProjectCaseStudy";
 
 import {
-  getProjectNumber,
+  getProjectContent,
   isProjectSlug,
   projectSlugs,
 } from "@/lib/projects";
@@ -28,14 +28,51 @@ export async function generateMetadata({
 
   if (!isProjectSlug(slug)) {
     return {
-      title: "Project — Danilo Escobar",
+      title: "Project",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
+  const project =
+    getProjectContent(
+      slug,
+      "en",
+    );
+
+  const title =
+    `${project.title} — ${project.overview.type}`;
+
+  const description =
+    project.summary;
+
   return {
-    title: `Project ${getProjectNumber(slug)} — Danilo Escobar`,
-    description:
-      "Technical engineering case study by Danilo Escobar.",
+    title,
+    description,
+
+    alternates: {
+      canonical:
+        `/projects/${slug}`,
+    },
+
+    openGraph: {
+      title:
+        `${title} | Danilo Escobar`,
+      description,
+      type: "article",
+      url:
+        `/projects/${slug}`,
+      siteName: "Danilo Escobar",
+    },
+
+    twitter: {
+      card: "summary",
+      title:
+        `${title} | Danilo Escobar`,
+      description,
+    },
   };
 }
 
@@ -49,6 +86,8 @@ export default async function ProjectPage({
   }
 
   return (
-    <ProjectCaseStudy slug={slug} />
+    <ProjectCaseStudy
+      slug={slug}
+    />
   );
 }
