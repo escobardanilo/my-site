@@ -34,19 +34,21 @@ function easeInOutCubic(
           2;
 }
 
-function createPoints() {
+function createPoints(
+  step: number,
+) {
   const points: GlobePoint[] = [];
   let index = 0;
 
   for (
     let lat = -82;
     lat <= 82;
-    lat += 4.5
+    lat += step
   ) {
     for (
       let lon = 0;
       lon < 360;
-      lon += 4.5
+      lon += step
     ) {
       const latitude =
         (lat * Math.PI) / 180;
@@ -133,6 +135,12 @@ function createPoints() {
   return points;
 }
 
+const desktopPoints =
+  createPoints(5.2);
+
+const mobilePoints =
+  createPoints(7.6);
+
 export function DitherGlobe() {
   const wrapperRef =
     useRef<HTMLDivElement>(null);
@@ -140,37 +148,79 @@ export function DitherGlobe() {
     useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const wrapper = wrapperRef.current;
-    const canvas = canvasRef.current;
+    const wrapper =
+      wrapperRef.current;
+    const canvas =
+      canvasRef.current;
 
     if (!wrapper || !canvas) {
       return;
     }
 
-    const points = createPoints();
+    const context =
+      canvas.getContext("2d");
 
-    const reduceMotion =
+    if (!context) {
+      return;
+    }
+
+    const reducedMotionQuery =
       window.matchMedia(
         "(prefers-reduced-motion: reduce)",
-      ).matches;
+      );
+
+    let reduceMotion =
+      reducedMotionQuery.matches;
 
     let animationFrame = 0;
-    let cancelled = false;
-    let startTime = performance.now();
+    let startTime =
+      performance.now();
+
+    let width = 0;
+    let height = 0;
+    let pixelRatio = 1;
+    let foreground = "#111111";
+    let isIntersecting = true;
 
     let pointerX = 0;
     let pointerY = 0;
     let currentPointerX = 0;
     let currentPointerY = 0;
 
+    let points =
+      window.innerWidth <= 700
+        ? mobilePoints
+        : desktopPoints;
+
+    const updateForeground =
+      () => {
+        foreground =
+          getComputedStyle(
+            document.documentElement,
+          )
+            .getPropertyValue(
+              "--foreground",
+            )
+            .trim() ||
+          "#111111";
+      };
+
     const resizeCanvas = () => {
-      const width = wrapper.clientWidth;
-      const height =
+      width =
+        wrapper.clientWidth;
+      height =
         wrapper.clientHeight;
 
-      const pixelRatio = Math.min(
+      const isMobile =
+        window.innerWidth <= 700;
+
+      points = isMobile
+        ? mobilePoints
+        : desktopPoints;
+
+      pixelRatio = Math.min(
         window.devicePixelRatio || 1,
-        2,
+        isMobile ? 1.25 : 1.75,
       );
 
       canvas.width =
@@ -190,34 +240,19 @@ export function DitherGlobe() {
         );
 
       canvas.style.width =
-        `${width}px`;
+        width + "px";
       canvas.style.height =
-        `${height}px`;
+        height + "px";
     };
+
+    const shouldAnimate = () =>
+      !reduceMotion &&
+      !document.hidden &&
+      isIntersecting;
 
     const draw = (
       timestamp: number,
     ) => {
-      if (cancelled) {
-        return;
-      }
-
-      const context =
-        canvas.getContext("2d");
-
-      if (!context) {
-        return;
-      }
-
-      const width = wrapper.clientWidth;
-      const height =
-        wrapper.clientHeight;
-
-      const pixelRatio = Math.min(
-        window.devicePixelRatio || 1,
-        2,
-      );
-
       context.setTransform(
         pixelRatio,
         0,
@@ -234,21 +269,14 @@ export function DitherGlobe() {
         height,
       );
 
-      const foreground =
-        getComputedStyle(
-          document.documentElement,
-        )
-          .getPropertyValue(
-            "--foreground",
-          )
-          .trim() || "#111111";
-
-      context.fillStyle = foreground;
+      context.fillStyle =
+        foreground;
 
       const elapsed =
         timestamp - startTime;
 
       const loopDuration = 9200;
+
       const progress =
         reduceMotion
           ? 0
@@ -282,8 +310,6 @@ export function DitherGlobe() {
               (progress - 0.61) /
                 0.18,
             );
-        } else {
-          dissolve = 0;
         }
       }
 
@@ -298,7 +324,9 @@ export function DitherGlobe() {
         0.045;
 
       const rotationY =
-        elapsed * 0.00011 +
+        (reduceMotion
+          ? 0.45
+          : elapsed * 0.00011) +
         currentPointerX * 0.004;
 
       const rotationX =
@@ -320,7 +348,7 @@ export function DitherGlobe() {
           height,
         ) *
         (width < 700
-          ? 0.35
+          ? 0.34
           : 0.39);
 
       const centerX =
@@ -328,58 +356,44 @@ export function DitherGlobe() {
       const centerY =
         height * 0.51;
 
-      const ordered =
-        points
-          .map((point) => {
-            const x1 =
-              point.x * cosY -
-              point.z * sinY;
+      for (
+        let index = 0;
+        index < points.length;
+        index += 1
+      ) {
+        const point =
+          points[index];
 
-            const z1 =
-              point.x * sinY +
-              point.z * cosY;
+        const x1 =
+          point.x * cosY -
+          point.z * sinY;
 
-            const y2 =
-              point.y * cosX -
-              z1 * sinX;
+        const z1 =
+          point.x * sinY +
+          point.z * cosY;
 
-            const z2 =
-              point.y * sinX +
-              z1 * cosX;
+        const y2 =
+          point.y * cosX -
+          z1 * sinX;
 
-            return {
-              point,
-              x: x1,
-              y: y2,
-              z: z2,
-            };
-          })
-          .sort(
-            (a, b) =>
-              a.z - b.z,
-          );
-
-      for (const item of ordered) {
-        const {
-          point,
-          x,
-          y,
-          z,
-        } = item;
+        const z2 =
+          point.y * sinX +
+          z1 * cosX;
 
         const perspective =
           1 /
-          (1.42 - z * 0.16);
+          (1.42 -
+            z2 * 0.16);
 
         const baseX =
           centerX +
-          x *
+          x1 *
             radius *
             perspective;
 
         const baseY =
           centerY -
-          y *
+          y2 *
             radius *
             perspective;
 
@@ -394,7 +408,7 @@ export function DitherGlobe() {
           (0.72 +
             Math.max(
               0,
-              z,
+              z2,
             ) *
               0.35);
 
@@ -416,31 +430,25 @@ export function DitherGlobe() {
             dissolve;
 
         const frontness =
-          (z + 1) / 2;
+          (z2 + 1) / 2;
 
-        const alpha =
+        context.globalAlpha =
           point.alpha *
           (0.38 +
             frontness * 0.62) *
           (1 -
             dissolve * 0.54);
 
-        const dotSize =
-          point.size *
-          (0.7 +
-            frontness * 0.72) *
-          (1 +
-            dissolve * 0.18);
-
-        context.globalAlpha =
-          alpha;
-
         context.beginPath();
 
         context.arc(
           baseX + scatterX,
           baseY + scatterY,
-          dotSize,
+          point.size *
+            (0.7 +
+              frontness * 0.72) *
+            (1 +
+              dissolve * 0.18),
           0,
           Math.PI * 2,
         );
@@ -450,13 +458,36 @@ export function DitherGlobe() {
 
       context.globalAlpha = 1;
 
-      animationFrame =
-        requestAnimationFrame(draw);
+      if (shouldAnimate()) {
+        animationFrame =
+          requestAnimationFrame(
+            draw,
+          );
+      }
+    };
+
+    const renderOrResume = () => {
+      cancelAnimationFrame(
+        animationFrame,
+      );
+
+      if (shouldAnimate()) {
+        animationFrame =
+          requestAnimationFrame(
+            draw,
+          );
+      } else {
+        draw(performance.now());
+      }
     };
 
     const handlePointerMove = (
       event: PointerEvent,
     ) => {
+      if (reduceMotion) {
+        return;
+      }
+
       const rect =
         wrapper.getBoundingClientRect();
 
@@ -481,20 +512,65 @@ export function DitherGlobe() {
         pointerY = 0;
       };
 
+    const handleVisibility =
+      () => {
+        if (!document.hidden) {
+          startTime =
+            performance.now();
+        }
+
+        renderOrResume();
+      };
+
+    const handleReducedMotion =
+      (event: MediaQueryListEvent) => {
+        reduceMotion =
+          event.matches;
+
+        startTime =
+          performance.now();
+
+        renderOrResume();
+      };
+
     const resizeObserver =
       new ResizeObserver(() => {
         resizeCanvas();
+        renderOrResume();
       });
+
+    const intersectionObserver =
+      new IntersectionObserver(
+        (entries) => {
+          isIntersecting =
+            Boolean(
+              entries[0]
+                ?.isIntersecting,
+            );
+
+          renderOrResume();
+        },
+        {
+          threshold: 0.02,
+        },
+      );
 
     const themeObserver =
       new MutationObserver(() => {
-        startTime =
-          performance.now();
+        updateForeground();
+        renderOrResume();
       });
 
     resizeCanvas();
+    updateForeground();
 
-    resizeObserver.observe(wrapper);
+    resizeObserver.observe(
+      wrapper,
+    );
+
+    intersectionObserver.observe(
+      wrapper,
+    );
 
     themeObserver.observe(
       document.documentElement,
@@ -516,17 +592,25 @@ export function DitherGlobe() {
       handlePointerLeave,
     );
 
-    animationFrame =
-      requestAnimationFrame(draw);
+    document.addEventListener(
+      "visibilitychange",
+      handleVisibility,
+    );
+
+    reducedMotionQuery.addEventListener(
+      "change",
+      handleReducedMotion,
+    );
+
+    renderOrResume();
 
     return () => {
-      cancelled = true;
-
       cancelAnimationFrame(
         animationFrame,
       );
 
       resizeObserver.disconnect();
+      intersectionObserver.disconnect();
       themeObserver.disconnect();
 
       wrapper.removeEventListener(
@@ -538,6 +622,16 @@ export function DitherGlobe() {
         "pointerleave",
         handlePointerLeave,
       );
+
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibility,
+      );
+
+      reducedMotionQuery.removeEventListener(
+        "change",
+        handleReducedMotion,
+      );
     };
   }, []);
 
@@ -546,7 +640,7 @@ export function DitherGlobe() {
       ref={wrapperRef}
       className="hero__globe"
       role="img"
-      aria-label="Dithered particle globe"
+      aria-label="Animated dithered globe"
     >
       <canvas
         ref={canvasRef}
