@@ -44,10 +44,6 @@ export function SiteShell() {
       "portfolio-site",
     );
 
-    setActiveSection(
-      getHashSection(),
-    );
-
     const targets = sectionIds
       .map((id) =>
         document.getElementById(id),
