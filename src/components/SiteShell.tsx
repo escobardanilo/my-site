@@ -58,12 +58,9 @@ export function SiteShell() {
   );
 
   useEffect(() => {
-    document.body.classList.remove(
-      "portfolio-site",
-    );
-
     document.body.classList.add(
-      "single-screen-site",
+      "portfolio-site",
+      "screen-experience-site",
     );
 
     queueMicrotask(() => {
@@ -91,7 +88,8 @@ export function SiteShell() {
 
     return () => {
       document.body.classList.remove(
-        "single-screen-site",
+        "portfolio-site",
+        "screen-experience-site",
       );
 
       window.removeEventListener(
@@ -117,11 +115,11 @@ export function SiteShell() {
 
       <main
         id="main-content"
-        className="single-screen-main"
+        className="screen-experience-main"
       >
         <div
           key={activeSection}
-          className="site-screen site-screen--active"
+          className="screen-panel"
         >
           {activeSection ===
             "home" && <Hero />}
