@@ -1261,258 +1261,143 @@ const liio: Record<
     card: {
       category: "",
       description:
-        "Tutor de aprendizagem com IA para crianças e adolescentes, com classificação pedagógica, avaliação independente e controlo explícito sobre o que chega ao aluno.",
+        "Tutor de aprendizagem com IA para crianças e adolescentes, com política pedagógica explícita, avaliação antes da entrega e contexto de sessão.",
       tags: [
         "AI Learning Tutor",
         "AI Engineering",
-        "Safety",
+        "EdTech",
       ],
     },
 
     eyebrow:
-      "EDTECH / AI LEARNING TUTOR",
+      "EDTECH / AI LEARNING SYSTEM",
 
     title: "LIIO",
 
     subtitle:
-      "Um tutor de IA que orienta o raciocínio sem transformar aprendizagem em entrega automática de respostas.",
+      "Um sistema de aprendizagem com IA desenhado para orientar raciocínio, preservar contexto e controlar o que chega ao aluno.",
 
     summary:
-      "LIIO é um tutor de aprendizagem com IA para crianças e adolescentes. Parte da ideia de que, à medida que a tecnologia evolui, a forma de aprender também precisa evoluir. A versão atual concentra a experiência funcional no Homework Mode, onde cada pedido é interpretado como EXPLAIN, GUIDE ou CHECK e respostas sensíveis passam por avaliação independente, recuperação limitada e fallback seguro antes de chegar à interface.",
+      "LIIO explora uma questão de produto concreta: como usar modelos generativos na aprendizagem sem transformar o tutor num gerador de respostas. O sistema combina contexto de sessão, política pedagógica e avaliação server-side para decidir como responder e quando bloquear, corrigir ou simplificar uma saída. A arquitetura foi pensada para evoluir com novas capacidades dos modelos e novas formas de interação educativa, sem depender de um único prompt ou comportamento fixo.",
 
     overview: {
       role:
         "AI Engineering / Full-stack",
       type:
-        "EdTech / AI Learning Tutor",
+        "EdTech / AI Learning System",
       status:
-        "Versão funcional / em desenvolvimento",
+        "Implementação funcional / em desenvolvimento",
     },
 
     problem: {
       title:
-        "Um tutor de IA não deve confundir ajuda com entrega direta da resposta.",
+        "Um chatbot responde. Um tutor precisa decidir como ensinar.",
 
       description:
-        "Em aprendizagem, uma resposta plausível pode resolver o exercício pelo aluno, adaptar-se mal à idade ou repetir uma estratégia que já falhou. LIIO trata a conversa como uma sessão de aprendizagem e separa geração de aceitação: o modelo produz uma resposta candidata, enquanto software, política pedagógica e avaliação determinam se ela pode ser entregue.",
+        "Em educação, a resposta mais provável nem sempre é a mais útil. Ela pode resolver o exercício pelo aluno, ignorar o nível de compreensão ou repetir uma estratégia que já falhou. O LIIO trata cada interação como parte de uma sessão de aprendizagem: identifica a intenção pedagógica, preserva o problema em contexto e separa a geração da decisão de entregar a resposta.",
     },
 
     product: {
       title:
-        "Homework Mode como núcleo funcional atual.",
+        "Homework Mode concentra a experiência funcional atual.",
 
       description:
-        "A experiência implementada combina chat com IA, continuidade de sessão, adaptação por idade e três comportamentos pedagógicos. EXPLAIN explica conceitos, GUIDE conduz o aluno por etapas sem revelar a resposta final protegida e CHECK analisa a tentativa do aluno sem completar a solução por ele.",
+        "O núcleo trabalha com três comportamentos pedagógicos — EXPLAIN, GUIDE e CHECK — usados apenas como política interna para distinguir explicar um conceito, orientar um raciocínio e avaliar uma tentativa. A interface continua simples; a complexidade fica na camada de decisão.",
 
       visuals: [
         {
           number: "01",
           label:
-            "LIIO / AI LEARNING TUTOR",
+            "LIIO / LEARNING SYSTEM",
 
           title: "LIIO",
 
           description:
-            "Produto EdTech desenhado para crianças e adolescentes, com foco em orientação, verificação e explicação em vez de resposta automática.",
+            "O produto é apresentado como tutor de aprendizagem, não como chatbot genérico. O foco está na relação entre contexto, intenção pedagógica e resposta controlada.",
 
           image:
             "/images/liio-icon.svg",
 
           alt:
-            "Marca LIIO, assistente de aprendizagem com IA",
-        },
-
-        {
-          number: "02",
-          label:
-            "LIIO / HOMEWORK MODE",
-
-          title: "Homework Mode",
-
-          description:
-            "Cada pedido é classificado como EXPLAIN, GUIDE ou CHECK antes da resposta final, mantendo o comportamento pedagógico explícito no software.",
-
-          image: null,
-
-          alt:
-            "Homework Mode do LIIO",
-        },
-
-        {
-          number: "03",
-          label:
-            "LIIO / SAFETY GATE",
-
-          title:
-            "Safety gate",
-
-          description:
-            "GUIDE e CHECK passam por avaliação independente, regras determinísticas, uma única tentativa de recuperação e fallback seguro quando necessário.",
-
-          image: null,
-
-          alt:
-            "Camada de segurança e avaliação do LIIO",
-        },
-
-        {
-          number: "04",
-          label:
-            "LIIO / PARENTS AREA",
-
-          title:
-            "Parents Area",
-
-          description:
-            "A área parental apresenta perfis, atividade, limites e dispositivos como visão de produto; nesta fase estas superfícies continuam demonstrativas e não são apresentadas como backend persistente de produção.",
-
-          image: null,
-
-          alt:
-            "Área parental do LIIO",
+            "Marca LIIO, sistema de aprendizagem com IA",
         },
       ],
     },
 
     architecture: {
       title:
-        "A resposta não sai diretamente do modelo para a criança.",
+        "A política pedagógica fica fora do modelo.",
 
       description:
-        "A sessão entra por uma API server-side, valida o payload com Zod, recupera o contexto recente e classifica a interação. GUIDE e CHECK passam por avaliadores independentes; uma resposta reprovada pode ser regenerada uma única vez e, se continuar inadequada, o sistema entrega um fallback determinístico e seguro.",
+        "A API valida o pedido, restaura o contexto recente e classifica a interação antes da geração. Respostas com maior risco pedagógico passam por um avaliador independente. Se forem rejeitadas, existe uma única tentativa de correção; persistindo o problema, o sistema encerra o caminho generativo com um fallback determinístico. Chaves, prompts, avaliação e regras permanecem server-side.",
 
       flow: [
-        "Input + idade",
-        "EXPLAIN / GUIDE / CHECK",
+        "Contexto da sessão",
+        "Classificação pedagógica",
         "Geração server-side",
         "Avaliação independente",
-        "Recovery + fallback",
+        "Correção limitada ou fallback",
       ],
     },
 
     process: {
       title:
-        "A sessão mantém contexto pedagógico em vez de funcionar como um chatbot genérico.",
+        "O contexto da sessão altera o comportamento do sistema.",
 
       description:
-        "Pedidos como “não entendi”, “faz mais fácil” ou “dá-me uma dica” modificam a aprendizagem em andamento. O sistema tenta manter o problema original como referência e muda de comportamento quando o aluno apresenta uma tentativa ou pede verificação.",
+        "Mensagens como “não entendi”, “mais fácil” ou uma nova tentativa do aluno não são tratadas como perguntas isoladas. O LIIO recupera a intenção anterior e adapta a próxima resposta ao estado da aprendizagem.",
 
-      steps: [
-        {
-          number: "01",
-          title: "Entrada",
-          description:
-            "A interface envia idade e até 40 mensagens recentes da conversa.",
-        },
-
-        {
-          number: "02",
-          title: "Classificação",
-          description:
-            "determineLearningInteraction identifica EXPLAIN, GUIDE ou CHECK e recupera o pedido de aprendizagem relevante.",
-        },
-
-        {
-          number: "03",
-          title: "Geração",
-          description:
-            "O modelo recebe um system prompt construído para idade, comportamento e problema atual.",
-        },
-
-        {
-          number: "04",
-          title: "Avaliação",
-          description:
-            "GUIDE e CHECK usam avaliadores independentes para verificar comportamento, segurança e adequação pedagógica.",
-        },
-
-        {
-          number: "05",
-          title: "Recuperação",
-          description:
-            "Uma resposta reprovada pode ser regenerada uma única vez com instruções privadas de correção.",
-        },
-
-        {
-          number: "06",
-          title: "Fallback",
-          description:
-            "Se a nova resposta continuar inadequada, o sistema devolve um fallback determinístico e seguro.",
-        },
-
-        {
-          number: "07",
-          title: "Saída",
-          description:
-            "O texto é normalizado para a interface infantil e só então retorna ao cliente.",
-        },
-      ],
+      steps: [],
     },
 
     decisions: {
       title:
-        "O modelo gera. O software decide o que pode chegar ao aluno.",
+        "Decisões de engenharia que tornam o tutor controlável.",
 
       description:
-        "As decisões principais do LIIO estão no contrato entre aprendizagem, modelo e software — não apenas na interface ou num único prompt.",
+        "O ponto forte do LIIO não é apenas gerar texto adequado à idade. É tornar comportamento, segurança e continuidade verificáveis no software.",
 
       items: [
         {
           number: "01",
           title:
-            "Classificar antes de responder",
+            "Geração separada de aceitação",
           description:
-            "EXPLAIN, GUIDE e CHECK recebem regras diferentes para que explicar, orientar e verificar não sejam tratados como o mesmo comportamento.",
+            "O modelo produz uma resposta candidata; outra etapa decide se ela pode ser entregue ao aluno.",
         },
 
         {
           number: "02",
           title:
-            "Gerador ≠ avaliador",
+            "Política testável em código",
           description:
-            "A resposta candidata e a decisão de aceitá-la não dependem da mesma geração.",
+            "Idade, limites de request, número de perguntas e adaptação após confusão possuem regras que podem ser verificadas fora do prompt.",
         },
 
         {
           number: "03",
           title:
-            "Política em código",
+            "Recuperação limitada",
           description:
-            "Idade, limites de request, question count e adaptação após confusão possuem regras verificáveis fora do prompt.",
+            "Uma resposta reprovada pode ser corrigida uma vez. Depois disso, o sistema prefere um fallback seguro a continuar regenerando.",
         },
 
         {
           number: "04",
           title:
-            "Recuperação limitada",
+            "Produto preparado para evoluir",
           description:
-            "Uma única tentativa de correção é permitida antes de encerrar com fallback seguro.",
-        },
-
-        {
-          number: "05",
-          title:
-            "Sessão, não chatbot",
-          description:
-            "Mensagens curtas de confusão ou pedido de dica modificam o contexto pedagógico existente em vez de iniciar uma conversa desconectada.",
-        },
-
-        {
-          number: "06",
-          title:
-            "Servidor como boundary",
-          description:
-            "Chaves, system prompts, avaliação e decisões internas permanecem no servidor e não são expostos ao browser.",
+            "A camada de decisão foi separada da interface e do modelo para permitir que novas capacidades, políticas e formas de aprendizagem sejam incorporadas sem transformar o produto num conjunto de prompts acoplados.",
         },
       ],
     },
 
     stack: {
       title:
-        "Stack focada em produto full-stack, política testável e IA server-side.",
+        "Stack orientada a produto full-stack e controle server-side.",
 
       description:
-        "A implementação combina interface, rotas API, contratos tipados, geração server-side e validação estruturada dos avaliadores.",
+        "A implementação combina aplicação web, contratos tipados, geração por LLM e validação estruturada para manter o comportamento observável e testável.",
 
       items: [
         "Next.js 16.3.5",
@@ -1526,48 +1411,19 @@ const liio: Record<
 
     results: {
       title:
-        "A implementação atual já demonstra um produto de aprendizagem construído em torno de um LLM — não apenas um chat com IA.",
+        "O que a implementação atual demonstra.",
 
       description:
-        "O núcleo funcional prova classificação pedagógica, avaliação independente, regras determinísticas, recuperação limitada e fallback seguro. O LIIO foi pensado como um produto em evolução contínua: se tecnologia, ferramentas e formas de aprender mudam, a experiência educacional também deve acompanhar essa transformação. A próxima fase concentra-se em perfis persistentes, autenticação real e expansão de modos apenas depois de o Homework Mode estar estável.",
+        "Um tutor com estado de sessão, classificação pedagógica, avaliação independente e limites de recuperação definidos por software.",
 
-      items: [
-        {
-          value: "3 MODOS",
-          label:
-            "EXPLAIN, GUIDE e CHECK com comportamentos pedagógicos distintos",
-        },
-
-        {
-          value: "6–15 ANOS",
-          label:
-            "Política de IA preparada para ajustar linguagem, extensão e abstração por idade",
-        },
-
-        {
-          value: "1 RETRY",
-          label:
-            "Máximo de uma regeneração antes do fallback seguro",
-        },
-
-        {
-          value: "SERVER-SIDE",
-          label:
-            "Chaves, prompts, avaliadores e decisões internas mantidos fora do browser",
-        },
-
-        {
-          value: "SAFETY GATE",
-          label:
-            "Resposta gerada não é automaticamente resposta entregue",
-        },
-      ],
+      items: [],
     },
 
     links: {
       github:
         "https://github.com/escobardanilo/liio",
-      live: null,
+      live:
+        "https://liio.vercel.app/",
     },
   },
 
@@ -1575,40 +1431,40 @@ const liio: Record<
     card: {
       category: "",
       description:
-        "AI learning tutor for children and teenagers with pedagogical classification, independent evaluation and explicit control over what reaches the learner.",
+        "AI learning tutor for children and teenagers with explicit pedagogical policy, pre-delivery evaluation and session context.",
       tags: [
         "AI Learning Tutor",
         "AI Engineering",
-        "Safety",
+        "EdTech",
       ],
     },
 
     eyebrow:
-      "EDTECH / AI LEARNING TUTOR",
+      "EDTECH / AI LEARNING SYSTEM",
 
     title: "LIIO",
 
     subtitle:
-      "An AI tutor that guides reasoning without turning learning into automatic answer delivery.",
+      "An AI learning system designed to guide reasoning, preserve context and control what reaches the learner.",
 
     summary:
-      "LIIO is an AI learning tutor for children and teenagers. It is built on the idea that as technology evolves, the way people learn should evolve with it. The current version centers on Homework Mode, where each request is interpreted as EXPLAIN, GUIDE or CHECK and sensitive responses pass through independent evaluation, bounded recovery and safe fallback before reaching the interface.",
+      "LIIO explores a concrete product problem: how to use generative models in learning without turning the tutor into an answer generator. The system combines session context, pedagogical policy and server-side evaluation to decide how to respond and when to block, correct or simplify an output. Its architecture is designed to evolve with new model capabilities and new forms of educational interaction without depending on a single prompt or fixed behavior.",
 
     overview: {
       role:
         "AI Engineering / Full-stack",
       type:
-        "EdTech / AI Learning Tutor",
+        "EdTech / AI Learning System",
       status:
-        "Functional version / in development",
+        "Functional implementation / in development",
     },
 
     problem: {
       title:
-        "An AI tutor should not confuse help with directly giving the answer.",
+        "A chatbot answers. A tutor has to decide how to teach.",
 
       description:
-        "In learning, a plausible response can solve the exercise for the student, adapt poorly to age or repeat a strategy that already failed. LIIO treats conversation as a learning session and separates generation from acceptance: the model produces a candidate response while software, pedagogical policy and evaluation decide whether it can be delivered.",
+        "In education, the most likely answer is not always the most useful one. It may solve the exercise for the learner, miss their level of understanding or repeat a strategy that already failed. LIIO treats each interaction as part of a learning session: it identifies pedagogical intent, preserves the original problem in context and separates generation from the decision to deliver the response.",
     },
 
     product: {
@@ -1616,185 +1472,102 @@ const liio: Record<
         "Homework Mode is the current functional core.",
 
       description:
-        "The implemented experience combines AI chat, session continuity, age adaptation and three pedagogical behaviors. EXPLAIN teaches concepts, GUIDE moves the learner through steps without revealing the protected final answer, and CHECK reviews the learner's attempt without completing the solution for them.",
+        "The core uses three pedagogical behaviors — EXPLAIN, GUIDE and CHECK — only as internal policy for distinguishing concept explanation, guided reasoning and attempt review. The interface stays simple; the complexity lives in the decision layer.",
 
       visuals: [
         {
           number: "01",
           label:
-            "LIIO / AI LEARNING TUTOR",
+            "LIIO / LEARNING SYSTEM",
+
           title: "LIIO",
+
           description:
-            "EdTech product designed for children and teenagers, focused on explanation, guidance and verification rather than automatic answer delivery.",
+            "The product is positioned as a learning tutor rather than a generic chatbot. The focus is the relationship between context, pedagogical intent and controlled response delivery.",
+
           image:
             "/images/liio-icon.svg",
+
           alt:
-            "LIIO AI learning tutor mark",
-        },
-        {
-          number: "02",
-          label:
-            "LIIO / HOMEWORK MODE",
-          title: "Homework Mode",
-          description:
-            "Every request is classified as EXPLAIN, GUIDE or CHECK before the final response, keeping pedagogical behavior explicit in software.",
-          image: null,
-          alt:
-            "LIIO Homework Mode",
-        },
-        {
-          number: "03",
-          label:
-            "LIIO / SAFETY GATE",
-          title: "Safety gate",
-          description:
-            "GUIDE and CHECK pass through independent evaluation, deterministic rules, one bounded recovery attempt and safe fallback when required.",
-          image: null,
-          alt:
-            "LIIO safety and evaluation layer",
-        },
-        {
-          number: "04",
-          label:
-            "LIIO / PARENTS AREA",
-          title: "Parents Area",
-          description:
-            "The parent area presents profiles, activity, limits and devices as a product surface; at this stage these remain demonstrative and are not presented as a persistent production backend.",
-          image: null,
-          alt:
-            "LIIO Parents Area",
+            "LIIO AI learning system mark",
         },
       ],
     },
 
     architecture: {
       title:
-        "Model output does not go directly to the child.",
+        "Pedagogical policy lives outside the model.",
 
       description:
-        "The session enters through a server-side API, validates the payload with Zod, restores recent context and classifies the interaction. GUIDE and CHECK use independent evaluators; a rejected response can be regenerated once and, if still unsuitable, the system returns a deterministic safe fallback.",
+        "The API validates the request, restores recent context and classifies the interaction before generation. Higher-risk pedagogical responses pass through an independent evaluator. If rejected, one correction attempt is allowed; if the issue persists, the system ends the generative path with a deterministic fallback. Keys, prompts, evaluation and rules remain server-side.",
 
       flow: [
-        "Input + age",
-        "EXPLAIN / GUIDE / CHECK",
+        "Session context",
+        "Pedagogical classification",
         "Server-side generation",
         "Independent evaluation",
-        "Recovery + fallback",
+        "Bounded correction or fallback",
       ],
     },
 
     process: {
       title:
-        "The session preserves pedagogical context instead of behaving like a generic chatbot.",
+        "Session context changes system behavior.",
 
       description:
-        "Requests such as “I don't understand”, “make it easier” or “give me a hint” modify the active learning context. The system keeps the original problem as reference and changes behavior when the learner presents an attempt or asks for verification.",
+        "Messages such as “I don't understand”, “make it easier” or a new learner attempt are not treated as isolated questions. LIIO restores the previous learning intent and adapts the next response to the current state of the session.",
 
-      steps: [
-        {
-          number: "01",
-          title: "Input",
-          description:
-            "The interface sends age and up to 40 recent conversation messages.",
-        },
-        {
-          number: "02",
-          title: "Classification",
-          description:
-            "determineLearningInteraction identifies EXPLAIN, GUIDE or CHECK and restores the relevant learning request.",
-        },
-        {
-          number: "03",
-          title: "Generation",
-          description:
-            "The model receives a system prompt built around age, behavior and the current problem.",
-        },
-        {
-          number: "04",
-          title: "Evaluation",
-          description:
-            "GUIDE and CHECK use independent evaluators to check behavior, safety and pedagogical fit.",
-        },
-        {
-          number: "05",
-          title: "Recovery",
-          description:
-            "A rejected response may be regenerated once with private correction instructions.",
-        },
-        {
-          number: "06",
-          title: "Fallback",
-          description:
-            "If the corrected response still fails, the system returns deterministic safe fallback text.",
-        },
-        {
-          number: "07",
-          title: "Output",
-          description:
-            "The text is normalized for the child-facing interface before it returns to the client.",
-        },
-      ],
+      steps: [],
     },
 
     decisions: {
       title:
-        "The model generates. Software decides what may reach the learner.",
+        "Engineering decisions that make the tutor controllable.",
 
       description:
-        "LIIO's core decisions live in the contract between learning, model and software — not only in the interface or a single prompt.",
+        "LIIO's strongest technical point is not simply generating age-appropriate text. It is making behavior, safety and continuity verifiable in software.",
 
       items: [
         {
           number: "01",
           title:
-            "Classify before responding",
+            "Generation separated from acceptance",
           description:
-            "EXPLAIN, GUIDE and CHECK have different rules so explaining, guiding and verifying are not treated as the same behavior.",
+            "The model produces a candidate response; another stage decides whether it may be delivered to the learner.",
         },
+
         {
           number: "02",
           title:
-            "Generator ≠ evaluator",
+            "Testable policy in code",
           description:
-            "The candidate response and the decision to accept it do not depend on the same generation.",
+            "Age, request limits, question count and adaptation after confusion have rules that can be verified outside the prompt.",
         },
+
         {
           number: "03",
           title:
-            "Policy in code",
+            "Bounded recovery",
           description:
-            "Age, request limits, question count and adaptation after confusion have verifiable rules outside the prompt.",
+            "A rejected response may be corrected once. After that, the system prefers a safe fallback over continued regeneration.",
         },
+
         {
           number: "04",
           title:
-            "Bounded recovery",
+            "Designed to evolve",
           description:
-            "Only one correction attempt is allowed before a safe fallback ends the generation path.",
-        },
-        {
-          number: "05",
-          title:
-            "Session, not chatbot",
-          description:
-            "Short confusion or hint requests modify the existing pedagogical context instead of starting a disconnected conversation.",
-        },
-        {
-          number: "06",
-          title:
-            "Server as boundary",
-          description:
-            "Keys, system prompts, evaluation and internal safety decisions stay on the server and are not exposed to the browser.",
+            "The decision layer is separated from the interface and model so new capabilities, policies and learning patterns can be added without turning the product into a set of tightly coupled prompts.",
         },
       ],
     },
 
     stack: {
       title:
-        "A stack focused on full-stack product engineering, testable policy and server-side AI.",
+        "A stack focused on full-stack product engineering and server-side control.",
 
       description:
-        "The implementation combines interface, API routes, typed contracts, server-side generation and structured evaluator validation.",
+        "The implementation combines a web application, typed contracts, LLM generation and structured validation to keep behavior observable and testable.",
 
       items: [
         "Next.js 16.3.5",
@@ -1808,44 +1581,19 @@ const liio: Record<
 
     results: {
       title:
-        "The current implementation already demonstrates a learning product built around an LLM — not just an AI chat interface.",
+        "What the current implementation demonstrates.",
 
       description:
-        "The functional core proves pedagogical classification, independent evaluation, deterministic rules, bounded recovery and safe fallback. LIIO is designed as a continuously evolving product: as technology, learning tools and learning behaviors change, the educational experience should evolve with them. The next phase focuses on persistent profiles, real authentication and expanding learning modes only after Homework Mode is stable.",
+        "A tutor with session state, pedagogical classification, independent evaluation and recovery limits defined by software.",
 
-      items: [
-        {
-          value: "3 MODES",
-          label:
-            "EXPLAIN, GUIDE and CHECK with distinct pedagogical behaviors",
-        },
-        {
-          value: "AGES 6–15",
-          label:
-            "AI policy prepared to adapt language, length and abstraction by age",
-        },
-        {
-          value: "1 RETRY",
-          label:
-            "Maximum one regeneration before safe fallback",
-        },
-        {
-          value: "SERVER-SIDE",
-          label:
-            "Keys, prompts, evaluators and internal decisions kept outside the browser",
-        },
-        {
-          value: "SAFETY GATE",
-          label:
-            "Generated response is not automatically a delivered response",
-        },
-      ],
+      items: [],
     },
 
     links: {
       github:
         "https://github.com/escobardanilo/liio",
-      live: null,
+      live:
+        "https://liio.vercel.app/",
     },
   },
 
@@ -1853,125 +1601,130 @@ const liio: Record<
     card: {
       category: "",
       description:
-        "Tutor de aprendizaje con IA para niños y adolescentes, con clasificación pedagógica, evaluación independiente y control explícito sobre lo que llega al alumno.",
+        "Tutor de aprendizaje con IA para niños y adolescentes con política pedagógica explícita, evaluación antes de la entrega y contexto de sesión.",
       tags: [
         "AI Learning Tutor",
         "AI Engineering",
-        "Safety",
+        "EdTech",
       ],
     },
+
     eyebrow:
-      "EDTECH / AI LEARNING TUTOR",
+      "EDTECH / AI LEARNING SYSTEM",
+
     title: "LIIO",
+
     subtitle:
-      "Un tutor de IA que guía el razonamiento sin convertir el aprendizaje en entrega automática de respuestas.",
+      "Un sistema de aprendizaje con IA diseñado para guiar el razonamiento, preservar contexto y controlar lo que llega al alumno.",
+
     summary:
-      "LIIO es un tutor de aprendizaje con IA para niños y adolescentes. Parte de la idea de que, a medida que la tecnología evoluciona, la forma de aprender también debe evolucionar. La versión actual se centra en Homework Mode, donde cada solicitud se interpreta como EXPLAIN, GUIDE o CHECK y las respuestas sensibles pasan por evaluación independiente, recuperación limitada y fallback seguro.",
+      "LIIO explora un problema de producto concreto: cómo utilizar modelos generativos en aprendizaje sin convertir el tutor en un generador de respuestas. Combina contexto de sesión, política pedagógica y evaluación server-side, con una arquitectura preparada para evolucionar junto con nuevas capacidades de los modelos y nuevas formas de interacción educativa.",
+
     overview: {
       role:
         "AI Engineering / Full-stack",
       type:
-        "EdTech / AI Learning Tutor",
+        "EdTech / AI Learning System",
       status:
-        "Versión funcional / en desarrollo",
+        "Implementación funcional / en desarrollo",
     },
+
     problem: {
       title:
-        "Un tutor de IA no debe confundir ayuda con entregar directamente la respuesta.",
+        "Un chatbot responde. Un tutor debe decidir cómo enseñar.",
+
       description:
-        "En aprendizaje, una respuesta plausible puede resolver el ejercicio por el alumno o adaptarse mal a su edad. LIIO separa generación y aceptación para mantener la política pedagógica en el software.",
+        "En educación, la respuesta más probable no siempre es la más útil. LIIO trata cada interacción como parte de una sesión de aprendizaje, conserva el problema original en contexto y separa generación de entrega.",
     },
+
     product: {
       title:
         "Homework Mode es el núcleo funcional actual.",
+
       description:
-        "La experiencia implementada combina continuidad de sesión, adaptación por edad y tres comportamientos: EXPLAIN, GUIDE y CHECK.",
+        "El sistema utiliza tres comportamientos pedagógicos — EXPLAIN, GUIDE y CHECK — como política interna para diferenciar explicación, orientación y revisión de intentos.",
+
       visuals: [
         {
           number: "01",
-          label: "LIIO / AI LEARNING TUTOR",
+          label:
+            "LIIO / LEARNING SYSTEM",
           title: "LIIO",
           description:
-            "Producto EdTech centrado en explicación, orientación y verificación.",
-          image: "/images/liio-icon.svg",
-          alt: "Marca LIIO",
+            "Tutor de aprendizaje centrado en contexto, intención pedagógica y entrega controlada.",
+          image:
+            "/images/liio-icon.svg",
+          alt:
+            "Marca LIIO",
+        },
+      ],
+    },
+
+    architecture: {
+      title:
+        "La política pedagógica vive fuera del modelo.",
+
+      description:
+        "La API valida la solicitud, restaura contexto y clasifica la interacción antes de generar. Las respuestas con mayor riesgo pasan por evaluación independiente, una corrección limitada y fallback determinista cuando es necesario.",
+      flow: [
+        "Contexto de sesión",
+        "Clasificación pedagógica",
+        "Generación server-side",
+        "Evaluación independiente",
+        "Corrección o fallback",
+      ],
+    },
+
+    process: {
+      title:
+        "El contexto de sesión modifica el comportamiento.",
+      description:
+        "Las solicitudes de ayuda y nuevos intentos del alumno modifican la sesión activa en lugar de iniciar conversaciones desconectadas.",
+      steps: [],
+    },
+
+    decisions: {
+      title:
+        "Decisiones de ingeniería para un tutor controlable.",
+      description:
+        "El valor técnico no está solo en generar texto, sino en hacer comportamiento, seguridad y continuidad verificables por software.",
+      items: [
+        {
+          number: "01",
+          title:
+            "Generación separada de aceptación",
+          description:
+            "Una etapa genera; otra decide si la respuesta puede llegar al alumno.",
         },
         {
           number: "02",
-          label: "LIIO / HOMEWORK MODE",
-          title: "Homework Mode",
+          title:
+            "Política verificable en código",
           description:
-            "Cada solicitud se clasifica antes de responder.",
-          image: null,
-          alt: "Homework Mode de LIIO",
+            "Edad, límites y adaptación pueden comprobarse fuera del prompt.",
         },
         {
           number: "03",
-          label: "LIIO / SAFETY GATE",
-          title: "Safety gate",
+          title:
+            "Recuperación limitada",
           description:
-            "Evaluación independiente, reglas deterministas, recuperación limitada y fallback seguro.",
-          image: null,
-          alt: "Safety gate de LIIO",
+            "Una corrección antes de utilizar fallback seguro.",
         },
         {
           number: "04",
-          label: "LIIO / PARENTS AREA",
-          title: "Parents Area",
+          title:
+            "Diseñado para evolucionar",
           description:
-            "Superficie demostrativa de perfiles, actividad, límites y dispositivos.",
-          image: null,
-          alt: "Parents Area de LIIO",
+            "La capa de decisión está separada para incorporar nuevas capacidades y formas de aprendizaje sin acoplar el producto a un conjunto fijo de prompts.",
         },
       ],
     },
-    architecture: {
-      title:
-        "La respuesta del modelo no va directamente al niño.",
-      description:
-        "La API valida el payload, recupera contexto, clasifica la interacción y aplica evaluación independiente en GUIDE y CHECK, con una única recuperación y fallback seguro.",
-      flow: [
-        "Input + edad",
-        "EXPLAIN / GUIDE / CHECK",
-        "Generación server-side",
-        "Evaluación independiente",
-        "Recovery + fallback",
-      ],
-    },
-    process: {
-      title:
-        "La sesión mantiene contexto pedagógico.",
-      description:
-        "Las solicitudes de ayuda modifican el contexto de aprendizaje activo en lugar de iniciar conversaciones desconectadas.",
-      steps: [
-        { number: "01", title: "Entrada", description: "Edad y hasta 40 mensajes recientes." },
-        { number: "02", title: "Clasificación", description: "EXPLAIN, GUIDE o CHECK." },
-        { number: "03", title: "Generación", description: "Prompt adaptado a edad, comportamiento y problema." },
-        { number: "04", title: "Evaluación", description: "GUIDE y CHECK usan evaluadores independientes." },
-        { number: "05", title: "Recuperación", description: "Una única regeneración con corrección." },
-        { number: "06", title: "Fallback", description: "Salida determinista y segura si la corrección falla." },
-        { number: "07", title: "Salida", description: "Normalización antes de llegar a la interfaz infantil." },
-      ],
-    },
-    decisions: {
-      title:
-        "El modelo genera. El software decide qué puede llegar al alumno.",
-      description:
-        "Las decisiones centrales viven entre aprendizaje, modelo y software.",
-      items: [
-        { number: "01", title: "Clasificar antes de responder", description: "Cada comportamiento tiene reglas propias." },
-        { number: "02", title: "Generador ≠ evaluador", description: "Generación y aceptación están separadas." },
-        { number: "03", title: "Política en código", description: "Edad, límites y reglas verificables fuera del prompt." },
-        { number: "04", title: "Recuperación limitada", description: "Una corrección antes del fallback seguro." },
-        { number: "05", title: "Sesión, no chatbot", description: "La conversación preserva el contexto pedagógico." },
-        { number: "06", title: "Servidor como boundary", description: "Prompts, claves y evaluación permanecen server-side." },
-      ],
-    },
+
     stack: {
       title:
-        "Producto full-stack, política testable e IA server-side.",
+        "Producto full-stack con control server-side.",
       description:
-        "Interface, API, contratos tipados, generación e avaliação estruturada.",
+        "Aplicación web, contratos tipados, generación por LLM y validación estructurada.",
       items: [
         "Next.js 16.3.5",
         "React 19.2.8",
@@ -1981,23 +1734,20 @@ const liio: Record<
         "Motion 13.2",
       ],
     },
+
     results: {
       title:
-        "La implementación actual demuestra un producto de aprendizaje construido alrededor de un LLM.",
+        "Qué demuestra la implementación actual.",
       description:
-        "El núcleo funcional prueba clasificación pedagógica, evaluación independiente, reglas deterministas, recuperación limitada y fallback seguro. LIIO está pensado como un producto en evolución continua: si la tecnología y las formas de aprender cambian, la experiencia educativa también debe evolucionar con ellas.",
-      items: [
-        { value: "3 MODOS", label: "EXPLAIN, GUIDE y CHECK" },
-        { value: "6–15 AÑOS", label: "Política preparada para adaptación por edad" },
-        { value: "1 RETRY", label: "Máximo antes del fallback seguro" },
-        { value: "SERVER-SIDE", label: "Prompts y evaluación fuera del browser" },
-        { value: "SAFETY GATE", label: "Respuesta generada no equivale a respuesta entregada" },
-      ],
+        "Un tutor con contexto de sesión, clasificación pedagógica, evaluación independiente y límites de recuperación definidos por software.",
+      items: [],
     },
+
     links: {
       github:
         "https://github.com/escobardanilo/liio",
-      live: null,
+      live:
+        "https://liio.vercel.app/",
     },
   },
 
@@ -2005,125 +1755,130 @@ const liio: Record<
     card: {
       category: "",
       description:
-        "KI-Lerntutor für Kinder und Jugendliche mit pädagogischer Klassifizierung, unabhängiger Bewertung und expliziter Kontrolle über die ausgelieferte Antwort.",
+        "KI-Lerntutor für Kinder und Jugendliche mit expliziter pädagogischer Policy, Bewertung vor der Ausgabe und Sitzungskontext.",
       tags: [
         "AI Learning Tutor",
         "AI Engineering",
-        "Safety",
+        "EdTech",
       ],
     },
+
     eyebrow:
-      "EDTECH / AI LEARNING TUTOR",
+      "EDTECH / AI LEARNING SYSTEM",
+
     title: "LIIO",
+
     subtitle:
-      "Ein KI-Tutor, der Denken anleitet, ohne Lernen in automatische Antwortausgabe zu verwandeln.",
+      "Ein KI-Lernsystem, das Denken anleitet, Kontext bewahrt und kontrolliert, was den Lernenden erreicht.",
+
     summary:
-      "LIIO ist ein KI-Lerntutor für Kinder und Jugendliche. Das Projekt folgt der Idee, dass sich mit dem technologischen Fortschritt auch die Art des Lernens weiterentwickeln sollte. Die aktuelle Version konzentriert sich auf Homework Mode mit EXPLAIN, GUIDE und CHECK sowie unabhängiger Bewertung, begrenzter Recovery und sicherem Fallback.",
+      "LIIO untersucht ein konkretes Produktproblem: Wie lassen sich generative Modelle beim Lernen einsetzen, ohne den Tutor zu einem Antwortgenerator zu machen? Das System verbindet Sitzungskontext, pädagogische Policy und serverseitige Bewertung und ist so aufgebaut, dass es mit neuen Modellfähigkeiten und neuen Formen digitaler Lerninteraktion weiterentwickelt werden kann.",
+
     overview: {
       role:
         "AI Engineering / Full-stack",
       type:
-        "EdTech / AI Learning Tutor",
+        "EdTech / AI Learning System",
       status:
-        "Funktionale Version / in Entwicklung",
+        "Funktionale Implementierung / in Entwicklung",
     },
+
     problem: {
       title:
-        "Ein KI-Tutor sollte Hilfe nicht mit direkter Antwortausgabe verwechseln.",
+        "Ein Chatbot antwortet. Ein Tutor muss entscheiden, wie er lehrt.",
+
       description:
-        "LIIO trennt Generierung und Akzeptanz, damit pädagogische Regeln außerhalb eines einzelnen Prompts durch Software kontrolliert werden.",
+        "Beim Lernen ist die wahrscheinlichste Antwort nicht immer die nützlichste. LIIO behandelt jede Interaktion als Teil einer Lernsitzung, bewahrt die ursprüngliche Aufgabe im Kontext und trennt Generierung von Ausgabe.",
     },
+
     product: {
       title:
         "Homework Mode ist der aktuelle funktionale Kern.",
+
       description:
-        "Die implementierte Erfahrung verbindet Sitzungskontinuität, Altersanpassung und EXPLAIN, GUIDE sowie CHECK.",
+        "Das System nutzt drei pädagogische Verhaltensweisen — EXPLAIN, GUIDE und CHECK — als interne Policy für Erklärung, angeleitetes Denken und Prüfung eines Versuchs.",
+
       visuals: [
         {
           number: "01",
-          label: "LIIO / AI LEARNING TUTOR",
+          label:
+            "LIIO / LEARNING SYSTEM",
           title: "LIIO",
           description:
-            "EdTech-Produkt für Erklärung, Anleitung und Verifikation.",
-          image: "/images/liio-icon.svg",
-          alt: "LIIO Marke",
+            "Lerntutor mit Fokus auf Kontext, pädagogische Absicht und kontrollierte Antwortausgabe.",
+          image:
+            "/images/liio-icon.svg",
+          alt:
+            "LIIO Marke",
+        },
+      ],
+    },
+
+    architecture: {
+      title:
+        "Die pädagogische Policy liegt außerhalb des Modells.",
+
+      description:
+        "Die API validiert die Anfrage, stellt Kontext wieder her und klassifiziert die Interaktion vor der Generierung. Pädagogisch riskantere Antworten durchlaufen unabhängige Bewertung, begrenzte Korrektur und bei Bedarf einen deterministischen Fallback.",
+      flow: [
+        "Sitzungskontext",
+        "Pädagogische Klassifizierung",
+        "Serverseitige Generierung",
+        "Unabhängige Bewertung",
+        "Korrektur oder Fallback",
+      ],
+    },
+
+    process: {
+      title:
+        "Sitzungskontext verändert das Systemverhalten.",
+      description:
+        "Hilfefragen und neue Lernversuche verändern die aktive Sitzung, statt getrennte Unterhaltungen zu starten.",
+      steps: [],
+    },
+
+    decisions: {
+      title:
+        "Engineering-Entscheidungen für einen kontrollierbaren Tutor.",
+      description:
+        "Der technische Wert liegt nicht nur in der Textgenerierung, sondern darin, Verhalten, Sicherheit und Kontinuität durch Software prüfbar zu machen.",
+      items: [
+        {
+          number: "01",
+          title:
+            "Generierung getrennt von Akzeptanz",
+          description:
+            "Eine Stufe generiert; eine andere entscheidet, ob die Antwort ausgeliefert werden darf.",
         },
         {
           number: "02",
-          label: "LIIO / HOMEWORK MODE",
-          title: "Homework Mode",
+          title:
+            "Prüfbare Policy im Code",
           description:
-            "Jede Anfrage wird vor der Antwort klassifiziert.",
-          image: null,
-          alt: "LIIO Homework Mode",
+            "Alter, Limits und Anpassung können außerhalb des Prompts überprüft werden.",
         },
         {
           number: "03",
-          label: "LIIO / SAFETY GATE",
-          title: "Safety gate",
+          title:
+            "Begrenzte Recovery",
           description:
-            "Unabhängige Bewertung, deterministische Regeln, begrenzte Recovery und sicherer Fallback.",
-          image: null,
-          alt: "LIIO Safety Gate",
+            "Eine Korrektur vor einem sicheren Fallback.",
         },
         {
           number: "04",
-          label: "LIIO / PARENTS AREA",
-          title: "Parents Area",
+          title:
+            "Für Weiterentwicklung konzipiert",
           description:
-            "Demonstrative Oberfläche für Profile, Aktivität, Limits und Geräte.",
-          image: null,
-          alt: "LIIO Parents Area",
+            "Die Entscheidungsschicht ist getrennt, damit neue Fähigkeiten und Lernformen integriert werden können, ohne das Produkt an feste Prompts zu koppeln.",
         },
       ],
     },
-    architecture: {
-      title:
-        "Modelloutput geht nicht direkt an das Kind.",
-      description:
-        "Die API validiert den Request, stellt Kontext wieder her, klassifiziert die Interaktion und bewertet GUIDE sowie CHECK unabhängig, mit einer Recovery und sicherem Fallback.",
-      flow: [
-        "Input + Alter",
-        "EXPLAIN / GUIDE / CHECK",
-        "Server-side Generierung",
-        "Unabhängige Bewertung",
-        "Recovery + Fallback",
-      ],
-    },
-    process: {
-      title:
-        "Die Sitzung bewahrt pädagogischen Kontext.",
-      description:
-        "Hilfefragen verändern den aktiven Lernkontext, statt eine neue, getrennte Unterhaltung zu beginnen.",
-      steps: [
-        { number: "01", title: "Input", description: "Alter und bis zu 40 aktuelle Nachrichten." },
-        { number: "02", title: "Klassifizierung", description: "EXPLAIN, GUIDE oder CHECK." },
-        { number: "03", title: "Generierung", description: "Prompt nach Alter, Verhalten und Aufgabe." },
-        { number: "04", title: "Bewertung", description: "GUIDE und CHECK nutzen unabhängige Evaluatoren." },
-        { number: "05", title: "Recovery", description: "Eine korrigierte Regenerierung." },
-        { number: "06", title: "Fallback", description: "Deterministische sichere Ausgabe bei erneutem Fehler." },
-        { number: "07", title: "Output", description: "Normalisierung vor der Ausgabe an die Kinderoberfläche." },
-      ],
-    },
-    decisions: {
-      title:
-        "Das Modell generiert. Software entscheidet, was den Lernenden erreicht.",
-      description:
-        "Die Kernentscheidungen liegen im Vertrag zwischen Lernen, Modell und Software.",
-      items: [
-        { number: "01", title: "Vor der Antwort klassifizieren", description: "Jedes Verhalten hat eigene Regeln." },
-        { number: "02", title: "Generator ≠ Evaluator", description: "Generierung und Akzeptanz sind getrennt." },
-        { number: "03", title: "Policy im Code", description: "Alter, Limits und Regeln sind außerhalb des Prompts prüfbar." },
-        { number: "04", title: "Begrenzte Recovery", description: "Eine Korrektur vor sicherem Fallback." },
-        { number: "05", title: "Sitzung statt Chatbot", description: "Die Unterhaltung bewahrt den Lernkontext." },
-        { number: "06", title: "Server als Boundary", description: "Prompts, Schlüssel und Bewertung bleiben serverseitig." },
-      ],
-    },
+
     stack: {
       title:
-        "Full-stack Produkt, testbare Policy und serverseitige KI.",
+        "Full-stack Produkt mit serverseitiger Kontrolle.",
       description:
-        "Interface, API, typisierte Verträge, Generierung und strukturierte Evaluator-Validierung.",
+        "Webanwendung, typisierte Verträge, LLM-Generierung und strukturierte Validierung.",
       items: [
         "Next.js 16.3.5",
         "React 19.2.8",
@@ -2133,23 +1888,20 @@ const liio: Record<
         "Motion 13.2",
       ],
     },
+
     results: {
       title:
-        "Die aktuelle Implementierung demonstriert ein Lernprodukt rund um ein LLM.",
+        "Was die aktuelle Implementierung demonstriert.",
       description:
-        "Der funktionale Kern zeigt pädagogische Klassifizierung, unabhängige Bewertung, deterministische Regeln, begrenzte Recovery und sicheren Fallback. LIIO ist als kontinuierlich weiterentwickeltes Produkt gedacht: Wenn sich Technologie und Lernformen verändern, sollte sich auch die Bildungserfahrung mit ihnen weiterentwickeln.",
-      items: [
-        { value: "3 MODI", label: "EXPLAIN, GUIDE und CHECK" },
-        { value: "6–15 JAHRE", label: "Policy für altersabhängige Anpassung" },
-        { value: "1 RETRY", label: "Maximum vor sicherem Fallback" },
-        { value: "SERVER-SIDE", label: "Prompts und Bewertung außerhalb des Browsers" },
-        { value: "SAFETY GATE", label: "Generierte Antwort ist nicht automatisch ausgelieferte Antwort" },
-      ],
+        "Ein Tutor mit Sitzungskontext, pädagogischer Klassifizierung, unabhängiger Bewertung und softwaredefinierten Recovery-Grenzen.",
+      items: [],
     },
+
     links: {
       github:
         "https://github.com/escobardanilo/liio",
-      live: null,
+      live:
+        "https://liio.vercel.app/",
     },
   },
 };
