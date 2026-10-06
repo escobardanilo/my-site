@@ -8,6 +8,9 @@ import type { Language } from "@/lib/translations";
 
 type HeaderProps = {
   activeSection?: SectionId;
+  onNavigate?: (
+    section: SectionId,
+  ) => void;
 };
 
 const navigationCopy: Record<
@@ -97,7 +100,8 @@ const navItems: Array<{
 ];
 
 export function Header({
-  activeSection,
+  activeSection = "home",
+  onNavigate,
 }: HeaderProps = {}) {
   const pathname = usePathname();
 
@@ -119,13 +123,26 @@ export function Header({
   ) {
     if (section === "home") {
       return isHome
-        ? "#home"
+        ? "/"
         : "/";
     }
 
     return isHome
-      ? `#${section}`
+      ? `/#${section}`
       : `/#${section}`;
+  }
+
+  function handleNavigation(
+    event:
+      React.MouseEvent<HTMLAnchorElement>,
+    section: SectionId,
+  ) {
+    if (!onNavigate || !isHome) {
+      return;
+    }
+
+    event.preventDefault();
+    onNavigate(section);
   }
 
   return (
@@ -135,6 +152,12 @@ export function Header({
           href={hrefFor("home")}
           className="header__brand"
           aria-label="Danilo Escobar — Home"
+          onClick={(event) =>
+            handleNavigation(
+              event,
+              "home",
+            )
+          }
         >
           Danilo Escobar
         </a>
@@ -157,6 +180,12 @@ export function Header({
                   activeSection === id
                     ? "page"
                     : undefined
+                }
+                onClick={(event) =>
+                  handleNavigation(
+                    event,
+                    id,
+                  )
                 }
               >
                 {navigation[key]}
@@ -225,13 +254,42 @@ export function Header({
             }
           >
             {theme === "light" ? (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20.5 14.6A7.7 7.7 0 0 1 9.4 3.5 8.5 8.5 0 1 0 20.5 14.6Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.5 14.6A7.7 7.7 0 0 1 9.4 3.5 8.5 8.5 0 1 0 20.5 14.6Z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             ) : (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M12 2V4M12 20V22M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07M2 12H4M20 12H22M4.93 19.07L6.34 17.66M17.66 6.34L19.07 4.93" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M12 2V4M12 20V22M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07M2 12H4M20 12H22M4.93 19.07L6.34 17.66M17.66 6.34L19.07 4.93"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
               </svg>
             )}
           </button>
@@ -244,6 +302,12 @@ export function Header({
                 : "header__contact"
             }
             href={hrefFor("contact")}
+            onClick={(event) =>
+              handleNavigation(
+                event,
+                "contact",
+              )
+            }
           >
             {navigation.contact}
           </a>
