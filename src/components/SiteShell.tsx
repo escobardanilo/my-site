@@ -119,7 +119,7 @@ export function SiteShell() {
       >
         <div
           key={activeSection}
-          className="screen-panel"
+          className={`screen-panel screen-panel--${activeSection}`}
         >
           {activeSection ===
             "home" && <Hero />}
