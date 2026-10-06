@@ -1308,18 +1308,35 @@ const liio: Record<
         {
           number: "01",
           label:
-            "LIIO / LEARNING SYSTEM",
+            "LIIO / IDENTITY",
 
           title: "LIIO",
 
           description:
-            "O produto é apresentado como tutor de aprendizagem, não como chatbot genérico. O foco está na relação entre contexto, intenção pedagógica e resposta controlada.",
+            "Identidade visual do tutor — uma presença simples e reconhecível para uma experiência de aprendizagem dirigida a crianças e adolescentes.",
 
           image:
-            "/images/liio-icon.svg",
+            "/images/0001.png",
 
           alt:
-            "Marca LIIO, sistema de aprendizagem com IA",
+            "Personagem visual do LIIO",
+        },
+
+        {
+          number: "02",
+          label:
+            "LIIO / PARENTS AREA",
+
+          title: "Parents Area",
+
+          description:
+            "Exploração de produto para a área parental: perfis, atividade, ligação de dispositivos e controlo de tempo e limites. Esta superfície representa a direção de produto e permanece separada do núcleo funcional de aprendizagem.",
+
+          image:
+            "/images/0002.png",
+
+          alt:
+            "Conjunto de ecrãs da área parental do LIIO",
         },
       ],
     },
@@ -1478,18 +1495,35 @@ const liio: Record<
         {
           number: "01",
           label:
-            "LIIO / LEARNING SYSTEM",
+            "LIIO / IDENTITY",
 
           title: "LIIO",
 
           description:
-            "The product is positioned as a learning tutor rather than a generic chatbot. The focus is the relationship between context, pedagogical intent and controlled response delivery.",
+            "The tutor's visual identity — a simple, recognizable presence for a learning experience designed for children and teenagers.",
 
           image:
-            "/images/liio-icon.svg",
+            "/images/0001.png",
 
           alt:
-            "LIIO AI learning system mark",
+            "LIIO visual character",
+        },
+
+        {
+          number: "02",
+          label:
+            "LIIO / PARENTS AREA",
+
+          title: "Parents Area",
+
+          description:
+            "Product exploration for the parent area: profiles, activity, device linking, and time and limit controls. This surface represents product direction and remains separate from the functional learning core.",
+
+          image:
+            "/images/0002.png",
+
+          alt:
+            "LIIO parent area interface screens",
         },
       ],
     },
@@ -1648,14 +1682,26 @@ const liio: Record<
         {
           number: "01",
           label:
-            "LIIO / LEARNING SYSTEM",
+            "LIIO / IDENTITY",
           title: "LIIO",
           description:
-            "Tutor de aprendizaje centrado en contexto, intención pedagógica y entrega controlada.",
+            "Identidad visual del tutor: una presencia simple y reconocible para una experiencia de aprendizaje dirigida a niños y adolescentes.",
           image:
-            "/images/liio-icon.svg",
+            "/images/0001.png",
           alt:
-            "Marca LIIO",
+            "Personaje visual de LIIO",
+        },
+        {
+          number: "02",
+          label:
+            "LIIO / PARENTS AREA",
+          title: "Parents Area",
+          description:
+            "Exploración de producto para el área parental: perfiles, actividad, vinculación de dispositivos y controles de tiempo y límites. Esta superficie representa la dirección de producto y permanece separada del núcleo funcional de aprendizaje.",
+          image:
+            "/images/0002.png",
+          alt:
+            "Pantallas del área parental de LIIO",
         },
       ],
     },
@@ -1802,14 +1848,26 @@ const liio: Record<
         {
           number: "01",
           label:
-            "LIIO / LEARNING SYSTEM",
+            "LIIO / IDENTITY",
           title: "LIIO",
           description:
-            "Lerntutor mit Fokus auf Kontext, pädagogische Absicht und kontrollierte Antwortausgabe.",
+            "Die visuelle Identität des Tutors — eine einfache, wiedererkennbare Präsenz für eine Lernerfahrung für Kinder und Jugendliche.",
           image:
-            "/images/liio-icon.svg",
+            "/images/0001.png",
           alt:
-            "LIIO Marke",
+            "LIIO visuelle Figur",
+        },
+        {
+          number: "02",
+          label:
+            "LIIO / PARENTS AREA",
+          title: "Parents Area",
+          description:
+            "Produktkonzept für den Elternbereich: Profile, Aktivität, Geräteverknüpfung sowie Zeit- und Limitsteuerung. Diese Oberfläche zeigt die Produktrichtung und bleibt vom funktionalen Lernkern getrennt.",
+          image:
+            "/images/0002.png",
+          alt:
+            "LIIO Elternbereich Oberflächen",
         },
       ],
     },
