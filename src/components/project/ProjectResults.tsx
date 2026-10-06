@@ -12,33 +12,55 @@ export function ProjectResults({
   project,
   labels,
 }: ProjectResultsProps) {
+  const hasResults =
+    project.results.items.length > 0;
+
   return (
-    <section className="project-section">
+    <section
+      className={
+        hasResults
+          ? "project-section"
+          : "project-section project-section--links-only"
+      }
+    >
       <div className="container">
-        <div className="project-section__heading">
-          <span>08</span>
-          <p>{labels.results}</p>
-        </div>
+        {hasResults && (
+          <>
+            <div className="project-section__heading">
+              <span>08</span>
+              <p>{labels.results}</p>
+            </div>
 
-        <div className="project-section__intro">
-          <h2>{project.results.title}</h2>
+            <div className="project-section__intro">
+              <h2>
+                {project.results.title}
+              </h2>
 
-          <p>{project.results.description}</p>
-        </div>
+              <p>
+                {project.results.description}
+              </p>
+            </div>
 
-        <div className="project-results">
-          {project.results.items.map(
-            (item) => (
-              <article
-                className="project-result"
-                key={item.value}
-              >
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
-              </article>
-            ),
-          )}
-        </div>
+            <div className="project-results">
+              {project.results.items.map(
+                (item) => (
+                  <article
+                    className="project-result"
+                    key={item.value}
+                  >
+                    <strong>
+                      {item.value}
+                    </strong>
+
+                    <span>
+                      {item.label}
+                    </span>
+                  </article>
+                ),
+              )}
+            </div>
+          </>
+        )}
 
         <div className="project-links">
           {project.links.github ? (
@@ -48,7 +70,9 @@ export function ProjectResults({
               rel="noreferrer"
             >
               <span>{labels.github}</span>
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">
+                ↗
+              </span>
             </a>
           ) : (
             <div>
@@ -69,7 +93,9 @@ export function ProjectResults({
                 {labels.liveProduct}
               </span>
 
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">
+                ↗
+              </span>
             </a>
           ) : (
             <div>
