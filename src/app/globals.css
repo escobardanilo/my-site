@@ -4470,3 +4470,52 @@ body.single-screen-site .header {
     min-height: 460px;
   }
 }
+
+
+/* =========================================================
+   SCREEN EXPERIENCE — BEHAVIOR ONLY
+   Keeps the existing portfolio dimensions and typography.
+   Each selected section owns its own scroll when required.
+   ========================================================= */
+
+body.screen-experience-site {
+  height: 100svh;
+  overflow: hidden;
+}
+
+.screen-experience-main {
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.screen-panel {
+  width: 100%;
+  height: 100svh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screen-panel > section,
+.screen-panel > .contact-screen {
+  height: auto;
+  min-height: 100svh;
+  overflow: visible;
+}
+
+.screen-panel .contact-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-panel .contact-screen .contact {
+  flex: 1 0 auto;
+}
+
+@media (max-width: 900px) {
+  .screen-panel {
+    overscroll-behavior-y: auto;
+  }
+}
