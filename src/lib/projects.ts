@@ -3474,7 +3474,7 @@ export function getProjectContent(
   if (slug === "liio") {
     return {
       number: "02",
-      ...son[language],
+      ...liio[language],
     };
   }
 
