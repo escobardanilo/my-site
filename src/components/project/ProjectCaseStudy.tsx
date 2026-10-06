@@ -74,10 +74,12 @@ export function ProjectCaseStudy({
           labels={labels}
         />
 
-        <ProjectProcess
-          project={project}
-          labels={labels}
-        />
+        {project.process.steps.length > 0 && (
+          <ProjectProcess
+            project={project}
+            labels={labels}
+          />
+        )}
 
         <ProjectDecisions
           project={project}
