@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url:
-        `${baseUrl}/projects/son`,
+        `${baseUrl}/projects/liio`,
       changeFrequency: "monthly",
       priority: 0.9,
     },
