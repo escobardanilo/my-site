@@ -1278,7 +1278,7 @@ const liio: Record<
       "Um tutor de IA que orienta o raciocínio sem transformar aprendizagem em entrega automática de respostas.",
 
     summary:
-      "LIIO é um tutor de aprendizagem com IA para crianças e adolescentes. A V1 concentra a experiência funcional no Homework Mode, onde cada pedido é interpretado como EXPLAIN, GUIDE ou CHECK e respostas sensíveis passam por avaliação independente, recuperação limitada e fallback seguro antes de chegar à interface.",
+      "LIIO é um tutor de aprendizagem com IA para crianças e adolescentes. Parte da ideia de que, à medida que a tecnologia evolui, a forma de aprender também precisa evoluir. A versão atual concentra a experiência funcional no Homework Mode, onde cada pedido é interpretado como EXPLAIN, GUIDE ou CHECK e respostas sensíveis passam por avaliação independente, recuperação limitada e fallback seguro antes de chegar à interface.",
 
     overview: {
       role:
@@ -1286,7 +1286,7 @@ const liio: Record<
       type:
         "EdTech / AI Learning Tutor",
       status:
-        "V1 funcional / em desenvolvimento",
+        "Versão funcional / em desenvolvimento",
     },
 
     problem: {
@@ -1299,7 +1299,7 @@ const liio: Record<
 
     product: {
       title:
-        "Homework Mode como núcleo funcional da V1.",
+        "Homework Mode como núcleo funcional atual.",
 
       description:
         "A experiência implementada combina chat com IA, continuidade de sessão, adaptação por idade e três comportamentos pedagógicos. EXPLAIN explica conceitos, GUIDE conduz o aluno por etapas sem revelar a resposta final protegida e CHECK analisa a tentativa do aluno sem completar a solução por ele.",
@@ -1364,7 +1364,7 @@ const liio: Record<
             "Parents Area",
 
           description:
-            "A área parental apresenta perfis, atividade, limites e dispositivos como visão de produto; na V1 estas superfícies continuam demonstrativas e não são apresentadas como backend persistente de produção.",
+            "A área parental apresenta perfis, atividade, limites e dispositivos como visão de produto; nesta fase estas superfícies continuam demonstrativas e não são apresentadas como backend persistente de produção.",
 
           image: null,
 
@@ -1526,10 +1526,10 @@ const liio: Record<
 
     results: {
       title:
-        "A V1 já demonstra um produto de aprendizagem construído em torno de um LLM — não apenas um chat com IA.",
+        "A implementação atual já demonstra um produto de aprendizagem construído em torno de um LLM — não apenas um chat com IA.",
 
       description:
-        "O núcleo funcional prova classificação pedagógica, avaliação independente, regras determinísticas, recuperação limitada e fallback seguro. A próxima evolução está concentrada em perfis persistentes, autenticação real e expansão de modos apenas depois de o Homework Mode estar estável.",
+        "O núcleo funcional prova classificação pedagógica, avaliação independente, regras determinísticas, recuperação limitada e fallback seguro. O LIIO foi pensado como um produto em evolução contínua: se tecnologia, ferramentas e formas de aprender mudam, a experiência educacional também deve acompanhar essa transformação. A próxima fase concentra-se em perfis persistentes, autenticação real e expansão de modos apenas depois de o Homework Mode estar estável.",
 
       items: [
         {
@@ -1592,7 +1592,7 @@ const liio: Record<
       "An AI tutor that guides reasoning without turning learning into automatic answer delivery.",
 
     summary:
-      "LIIO is an AI learning tutor for children and teenagers. The current V1 centers on Homework Mode, where each request is interpreted as EXPLAIN, GUIDE or CHECK and sensitive responses pass through independent evaluation, bounded recovery and safe fallback before reaching the interface.",
+      "LIIO is an AI learning tutor for children and teenagers. It is built on the idea that as technology evolves, the way people learn should evolve with it. The current version centers on Homework Mode, where each request is interpreted as EXPLAIN, GUIDE or CHECK and sensitive responses pass through independent evaluation, bounded recovery and safe fallback before reaching the interface.",
 
     overview: {
       role:
@@ -1600,7 +1600,7 @@ const liio: Record<
       type:
         "EdTech / AI Learning Tutor",
       status:
-        "Functional V1 / in development",
+        "Functional version / in development",
     },
 
     problem: {
@@ -1613,7 +1613,7 @@ const liio: Record<
 
     product: {
       title:
-        "Homework Mode is the functional core of V1.",
+        "Homework Mode is the current functional core.",
 
       description:
         "The implemented experience combines AI chat, session continuity, age adaptation and three pedagogical behaviors. EXPLAIN teaches concepts, GUIDE moves the learner through steps without revealing the protected final answer, and CHECK reviews the learner's attempt without completing the solution for them.",
@@ -1659,7 +1659,7 @@ const liio: Record<
             "LIIO / PARENTS AREA",
           title: "Parents Area",
           description:
-            "The parent area presents profiles, activity, limits and devices as a product surface; in V1 these remain demonstrative and are not presented as a persistent production backend.",
+            "The parent area presents profiles, activity, limits and devices as a product surface; at this stage these remain demonstrative and are not presented as a persistent production backend.",
           image: null,
           alt:
             "LIIO Parents Area",
@@ -1808,10 +1808,10 @@ const liio: Record<
 
     results: {
       title:
-        "V1 already demonstrates a learning product built around an LLM — not just an AI chat interface.",
+        "The current implementation already demonstrates a learning product built around an LLM — not just an AI chat interface.",
 
       description:
-        "The functional core proves pedagogical classification, independent evaluation, deterministic rules, bounded recovery and safe fallback. The next evolution is focused on persistent profiles, real authentication and expanding learning modes only after Homework Mode is stable.",
+        "The functional core proves pedagogical classification, independent evaluation, deterministic rules, bounded recovery and safe fallback. LIIO is designed as a continuously evolving product: as technology, learning tools and learning behaviors change, the educational experience should evolve with them. The next phase focuses on persistent profiles, real authentication and expanding learning modes only after Homework Mode is stable.",
 
       items: [
         {
@@ -1866,14 +1866,14 @@ const liio: Record<
     subtitle:
       "Un tutor de IA que guía el razonamiento sin convertir el aprendizaje en entrega automática de respuestas.",
     summary:
-      "LIIO es un tutor de aprendizaje con IA para niños y adolescentes. La V1 se centra en Homework Mode, donde cada solicitud se interpreta como EXPLAIN, GUIDE o CHECK y las respuestas sensibles pasan por evaluación independiente, recuperación limitada y fallback seguro.",
+      "LIIO es un tutor de aprendizaje con IA para niños y adolescentes. Parte de la idea de que, a medida que la tecnología evoluciona, la forma de aprender también debe evolucionar. La versión actual se centra en Homework Mode, donde cada solicitud se interpreta como EXPLAIN, GUIDE o CHECK y las respuestas sensibles pasan por evaluación independiente, recuperación limitada y fallback seguro.",
     overview: {
       role:
         "AI Engineering / Full-stack",
       type:
         "EdTech / AI Learning Tutor",
       status:
-        "V1 funcional / en desarrollo",
+        "Versión funcional / en desarrollo",
     },
     problem: {
       title:
@@ -1883,7 +1883,7 @@ const liio: Record<
     },
     product: {
       title:
-        "Homework Mode es el núcleo funcional de la V1.",
+        "Homework Mode es el núcleo funcional actual.",
       description:
         "La experiencia implementada combina continuidad de sesión, adaptación por edad y tres comportamientos: EXPLAIN, GUIDE y CHECK.",
       visuals: [
@@ -1983,9 +1983,9 @@ const liio: Record<
     },
     results: {
       title:
-        "La V1 demuestra un producto de aprendizaje construido alrededor de un LLM.",
+        "La implementación actual demuestra un producto de aprendizaje construido alrededor de un LLM.",
       description:
-        "El núcleo funcional prueba clasificación pedagógica, evaluación independiente, reglas deterministas, recuperación limitada y fallback seguro.",
+        "El núcleo funcional prueba clasificación pedagógica, evaluación independiente, reglas deterministas, recuperación limitada y fallback seguro. LIIO está pensado como un producto en evolución continua: si la tecnología y las formas de aprender cambian, la experiencia educativa también debe evolucionar con ellas.",
       items: [
         { value: "3 MODOS", label: "EXPLAIN, GUIDE y CHECK" },
         { value: "6–15 AÑOS", label: "Política preparada para adaptación por edad" },
@@ -2018,14 +2018,14 @@ const liio: Record<
     subtitle:
       "Ein KI-Tutor, der Denken anleitet, ohne Lernen in automatische Antwortausgabe zu verwandeln.",
     summary:
-      "LIIO ist ein KI-Lerntutor für Kinder und Jugendliche. Die V1 konzentriert sich auf Homework Mode mit EXPLAIN, GUIDE und CHECK sowie unabhängiger Bewertung, begrenzter Recovery und sicherem Fallback.",
+      "LIIO ist ein KI-Lerntutor für Kinder und Jugendliche. Das Projekt folgt der Idee, dass sich mit dem technologischen Fortschritt auch die Art des Lernens weiterentwickeln sollte. Die aktuelle Version konzentriert sich auf Homework Mode mit EXPLAIN, GUIDE und CHECK sowie unabhängiger Bewertung, begrenzter Recovery und sicherem Fallback.",
     overview: {
       role:
         "AI Engineering / Full-stack",
       type:
         "EdTech / AI Learning Tutor",
       status:
-        "Funktionale V1 / in Entwicklung",
+        "Funktionale Version / in Entwicklung",
     },
     problem: {
       title:
@@ -2035,7 +2035,7 @@ const liio: Record<
     },
     product: {
       title:
-        "Homework Mode ist der funktionale Kern der V1.",
+        "Homework Mode ist der aktuelle funktionale Kern.",
       description:
         "Die implementierte Erfahrung verbindet Sitzungskontinuität, Altersanpassung und EXPLAIN, GUIDE sowie CHECK.",
       visuals: [
@@ -2135,9 +2135,9 @@ const liio: Record<
     },
     results: {
       title:
-        "Die V1 demonstriert ein Lernprodukt rund um ein LLM.",
+        "Die aktuelle Implementierung demonstriert ein Lernprodukt rund um ein LLM.",
       description:
-        "Der funktionale Kern zeigt pädagogische Klassifizierung, unabhängige Bewertung, deterministische Regeln, begrenzte Recovery und sicheren Fallback.",
+        "Der funktionale Kern zeigt pädagogische Klassifizierung, unabhängige Bewertung, deterministische Regeln, begrenzte Recovery und sicheren Fallback. LIIO ist als kontinuierlich weiterentwickeltes Produkt gedacht: Wenn sich Technologie und Lernformen verändern, sollte sich auch die Bildungserfahrung mit ihnen weiterentwickeln.",
       items: [
         { value: "3 MODI", label: "EXPLAIN, GUIDE und CHECK" },
         { value: "6–15 JAHRE", label: "Policy für altersabhängige Anpassung" },
