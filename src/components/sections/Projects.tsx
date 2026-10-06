@@ -11,23 +11,6 @@ import {
 
 import type { Language } from "@/lib/translations";
 
-const liioCardDescriptions: Record<
-  Language,
-  string
-> = {
-  pt:
-    "Tutor de aprendizagem com IA para crianças e adolescentes, com EXPLAIN, GUIDE e CHECK, avaliação independente e fallback seguro antes da resposta chegar ao aluno.",
-
-  en:
-    "AI learning tutor for children and teenagers with EXPLAIN, GUIDE and CHECK, independent evaluation and safe fallback before a response reaches the learner.",
-
-  es:
-    "Tutor de aprendizaje con IA para niños y adolescentes, con EXPLAIN, GUIDE y CHECK, evaluación independiente y fallback seguro antes de entregar la respuesta.",
-
-  de:
-    "KI-Lerntutor für Kinder und Jugendliche mit EXPLAIN, GUIDE und CHECK, unabhängiger Bewertung und sicherem Fallback vor der Ausgabe an den Lernenden.",
-};
-
 export function Projects() {
   const {
     copy,
@@ -81,13 +64,7 @@ export function Projects() {
                   .visuals[0];
 
               const description =
-                slug ===
-                "liio"
-                  ? liioCardDescriptions[
-                      language
-                    ]
-                  : content.card
-                      .description;
+                content.card.description;
 
               return (
                 <article
