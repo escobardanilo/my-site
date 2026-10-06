@@ -1555,3 +1555,44 @@
     font-size: 11px;
   }
 }
+
+
+/* LIIO — image framing */
+
+.project-visuals--liio {
+  grid-template-columns:
+    minmax(260px, 0.72fr)
+    minmax(0, 1.58fr);
+
+  align-items: stretch;
+}
+
+.project-visual--liio .project-visual__canvas {
+  background: var(--surface);
+}
+
+.project-visual--liio .project-visual__image-button {
+  padding: 12px;
+}
+
+.project-visual--liio .project-visual__image {
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-visual--liio-01
+  .project-visual__canvas {
+  aspect-ratio: 520 / 341;
+}
+
+.project-visual--liio-02
+  .project-visual__canvas {
+  aspect-ratio: 3640 / 1914;
+}
+
+@media (max-width: 900px) {
+  .project-visuals--liio {
+    grid-template-columns: 1fr;
+  }
+}
