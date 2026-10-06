@@ -11,21 +11,21 @@ import {
 
 import type { Language } from "@/lib/translations";
 
-const sonCardDescriptions: Record<
+const liioCardDescriptions: Record<
   Language,
   string
 > = {
   pt:
-    "Sistema de assistência operacional para ambiente industrial, combinando IA, contexto técnico e supervisão para apoiar diagnóstico, orientação e tomada de decisão no trabalho de campo.",
+    "Tutor de aprendizagem com IA para crianças e adolescentes, com EXPLAIN, GUIDE e CHECK, avaliação independente e fallback seguro antes da resposta chegar ao aluno.",
 
   en:
-    "Operational assistance system for industrial environments, combining AI, technical context and supervision to support diagnostics, guidance and decision-making in field work.",
+    "AI learning tutor for children and teenagers with EXPLAIN, GUIDE and CHECK, independent evaluation and safe fallback before a response reaches the learner.",
 
   es:
-    "Sistema de asistencia operativa para entornos industriales, combinando IA, contexto técnico y supervisión para apoyar diagnóstico, orientación y toma de decisiones en el trabajo de campo.",
+    "Tutor de aprendizaje con IA para niños y adolescentes, con EXPLAIN, GUIDE y CHECK, evaluación independiente y fallback seguro antes de entregar la respuesta.",
 
   de:
-    "Operatives Assistenzsystem für industrielle Umgebungen, das KI, technischen Kontext und Aufsicht kombiniert, um Diagnose, Orientierung und Entscheidungsfindung im operativen Einsatz zu unterstützen.",
+    "KI-Lerntutor für Kinder und Jugendliche mit EXPLAIN, GUIDE und CHECK, unabhängiger Bewertung und sicherem Fallback vor der Ausgabe an den Lernenden.",
 };
 
 export function Projects() {
@@ -82,8 +82,8 @@ export function Projects() {
 
               const description =
                 slug ===
-                "son"
-                  ? sonCardDescriptions[
+                "liio"
+                  ? liioCardDescriptions[
                       language
                     ]
                   : content.card
