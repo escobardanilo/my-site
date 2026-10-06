@@ -82,11 +82,21 @@ export function ProjectVisual({
             </p>
           </div>
 
-          <div className="project-visuals">
+          <div
+            className={
+              project.title === "LIIO"
+                ? "project-visuals project-visuals--liio"
+                : "project-visuals"
+            }
+          >
             {project.product.visuals.map(
               (visual) => (
                 <article
-                  className="project-visual"
+                  className={
+                    project.title === "LIIO"
+                      ? `project-visual project-visual--liio project-visual--liio-${visual.number}`
+                      : "project-visual"
+                  }
                   key={visual.number}
                 >
                   <div className="project-visual__top">
