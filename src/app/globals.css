@@ -4519,3 +4519,9 @@ body.screen-experience-site {
     overscroll-behavior-y: auto;
   }
 }
+
+
+/* Home screen has no scrollbar; other screens scroll only when needed. */
+.screen-panel--home {
+  overflow-y: hidden;
+}
