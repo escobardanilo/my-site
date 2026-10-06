@@ -2,7 +2,7 @@ import type { Language } from "@/lib/translations";
 
 export const projectSlugs = [
   "paypart",
-  "son",
+  "liio",
   "alta",
 ] as const;
 
@@ -1253,7 +1253,7 @@ const payPart: Record<
   },
 };
 
-const son: Record<
+const liio: Record<
   Language,
   Omit<ProjectContent, "number">
 > = {
@@ -1261,204 +1261,200 @@ const son: Record<
     card: {
       category: "",
       description:
-        "Assistente industrial de IA que classifica pedidos, avalia respostas antes da entrega e mantém a autoridade operacional fora do modelo.",
+        "Tutor de aprendizagem com IA para crianças e adolescentes, com classificação pedagógica, avaliação independente e controlo explícito sobre o que chega ao aluno.",
       tags: [
-        "Industrial AI",
-        "RAG",
-        "Operational Intelligence",
+        "AI Learning Tutor",
+        "AI Engineering",
+        "Safety",
       ],
     },
 
     eyebrow:
-      "INDUSTRIAL AI / OPERATIONAL INTELLIGENCE",
+      "EDTECH / AI LEARNING TUTOR",
 
-    title: "SON",
+    title: "LIIO",
 
     subtitle:
-      "Assistência operacional com geração, avaliação e autoridade tratadas como responsabilidades separadas.",
+      "Um tutor de IA que orienta o raciocínio sem transformar aprendizagem em entrega automática de respostas.",
 
     summary:
-      "SON — System Operations Navigator — é um assistente operacional de IA para operadores, técnicos e supervisores. O sistema explica conceitos técnicos, conduz investigações passo a passo, verifica observações fornecidas pelo operador e escala situações que exigem uma função humana autorizada.",
+      "LIIO é um tutor de aprendizagem com IA para crianças e adolescentes. A V1 concentra a experiência funcional no Homework Mode, onde cada pedido é interpretado como EXPLAIN, GUIDE ou CHECK e respostas sensíveis passam por avaliação independente, recuperação limitada e fallback seguro antes de chegar à interface.",
 
     overview: {
       role:
         "AI Engineering / Full-stack",
       type:
-        "Industrial AI / Operational Intelligence",
+        "EdTech / AI Learning Tutor",
       status:
-        "Protótipo funcional / frontend publicado",
+        "V1 funcional / em desenvolvimento",
     },
 
     problem: {
       title:
-        "Um LLM não deve decidir sozinho o que é seguro devolver a um operador.",
+        "Um tutor de IA não deve confundir ajuda com entrega direta da resposta.",
 
       description:
-        "Em contexto industrial, uma resposta plausível pode ultrapassar limites de autoridade, inventar procedimentos ou transformar orientação em intervenção. O SON foi estruturado para separar geração de aceitação: o modelo produz uma resposta candidata, enquanto software, políticas e avaliação determinam se ela pode chegar ao operador.",
+        "Em aprendizagem, uma resposta plausível pode resolver o exercício pelo aluno, adaptar-se mal à idade ou repetir uma estratégia que já falhou. LIIO trata a conversa como uma sessão de aprendizagem e separa geração de aceitação: o modelo produz uma resposta candidata, enquanto software, política pedagógica e avaliação determinam se ela pode ser entregue.",
     },
 
     product: {
       title:
-        "Um workspace operacional construído à volta do assistente.",
+        "Homework Mode como núcleo funcional da V1.",
 
       description:
-        "O SON não existe como chat isolado. O assistente está inserido num produto com contexto operacional, ativos, conhecimento, atividade, reporting e visão de supervisão. As superfícies públicas utilizam dados demonstrativos quando não existe integração industrial real.",
+        "A experiência implementada combina chat com IA, continuidade de sessão, adaptação por idade e três comportamentos pedagógicos. EXPLAIN explica conceitos, GUIDE conduz o aluno por etapas sem revelar a resposta final protegida e CHECK analisa a tentativa do aluno sem completar a solução por ele.",
 
       visuals: [
         {
           number: "01",
           label:
-            "SON / OPERATIONAL ASSISTANT",
+            "LIIO / AI LEARNING TUTOR",
 
-          title: "SON",
+          title: "LIIO",
 
           description:
-            "Assistente operacional com contexto de sessão, aviso de segurança e orientação baseada nos modos EXPLAIN, GUIDE e VERIFY.",
+            "Produto EdTech desenhado para crianças e adolescentes, com foco em orientação, verificação e explicação em vez de resposta automática.",
 
-          image: "/images/son-two.png",
+          image:
+            "/images/liio-icon.svg",
 
           alt:
-            "Assistente operacional industrial SON",
+            "Marca LIIO, assistente de aprendizagem com IA",
         },
 
         {
           number: "02",
           label:
-            "SON / SUPERVISOR",
+            "LIIO / HOMEWORK MODE",
 
-          title: "SON",
+          title: "Homework Mode",
 
           description:
-            "Visão de supervisão com sessões, operadores, equipamentos, alertas, escalamentos e atividade documental demonstrativa.",
+            "Cada pedido é classificado como EXPLAIN, GUIDE ou CHECK antes da resposta final, mantendo o comportamento pedagógico explícito no software.",
 
-          image: "/images/son-tree.png",
+          image: null,
 
           alt:
-            "Dashboard de supervisão do SON",
+            "Homework Mode do LIIO",
         },
 
         {
           number: "03",
           label:
-            "SON / EQUIPMENT",
+            "LIIO / SAFETY GATE",
 
-          title: "SON",
+          title:
+            "Safety gate",
 
           description:
-            "Diretório de ativos com equipamento, área, estado operacional, atividade recente e documentação associada.",
+            "GUIDE e CHECK passam por avaliação independente, regras determinísticas, uma única tentativa de recuperação e fallback seguro quando necessário.",
 
-          image: "/images/son-one.png",
+          image: null,
 
           alt:
-            "Diretório de equipamentos do SON",
+            "Camada de segurança e avaliação do LIIO",
         },
 
         {
           number: "04",
           label:
-            "SON / REPORT ISSUE",
+            "LIIO / PARENTS AREA",
 
-          title: "SON",
+          title:
+            "Parents Area",
 
           description:
-            "Registo demonstrativo de observações operacionais com equipamento, categoria e descrição para revisão do supervisor.",
+            "A área parental apresenta perfis, atividade, limites e dispositivos como visão de produto; na V1 estas superfícies continuam demonstrativas e não são apresentadas como backend persistente de produção.",
 
-          image: "/images/son-four.png",
+          image: null,
 
           alt:
-            "Formulário de observação operacional do SON",
+            "Área parental do LIIO",
         },
       ],
     },
 
     architecture: {
       title:
-        "A resposta do modelo nunca segue diretamente para o operador.",
+        "A resposta não sai diretamente do modelo para a criança.",
 
       description:
-        "A sessão entra pela API server-side, é classificada por comportamento operacional, pode receber evidência recuperada pelo RAG, passa pela geração no Groq e depois por uma avaliação independente. Uma resposta rejeitada pode ser regenerada uma única vez; se continuar fora dos critérios, o sistema entrega um fallback determinístico e localizado.",
+        "A sessão entra por uma API server-side, valida o payload com Zod, recupera o contexto recente e classifica a interação. GUIDE e CHECK passam por avaliadores independentes; uma resposta reprovada pode ser regenerada uma única vez e, se continuar inadequada, o sistema entrega um fallback determinístico e seguro.",
 
       flow: [
-        "Input + locale",
-        "EXPLAIN / GUIDE / VERIFY",
-        "RAG opcional",
-        "Groq / geração",
-        "Avaliação + fallback",
+        "Input + idade",
+        "EXPLAIN / GUIDE / CHECK",
+        "Geração server-side",
+        "Avaliação independente",
+        "Recovery + fallback",
       ],
     },
 
     process: {
       title:
-        "Geração e aceitação são dois processos diferentes.",
+        "A sessão mantém contexto pedagógico em vez de funcionar como um chatbot genérico.",
 
       description:
-        "O percurso da mensagem foi construído para que a utilidade do modelo não determine, por si só, o que é aceite pelo sistema.",
+        "Pedidos como “não entendi”, “faz mais fácil” ou “dá-me uma dica” modificam a aprendizagem em andamento. O sistema tenta manter o problema original como referência e muda de comportamento quando o aluno apresenta uma tentativa ou pede verificação.",
 
       steps: [
         {
           number: "01",
-          title: "Input",
+          title: "Entrada",
           description:
-            "O cliente envia o idioma selecionado e até 30 mensagens recentes e não vazias da sessão.",
+            "A interface envia idade e até 40 mensagens recentes da conversa.",
         },
 
         {
           number: "02",
           title: "Classificação",
           description:
-            "O pedido é interpretado como EXPLAIN, GUIDE ou VERIFY e o contexto operacional atual é recuperado.",
+            "determineLearningInteraction identifica EXPLAIN, GUIDE ou CHECK e recupera o pedido de aprendizagem relevante.",
         },
 
         {
           number: "03",
-          title: "Retrieval",
+          title: "Geração",
           description:
-            "Quando o serviço RAG está disponível, são recuperados chunks relevantes e metadata das fontes antes da geração.",
+            "O modelo recebe um system prompt construído para idade, comportamento e problema atual.",
         },
 
         {
           number: "04",
-          title: "Geração",
+          title: "Avaliação",
           description:
-            "Groq produz uma resposta candidata usando política operacional, idioma, histórico da conversa e evidência recuperada quando existente.",
+            "GUIDE e CHECK usam avaliadores independentes para verificar comportamento, segurança e adequação pedagógica.",
         },
 
         {
           number: "05",
-          title: "Avaliação",
+          title: "Recuperação",
           description:
-            "Um avaliador independente verifica segurança, autoridade, evidência, utilidade, comportamento, número de passos e necessidade de escalamento.",
+            "Uma resposta reprovada pode ser regenerada uma única vez com instruções privadas de correção.",
         },
 
         {
           number: "06",
-          title: "Recuperação",
+          title: "Fallback",
           description:
-            "Uma resposta rejeitada pode receber uma única nova geração com contexto privado de correção.",
+            "Se a nova resposta continuar inadequada, o sistema devolve um fallback determinístico e seguro.",
         },
 
         {
           number: "07",
-          title: "Fallback",
+          title: "Saída",
           description:
-            "Se a resposta corrigida continuar a falhar, o SON devolve texto determinístico e seguro no idioma selecionado.",
-        },
-
-        {
-          number: "08",
-          title: "Output",
-          description:
-            "A resposta aceite é sanitizada e apenas apresenta fontes realmente recuperadas quando existe evidência.",
+            "O texto é normalizado para a interface infantil e só então retorna ao cliente.",
         },
       ],
     },
 
     decisions: {
       title:
-        "A resposta do modelo é apenas uma candidata.",
+        "O modelo gera. O software decide o que pode chegar ao aluno.",
 
       description:
-        "As decisões centrais do SON estão no contrato entre modelo, software, evidência e autoridade humana — não apenas no prompt ou na interface.",
+        "As decisões principais do LIIO estão no contrato entre aprendizagem, modelo e software — não apenas na interface ou num único prompt.",
 
       items: [
         {
@@ -1466,7 +1462,7 @@ const son: Record<
           title:
             "Classificar antes de responder",
           description:
-            "Cada pedido é interpretado como EXPLAIN, GUIDE ou VERIFY para que diferentes tipos de assistência tenham regras operacionais explícitas.",
+            "EXPLAIN, GUIDE e CHECK recebem regras diferentes para que explicar, orientar e verificar não sejam tratados como o mesmo comportamento.",
         },
 
         {
@@ -1474,15 +1470,15 @@ const son: Record<
           title:
             "Gerador ≠ avaliador",
           description:
-            "A geração da resposta e a decisão de aceitá-la não dependem da mesma chamada ou do mesmo papel do modelo.",
+            "A resposta candidata e a decisão de aceitá-la não dependem da mesma geração.",
         },
 
         {
           number: "03",
           title:
-            "Software mantém autoridade",
+            "Política em código",
           description:
-            "Limites operacionais, claims de evidência, número de passos e fallback são controlados fora do prompt.",
+            "Idade, limites de request, question count e adaptação após confusão possuem regras verificáveis fora do prompt.",
         },
 
         {
@@ -1490,82 +1486,80 @@ const son: Record<
           title:
             "Recuperação limitada",
           description:
-            "O SON permite apenas uma tentativa de correção antes de interromper a geração e utilizar um fallback determinístico.",
+            "Uma única tentativa de correção é permitida antes de encerrar com fallback seguro.",
         },
 
         {
           number: "05",
           title:
-            "Evidência nunca é inventada",
+            "Sessão, não chatbot",
           description:
-            "O RAG pode enriquecer respostas quando encontra chunks reais; ausência de retrieval não autoriza claims específicos sobre documentos ou procedimentos.",
+            "Mensagens curtas de confusão ou pedido de dica modificam o contexto pedagógico existente em vez de iniciar uma conversa desconectada.",
         },
 
         {
           number: "06",
           title:
-            "Autoridade humana explícita",
+            "Servidor como boundary",
           description:
-            "O SON informa e orienta. Intervenções físicas, autorizações e decisões críticas continuam sob responsabilidade de funções humanas autorizadas.",
+            "Chaves, system prompts, avaliação e decisões internas permanecem no servidor e não são expostos ao browser.",
         },
       ],
     },
 
     stack: {
       title:
-        "Do LLM ao retrieval, cada camada tem uma responsabilidade definida.",
+        "Stack focada em produto full-stack, política testável e IA server-side.",
 
       description:
-        "A implementação combina aplicação full-stack, geração e avaliação server-side, contratos tipados, validação estruturada e uma camada RAG separada para conhecimento industrial.",
+        "A implementação combina interface, rotas API, contratos tipados, geração server-side e validação estruturada dos avaliadores.",
 
       items: [
-        "Next.js 16.3.5 + React 19.2.8",
+        "Next.js 16.3.5",
+        "React 19.2.8",
         "TypeScript 5",
         "Groq SDK 1.6",
         "Zod 4.6",
-        "Python",
-        "FastAPI",
-        "Sentence Transformers",
-        "Supabase + pgvector",
+        "Motion 13.2",
       ],
     },
 
     results: {
       title:
-        "Evidências técnicas já verificadas.",
+        "A V1 já demonstra um produto de aprendizagem construído em torno de um LLM — não apenas um chat com IA.",
 
       description:
-        "O protótipo público demonstra a arquitetura operacional, avaliação, multilingualidade e interação do produto. O RAG foi validado localmente sem ser apresentado como integração industrial de produção.",
+        "O núcleo funcional prova classificação pedagógica, avaliação independente, regras determinísticas, recuperação limitada e fallback seguro. A próxima evolução está concentrada em perfis persistentes, autenticação real e expansão de modos apenas depois de o Homework Mode estar estável.",
 
       items: [
         {
           value: "3 MODOS",
           label:
-            "EXPLAIN, GUIDE e VERIFY",
+            "EXPLAIN, GUIDE e CHECK com comportamentos pedagógicos distintos",
         },
 
         {
-          value: "4 IDIOMAS",
+          value: "6–15 ANOS",
           label:
-            "PT, EN, ES e DE validados no fluxo",
-        },
-
-        {
-          value: "25 TESTES",
-          label:
-            "Node aprovados após a integração RAG",
-        },
-
-        {
-          value: "13 TESTES",
-          label:
-            "Python aprovados para o serviço RAG",
+            "Política de IA preparada para ajustar linguagem, extensão e abstração por idade",
         },
 
         {
           value: "1 RETRY",
           label:
-            "Tentativa máxima de regeneração antes do fallback seguro",
+            "Máximo de uma regeneração antes do fallback seguro",
+        },
+
+        {
+          value: "SERVER-SIDE",
+          label:
+            "Chaves, prompts, avaliadores e decisões internas mantidos fora do browser",
+        },
+
+        {
+          value: "SAFETY GATE",
+          label:
+            "Resposta gerada não é automaticamente resposta entregue",
         },
       ],
     },
@@ -1573,301 +1567,7 @@ const son: Record<
     links: {
       github:
         "https://github.com/escobardanilo/liio",
-      live:
-        "https://son-industry.vercel.app",
-    },
-  },
-
-  es: {
-    card: {
-      category: "",
-      description:
-        "Asistente industrial de IA que clasifica solicitudes, evalúa respuestas antes de entregarlas y mantiene la autoridad operativa fuera del modelo.",
-      tags: [
-        "Industrial AI",
-        "RAG",
-        "Operational Intelligence",
-      ],
-    },
-
-    eyebrow:
-      "INDUSTRIAL AI / OPERATIONAL INTELLIGENCE",
-
-    title: "SON",
-
-    subtitle:
-      "Asistencia operativa con generación, evaluación y autoridad tratadas como responsabilidades separadas.",
-
-    summary:
-      "SON — System Operations Navigator — es un asistente operativo de IA para operadores, técnicos y supervisores. Explica conceptos técnicos, guía investigaciones paso a paso, verifica observaciones y escala situaciones que requieren una función humana autorizada.",
-
-    overview: {
-      role:
-        "AI Engineering / Full-stack",
-      type:
-        "Industrial AI / Operational Intelligence",
-      status:
-        "Prototipo funcional / frontend publicado",
-    },
-
-    problem: {
-      title:
-        "Un LLM no debe decidir por sí solo qué es seguro entregar a un operador.",
-
-      description:
-        "En un contexto industrial, una respuesta plausible puede superar límites de autoridad, inventar procedimientos o convertir orientación en intervención. SON separa generación y aceptación para mantener el control en el software.",
-    },
-
-    product: {
-      title:
-        "Un workspace operativo construido alrededor del asistente.",
-
-      description:
-        "SON no funciona como un chat aislado. El asistente forma parte de un producto con contexto operativo, activos, conocimiento, actividad, reporting y supervisión.",
-
-      visuals: [
-        {
-          number: "01",
-          label:
-            "SON / OPERATIONAL ASSISTANT",
-          title: "SON",
-          description:
-            "Asistente operativo con contexto de sesión, aviso de seguridad y modos EXPLAIN, GUIDE y VERIFY.",
-          image: "/images/son-two.png",
-          alt:
-            "Asistente operativo industrial SON",
-        },
-
-        {
-          number: "02",
-          label:
-            "SON / SUPERVISOR",
-          title: "SON",
-          description:
-            "Vista de supervisión con sesiones, operadores, equipos, alertas, escalaciones y actividad documental.",
-          image: "/images/son-tree.png",
-          alt:
-            "Dashboard de supervisión de SON",
-        },
-
-        {
-          number: "03",
-          label:
-            "SON / EQUIPMENT",
-          title: "SON",
-          description:
-            "Directorio de activos con equipo, área, estado, actividad reciente y documentación.",
-          image: "/images/son-one.png",
-          alt:
-            "Directorio de equipos de SON",
-        },
-
-        {
-          number: "04",
-          label:
-            "SON / REPORT ISSUE",
-          title: "SON",
-          description:
-            "Formulario demostrativo para registrar observaciones operativas y enviarlas a revisión.",
-          image: "/images/son-four.png",
-          alt:
-            "Formulario de observación operativa de SON",
-        },
-      ],
-    },
-
-    architecture: {
-      title:
-        "La respuesta del modelo nunca va directamente al operador.",
-
-      description:
-        "La sesión entra por una API server-side, se clasifica, puede incorporar evidencia RAG, se genera con Groq y pasa por una evaluación independiente antes de ser aceptada.",
-
-      flow: [
-        "Input + locale",
-        "EXPLAIN / GUIDE / VERIFY",
-        "RAG opcional",
-        "Groq / generación",
-        "Evaluación + fallback",
-      ],
-    },
-
-    process: {
-      title:
-        "Generación y aceptación son procesos diferentes.",
-
-      description:
-        "El flujo mantiene separados el contenido producido por el modelo y la decisión del sistema de entregarlo.",
-
-      steps: [
-        {
-          number: "01",
-          title: "Input",
-          description:
-            "El cliente envía el idioma y hasta 30 mensajes recientes.",
-        },
-        {
-          number: "02",
-          title: "Clasificación",
-          description:
-            "La solicitud se interpreta como EXPLAIN, GUIDE o VERIFY.",
-        },
-        {
-          number: "03",
-          title: "Retrieval",
-          description:
-            "Cuando RAG está disponible se recupera evidencia relevante.",
-        },
-        {
-          number: "04",
-          title: "Generación",
-          description:
-            "Groq genera una respuesta candidata con política, contexto y evidencia.",
-        },
-        {
-          number: "05",
-          title: "Evaluación",
-          description:
-            "Un evaluador independiente comprueba seguridad, autoridad y límites de evidencia.",
-        },
-        {
-          number: "06",
-          title: "Recuperación",
-          description:
-            "Una respuesta rechazada puede regenerarse una única vez.",
-        },
-        {
-          number: "07",
-          title: "Fallback",
-          description:
-            "Si vuelve a fallar, SON devuelve un fallback determinista.",
-        },
-        {
-          number: "08",
-          title: "Output",
-          description:
-            "La respuesta aceptada es sanitizada antes de entregarse.",
-        },
-      ],
-    },
-
-    decisions: {
-      title:
-        "La respuesta del modelo es solo una candidata.",
-
-      description:
-        "Las decisiones principales de SON existen entre modelo, software, evidencia y autoridad humana.",
-
-      items: [
-        {
-          number: "01",
-          title:
-            "Clasificar antes de responder",
-          description:
-            "EXPLAIN, GUIDE y VERIFY tienen reglas operativas diferentes.",
-        },
-        {
-          number: "02",
-          title:
-            "Generador ≠ evaluador",
-          description:
-            "La generación y la decisión de aceptación están separadas.",
-        },
-        {
-          number: "03",
-          title:
-            "El software mantiene autoridad",
-          description:
-            "Los límites operativos se aplican fuera del prompt.",
-        },
-        {
-          number: "04",
-          title:
-            "Recuperación limitada",
-          description:
-            "Solo existe una regeneración antes del fallback.",
-        },
-        {
-          number: "05",
-          title:
-            "La evidencia no se inventa",
-          description:
-            "Sin retrieval real no se permiten claims específicos sobre documentos.",
-        },
-        {
-          number: "06",
-          title:
-            "Autoridad humana explícita",
-          description:
-            "Intervenciones y decisiones críticas siguen siendo humanas.",
-        },
-      ],
-    },
-
-    stack: {
-      title:
-        "Cada capa tiene una responsabilidad definida.",
-
-      description:
-        "Aplicación full-stack, IA server-side, validación estructurada y retrieval industrial separado.",
-
-      items: [
-        "Next.js 16.3.5 + React 19.2.8",
-        "TypeScript 5",
-        "Groq SDK 1.6",
-        "Zod 4.6",
-        "Python",
-        "FastAPI",
-        "Sentence Transformers",
-        "Supabase + pgvector",
-      ],
-    },
-
-    results: {
-      title:
-        "Evidencias técnicas verificadas.",
-
-      description:
-        "El producto demuestra el núcleo operativo mientras RAG permanece claramente identificado como una capa validada localmente.",
-
-      items: [
-        {
-          value: "3 MODOS",
-          label:
-            "EXPLAIN, GUIDE y VERIFY",
-        },
-
-        {
-          value: "4 IDIOMAS",
-          label:
-            "PT, EN, ES y DE validados en el flujo",
-        },
-
-        {
-          value: "25 TESTS",
-          label:
-            "Node aprobados después de la integración RAG",
-        },
-
-        {
-          value: "13 TESTS",
-          label:
-            "Python aprobados para el servicio RAG",
-        },
-
-        {
-          value: "1 REINTENTO",
-          label:
-            "Máximo antes de activar el fallback seguro",
-        },
-      ],
-    },
-
-    links: {
-      github:
-        "https://github.com/escobardanilo/liio",
-      live:
-        "https://son-industry.vercel.app",
+      live: null,
     },
   },
 
@@ -1875,181 +1575,173 @@ const son: Record<
     card: {
       category: "",
       description:
-        "Industrial AI assistant that classifies requests, evaluates responses before delivery and keeps operational authority outside the model.",
+        "AI learning tutor for children and teenagers with pedagogical classification, independent evaluation and explicit control over what reaches the learner.",
       tags: [
-        "Industrial AI",
-        "RAG",
-        "Operational Intelligence",
+        "AI Learning Tutor",
+        "AI Engineering",
+        "Safety",
       ],
     },
 
     eyebrow:
-      "INDUSTRIAL AI / OPERATIONAL INTELLIGENCE",
+      "EDTECH / AI LEARNING TUTOR",
 
-    title: "SON",
+    title: "LIIO",
 
     subtitle:
-      "Operational assistance with generation, evaluation and authority treated as separate responsibilities.",
+      "An AI tutor that guides reasoning without turning learning into automatic answer delivery.",
 
     summary:
-      "SON — System Operations Navigator — is an industrial AI operations assistant for operators, technicians and supervisors. It explains technical concepts, guides investigations step by step, verifies supplied observations and escalates situations requiring an authorized human role.",
+      "LIIO is an AI learning tutor for children and teenagers. The current V1 centers on Homework Mode, where each request is interpreted as EXPLAIN, GUIDE or CHECK and sensitive responses pass through independent evaluation, bounded recovery and safe fallback before reaching the interface.",
 
     overview: {
       role:
         "AI Engineering / Full-stack",
       type:
-        "Industrial AI / Operational Intelligence",
+        "EdTech / AI Learning Tutor",
       status:
-        "Functional prototype / deployed frontend",
+        "Functional V1 / in development",
     },
 
     problem: {
       title:
-        "An LLM should not decide on its own what is safe to return to an operator.",
+        "An AI tutor should not confuse help with directly giving the answer.",
 
       description:
-        "In an industrial environment, a plausible answer can cross authority boundaries, invent procedures or turn guidance into intervention. SON separates generation from acceptance so software remains responsible for what reaches the operator.",
+        "In learning, a plausible response can solve the exercise for the student, adapt poorly to age or repeat a strategy that already failed. LIIO treats conversation as a learning session and separates generation from acceptance: the model produces a candidate response while software, pedagogical policy and evaluation decide whether it can be delivered.",
     },
 
     product: {
       title:
-        "An operational workspace built around the assistant.",
+        "Homework Mode is the functional core of V1.",
 
       description:
-        "SON is not an isolated chat interface. The assistant sits inside a product with operational context, assets, knowledge, activity, reporting and supervisor surfaces.",
+        "The implemented experience combines AI chat, session continuity, age adaptation and three pedagogical behaviors. EXPLAIN teaches concepts, GUIDE moves the learner through steps without revealing the protected final answer, and CHECK reviews the learner's attempt without completing the solution for them.",
 
       visuals: [
         {
           number: "01",
           label:
-            "SON / OPERATIONAL ASSISTANT",
-          title: "SON",
+            "LIIO / AI LEARNING TUTOR",
+          title: "LIIO",
           description:
-            "Operational assistant with session context, safety notice and EXPLAIN, GUIDE and VERIFY behaviors.",
-          image: "/images/son-two.png",
+            "EdTech product designed for children and teenagers, focused on explanation, guidance and verification rather than automatic answer delivery.",
+          image:
+            "/images/liio-icon.svg",
           alt:
-            "SON industrial operational assistant",
+            "LIIO AI learning tutor mark",
         },
-
         {
           number: "02",
           label:
-            "SON / SUPERVISOR",
-          title: "SON",
+            "LIIO / HOMEWORK MODE",
+          title: "Homework Mode",
           description:
-            "Supervisor view for sessions, operators, equipment, alerts, escalations and document activity.",
-          image: "/images/son-tree.png",
+            "Every request is classified as EXPLAIN, GUIDE or CHECK before the final response, keeping pedagogical behavior explicit in software.",
+          image: null,
           alt:
-            "SON supervisor dashboard",
+            "LIIO Homework Mode",
         },
-
         {
           number: "03",
           label:
-            "SON / EQUIPMENT",
-          title: "SON",
+            "LIIO / SAFETY GATE",
+          title: "Safety gate",
           description:
-            "Asset directory exposing equipment, area, operational state, recent activity and related documentation.",
-          image: "/images/son-one.png",
+            "GUIDE and CHECK pass through independent evaluation, deterministic rules, one bounded recovery attempt and safe fallback when required.",
+          image: null,
           alt:
-            "SON equipment directory",
+            "LIIO safety and evaluation layer",
         },
-
         {
           number: "04",
           label:
-            "SON / REPORT ISSUE",
-          title: "SON",
+            "LIIO / PARENTS AREA",
+          title: "Parents Area",
           description:
-            "Demonstration surface for recording an operational observation for supervisor review.",
-          image: "/images/son-four.png",
+            "The parent area presents profiles, activity, limits and devices as a product surface; in V1 these remain demonstrative and are not presented as a persistent production backend.",
+          image: null,
           alt:
-            "SON operational issue report form",
+            "LIIO Parents Area",
         },
       ],
     },
 
     architecture: {
       title:
-        "Model output never goes directly to the operator.",
+        "Model output does not go directly to the child.",
 
       description:
-        "The session enters through a server-side API, is classified by operational behavior, may receive retrieved evidence, is generated with Groq and then evaluated independently. A rejected candidate may be regenerated once before a deterministic localized fallback is returned.",
+        "The session enters through a server-side API, validates the payload with Zod, restores recent context and classifies the interaction. GUIDE and CHECK use independent evaluators; a rejected response can be regenerated once and, if still unsuitable, the system returns a deterministic safe fallback.",
 
       flow: [
-        "Input + locale",
-        "EXPLAIN / GUIDE / VERIFY",
-        "Optional RAG",
-        "Groq / generation",
-        "Evaluation + fallback",
+        "Input + age",
+        "EXPLAIN / GUIDE / CHECK",
+        "Server-side generation",
+        "Independent evaluation",
+        "Recovery + fallback",
       ],
     },
 
     process: {
       title:
-        "Generation and acceptance are different processes.",
+        "The session preserves pedagogical context instead of behaving like a generic chatbot.",
 
       description:
-        "The message path separates what the model generates from what the application accepts for delivery.",
+        "Requests such as “I don't understand”, “make it easier” or “give me a hint” modify the active learning context. The system keeps the original problem as reference and changes behavior when the learner presents an attempt or asks for verification.",
 
       steps: [
         {
           number: "01",
           title: "Input",
           description:
-            "The client sends the selected locale and up to 30 recent conversation messages.",
+            "The interface sends age and up to 40 recent conversation messages.",
         },
         {
           number: "02",
           title: "Classification",
           description:
-            "The request is classified as EXPLAIN, GUIDE or VERIFY.",
+            "determineLearningInteraction identifies EXPLAIN, GUIDE or CHECK and restores the relevant learning request.",
         },
         {
           number: "03",
-          title: "Retrieval",
+          title: "Generation",
           description:
-            "Relevant evidence is retrieved when the optional RAG service is available.",
+            "The model receives a system prompt built around age, behavior and the current problem.",
         },
         {
           number: "04",
-          title: "Generation",
+          title: "Evaluation",
           description:
-            "Groq generates a candidate response using policy, context and available evidence.",
+            "GUIDE and CHECK use independent evaluators to check behavior, safety and pedagogical fit.",
         },
         {
           number: "05",
-          title: "Evaluation",
+          title: "Recovery",
           description:
-            "An independent evaluator checks safety, authority, evidence and behavioral alignment.",
+            "A rejected response may be regenerated once with private correction instructions.",
         },
         {
           number: "06",
-          title: "Recovery",
+          title: "Fallback",
           description:
-            "A rejected candidate may receive one corrected generation attempt.",
+            "If the corrected response still fails, the system returns deterministic safe fallback text.",
         },
         {
           number: "07",
-          title: "Fallback",
-          description:
-            "A deterministic localized fallback is returned if correction still fails.",
-        },
-        {
-          number: "08",
           title: "Output",
           description:
-            "Accepted output is sanitized before it reaches the operator.",
+            "The text is normalized for the child-facing interface before it returns to the client.",
         },
       ],
     },
 
     decisions: {
       title:
-        "Model output is only a candidate.",
+        "The model generates. Software decides what may reach the learner.",
 
       description:
-        "SON's key decisions live in the contract between model, software, evidence and human authority.",
+        "LIIO's core decisions live in the contract between learning, model and software — not only in the interface or a single prompt.",
 
       items: [
         {
@@ -2057,101 +1749,95 @@ const son: Record<
           title:
             "Classify before responding",
           description:
-            "EXPLAIN, GUIDE and VERIFY receive explicit operational rules.",
+            "EXPLAIN, GUIDE and CHECK have different rules so explaining, guiding and verifying are not treated as the same behavior.",
         },
         {
           number: "02",
           title:
             "Generator ≠ evaluator",
           description:
-            "Generation and acceptance do not depend on the same role.",
+            "The candidate response and the decision to accept it do not depend on the same generation.",
         },
         {
           number: "03",
           title:
-            "Software keeps authority",
+            "Policy in code",
           description:
-            "Operational boundaries are enforced outside the prompt.",
+            "Age, request limits, question count and adaptation after confusion have verifiable rules outside the prompt.",
         },
         {
           number: "04",
           title:
             "Bounded recovery",
           description:
-            "Only one corrected generation is allowed before fallback.",
+            "Only one correction attempt is allowed before a safe fallback ends the generation path.",
         },
         {
           number: "05",
           title:
-            "Evidence is never invented",
+            "Session, not chatbot",
           description:
-            "Missing retrieval never permits fabricated company-specific claims.",
+            "Short confusion or hint requests modify the existing pedagogical context instead of starting a disconnected conversation.",
         },
         {
           number: "06",
           title:
-            "Human authority stays explicit",
+            "Server as boundary",
           description:
-            "Physical intervention and safety-critical decisions remain human responsibilities.",
+            "Keys, system prompts, evaluation and internal safety decisions stay on the server and are not exposed to the browser.",
         },
       ],
     },
 
     stack: {
       title:
-        "Each layer has a defined responsibility.",
+        "A stack focused on full-stack product engineering, testable policy and server-side AI.",
 
       description:
-        "Full-stack application engineering, server-side generation and evaluation, structured validation and a separate industrial retrieval layer.",
+        "The implementation combines interface, API routes, typed contracts, server-side generation and structured evaluator validation.",
 
       items: [
-        "Next.js 16.3.5 + React 19.2.8",
+        "Next.js 16.3.5",
+        "React 19.2.8",
         "TypeScript 5",
         "Groq SDK 1.6",
         "Zod 4.6",
-        "Python",
-        "FastAPI",
-        "Sentence Transformers",
-        "Supabase + pgvector",
+        "Motion 13.2",
       ],
     },
 
     results: {
       title:
-        "Verified technical evidence.",
+        "V1 already demonstrates a learning product built around an LLM — not just an AI chat interface.",
 
       description:
-        "The public prototype demonstrates the operational architecture while the RAG layer remains accurately scoped as locally validated infrastructure.",
+        "The functional core proves pedagogical classification, independent evaluation, deterministic rules, bounded recovery and safe fallback. The next evolution is focused on persistent profiles, real authentication and expanding learning modes only after Homework Mode is stable.",
 
       items: [
         {
           value: "3 MODES",
           label:
-            "EXPLAIN, GUIDE and VERIFY",
+            "EXPLAIN, GUIDE and CHECK with distinct pedagogical behaviors",
         },
-
         {
-          value: "4 LANGUAGES",
+          value: "AGES 6–15",
           label:
-            "PT, EN, ES and DE validated across the flow",
+            "AI policy prepared to adapt language, length and abstraction by age",
         },
-
-        {
-          value: "25 TESTS",
-          label:
-            "Node tests passed after RAG integration",
-        },
-
-        {
-          value: "13 TESTS",
-          label:
-            "Python tests passed for the RAG service",
-        },
-
         {
           value: "1 RETRY",
           label:
-            "Maximum regeneration attempt before safe fallback",
+            "Maximum one regeneration before safe fallback",
+        },
+        {
+          value: "SERVER-SIDE",
+          label:
+            "Keys, prompts, evaluators and internal decisions kept outside the browser",
+        },
+        {
+          value: "SAFETY GATE",
+          label:
+            "Generated response is not automatically a delivered response",
         },
       ],
     },
@@ -2159,8 +1845,159 @@ const son: Record<
     links: {
       github:
         "https://github.com/escobardanilo/liio",
-      live:
-        "https://son-industry.vercel.app",
+      live: null,
+    },
+  },
+
+  es: {
+    card: {
+      category: "",
+      description:
+        "Tutor de aprendizaje con IA para niños y adolescentes, con clasificación pedagógica, evaluación independiente y control explícito sobre lo que llega al alumno.",
+      tags: [
+        "AI Learning Tutor",
+        "AI Engineering",
+        "Safety",
+      ],
+    },
+    eyebrow:
+      "EDTECH / AI LEARNING TUTOR",
+    title: "LIIO",
+    subtitle:
+      "Un tutor de IA que guía el razonamiento sin convertir el aprendizaje en entrega automática de respuestas.",
+    summary:
+      "LIIO es un tutor de aprendizaje con IA para niños y adolescentes. La V1 se centra en Homework Mode, donde cada solicitud se interpreta como EXPLAIN, GUIDE o CHECK y las respuestas sensibles pasan por evaluación independiente, recuperación limitada y fallback seguro.",
+    overview: {
+      role:
+        "AI Engineering / Full-stack",
+      type:
+        "EdTech / AI Learning Tutor",
+      status:
+        "V1 funcional / en desarrollo",
+    },
+    problem: {
+      title:
+        "Un tutor de IA no debe confundir ayuda con entregar directamente la respuesta.",
+      description:
+        "En aprendizaje, una respuesta plausible puede resolver el ejercicio por el alumno o adaptarse mal a su edad. LIIO separa generación y aceptación para mantener la política pedagógica en el software.",
+    },
+    product: {
+      title:
+        "Homework Mode es el núcleo funcional de la V1.",
+      description:
+        "La experiencia implementada combina continuidad de sesión, adaptación por edad y tres comportamientos: EXPLAIN, GUIDE y CHECK.",
+      visuals: [
+        {
+          number: "01",
+          label: "LIIO / AI LEARNING TUTOR",
+          title: "LIIO",
+          description:
+            "Producto EdTech centrado en explicación, orientación y verificación.",
+          image: "/images/liio-icon.svg",
+          alt: "Marca LIIO",
+        },
+        {
+          number: "02",
+          label: "LIIO / HOMEWORK MODE",
+          title: "Homework Mode",
+          description:
+            "Cada solicitud se clasifica antes de responder.",
+          image: null,
+          alt: "Homework Mode de LIIO",
+        },
+        {
+          number: "03",
+          label: "LIIO / SAFETY GATE",
+          title: "Safety gate",
+          description:
+            "Evaluación independiente, reglas deterministas, recuperación limitada y fallback seguro.",
+          image: null,
+          alt: "Safety gate de LIIO",
+        },
+        {
+          number: "04",
+          label: "LIIO / PARENTS AREA",
+          title: "Parents Area",
+          description:
+            "Superficie demostrativa de perfiles, actividad, límites y dispositivos.",
+          image: null,
+          alt: "Parents Area de LIIO",
+        },
+      ],
+    },
+    architecture: {
+      title:
+        "La respuesta del modelo no va directamente al niño.",
+      description:
+        "La API valida el payload, recupera contexto, clasifica la interacción y aplica evaluación independiente en GUIDE y CHECK, con una única recuperación y fallback seguro.",
+      flow: [
+        "Input + edad",
+        "EXPLAIN / GUIDE / CHECK",
+        "Generación server-side",
+        "Evaluación independiente",
+        "Recovery + fallback",
+      ],
+    },
+    process: {
+      title:
+        "La sesión mantiene contexto pedagógico.",
+      description:
+        "Las solicitudes de ayuda modifican el contexto de aprendizaje activo en lugar de iniciar conversaciones desconectadas.",
+      steps: [
+        { number: "01", title: "Entrada", description: "Edad y hasta 40 mensajes recientes." },
+        { number: "02", title: "Clasificación", description: "EXPLAIN, GUIDE o CHECK." },
+        { number: "03", title: "Generación", description: "Prompt adaptado a edad, comportamiento y problema." },
+        { number: "04", title: "Evaluación", description: "GUIDE y CHECK usan evaluadores independientes." },
+        { number: "05", title: "Recuperación", description: "Una única regeneración con corrección." },
+        { number: "06", title: "Fallback", description: "Salida determinista y segura si la corrección falla." },
+        { number: "07", title: "Salida", description: "Normalización antes de llegar a la interfaz infantil." },
+      ],
+    },
+    decisions: {
+      title:
+        "El modelo genera. El software decide qué puede llegar al alumno.",
+      description:
+        "Las decisiones centrales viven entre aprendizaje, modelo y software.",
+      items: [
+        { number: "01", title: "Clasificar antes de responder", description: "Cada comportamiento tiene reglas propias." },
+        { number: "02", title: "Generador ≠ evaluador", description: "Generación y aceptación están separadas." },
+        { number: "03", title: "Política en código", description: "Edad, límites y reglas verificables fuera del prompt." },
+        { number: "04", title: "Recuperación limitada", description: "Una corrección antes del fallback seguro." },
+        { number: "05", title: "Sesión, no chatbot", description: "La conversación preserva el contexto pedagógico." },
+        { number: "06", title: "Servidor como boundary", description: "Prompts, claves y evaluación permanecen server-side." },
+      ],
+    },
+    stack: {
+      title:
+        "Producto full-stack, política testable e IA server-side.",
+      description:
+        "Interface, API, contratos tipados, generación e avaliação estruturada.",
+      items: [
+        "Next.js 16.3.5",
+        "React 19.2.8",
+        "TypeScript 5",
+        "Groq SDK 1.6",
+        "Zod 4.6",
+        "Motion 13.2",
+      ],
+    },
+    results: {
+      title:
+        "La V1 demuestra un producto de aprendizaje construido alrededor de un LLM.",
+      description:
+        "El núcleo funcional prueba clasificación pedagógica, evaluación independiente, reglas deterministas, recuperación limitada y fallback seguro.",
+      items: [
+        { value: "3 MODOS", label: "EXPLAIN, GUIDE y CHECK" },
+        { value: "6–15 AÑOS", label: "Política preparada para adaptación por edad" },
+        { value: "1 RETRY", label: "Máximo antes del fallback seguro" },
+        { value: "SERVER-SIDE", label: "Prompts y evaluación fuera del browser" },
+        { value: "SAFETY GATE", label: "Respuesta generada no equivale a respuesta entregada" },
+      ],
+    },
+    links: {
+      github:
+        "https://github.com/escobardanilo/liio",
+      live: null,
     },
   },
 
@@ -2168,292 +2005,151 @@ const son: Record<
     card: {
       category: "",
       description:
-        "Industrieller KI-Assistent, der Anfragen klassifiziert, Antworten vor der Ausgabe bewertet und operative Autorität außerhalb des Modells hält.",
+        "KI-Lerntutor für Kinder und Jugendliche mit pädagogischer Klassifizierung, unabhängiger Bewertung und expliziter Kontrolle über die ausgelieferte Antwort.",
       tags: [
-        "Industrial AI",
-        "RAG",
-        "Operational Intelligence",
+        "AI Learning Tutor",
+        "AI Engineering",
+        "Safety",
       ],
     },
-
     eyebrow:
-      "INDUSTRIAL AI / OPERATIONAL INTELLIGENCE",
-
-    title: "SON",
-
+      "EDTECH / AI LEARNING TUTOR",
+    title: "LIIO",
     subtitle:
-      "Operative Assistenz mit getrennten Verantwortlichkeiten für Generierung, Bewertung und Autorität.",
-
+      "Ein KI-Tutor, der Denken anleitet, ohne Lernen in automatische Antwortausgabe zu verwandeln.",
     summary:
-      "SON — System Operations Navigator — ist ein industrieller KI-Assistent für Operatoren, Techniker und Supervisoren. Er erklärt technische Konzepte, begleitet Untersuchungen schrittweise, prüft Beobachtungen und eskaliert Situationen, die eine autorisierte menschliche Rolle erfordern.",
-
+      "LIIO ist ein KI-Lerntutor für Kinder und Jugendliche. Die V1 konzentriert sich auf Homework Mode mit EXPLAIN, GUIDE und CHECK sowie unabhängiger Bewertung, begrenzter Recovery und sicherem Fallback.",
     overview: {
       role:
         "AI Engineering / Full-stack",
       type:
-        "Industrial AI / Operational Intelligence",
+        "EdTech / AI Learning Tutor",
       status:
-        "Funktionsfähiger Prototyp / Frontend deployed",
+        "Funktionale V1 / in Entwicklung",
     },
-
     problem: {
       title:
-        "Ein LLM sollte nicht allein entscheiden, was an einen Operator ausgegeben werden darf.",
-
+        "Ein KI-Tutor sollte Hilfe nicht mit direkter Antwortausgabe verwechseln.",
       description:
-        "In industriellen Umgebungen können plausible Antworten Autoritätsgrenzen überschreiten oder Verfahren erfinden. SON trennt Generierung und Akzeptanz, damit die Software die Kontrolle behält.",
+        "LIIO trennt Generierung und Akzeptanz, damit pädagogische Regeln außerhalb eines einzelnen Prompts durch Software kontrolliert werden.",
     },
-
     product: {
       title:
-        "Ein operativer Workspace rund um den Assistenten.",
-
+        "Homework Mode ist der funktionale Kern der V1.",
       description:
-        "SON ist kein isolierter Chat. Der Assistent ist Teil eines Produkts mit operativem Kontext, Assets, Wissen, Aktivität, Reporting und Supervisor-Oberflächen.",
-
+        "Die implementierte Erfahrung verbindet Sitzungskontinuität, Altersanpassung und EXPLAIN, GUIDE sowie CHECK.",
       visuals: [
         {
           number: "01",
-          label:
-            "SON / OPERATIONAL ASSISTANT",
-          title: "SON",
+          label: "LIIO / AI LEARNING TUTOR",
+          title: "LIIO",
           description:
-            "Operativer Assistent mit Sitzungskontext, Sicherheitshinweis und EXPLAIN-, GUIDE- und VERIFY-Verhalten.",
-          image: "/images/son-two.png",
-          alt:
-            "Industrieller SON Operations Assistant",
+            "EdTech-Produkt für Erklärung, Anleitung und Verifikation.",
+          image: "/images/liio-icon.svg",
+          alt: "LIIO Marke",
         },
-
         {
           number: "02",
-          label:
-            "SON / SUPERVISOR",
-          title: "SON",
+          label: "LIIO / HOMEWORK MODE",
+          title: "Homework Mode",
           description:
-            "Supervisor-Ansicht für Sitzungen, Operatoren, Geräte, Warnungen, Eskalationen und Dokumentaktivität.",
-          image: "/images/son-tree.png",
-          alt:
-            "SON Supervisor Dashboard",
+            "Jede Anfrage wird vor der Antwort klassifiziert.",
+          image: null,
+          alt: "LIIO Homework Mode",
         },
-
         {
           number: "03",
-          label:
-            "SON / EQUIPMENT",
-          title: "SON",
+          label: "LIIO / SAFETY GATE",
+          title: "Safety gate",
           description:
-            "Asset-Verzeichnis mit Geräten, Bereich, Status, letzter Aktivität und Dokumentation.",
-          image: "/images/son-one.png",
-          alt:
-            "SON Equipment Directory",
+            "Unabhängige Bewertung, deterministische Regeln, begrenzte Recovery und sicherer Fallback.",
+          image: null,
+          alt: "LIIO Safety Gate",
         },
-
         {
           number: "04",
-          label:
-            "SON / REPORT ISSUE",
-          title: "SON",
+          label: "LIIO / PARENTS AREA",
+          title: "Parents Area",
           description:
-            "Demonstrationsoberfläche zur Erfassung operativer Beobachtungen für die Supervisor-Prüfung.",
-          image: "/images/son-four.png",
-          alt:
-            "SON Formular für operative Beobachtungen",
+            "Demonstrative Oberfläche für Profile, Aktivität, Limits und Geräte.",
+          image: null,
+          alt: "LIIO Parents Area",
         },
       ],
     },
-
     architecture: {
       title:
-        "Modellantworten gehen niemals direkt an den Operator.",
-
+        "Modelloutput geht nicht direkt an das Kind.",
       description:
-        "Die Sitzung wird serverseitig klassifiziert, kann RAG-Evidenz erhalten, wird mit Groq generiert und anschließend unabhängig bewertet. Ein abgelehnter Kandidat darf einmal korrigiert werden, bevor ein deterministischer Fallback verwendet wird.",
-
+        "Die API validiert den Request, stellt Kontext wieder her, klassifiziert die Interaktion und bewertet GUIDE sowie CHECK unabhängig, mit einer Recovery und sicherem Fallback.",
       flow: [
-        "Input + Locale",
-        "EXPLAIN / GUIDE / VERIFY",
-        "Optionales RAG",
-        "Groq / Generierung",
-        "Bewertung + Fallback",
+        "Input + Alter",
+        "EXPLAIN / GUIDE / CHECK",
+        "Server-side Generierung",
+        "Unabhängige Bewertung",
+        "Recovery + Fallback",
       ],
     },
-
     process: {
       title:
-        "Generierung und Akzeptanz sind getrennte Prozesse.",
-
+        "Die Sitzung bewahrt pädagogischen Kontext.",
       description:
-        "Der Ablauf trennt Modelloutput von der Entscheidung der Anwendung, diesen Output auszuliefern.",
-
+        "Hilfefragen verändern den aktiven Lernkontext, statt eine neue, getrennte Unterhaltung zu beginnen.",
       steps: [
-        {
-          number: "01",
-          title: "Input",
-          description:
-            "Der Client sendet Locale und den aktuellen Gesprächskontext.",
-        },
-        {
-          number: "02",
-          title: "Klassifizierung",
-          description:
-            "Die Anfrage wird als EXPLAIN, GUIDE oder VERIFY klassifiziert.",
-        },
-        {
-          number: "03",
-          title: "Retrieval",
-          description:
-            "Bei verfügbarem RAG werden relevante Evidenz-Chunks abgerufen.",
-        },
-        {
-          number: "04",
-          title: "Generierung",
-          description:
-            "Groq erzeugt eine Antwortkandidatin aus Policy, Kontext und Evidenz.",
-        },
-        {
-          number: "05",
-          title: "Bewertung",
-          description:
-            "Ein unabhängiger Evaluator prüft Sicherheit, Autorität und Evidenzgrenzen.",
-        },
-        {
-          number: "06",
-          title: "Recovery",
-          description:
-            "Ein abgelehnter Kandidat kann einmal korrigiert werden.",
-        },
-        {
-          number: "07",
-          title: "Fallback",
-          description:
-            "Bei erneutem Fehler wird deterministischer lokalisierter Text geliefert.",
-        },
-        {
-          number: "08",
-          title: "Output",
-          description:
-            "Akzeptierter Output wird vor der Ausgabe sanitisiert.",
-        },
+        { number: "01", title: "Input", description: "Alter und bis zu 40 aktuelle Nachrichten." },
+        { number: "02", title: "Klassifizierung", description: "EXPLAIN, GUIDE oder CHECK." },
+        { number: "03", title: "Generierung", description: "Prompt nach Alter, Verhalten und Aufgabe." },
+        { number: "04", title: "Bewertung", description: "GUIDE und CHECK nutzen unabhängige Evaluatoren." },
+        { number: "05", title: "Recovery", description: "Eine korrigierte Regenerierung." },
+        { number: "06", title: "Fallback", description: "Deterministische sichere Ausgabe bei erneutem Fehler." },
+        { number: "07", title: "Output", description: "Normalisierung vor der Ausgabe an die Kinderoberfläche." },
       ],
     },
-
     decisions: {
       title:
-        "Modelloutput ist nur ein Kandidat.",
-
+        "Das Modell generiert. Software entscheidet, was den Lernenden erreicht.",
       description:
-        "Die wichtigsten Entscheidungen liegen zwischen Modell, Software, Evidenz und menschlicher Autorität.",
-
+        "Die Kernentscheidungen liegen im Vertrag zwischen Lernen, Modell und Software.",
       items: [
-        {
-          number: "01",
-          title:
-            "Vor der Antwort klassifizieren",
-          description:
-            "EXPLAIN, GUIDE und VERIFY besitzen eigene operative Regeln.",
-        },
-        {
-          number: "02",
-          title:
-            "Generator ≠ Evaluator",
-          description:
-            "Generierung und Akzeptanz sind voneinander getrennt.",
-        },
-        {
-          number: "03",
-          title:
-            "Software behält Autorität",
-          description:
-            "Operative Grenzen werden außerhalb des Prompts erzwungen.",
-        },
-        {
-          number: "04",
-          title:
-            "Begrenzte Recovery",
-          description:
-            "Nur eine Korrekturgenerierung ist vor dem Fallback erlaubt.",
-        },
-        {
-          number: "05",
-          title:
-            "Evidenz wird nicht erfunden",
-          description:
-            "Fehlendes Retrieval erlaubt keine erfundenen dokumentbezogenen Aussagen.",
-        },
-        {
-          number: "06",
-          title:
-            "Menschliche Autorität bleibt explizit",
-          description:
-            "Physische Eingriffe und kritische Entscheidungen bleiben menschliche Verantwortung.",
-        },
+        { number: "01", title: "Vor der Antwort klassifizieren", description: "Jedes Verhalten hat eigene Regeln." },
+        { number: "02", title: "Generator ≠ Evaluator", description: "Generierung und Akzeptanz sind getrennt." },
+        { number: "03", title: "Policy im Code", description: "Alter, Limits und Regeln sind außerhalb des Prompts prüfbar." },
+        { number: "04", title: "Begrenzte Recovery", description: "Eine Korrektur vor sicherem Fallback." },
+        { number: "05", title: "Sitzung statt Chatbot", description: "Die Unterhaltung bewahrt den Lernkontext." },
+        { number: "06", title: "Server als Boundary", description: "Prompts, Schlüssel und Bewertung bleiben serverseitig." },
       ],
     },
-
     stack: {
       title:
-        "Jede Schicht besitzt eine definierte Verantwortung.",
-
+        "Full-stack Produkt, testbare Policy und serverseitige KI.",
       description:
-        "Full-stack Anwendung, serverseitige KI, strukturierte Validierung und eine separate Retrieval-Schicht.",
-
+        "Interface, API, typisierte Verträge, Generierung und strukturierte Evaluator-Validierung.",
       items: [
-        "Next.js 16.3.5 + React 19.2.8",
+        "Next.js 16.3.5",
+        "React 19.2.8",
         "TypeScript 5",
         "Groq SDK 1.6",
         "Zod 4.6",
-        "Python",
-        "FastAPI",
-        "Sentence Transformers",
-        "Supabase + pgvector",
+        "Motion 13.2",
       ],
     },
-
     results: {
       title:
-        "Verifizierte technische Ergebnisse.",
-
+        "Die V1 demonstriert ein Lernprodukt rund um ein LLM.",
       description:
-        "Der öffentliche Prototyp demonstriert die operative Architektur; RAG bleibt korrekt als lokal validierte Schicht ausgewiesen.",
-
+        "Der funktionale Kern zeigt pädagogische Klassifizierung, unabhängige Bewertung, deterministische Regeln, begrenzte Recovery und sicheren Fallback.",
       items: [
-        {
-          value: "3 MODI",
-          label:
-            "EXPLAIN, GUIDE und VERIFY",
-        },
-
-        {
-          value: "4 SPRACHEN",
-          label:
-            "PT, EN, ES und DE im Ablauf validiert",
-        },
-
-        {
-          value: "25 TESTS",
-          label:
-            "Node-Tests nach der RAG-Integration bestanden",
-        },
-
-        {
-          value: "13 TESTS",
-          label:
-            "Python-Tests für den RAG-Service bestanden",
-        },
-
-        {
-          value: "1 VERSUCH",
-          label:
-            "Maximale Regenerierung vor dem sicheren Fallback",
-        },
+        { value: "3 MODI", label: "EXPLAIN, GUIDE und CHECK" },
+        { value: "6–15 JAHRE", label: "Policy für altersabhängige Anpassung" },
+        { value: "1 RETRY", label: "Maximum vor sicherem Fallback" },
+        { value: "SERVER-SIDE", label: "Prompts und Bewertung außerhalb des Browsers" },
+        { value: "SAFETY GATE", label: "Generierte Antwort ist nicht automatisch ausgelieferte Antwort" },
       ],
     },
-
     links: {
       github:
         "https://github.com/escobardanilo/liio",
-      live:
-        "https://son-industry.vercel.app",
+      live: null,
     },
   },
 };
@@ -3740,7 +3436,7 @@ const projectNumbers: Record<
   string
 > = {
   paypart: "01",
-  son: "02",
+  liio: "02",
   alta: "03",
 };
 
@@ -3775,7 +3471,7 @@ export function getProjectContent(
     };
   }
 
-  if (slug === "son") {
+  if (slug === "liio") {
     return {
       number: "02",
       ...son[language],
