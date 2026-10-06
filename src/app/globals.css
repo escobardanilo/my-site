@@ -3744,3 +3744,729 @@ body.portfolio-site {
     font-size: 13px;
   }
 }
+
+
+/* =========================================================
+   SINGLE-SCREEN EXPERIENCE — REAPPLIED
+   ========================================================= */
+
+body.single-screen-site {
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+}
+
+body.single-screen-site .header {
+  position: fixed;
+}
+
+.single-screen-main {
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.site-screen {
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  animation: screen-enter 280ms ease both;
+}
+
+@keyframes screen-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.single-screen-site .hero,
+.single-screen-site .tech-stack,
+.single-screen-site .expertise,
+.single-screen-site .work-history,
+.single-screen-site .projects,
+.single-screen-site .about,
+.single-screen-site .contact-screen {
+  height: 100svh;
+  min-height: 0;
+}
+
+.single-screen-site .hero {
+  padding-top: 88px;
+  border-bottom: 0;
+}
+
+.single-screen-site .hero__frame,
+.single-screen-site .hero__primary,
+.single-screen-site .hero__copy,
+.single-screen-site .hero__visual {
+  height: calc(100svh - 88px);
+  min-height: 0;
+}
+
+.single-screen-site .hero__primary {
+  border-bottom: 0;
+}
+
+.single-screen-site .hero__copy {
+  padding:
+    clamp(34px, 5vh, 68px)
+    clamp(34px, 4vw, 70px);
+}
+
+.single-screen-site .hero__eyebrow {
+  margin-bottom: clamp(28px, 4vh, 52px);
+}
+
+.single-screen-site .hero__title {
+  font-size: clamp(48px, 5vw, 84px);
+}
+
+.single-screen-site .hero__lead {
+  max-width: 700px;
+  margin-top: clamp(22px, 3vh, 34px);
+  font-size: clamp(14px, 1vw, 17px);
+  line-height: 1.55;
+}
+
+.single-screen-site .hero__cta {
+  margin-top: clamp(20px, 3vh, 32px);
+}
+
+.single-screen-site .tech-stack,
+.single-screen-site .expertise,
+.single-screen-site .work-history,
+.single-screen-site .projects,
+.single-screen-site .about {
+  padding: 108px 0 20px;
+  border-bottom: 0;
+}
+
+.single-screen-site .tech-stack > .container,
+.single-screen-site .expertise > .container,
+.single-screen-site .work-history > .container,
+.single-screen-site .projects > .container,
+.single-screen-site .about > .container {
+  height: calc(100svh - 128px);
+  overflow: hidden;
+}
+
+.single-screen-site .section-intro {
+  grid-template-columns: 80px minmax(0, 760px);
+  gap: 24px;
+  margin-bottom: clamp(18px, 2.4vh, 30px);
+}
+
+.single-screen-site .section-intro__eyebrow {
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.single-screen-site .section-intro__title {
+  font-size: clamp(32px, 3vw, 48px);
+  line-height: 0.98;
+}
+
+.single-screen-site .section-intro__description {
+  max-width: 760px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Stack */
+
+.single-screen-site .tech-stack__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-screen-site .tech-stack__groups {
+  flex: 1;
+  min-height: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.single-screen-site .tech-stack__group {
+  min-height: 0;
+  padding: 22px;
+}
+
+.single-screen-site .tech-stack__group h3 {
+  margin-bottom: 24px;
+  font-size: clamp(20px, 1.8vw, 28px);
+}
+
+.single-screen-site .tech-stack__item {
+  font-size: 11px;
+}
+
+/* Expertise */
+
+.single-screen-site .expertise > .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-screen-site .expertise-list {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-left: 1px solid var(--border);
+}
+
+.single-screen-site .expertise-item {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.single-screen-site .expertise-item:hover {
+  padding: 20px;
+}
+
+.single-screen-site .expertise-item__main {
+  flex: 1;
+}
+
+.single-screen-site .expertise-item__main h3 {
+  font-size: clamp(25px, 2.4vw, 40px);
+}
+
+.single-screen-site .expertise-item__main p {
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.single-screen-site .expertise-item__capabilities {
+  width: 100%;
+  margin-top: auto;
+}
+
+.single-screen-site .expertise-item__capabilities span {
+  padding: 8px 0;
+  font-size: 10px;
+}
+
+/* Experience */
+
+.single-screen-site .work-history > .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-screen-site .work-history__list--professional {
+  flex: 1;
+  min-height: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.single-screen-site .experience-card {
+  min-height: 0;
+  padding: 24px;
+}
+
+.single-screen-site .experience-card__meta {
+  margin-bottom: 30px;
+  font-size: 10px;
+}
+
+.single-screen-site .experience-card h3 {
+  font-size: clamp(30px, 3vw, 44px);
+}
+
+.single-screen-site .experience-card__description {
+  margin-top: 22px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.single-screen-site .experience-card__focus {
+  padding-top: 20px;
+}
+
+/* Projects */
+
+.single-screen-site .projects > .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-screen-site .projects__list {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.single-screen-site .project-card {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.single-screen-site .project-card:last-child {
+  padding: 0;
+  border-bottom: 0;
+}
+
+.single-screen-site .project-card__visual {
+  height: 42%;
+  min-height: 0;
+  aspect-ratio: auto;
+  padding: 12px;
+}
+
+.single-screen-site .project-card__content {
+  flex: 1;
+  min-height: 0;
+}
+
+.single-screen-site .project-card__heading {
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+}
+
+.single-screen-site .project-card__heading h3 {
+  font-size: clamp(24px, 2.2vw, 36px);
+}
+
+.single-screen-site .project-card__details {
+  flex: 1;
+  min-height: 0;
+  padding-top: 12px;
+}
+
+.single-screen-site .project-card__details > p {
+  min-height: 0;
+  margin-bottom: 10px;
+  font-size: 11px;
+  line-height: 1.42;
+}
+
+.single-screen-site .project-card__tags {
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.single-screen-site .project-card__tags span {
+  padding: 5px 8px;
+  font-size: 8px;
+}
+
+.single-screen-site .project-card__action {
+  margin-top: auto;
+  padding: 9px 0;
+  font-size: 10px;
+}
+
+/* About */
+
+.single-screen-site .about--professional {
+  padding-top: 108px;
+  padding-bottom: 20px;
+}
+
+.single-screen-site .about-professional__layout {
+  height: 100%;
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(360px, 1.05fr);
+  gap: clamp(42px, 5vw, 80px);
+}
+
+.single-screen-site .about-professional__content {
+  height: 100%;
+  padding: 10px 0;
+}
+
+.single-screen-site .about-professional__title {
+  margin-bottom: 28px;
+  font-size: clamp(34px, 3.8vw, 54px);
+}
+
+.single-screen-site .about-professional__copy {
+  gap: 16px;
+}
+
+.single-screen-site .about-professional__lead {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.5;
+}
+
+.single-screen-site .about-professional__copy p:not(.about-professional__lead) {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.single-screen-site .about-professional__portrait {
+  min-height: 0;
+  height: 100%;
+}
+
+/* Contact */
+
+.single-screen-site .contact-screen {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--contact-background);
+}
+
+.single-screen-site .contact-screen .contact {
+  flex: 1;
+  min-height: 0;
+  padding: 108px 0 20px;
+}
+
+.single-screen-site .contact-screen .contact > .container {
+  height: 100%;
+}
+
+.single-screen-site .contact__top {
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  padding-bottom: 30px;
+}
+
+.single-screen-site .contact__main {
+  grid-template-columns:
+    minmax(0, 1fr)
+    300px;
+  gap: 44px;
+}
+
+.single-screen-site .contact__main h2 {
+  font-size: clamp(44px, 6vw, 84px);
+}
+
+.single-screen-site .contact__main p {
+  font-size: 12px;
+}
+
+.single-screen-site .contact__actions {
+  margin-top: 38px;
+  padding-top: 18px;
+  grid-template-columns:
+    minmax(0, 1fr)
+    300px;
+  gap: 44px;
+}
+
+.single-screen-site .contact-screen .footer {
+  flex: 0 0 auto;
+}
+
+.single-screen-site .contact-screen .footer__inner {
+  min-height: 84px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* Header */
+
+.single-screen-site .header__nav {
+  display: flex;
+}
+
+.single-screen-site .header__nav-link {
+  opacity: 0.62;
+}
+
+.single-screen-site .header__nav-link--active {
+  opacity: 1;
+}
+
+.single-screen-site .header__nav-link--active::after {
+  transform: scaleX(1);
+}
+
+/* Responsive screen navigation */
+
+@media (max-width: 1180px) {
+  .single-screen-site .header__inner {
+    grid-template-columns:
+      minmax(120px, 1fr)
+      auto
+      minmax(270px, 1fr);
+    gap: 18px;
+  }
+
+  .single-screen-site .header__nav {
+    gap: 16px;
+  }
+
+  .single-screen-site .header__nav-link {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  body.single-screen-site {
+    overflow: hidden;
+  }
+
+  .single-screen-site .header {
+    height: 116px;
+  }
+
+  .single-screen-site .header__inner {
+    height: 116px;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 50px 42px;
+    grid-template-areas:
+      "brand actions"
+      "nav nav";
+    gap: 4px 12px;
+  }
+
+  .single-screen-site .header__brand {
+    grid-area: brand;
+  }
+
+  .single-screen-site .header__actions {
+    grid-area: actions;
+    gap: 7px;
+  }
+
+  .single-screen-site .language-switcher {
+    display: none;
+  }
+
+  .single-screen-site .language-select {
+    display: block;
+    height: 36px;
+  }
+
+  .single-screen-site .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .single-screen-site .header__contact {
+    min-height: 36px;
+    padding: 0 13px;
+    font-size: 10px;
+  }
+
+  .single-screen-site .header__nav {
+    grid-area: nav;
+    width: 100%;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .single-screen-site .header__nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-screen {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .single-screen-site .hero {
+    min-height: 100svh;
+    height: auto;
+    padding-top: 116px;
+  }
+
+  .single-screen-site .hero__frame,
+  .single-screen-site .hero__primary {
+    height: auto;
+    min-height: calc(100svh - 116px);
+  }
+
+  .single-screen-site .hero__primary {
+    grid-template-columns: 1fr;
+  }
+
+  .single-screen-site .hero__copy {
+    height: auto;
+    min-height: auto;
+    padding: 44px 32px;
+    border-right: 0;
+    border-bottom: 1px solid var(--structural-line);
+  }
+
+  .single-screen-site .hero__visual {
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .single-screen-site .tech-stack,
+  .single-screen-site .expertise,
+  .single-screen-site .work-history,
+  .single-screen-site .projects,
+  .single-screen-site .about {
+    height: auto;
+    min-height: 100svh;
+    padding: 136px 0 48px;
+  }
+
+  .single-screen-site .tech-stack > .container,
+  .single-screen-site .expertise > .container,
+  .single-screen-site .work-history > .container,
+  .single-screen-site .projects > .container,
+  .single-screen-site .about > .container {
+    height: auto;
+    overflow: visible;
+  }
+
+  .single-screen-site .section-intro {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .single-screen-site .section-intro__title {
+    font-size: 34px;
+  }
+
+  .single-screen-site .section-intro__description {
+    font-size: 14px;
+  }
+
+  .single-screen-site .tech-stack__groups,
+  .single-screen-site .expertise-list,
+  .single-screen-site .work-history__list--professional,
+  .single-screen-site .projects__list,
+  .single-screen-site .about-professional__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .single-screen-site .tech-stack__group,
+  .single-screen-site .expertise-item,
+  .single-screen-site .experience-card {
+    min-height: auto;
+  }
+
+  .single-screen-site .expertise-item__main h3,
+  .single-screen-site .experience-card h3 {
+    font-size: 34px;
+  }
+
+  .single-screen-site .expertise-item__main p,
+  .single-screen-site .experience-card__description,
+  .single-screen-site .project-card__details > p,
+  .single-screen-site .about-professional__copy p:not(.about-professional__lead) {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .single-screen-site .project-card__visual {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .single-screen-site .project-card__content {
+    min-height: auto;
+  }
+
+  .single-screen-site .project-card__heading h3 {
+    font-size: 38px;
+  }
+
+  .single-screen-site .project-card__tags span {
+    font-size: 10px;
+  }
+
+  .single-screen-site .about-professional__portrait {
+    min-height: 560px;
+  }
+
+  .single-screen-site .contact-screen {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+
+  .single-screen-site .contact-screen .contact {
+    padding-top: 136px;
+  }
+
+  .single-screen-site .contact__main,
+  .single-screen-site .contact__actions {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .single-screen-site .hero__copy {
+    padding: 34px 20px 40px;
+  }
+
+  .single-screen-site .hero__title {
+    font-size: clamp(42px, 13vw, 58px);
+  }
+
+  .single-screen-site .hero__lead {
+    font-size: 15px;
+  }
+
+  .single-screen-site .hero__visual {
+    height: 400px;
+    min-height: 400px;
+  }
+
+  .single-screen-site .tech-stack,
+  .single-screen-site .expertise,
+  .single-screen-site .work-history,
+  .single-screen-site .projects,
+  .single-screen-site .about {
+    padding-top: 132px;
+  }
+
+  .single-screen-site .tech-stack__group,
+  .single-screen-site .expertise-item,
+  .single-screen-site .experience-card {
+    padding: 20px;
+  }
+
+  .single-screen-site .tech-stack__item {
+    font-size: 12px;
+  }
+
+  .single-screen-site .expertise-item__capabilities span {
+    font-size: 11px;
+  }
+
+  .single-screen-site .project-card__details > p {
+    font-size: 14px;
+  }
+
+  .single-screen-site .project-card__action {
+    font-size: 12px;
+  }
+
+  .single-screen-site .about-professional__title {
+    font-size: 40px;
+  }
+
+  .single-screen-site .about-professional__lead {
+    font-size: 19px;
+  }
+
+  .single-screen-site .about-professional__portrait {
+    min-height: 460px;
+  }
+}
