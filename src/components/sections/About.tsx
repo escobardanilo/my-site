@@ -17,46 +17,46 @@ const aboutCopy: Record<
 > = {
   pt: {
     title:
-      "Transformo complexidade operacional em software que funciona.",
+      "Construo sistemas onde software, IA e produto se encontram.",
     lead:
-      "Sou AI Engineer e Software Engineer. Construo produtos e sistemas onde IA, dados e software fazem parte de uma arquitetura maior, com responsabilidades e limites claros.",
+      "Sou AI Engineer e Software Engineer. Desenvolvo produtos full-stack e sistemas de IA que conectam modelos, dados, interfaces e fluxos de trabalho, com foco em soluções claras, úteis e tecnicamente sólidas.",
     systems:
-      "A experiência em operações industriais ensinou-me a olhar para pessoas, processos, restrições, falhas e decisões — não apenas para código. Essa perspetiva acompanha a forma como desenho workflows, validação e confiabilidade em software.",
+      "O meu percurso cruza engenharia de software, inteligência artificial, produto e experiência de utilização. Isso dá-me uma visão de ponta a ponta: da interface e da lógica de negócio à arquitetura, validação e comportamento do sistema em uso real.",
     freelance:
-      "Também trabalhei de forma independente em projetos freelance de websites, landing pages e aplicações, com foco em UI, UX, estrutura visual, clareza de navegação e experiência de utilização.",
+      "Também desenvolvi projetos freelance de websites, landing pages e aplicações, com especial atenção a UI, UX, estrutura visual e clareza de navegação. A experiência anterior em operações industriais acrescentou uma visão prática sobre execução, restrições e confiabilidade — sem limitar o meu trabalho a esse contexto.",
     contact: "Contacte-me",
   },
   en: {
     title:
-      "I turn operational complexity into software that works.",
+      "I build systems where software, AI and product come together.",
     lead:
-      "I am an AI Engineer and Software Engineer. I build products and systems where AI, data and software are part of a larger architecture with clear responsibilities and boundaries.",
+      "I am an AI Engineer and Software Engineer. I build full-stack products and AI systems that connect models, data, interfaces and workflows, with a focus on solutions that are clear, useful and technically solid.",
     systems:
-      "My background in industrial operations taught me to look at people, processes, constraints, failure modes and decisions — not just code. That perspective shapes how I approach workflows, validation and reliability in software.",
+      "My background spans software engineering, artificial intelligence, product and user experience. That gives me an end-to-end view: from interface and business logic to architecture, validation and how a system behaves in real use.",
     freelance:
-      "I have also worked independently on freelance websites, landing pages and applications, with a focus on UI, UX, visual structure, navigation clarity and user experience.",
+      "I have also delivered freelance websites, landing pages and applications with particular attention to UI, UX, visual structure and navigation clarity. Earlier experience in industrial operations adds a practical perspective on execution, constraints and reliability without defining the scope of my work.",
     contact: "Get in touch",
   },
   es: {
     title:
-      "Transformo complejidad operativa en software que funciona.",
+      "Construyo sistemas donde software, IA y producto se encuentran.",
     lead:
-      "Soy AI Engineer y Software Engineer. Construyo productos y sistemas donde IA, datos y software forman parte de una arquitectura mayor, con responsabilidades y límites claros.",
+      "Soy AI Engineer y Software Engineer. Desarrollo productos full-stack y sistemas de IA que conectan modelos, datos, interfaces y workflows, con foco en soluciones claras, útiles y técnicamente sólidas.",
     systems:
-      "Mi experiencia en operaciones industriales me enseñó a observar personas, procesos, restricciones, fallos y decisiones, no solo código. Esa perspectiva influye en cómo diseño workflows, validación y fiabilidad en software.",
+      "Mi trayectoria cruza ingeniería de software, inteligencia artificial, producto y experiencia de usuario. Eso me da una visión de extremo a extremo: desde la interfaz y la lógica de negocio hasta la arquitectura, validación y comportamiento del sistema en uso real.",
     freelance:
-      "También he trabajado de forma independiente en proyectos freelance de sitios web, landing pages y aplicaciones, con foco en UI, UX, estructura visual, claridad de navegación y experiencia de usuario.",
+      "También he desarrollado proyectos freelance de sitios web, landing pages y aplicaciones, con especial atención a UI, UX, estructura visual y claridad de navegación. Mi experiencia anterior en operaciones industriales aporta una perspectiva práctica sobre ejecución, restricciones y fiabilidad sin limitar mi trabajo a ese contexto.",
     contact: "Contactar",
   },
   de: {
     title:
-      "Ich übersetze operative Komplexität in Software, die funktioniert.",
+      "Ich entwickle Systeme, in denen Software, KI und Produkt zusammenkommen.",
     lead:
-      "Ich bin AI Engineer und Software Engineer. Ich entwickle Produkte und Systeme, in denen KI, Daten und Software Teil einer größeren Architektur mit klaren Verantwortlichkeiten und Grenzen sind.",
+      "Ich bin AI Engineer und Software Engineer. Ich entwickle Full-Stack-Produkte und KI-Systeme, die Modelle, Daten, Interfaces und Workflows verbinden, mit Fokus auf klare, nützliche und technisch solide Lösungen.",
     systems:
-      "Mein Hintergrund in industriellen Abläufen hat mich gelehrt, Menschen, Prozesse, Einschränkungen, Fehlerszenarien und Entscheidungen zu betrachten — nicht nur Code. Diese Perspektive prägt meinen Umgang mit Workflows, Validierung und Zuverlässigkeit.",
+      "Mein Hintergrund verbindet Software Engineering, künstliche Intelligenz, Produktentwicklung und User Experience. Dadurch betrachte ich Systeme durchgängig: vom Interface und der Geschäftslogik bis zu Architektur, Validierung und Verhalten im realen Einsatz.",
     freelance:
-      "Ich habe außerdem selbstständig an Freelance-Projekten für Websites, Landingpages und Anwendungen gearbeitet, mit Fokus auf UI, UX, visuelle Struktur, klare Navigation und Nutzererlebnis.",
+      "Ich habe außerdem Freelance-Projekte für Websites, Landingpages und Anwendungen umgesetzt, mit besonderem Fokus auf UI, UX, visuelle Struktur und klare Navigation. Frühere Erfahrung in industriellen Abläufen ergänzt dies um eine praktische Perspektive auf Ausführung, Einschränkungen und Zuverlässigkeit, ohne meinen heutigen Schwerpunkt zu definieren.",
     contact: "Kontakt aufnehmen",
   },
 };
