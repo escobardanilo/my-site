@@ -17,46 +17,46 @@ const aboutCopy: Record<
 > = {
   pt: {
     title:
-      "Construo sistemas onde software, IA e produto se encontram.",
+      "Construo produtos que fazem a IA sair do modelo e entrar no produto.",
     lead:
-      "Sou AI Engineer e Software Engineer. Desenvolvo produtos full-stack e sistemas de IA que conectam modelos, dados, interfaces e fluxos de trabalho, com foco em soluções claras, úteis e tecnicamente sólidas.",
+      "Sou AI Engineer e Software Engineer. Trabalho na ligação entre modelos, software, dados e interfaces para transformar capacidades de IA em produtos que as pessoas conseguem realmente usar.",
     systems:
-      "O meu percurso cruza engenharia de software, inteligência artificial, produto e experiência de utilização. Isso dá-me uma visão de ponta a ponta: da interface e da lógica de negócio à arquitetura, validação e comportamento do sistema em uso real.",
+      "Interessa-me especialmente o ponto em que a tecnologia deixa de ser apenas uma feature e passa a participar de decisões, investigação, execução e compreensão de processos. É aí que desenho arquitetura, validação, contexto, fluxos e limites para que o sistema seja útil e previsível.",
     freelance:
-      "Também desenvolvi projetos freelance de websites, landing pages e aplicações, com especial atenção a UI, UX, estrutura visual e clareza de navegação. A experiência anterior em operações industriais acrescentou uma visão prática sobre execução, restrições e confiabilidade — sem limitar o meu trabalho a esse contexto.",
+      "Também desenvolvo aplicações, websites e experiências digitais de ponta a ponta, cruzando engenharia com produto, UI e UX. O objetivo é sempre o mesmo: construir algo tecnicamente sólido, claro para quem usa e preparado para evoluir.",
     contact: "Contacte-me",
   },
   en: {
     title:
-      "I build systems where software, AI and product come together.",
+      "I build products that move AI out of the model and into the product.",
     lead:
-      "I am an AI Engineer and Software Engineer. I build full-stack products and AI systems that connect models, data, interfaces and workflows, with a focus on solutions that are clear, useful and technically solid.",
+      "I am an AI Engineer and Software Engineer. I work at the intersection of models, software, data and interfaces, turning AI capabilities into products people can actually use.",
     systems:
-      "My background spans software engineering, artificial intelligence, product and user experience. That gives me an end-to-end view: from interface and business logic to architecture, validation and how a system behaves in real use.",
+      "I am especially interested in the point where technology stops being just a feature and starts taking part in decisions, investigation, execution and understanding. That is where I design architecture, validation, context, workflows and boundaries so the system remains useful and predictable.",
     freelance:
-      "I have also delivered freelance websites, landing pages and applications with particular attention to UI, UX, visual structure and navigation clarity. Earlier experience in industrial operations adds a practical perspective on execution, constraints and reliability without defining the scope of my work.",
+      "I also build applications, websites and digital experiences end to end, combining engineering with product, UI and UX. The goal is always the same: create something technically solid, clear to use and ready to evolve.",
     contact: "Get in touch",
   },
   es: {
     title:
-      "Construyo sistemas donde software, IA y producto se encuentran.",
+      "Construyo productos que sacan la IA del modelo y la llevan al producto.",
     lead:
-      "Soy AI Engineer y Software Engineer. Desarrollo productos full-stack y sistemas de IA que conectan modelos, datos, interfaces y workflows, con foco en soluciones claras, útiles y técnicamente sólidas.",
+      "Soy AI Engineer y Software Engineer. Trabajo en la conexión entre modelos, software, datos e interfaces para convertir capacidades de IA en productos que las personas realmente puedan utilizar.",
     systems:
-      "Mi trayectoria cruza ingeniería de software, inteligencia artificial, producto y experiencia de usuario. Eso me da una visión de extremo a extremo: desde la interfaz y la lógica de negocio hasta la arquitectura, validación y comportamiento del sistema en uso real.",
+      "Me interesa especialmente el punto en el que la tecnología deja de ser solo una feature y pasa a participar en decisiones, investigación, ejecución y comprensión. Ahí diseño arquitectura, validación, contexto, workflows y límites para que el sistema sea útil y predecible.",
     freelance:
-      "También he desarrollado proyectos freelance de sitios web, landing pages y aplicaciones, con especial atención a UI, UX, estructura visual y claridad de navegación. Mi experiencia anterior en operaciones industriales aporta una perspectiva práctica sobre ejecución, restricciones y fiabilidad sin limitar mi trabajo a ese contexto.",
+      "También desarrollo aplicaciones, sitios web y experiencias digitales de extremo a extremo, combinando ingeniería con producto, UI y UX. El objetivo es siempre el mismo: construir algo técnicamente sólido, claro para quien lo usa y preparado para evolucionar.",
     contact: "Contactar",
   },
   de: {
     title:
-      "Ich entwickle Systeme, in denen Software, KI und Produkt zusammenkommen.",
+      "Ich entwickle Produkte, die KI aus dem Modell in das eigentliche Produkt bringen.",
     lead:
-      "Ich bin AI Engineer und Software Engineer. Ich entwickle Full-Stack-Produkte und KI-Systeme, die Modelle, Daten, Interfaces und Workflows verbinden, mit Fokus auf klare, nützliche und technisch solide Lösungen.",
+      "Ich bin AI Engineer und Software Engineer. Ich verbinde Modelle, Software, Daten und Interfaces und übersetze KI-Fähigkeiten in Produkte, die Menschen tatsächlich nutzen können.",
     systems:
-      "Mein Hintergrund verbindet Software Engineering, künstliche Intelligenz, Produktentwicklung und User Experience. Dadurch betrachte ich Systeme durchgängig: vom Interface und der Geschäftslogik bis zu Architektur, Validierung und Verhalten im realen Einsatz.",
+      "Besonders interessiert mich der Punkt, an dem Technologie nicht mehr nur eine Funktion ist, sondern Entscheidungen, Recherche, Ausführung und Verständnis unterstützt. Dort gestalte ich Architektur, Validierung, Kontext, Workflows und Grenzen, damit das System nützlich und vorhersehbar bleibt.",
     freelance:
-      "Ich habe außerdem Freelance-Projekte für Websites, Landingpages und Anwendungen umgesetzt, mit besonderem Fokus auf UI, UX, visuelle Struktur und klare Navigation. Frühere Erfahrung in industriellen Abläufen ergänzt dies um eine praktische Perspektive auf Ausführung, Einschränkungen und Zuverlässigkeit, ohne meinen heutigen Schwerpunkt zu definieren.",
+      "Ich entwickle außerdem Anwendungen, Websites und digitale Erlebnisse durchgängig und verbinde Engineering mit Produkt, UI und UX. Das Ziel bleibt gleich: technisch solide, klar nutzbar und für Weiterentwicklung vorbereitet.",
     contact: "Kontakt aufnehmen",
   },
 };
