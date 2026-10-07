@@ -17,7 +17,7 @@ const aboutCopy: Record<
 > = {
   pt: {
     title:
-      "Software pensado para o trabalho real.",
+      "Transformo complexidade operacional em software que funciona.",
     lead:
       "Sou AI Engineer e Software Engineer. Construo produtos e sistemas onde IA, dados e software fazem parte de uma arquitetura maior, com responsabilidades e limites claros.",
     systems:
@@ -28,7 +28,7 @@ const aboutCopy: Record<
   },
   en: {
     title:
-      "Software designed for real work.",
+      "I turn operational complexity into software that works.",
     lead:
       "I am an AI Engineer and Software Engineer. I build products and systems where AI, data and software are part of a larger architecture with clear responsibilities and boundaries.",
     systems:
@@ -39,7 +39,7 @@ const aboutCopy: Record<
   },
   es: {
     title:
-      "Software pensado para el trabajo real.",
+      "Transformo complejidad operativa en software que funciona.",
     lead:
       "Soy AI Engineer y Software Engineer. Construyo productos y sistemas donde IA, datos y software forman parte de una arquitectura mayor, con responsabilidades y límites claros.",
     systems:
@@ -50,7 +50,7 @@ const aboutCopy: Record<
   },
   de: {
     title:
-      "Software für reale Arbeit.",
+      "Ich übersetze operative Komplexität in Software, die funktioniert.",
     lead:
       "Ich bin AI Engineer und Software Engineer. Ich entwickle Produkte und Systeme, in denen KI, Daten und Software Teil einer größeren Architektur mit klaren Verantwortlichkeiten und Grenzen sind.",
     systems:
