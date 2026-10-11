@@ -471,10 +471,8 @@ const payPart: Record<
     },
 
     links: {
-      github:
-        "https://github.com/escobardanilo/paypart",
-      live:
-        "https://paypart.vercel.app/",
+      github: null,
+      live: null,
     },
   },
 
@@ -729,10 +727,8 @@ const payPart: Record<
     },
 
     links: {
-      github:
-        "https://github.com/escobardanilo/paypart",
-      live:
-        "https://paypart.vercel.app/",
+      github: null,
+      live: null,
     },
   },
 
@@ -987,10 +983,8 @@ const payPart: Record<
     },
 
     links: {
-      github:
-        "https://github.com/escobardanilo/paypart",
-      live:
-        "https://paypart.vercel.app/",
+      github: null,
+      live: null,
     },
   },
 
@@ -1245,10 +1239,8 @@ const payPart: Record<
     },
 
     links: {
-      github:
-        "https://github.com/escobardanilo/paypart",
-      live:
-        "https://paypart.vercel.app/",
+      github: null,
+      live: null,
     },
   },
 };
