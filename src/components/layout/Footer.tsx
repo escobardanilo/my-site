@@ -13,7 +13,7 @@ export function Footer() {
           <span>Danilo Escobar</span>
 
           <span>
-            AI Engineer / Software Engineer
+            {copy.footer.role}
           </span>
         </div>
 
