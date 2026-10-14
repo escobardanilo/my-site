@@ -28,7 +28,14 @@ const nextConfig: NextConfig = {
         source:
           "/projects/project-03",
         destination:
+          "/projects/opinsy",
+        permanent: true,
+      },
+      {
+        source:
           "/projects/alta",
+        destination:
+          "/projects/opinsy",
         permanent: true,
       },
     ];
