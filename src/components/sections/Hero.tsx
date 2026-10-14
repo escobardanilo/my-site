@@ -8,36 +8,42 @@ const heroCopy: Record<
   Language,
   {
     eyebrow: string;
+    titleLineOne: string;
+    titleLineTwo: string;
     description: string;
     projects: string;
   }
 > = {
   pt: {
-    eyebrow:
-      "AI ENGINEER / SOFTWARE ENGINEER",
+    eyebrow: "IA / SOFTWARE / AUTOMAÇÃO",
+    titleLineOne: "Criando produtos.",
+    titleLineTwo: "Que viabilizam o negócio.",
     description:
-      "Construo produtos full-stack e sistemas de IA que conectam modelos, dados, APIs e workflows operacionais. O foco é software fiável para processos reais, com validação, outputs estruturados e controlo humano onde a decisão exige contexto.",
+      "Passei por indústria, logística, manufatura, coordenação, produção, operações, marketing e design gráfico. Hoje, levo essa experiência prática para a criação de produtos digitais com IA e automação.",
     projects: "Ver projetos",
   },
   en: {
-    eyebrow:
-      "AI ENGINEER / SOFTWARE ENGINEER",
+    eyebrow: "AI / SOFTWARE / AUTOMATION",
+    titleLineOne: "Building products.",
+    titleLineTwo: "That move business forward.",
     description:
-      "I build full-stack products and AI systems that connect models, data, APIs and operational workflows. The focus is reliable software for real processes, with validation, structured outputs and human control where decisions require context.",
+      "My background spans industry, logistics, manufacturing, coordination, production, operations, marketing and graphic design. I bring that practical experience into digital products built with AI and automation.",
     projects: "View projects",
   },
   es: {
-    eyebrow:
-      "AI ENGINEER / SOFTWARE ENGINEER",
+    eyebrow: "IA / SOFTWARE / AUTOMATIZACIÓN",
+    titleLineOne: "Creando productos.",
+    titleLineTwo: "Que impulsan el negocio.",
     description:
-      "Construyo productos full-stack y sistemas de IA que conectan modelos, datos, APIs y workflows operativos. El foco es software fiable para procesos reales, con validación, outputs estructurados y control humano cuando la decisión requiere contexto.",
+      "Mi trayectoria abarca industria, logística, manufactura, coordinación, producción, operaciones, marketing y diseño gráfico. Hoy llevo esa experiencia práctica a la creación de productos digitales con IA y automatización.",
     projects: "Ver proyectos",
   },
   de: {
-    eyebrow:
-      "AI ENGINEER / SOFTWARE ENGINEER",
+    eyebrow: "KI / SOFTWARE / AUTOMATISIERUNG",
+    titleLineOne: "Produkte entwickeln.",
+    titleLineTwo: "Die Unternehmen voranbringen.",
     description:
-      "Ich entwickle Full-Stack-Produkte und KI-Systeme, die Modelle, Daten, APIs und operative Workflows verbinden. Der Fokus liegt auf zuverlässiger Software für reale Prozesse, mit Validierung, strukturierten Outputs und menschlicher Kontrolle, wenn Entscheidungen Kontext erfordern.",
+      "Mein Weg führte durch Industrie, Logistik, Fertigung, Koordination, Produktion, operative Abläufe, Marketing und Grafikdesign. Diese praktische Erfahrung bringe ich heute in digitale Produkte mit KI und Automatisierung ein.",
     projects: "Projekte ansehen",
   },
 };
@@ -67,11 +73,11 @@ export function Hero() {
               id="hero-title"
             >
               <span>
-                AI Engineer.
+                {hero.titleLineOne}
               </span>
 
               <em>
-                Software Engineer.
+                {hero.titleLineTwo}
               </em>
             </h1>
 
