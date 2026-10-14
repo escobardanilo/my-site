@@ -34,7 +34,7 @@ const experienceCopy: Record<
           "ATUAL / FREELANCE / BRASIL",
         company: "Nucleo — Brasil",
         role:
-          "Freelance Software Engineer",
+          "Desenvolvimento de software (freelance)",
         description:
           "Desenvolvimento backend e frontend para uma operação ligada a um centro de treinamento competitivo de HYROX e CrossFit, incluindo a camada de software necessária para suportar dados, fluxos e aplicação no funcionamento da operação.",
         focus: [
@@ -76,7 +76,7 @@ const experienceCopy: Record<
           "CURRENT / FREELANCE / BRAZIL",
         company: "Nucleo — Brazil",
         role:
-          "Freelance Software Engineer",
+          "Freelance software development",
         description:
           "Backend and frontend development for an operation connected to a competitive HYROX and CrossFit training center, including the software layer needed to support data, workflows and the application within day-to-day operations.",
         focus: [
@@ -118,7 +118,7 @@ const experienceCopy: Record<
           "ACTUAL / FREELANCE / BRASIL",
         company: "Nucleo — Brasil",
         role:
-          "Freelance Software Engineer",
+          "Desarrollo de software freelance",
         description:
           "Desarrollo backend y frontend para una operación vinculada a un centro de entrenamiento competitivo de HYROX y CrossFit, incluida la capa de software necesaria para soportar datos, workflows y la aplicación dentro de la operación.",
         focus: [
@@ -161,7 +161,7 @@ const experienceCopy: Record<
         company:
           "Nucleo — Brasilien",
         role:
-          "Freelance Software Engineer",
+          "Freelance-Softwareentwicklung",
         description:
           "Backend- und Frontend-Entwicklung für einen Betrieb rund um ein wettbewerbsorientiertes HYROX- und CrossFit-Trainingszentrum, einschließlich der Softwareschicht zur Unterstützung von Daten, Workflows und Anwendung im operativen Alltag.",
         focus: [
