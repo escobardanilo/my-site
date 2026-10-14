@@ -1,5 +1,7 @@
 "use client";
 
+import { useLayoutEffect } from "react";
+
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 
@@ -30,6 +32,36 @@ type ProjectCaseStudyProps = {
 export function ProjectCaseStudy({
   slug,
 }: ProjectCaseStudyProps) {
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    const previousScrollBehavior =
+      root.style.scrollBehavior;
+
+    root.style.scrollBehavior = "auto";
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+
+    const frame = window.requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+
+      root.style.scrollBehavior =
+        previousScrollBehavior;
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      root.style.scrollBehavior =
+        previousScrollBehavior;
+    };
+  }, [slug]);
+
   const { language } =
     useSitePreferences();
 
