@@ -17,46 +17,46 @@ const aboutCopy: Record<
 > = {
   pt: {
     title:
-      "Construo produtos que fazem a IA sair do modelo e entrar no produto.",
+      "Conheço o negócio por dentro. Construo o que o faz avançar.",
     lead:
-      "Sou AI Engineer e Software Engineer. Trabalho na ligação entre modelos, software, dados e interfaces para transformar capacidades de IA em produtos que as pessoas conseguem realmente usar.",
+      "Quando comecei a estudar engenharia de IA, já tinha passado por várias áreas da indústria, logística e manufatura, além de marketing e design gráfico.",
     systems:
-      "Interessa-me especialmente o ponto em que a tecnologia deixa de ser apenas uma feature e passa a participar de decisões, investigação, execução e compreensão de processos. É aí que desenho arquitetura, validação, contexto, fluxos e limites para que o sistema seja útil e previsível.",
+      "Passei pelo armazém, pela coordenação, pela produção e pela operação. Ter conhecido esses contextos por dentro foi um privilégio — e é parte do que me diferencia: junto conhecimento técnico a experiência prática para perceber necessidades, identificar oportunidades e transformar problemas concretos em produtos digitais úteis.",
     freelance:
-      "Também desenvolvo aplicações, websites e experiências digitais de ponta a ponta, cruzando engenharia com produto, UI e UX. O objetivo é sempre o mesmo: construir algo tecnicamente sólido, claro para quem usa e preparado para evoluir.",
+      "Sendo cauteloso, acredito que, daqui a cinco anos, as empresas que não tiverem integrado automação com IA nos seus processos vão ficar para trás. Quero contribuir para essa mudança, criando produtos que viabilizem o negócio e liguem a tecnologia às necessidades reais das empresas.",
     contact: "Contacte-me",
   },
   en: {
     title:
-      "I build products that move AI out of the model and into the product.",
+      "I understand business from the inside. I build what moves it forward.",
     lead:
-      "I am an AI Engineer and Software Engineer. I work at the intersection of models, software, data and interfaces, turning AI capabilities into products people can actually use.",
+      "When I started learning about AI engineering, I had already worked across industry, logistics and manufacturing, as well as marketing and graphic design.",
     systems:
-      "I am especially interested in the point where technology stops being just a feature and starts taking part in decisions, investigation, execution and understanding. That is where I design architecture, validation, context, workflows and boundaries so the system remains useful and predictable.",
+      "I worked in warehousing, coordination, production and operations. Experiencing these environments firsthand was a privilege — and part of what sets me apart: I combine technical knowledge with practical experience to identify real needs and turn concrete problems into useful digital products.",
     freelance:
-      "I also build applications, websites and digital experiences end to end, combining engineering with product, UI and UX. The goal is always the same: create something technically solid, clear to use and ready to evolve.",
+      "Taking a cautious view, I believe that within five years, companies that have not integrated AI automation into their processes will risk falling behind. I want to contribute to that shift by building products that enable business and connect technology to real company needs.",
     contact: "Get in touch",
   },
   es: {
     title:
-      "Construyo productos que sacan la IA del modelo y la llevan al producto.",
+      "Conozco el negocio desde dentro. Construyo lo que lo hace avanzar.",
     lead:
-      "Soy AI Engineer y Software Engineer. Trabajo en la conexión entre modelos, software, datos e interfaces para convertir capacidades de IA en productos que las personas realmente puedan utilizar.",
+      "Cuando empecé a aprender ingeniería de IA, ya había pasado por distintas áreas de la industria, la logística y la manufactura, además del marketing y el diseño gráfico.",
     systems:
-      "Me interesa especialmente el punto en el que la tecnología deja de ser solo una feature y pasa a participar en decisiones, investigación, ejecución y comprensión. Ahí diseño arquitectura, validación, contexto, workflows y límites para que el sistema sea útil y predecible.",
+      "Trabajé en almacén, coordinación, producción y operaciones. Haber conocido estos entornos desde dentro fue un privilegio y es parte de lo que me diferencia: combino conocimientos técnicos con experiencia práctica para identificar necesidades reales y convertir problemas concretos en productos digitales útiles.",
     freelance:
-      "También desarrollo aplicaciones, sitios web y experiencias digitales de extremo a extremo, combinando ingeniería con producto, UI y UX. El objetivo es siempre el mismo: construir algo técnicamente sólido, claro para quien lo usa y preparado para evolucionar.",
+      "Con una visión prudente, creo que dentro de cinco años las empresas que no hayan integrado automatización con IA en sus procesos correrán el riesgo de quedarse atrás. Quiero contribuir a ese cambio creando productos que hagan avanzar el negocio y conecten la tecnología con necesidades reales.",
     contact: "Contactar",
   },
   de: {
     title:
-      "Ich entwickle Produkte, die KI aus dem Modell in das eigentliche Produkt bringen.",
+      "Ich kenne Unternehmen von innen. Ich entwickle, was sie voranbringt.",
     lead:
-      "Ich bin AI Engineer und Software Engineer. Ich verbinde Modelle, Software, Daten und Interfaces und übersetze KI-Fähigkeiten in Produkte, die Menschen tatsächlich nutzen können.",
+      "Als ich begann, mich mit KI-Engineering zu beschäftigen, hatte ich bereits in Industrie, Logistik und Fertigung sowie in Marketing und Grafikdesign gearbeitet.",
     systems:
-      "Besonders interessiert mich der Punkt, an dem Technologie nicht mehr nur eine Funktion ist, sondern Entscheidungen, Recherche, Ausführung und Verständnis unterstützt. Dort gestalte ich Architektur, Validierung, Kontext, Workflows und Grenzen, damit das System nützlich und vorhersehbar bleibt.",
+      "Ich habe in Lagerhaltung, Koordination, Produktion und operativen Abläufen gearbeitet. Diese Bereiche aus eigener Erfahrung kennenzulernen, war ein Privileg und ist Teil dessen, was mich unterscheidet: Ich verbinde technisches Wissen mit praktischer Erfahrung, um konkrete Bedürfnisse zu erkennen und in nützliche digitale Produkte zu übersetzen.",
     freelance:
-      "Ich entwickle außerdem Anwendungen, Websites und digitale Erlebnisse durchgängig und verbinde Engineering mit Produkt, UI und UX. Das Ziel bleibt gleich: technisch solide, klar nutzbar und für Weiterentwicklung vorbereitet.",
+      "Vorsichtig betrachtet glaube ich, dass Unternehmen in fünf Jahren zurückfallen werden, wenn sie bis dahin keine KI-Automatisierung in ihre Prozesse integriert haben. Ich möchte zu diesem Wandel beitragen und Produkte entwickeln, die Unternehmen voranbringen und Technologie mit realen Anforderungen verbinden.",
     contact: "Kontakt aufnehmen",
   },
 };
