@@ -3,7 +3,7 @@ import type { Language } from "@/lib/translations";
 export const projectSlugs = [
   "paypart",
   "liio",
-  "alta",
+  "opinsy",
 ] as const;
 
 export type ProjectSlug =
@@ -1956,7 +1956,7 @@ const liio: Record<
   },
 };
 
-const alta: Record<
+const opinsy: Record<
   Language,
   Omit<ProjectContent, "number">
 > = {
@@ -1964,644 +1964,267 @@ const alta: Record<
     card: {
       category: "",
       description:
-        "Plataforma de inteligência clínica com agente de IA que transforma contexto fragmentado em investigação estruturada, evidência e trabalho preparado para revisão profissional.",
+        "Plataforma de inteligência competitiva para marketing digital: transforma conteúdos e métricas em padrões, oportunidades e evidências para orientar decisões de marca.",
       tags: [
-        "Clinical AI",
-        "Agentic AI",
-        "Python",
-        "RAG",
+        "Competitive Intelligence",
+        "MarTech",
+        "AI / Data",
       ],
     },
 
     eyebrow:
-      "CLINICAL AI / AGENTIC WORKFLOWS",
+      "MARTECH / COMPETITIVE INTELLIGENCE",
 
-    title: "ALTA",
+    title: "OPINSY",
 
     subtitle:
-      "Inteligência clínica que investiga o caso antes de responder.",
+      "Entender o que move o conteúdo — e o que isso significa para a marca.",
 
     summary:
-      "A ALTA é uma plataforma de inteligência clínica criada para centralizar histórico, consultas, exames, documentos, medicação e evolução do paciente. O agente trabalha sobre esse contexto, identifica a informação necessária, seleciona ferramentas controladas, investiga o caso e prepara respostas estruturadas para revisão profissional.",
+      "A OPINSY é uma plataforma de inteligência competitiva para marketing digital. Organiza conteúdos públicos de concorrentes e dados da própria marca, relaciona temas, intenções e palavras-chave com sinais de desempenho e transforma recorrências em evidências consultáveis. Em vez de ficar por rankings de visualizações, procura explicar padrões e o que podem significar para a estratégia. O agente Liio permite explorar essa base por perguntas, consultar evidências e receber próximos passos com um nível de confiança explícito. O MVP está em desenvolvimento: análise assistida por IA, importação CSV, deteção de padrões, comparação competitiva e o agente já têm implementação no código; as integrações diretas oficiais com redes sociais e outros sistemas continuam planeadas.",
 
     overview: {
       role:
-        "AI Engineering / Product Architecture",
+        "Desenvolvimento de produto / IA e dados",
       type:
-        "Clinical AI / Agentic Workspace",
+        "Competitive Intelligence / MarTech",
       status:
-        "Em desenvolvimento",
+        "MVP em desenvolvimento",
     },
 
     problem: {
       title:
-        "A informação clínica existe. O problema é reuni-la a tempo de decidir.",
+        "Os dashboards mostram números. A estratégia precisa de explicar os padrões.",
 
       description:
-        "Prontuários, exames, PDFs, relatórios, notas, medicamentos e consultas anteriores podem estar dispersos entre diferentes fontes. A ALTA transforma esse material em contexto clínico estruturado, pesquisável e utilizável pelo profissional e pelo agente.",
+        "Visualizações, likes e engagement isolados não explicam por que certos temas, intenções ou formatos se repetem, nem se o resultado é consistente. Sem relacionar dados da própria marca com evidência competitiva e histórico, é fácil confundir uma publicação fora da curva com uma oportunidade replicável. A OPINSY procura ligar desempenho, contexto e evidência para apoiar uma leitura mais rigorosa.",
     },
 
     product: {
       title:
-        "Um agente que trabalha sobre o caso, não apenas sobre a pergunta.",
+        "Uma base de conhecimento competitiva, consultável por evidências.",
 
       description:
-        "O agente interpreta a solicitação, recupera o contexto do paciente, seleciona ferramentas específicas, executa operações controladas e combina os resultados antes de apresentar uma resposta. O profissional mantém a decisão final e ações críticas continuam sujeitas a confirmação explícita.",
+        "A OPINSY estrutura conteúdos e métricas por perfil e plataforma. A camada de análise organiza informação disponível em campos tipados — tema, intenção, audiência, proposta de valor, CTA e sinais visuais ou de áudio quando existe evidência adequada — e calcula indicadores quando os dados permitem. Os padrões recorrentes são comparados com os da própria marca; o agente Liio permite perguntar sobre essas relações, consultar evidências e explorar próximos passos. As conclusões orientam a investigação, sem tratar correlação como causalidade comprovada.",
 
       visuals: [
         {
           number: "01",
           label:
-            "ALTA / AGENT ORCHESTRATION",
-
-          title: "ALTA",
-
+            "OPINSY / INTELLIGENCE WORKSPACE",
+          title: "OPINSY",
           description:
-            "O agente recupera contexto, seleciona ferramentas e investiga o caso sem receber acesso irrestrito à infraestrutura ou às operações críticas.",
-
-          image: "/images/alta-one.png",
-
+            "A plataforma organiza conteúdos, métricas e sinais competitivos num contexto comum para análise de marketing.",
+          image: "/images/opin-1.png",
           alt:
-            "Orquestração do agente de inteligência clínica ALTA",
+            "Interface da plataforma de inteligência competitiva OPINSY",
         },
-
         {
           number: "02",
           label:
-            "ALTA / CLINICAL FLOW",
-
-          title: "ALTA",
-
+            "OPINSY / CONTENT ANALYSIS",
+          title: "Content Intelligence",
           description:
-            "Dados clínicos passam por processamento, estruturação, contexto, agente, ferramentas, validação, revisão profissional e auditoria.",
-
-          image: "/images/alta-two.png",
-
+            "Análise estruturada de cada publicação, preservando os dados disponíveis e distinguindo evidência de informação em falta.",
+          image: "/images/opin-2.png",
           alt:
-            "Fluxo de inteligência clínica da ALTA",
+            "Interface de análise de conteúdos da OPINSY",
         },
-
         {
           number: "03",
           label:
-            "ALTA / CLINICAL CONTEXT",
-
-          title: "ALTA",
-
+            "OPINSY / COMPETITOR INTELLIGENCE",
+          title: "Competitive Intelligence",
           description:
-            "Histórico, consultas, exames, medicação e documentos formam um contexto longitudinal sobre o qual o agente pode investigar alterações e produzir sínteses estruturadas.",
-
-          image: "/images/alta-tree.png",
-
+            "Comparação entre padrões observados nos concorrentes e os conteúdos da própria marca, para identificar semelhanças e lacunas.",
+          image: "/images/opin-3.png",
           alt:
-            "Contexto clínico longitudinal da ALTA",
+            "Interface de comparação de inteligência competitiva da OPINSY",
         },
-
         {
           number: "04",
           label:
-            "ALTA / AI ARCHITECTURE",
-
-          title: "ALTA",
-
+            "OPINSY / LIIO EVIDENCE ASSISTANT",
+          title: "Liio",
           description:
-            "Next.js comunica com FastAPI e um núcleo Python responsável por agentes, ferramentas, RAG, embeddings, documentos, validação e workflows.",
-
-          image: "/images/alta-four.png",
-
+            "O agente consulta padrões e evidências da base para responder a perguntas estratégicas e sugerir o próximo passo.",
+          image: "/images/opin-4.png",
           alt:
-            "Arquitetura de AI Engineering da plataforma ALTA",
+            "Interface do agente Liio na plataforma OPINSY",
         },
       ],
     },
 
     architecture: {
       title:
-        "O LLM interpreta. Python executa e orquestra.",
+        "Uma pipeline que separa dados, análise e interpretação.",
 
       description:
-        "A aplicação web funciona como camada de interação. FastAPI expõe os serviços Python; o agente coordena ferramentas controladas; RAG e embeddings recuperam contexto; PostgreSQL preserva dados e histórico. O software mantém regras, permissões e validação fora do modelo.",
+        "A aplicação Next.js com TypeScript utiliza Supabase para autenticação e PostgreSQL para persistir organizações, perfis, conteúdos, métricas, análises, padrões, evidências e conversas do agente, com Drizzle ORM como camada de acesso a dados. A análise atual usa o SDK da Groq e o modelo openai/gpt-oss-20b, com saída estruturada validada por Zod. Os indicadores derivados e os agrupamentos de padrões são calculados em código, enquanto Liio consulta inteligência e evidências através de ferramentas controladas. A estrutura prevê dados visuais e de áudio, mas o sistema não deve afirmar o que não esteja sustentado pela evidência disponível.",
 
       flow: [
-        "Next.js / React / TypeScript",
-        "FastAPI",
-        "Python AI Engine",
-        "AI Agent + Tool Orchestration",
-        "RAG / Embeddings / Documents",
-        "PostgreSQL / Supabase / pgvector",
+        "Perfis públicos e importação CSV",
+        "Normalização de conteúdos e métricas",
+        "PostgreSQL / Supabase + Drizzle ORM",
+        "Análise estruturada: Groq + Zod",
+        "Indicadores e padrões calculados em código",
+        "Comparação: concorrentes vs. marca",
+        "Liio: perguntas, evidências e próximos passos",
       ],
     },
 
     process: {
       title:
-        "Do contexto fragmentado à resposta estruturada e auditável.",
+        "Do conteúdo bruto à decisão informada.",
 
       description:
-        "O fluxo separa contexto clínico, interpretação do agente, execução de ferramentas, validação do software e decisão profissional.",
+        "O fluxo preserva a origem dos dados e separa observação, indicador, padrão e recomendação. A recolha direta por OAuth e outras integrações são etapas planeadas, não capacidades que o MVP deva apresentar como concluídas.",
 
       steps: [
         {
           number: "01",
           title:
-            "Contexto do paciente",
+            "Recolher e importar",
           description:
-            "Histórico, consultas, exames, documentos, medicação, sintomas e evolução são reunidos num contexto estruturado.",
+            "Perfis públicos podem ser registados e conteúdos e métricas podem entrar por CSV. A ligação direta oficial a Instagram e TikTok está planeada.",
         },
-
         {
           number: "02",
           title:
-            "Recuperação",
+            "Estruturar o contexto",
           description:
-            "O sistema identifica dados e documentos relevantes para a solicitação atual.",
+            "Cada registo associa plataforma, perfil, formato, legenda, data, permalink e métricas disponíveis, preservando o histórico relevante.",
         },
-
         {
           number: "03",
           title:
-            "Interpretação",
+            "Analisar com evidência",
           description:
-            "O agente compreende a pergunta e determina que informação ainda precisa investigar.",
+            "O modelo produz uma análise estruturada. A instrução e o esquema exigem que informação ausente seja assinalada como indisponível, em vez de inventada.",
         },
-
         {
           number: "04",
           title:
-            "Seleção de ferramentas",
+            "Calcular desempenho",
           description:
-            "O agente escolhe ferramentas de contexto, timeline, documentos, pesquisa, medicação, cálculos ou resumo.",
+            "O software calcula indicadores como engagement, reach, saves e shares quando existem dados suficientes e identifica as métricas em falta.",
         },
-
         {
           number: "05",
           title:
-            "Execução controlada",
+            "Detetar e comparar padrões",
           description:
-            "Funções Python executam as operações concretas. O LLM não recebe controlo irrestrito sobre a infraestrutura.",
+            "Temas, intenções e palavras-chave recorrentes são agrupados e relacionados com métricas disponíveis, permitindo comparar sinais da marca e dos concorrentes.",
         },
-
         {
           number: "06",
           title:
-            "RAG + evidência",
+            "Consultar com Liio",
           description:
-            "Documentos e fontes relevantes podem ser recuperados semanticamente para fundamentar a resposta.",
-        },
-
-        {
-          number: "07",
-          title:
-            "Validação",
-          description:
-            "Pydantic, Zod, regras, permissões e contratos verificam a estrutura e os limites do resultado.",
-        },
-
-        {
-          number: "08",
-          title:
-            "Revisão profissional",
-          description:
-            "O profissional confirma, altera ou rejeita a informação antes de qualquer ação sensível.",
-        },
-
-        {
-          number: "09",
-          title:
-            "Auditoria",
-          description:
-            "Tool calls, fontes, contexto recuperado, versões e decisões permanecem rastreáveis.",
+            "O agente responde com base em padrões e evidências registados, indicando confiança e uma possível próxima ação, sem substituir a avaliação estratégica.",
         },
       ],
     },
 
     decisions: {
       title:
-        "Autonomia do agente limitada pelo software.",
+        "Inteligência útil exige evidência, contexto e limites claros.",
 
       description:
-        "O LLM interpreta e raciocina; Python executa; ferramentas possuem limites claros; o software valida; o profissional mantém a decisão final.",
+        "O objetivo não é produzir mais um resumo automático, mas criar uma base comparável e rastreável que ajude a interpretar o comportamento competitivo.",
 
       items: [
         {
           number: "01",
           title:
-            "Python como núcleo da inteligência",
+            "Evidência antes da interpretação",
           description:
-            "Agentes, workflows, processamento documental, RAG, embeddings, cálculos, avaliação e ferramentas clínicas ficam concentrados na camada Python.",
+            "A análise deve usar apenas os dados fornecidos e explicitar quando falta informação textual, visual, áudio ou de desempenho.",
         },
-
         {
           number: "02",
           title:
-            "Ferramentas com responsabilidade específica",
+            "Métricas calculadas pelo software",
           description:
-            "O agente decide qual ferramenta utilizar, mas cada função tem operações explicitamente definidas pelo software.",
+            "Indicadores derivados são calculados por funções determinísticas, em vez de depender da estimativa livre do modelo.",
         },
-
         {
           number: "03",
           title:
-            "Outputs estruturados antes de texto livre",
+            "Recorrência não significa causalidade",
           description:
-            "Pydantic no backend e Zod na aplicação web validam contratos e formatos antes de os resultados entrarem no produto.",
+            "Os padrões representam sinais observados numa amostra; não provam, por si só, que um tema ou formato causou o desempenho.",
         },
-
         {
           number: "04",
           title:
-            "Human-in-the-loop nas ações críticas",
+            "Comparação com a própria marca",
           description:
-            "O fluxo mantém a sequência IA analisa → IA sugere → software valida → profissional confirma → sistema executa.",
+            "A leitura competitiva relaciona padrões dos concorrentes com padrões internos para revelar semelhanças, diferenças e lacunas.",
         },
-
         {
           number: "05",
           title:
-            "Arquitetura model-agnostic",
+            "Integrações com estado explícito",
           description:
-            "Modelos diferentes podem ser utilizados para extração, classificação, embeddings e raciocínio sem prender o produto a um único fornecedor.",
-        },
-
-        {
-          number: "06",
-          title:
-            "Observabilidade da IA",
-          description:
-            "Latência, custos, tokens, tool calls, erros, versões de prompts, modelos e resultados das ferramentas devem permanecer observáveis.",
+            "O catálogo distingue fontes disponíveis, como perfis públicos e CSV, de integrações OAuth com redes sociais, CRM, calendário e websites ainda planeadas.",
         },
       ],
     },
 
     stack: {
       title:
-        "Uma arquitetura de AI Engineering com Python no centro.",
+        "Uma stack web com análise assistida por IA e dados estruturados.",
 
       description:
-        "A stack separa aplicação web, serviços Python, agentes, retrieval, dados, validação e testes para manter o sistema controlável e evolutivo.",
+        "O MVP combina uma aplicação web, persistência relacional, validação de contratos e um núcleo de análise que separa a interpretação do modelo dos cálculos e das regras de negócio.",
 
       items: [
-        "Python",
-        "FastAPI",
-        "Pydantic",
-        "LangGraph / state machine",
-        "Next.js + React",
-        "TypeScript + Zod",
+        "Next.js 16.3.6",
+        "React 19.2.8",
+        "TypeScript 5",
         "PostgreSQL + Supabase",
-        "pgvector",
-        "RAG + Embeddings",
-        "PyMuPDF / pypdf",
-        "Docker",
-        "Pytest + Vitest + Playwright",
+        "Drizzle ORM",
+        "Groq SDK · openai/gpt-oss-20b",
+        "Zod 4",
+        "csv-parse",
+        "Supabase SSR Auth",
+        "Tailwind CSS 4",
       ],
     },
 
     results: {
       title:
-        "O núcleo técnico da ALTA está definido antes da implementação completa.",
+        "O que a implementação atual já demonstra.",
 
       description:
-        "Como o projeto está em arquitetura e construção de MVP, estes indicadores representam capacidades projetadas e decisões de engenharia, não métricas de produção.",
+        "O projeto continua em desenvolvimento. Estes pontos descrevem componentes presentes no código, não resultados comerciais nem métricas de produção.",
 
       items: [
         {
-          value: "9 TOOLS",
+          value: "CSV",
           label:
-            "Ferramentas previstas para contexto, timeline, documentos, evidência, cálculos, medicação, resumo, geração e auditoria",
+            "Importação validada de conteúdos e métricas históricas",
         },
-
         {
-          value: "HITL",
+          value: "GROQ + ZOD",
           label:
-            "Ações críticas dependem de confirmação profissional",
+            "Análise assistida por IA com saída estruturada e validada",
         },
-
         {
-          value:
-            "MODEL-AGNOSTIC",
+          value: "PATTERNS",
           label:
-            "Arquitetura preparada para diferentes modelos e fornecedores",
+            "Agrupamento de temas, intenções e palavras-chave recorrentes",
         },
-
         {
-          value: "RAG",
+          value: "COMPARAÇÃO",
           label:
-            "Recuperação de contexto clínico e documental antes da geração",
+            "Estrutura para comparar padrões da marca com padrões de concorrentes",
         },
-
         {
-          value: "AUDITÁVEL",
+          value: "LIIO",
           label:
-            "Tool calls, fontes, versões e decisões deixam rasto",
-        },
-      ],
-    },
-
-    links: {
-      github: null,
-      live: null,
-    },
-  },
-
-  es: {
-    card: {
-      category: "",
-      description:
-        "Plataforma de inteligencia clínica con agente de IA que transforma contexto fragmentado en investigación estructurada, evidencia y trabajo preparado para revisión profesional.",
-      tags: [
-        "Clinical AI",
-        "Agentic AI",
-        "Python",
-        "RAG",
-      ],
-    },
-
-    eyebrow:
-      "CLINICAL AI / AGENTIC WORKFLOWS",
-
-    title: "ALTA",
-
-    subtitle:
-      "Inteligencia clínica que investiga el caso antes de responder.",
-
-    summary:
-      "ALTA es una plataforma de inteligencia clínica diseñada para centralizar historial, consultas, exámenes, documentos, medicación y evolución del paciente. El agente trabaja sobre ese contexto, selecciona herramientas controladas, investiga el caso y prepara respuestas estructuradas para revisión profesional.",
-
-    overview: {
-      role:
-        "AI Engineering / Product Architecture",
-      type:
-        "Clinical AI / Agentic Workspace",
-      status:
-        "En desarrollo",
-    },
-
-    problem: {
-      title:
-        "La información clínica existe. El problema es reunirla a tiempo para decidir.",
-
-      description:
-        "Historias clínicas, exámenes, PDFs, informes, notas, medicación y consultas anteriores pueden quedar dispersos entre distintas fuentes. ALTA transforma ese material en contexto clínico estructurado y utilizable.",
-    },
-
-    product: {
-      title:
-        "Un agente que trabaja sobre el caso, no solo sobre la pregunta.",
-
-      description:
-        "El agente interpreta la solicitud, recupera el contexto del paciente, selecciona herramientas específicas, ejecuta operaciones controladas y combina los resultados antes de presentar una respuesta. El profesional mantiene la decisión final.",
-
-      visuals: [
-        {
-          number: "01",
-          label:
-            "ALTA / AGENT ORCHESTRATION",
-          title: "ALTA",
-          description:
-            "El agente recupera contexto, selecciona herramientas e investiga el caso sin recibir acceso irrestricto a infraestructura u operaciones críticas.",
-          image: "/images/alta-one.png",
-          alt:
-            "Orquestación del agente clínico de ALTA",
-        },
-
-        {
-          number: "02",
-          label:
-            "ALTA / CLINICAL FLOW",
-          title: "ALTA",
-          description:
-            "Los datos clínicos pasan por procesamiento, estructuración, contexto, agente, herramientas, validación, revisión profesional y auditoría.",
-          image: "/images/alta-two.png",
-          alt:
-            "Flujo de inteligencia clínica de ALTA",
-        },
-
-        {
-          number: "03",
-          label:
-            "ALTA / CLINICAL CONTEXT",
-          title: "ALTA",
-          description:
-            "Historial, consultas, exámenes, medicación y documentos forman un contexto longitudinal que el agente puede investigar.",
-          image: "/images/alta-tree.png",
-          alt:
-            "Contexto clínico longitudinal de ALTA",
-        },
-
-        {
-          number: "04",
-          label:
-            "ALTA / AI ARCHITECTURE",
-          title: "ALTA",
-          description:
-            "Next.js se comunica con FastAPI y un núcleo Python responsable de agentes, herramientas, RAG, embeddings, documentos y validación.",
-          image: "/images/alta-four.png",
-          alt:
-            "Arquitectura de AI Engineering de ALTA",
-        },
-      ],
-    },
-
-    architecture: {
-      title:
-        "El LLM interpreta. Python ejecuta y orquesta.",
-
-      description:
-        "La aplicación web funciona como capa de interacción. FastAPI expone servicios Python; el agente coordina herramientas controladas; RAG y embeddings recuperan contexto; PostgreSQL conserva datos e historial.",
-
-      flow: [
-        "Next.js / React / TypeScript",
-        "FastAPI",
-        "Python AI Engine",
-        "AI Agent + Tool Orchestration",
-        "RAG / Embeddings / Documents",
-        "PostgreSQL / Supabase / pgvector",
-      ],
-    },
-
-    process: {
-      title:
-        "Del contexto fragmentado a una respuesta estructurada y auditable.",
-
-      description:
-        "El flujo separa contexto clínico, interpretación del agente, ejecución de herramientas, validación del software y decisión profesional.",
-
-      steps: [
-        {
-          number: "01",
-          title:
-            "Contexto del paciente",
-          description:
-            "Historial, consultas, exámenes, documentos, medicación, síntomas y evolución se reúnen en un contexto estructurado.",
-        },
-        {
-          number: "02",
-          title:
-            "Recuperación",
-          description:
-            "El sistema identifica datos y documentos relevantes para la solicitud actual.",
-        },
-        {
-          number: "03",
-          title:
-            "Interpretación",
-          description:
-            "El agente comprende la pregunta y determina qué información necesita investigar.",
-        },
-        {
-          number: "04",
-          title:
-            "Selección de herramientas",
-          description:
-            "El agente elige herramientas de contexto, timeline, documentos, búsqueda, medicación, cálculos o resumen.",
-        },
-        {
-          number: "05",
-          title:
-            "Ejecución controlada",
-          description:
-            "Funciones Python ejecutan las operaciones concretas. El LLM no controla directamente la infraestructura.",
-        },
-        {
-          number: "06",
-          title:
-            "RAG + evidencia",
-          description:
-            "Documentos y fuentes relevantes se recuperan semánticamente antes de generar la respuesta.",
-        },
-        {
-          number: "07",
-          title:
-            "Validación",
-          description:
-            "Pydantic, Zod, reglas y permisos comprueban estructura y límites.",
-        },
-        {
-          number: "08",
-          title:
-            "Revisión profesional",
-          description:
-            "El profesional confirma, modifica o rechaza la información antes de una acción sensible.",
-        },
-        {
-          number: "09",
-          title:
-            "Auditoría",
-          description:
-            "Tool calls, fuentes, contexto, versiones y decisiones permanecen trazables.",
-        },
-      ],
-    },
-
-    decisions: {
-      title:
-        "Autonomía del agente limitada por el software.",
-
-      description:
-        "El LLM interpreta y razona; Python ejecuta; las herramientas tienen límites claros; el software valida y el profesional conserva la decisión final.",
-
-      items: [
-        {
-          number: "01",
-          title:
-            "Python como núcleo de inteligencia",
-          description:
-            "Agentes, workflows, documentos, RAG, embeddings, cálculos y evaluación se concentran en la capa Python.",
-        },
-        {
-          number: "02",
-          title:
-            "Herramientas con responsabilidad específica",
-          description:
-            "El agente decide qué herramienta usar, pero el software define exactamente qué puede hacer.",
-        },
-        {
-          number: "03",
-          title:
-            "Outputs estructurados",
-          description:
-            "Pydantic y Zod validan contratos antes de que los resultados entren en el producto.",
-        },
-        {
-          number: "04",
-          title:
-            "Human-in-the-loop",
-          description:
-            "IA analiza → IA sugiere → software valida → profesional confirma → sistema ejecuta.",
-        },
-        {
-          number: "05",
-          title:
-            "Arquitectura model-agnostic",
-          description:
-            "Modelos distintos pueden utilizarse para extracción, clasificación, embeddings y razonamiento.",
-        },
-        {
-          number: "06",
-          title:
-            "Observabilidad de IA",
-          description:
-            "Latencia, costes, tokens, tool calls, errores, prompts, modelos y resultados permanecen observables.",
-        },
-      ],
-    },
-
-    stack: {
-      title:
-        "Una arquitectura de AI Engineering con Python en el centro.",
-
-      description:
-        "La stack separa aplicación web, servicios Python, agentes, retrieval, datos, validación y pruebas.",
-
-      items: [
-        "Python",
-        "FastAPI",
-        "Pydantic",
-        "LangGraph / state machine",
-        "Next.js + React",
-        "TypeScript + Zod",
-        "PostgreSQL + Supabase",
-        "pgvector",
-        "RAG + Embeddings",
-        "PyMuPDF / pypdf",
-        "Docker",
-        "Pytest + Vitest + Playwright",
-      ],
-    },
-
-    results: {
-      title:
-        "El núcleo técnico de ALTA está definido antes de la implementación completa.",
-
-      description:
-        "Como el proyecto está en arquitectura y construcción del MVP, estos indicadores representan capacidades proyectadas y no métricas de producción.",
-
-      items: [
-        {
-          value: "9 TOOLS",
-          label:
-            "Herramientas previstas para contexto, timeline, documentos, evidencia, cálculos, medicación, resumen, generación y auditoría",
-        },
-        {
-          value: "HITL",
-          label:
-            "Las acciones críticas requieren confirmación profesional",
-        },
-        {
-          value:
-            "MODEL-AGNOSTIC",
-          label:
-            "Arquitectura preparada para distintos modelos y proveedores",
-        },
-        {
-          value: "RAG",
-          label:
-            "Recuperación de contexto clínico y documental antes de la generación",
-        },
-        {
-          value:
-            "AUDITABLE",
-          label:
-            "Tool calls, fuentes, versiones y decisiones permanecen trazables",
+            "Agente com respostas associadas a evidências, confiança e próxima ação",
         },
       ],
     },
@@ -2616,302 +2239,542 @@ const alta: Record<
     card: {
       category: "",
       description:
-        "Clinical intelligence platform with an AI agent that turns fragmented context into structured investigation, evidence and work prepared for professional review.",
+        "Competitive intelligence for digital marketing: turning content and metrics into patterns, opportunities and evidence for brand decisions.",
       tags: [
-        "Clinical AI",
-        "Agentic AI",
-        "Python",
-        "RAG",
+        "Competitive Intelligence",
+        "MarTech",
+        "AI / Data",
       ],
     },
 
     eyebrow:
-      "CLINICAL AI / AGENTIC WORKFLOWS",
+      "MARTECH / COMPETITIVE INTELLIGENCE",
 
-    title: "ALTA",
+    title: "OPINSY",
 
     subtitle:
-      "Clinical intelligence that investigates the case before answering.",
+      "Understand what moves content — and what it means for the brand.",
 
     summary:
-      "ALTA is a clinical intelligence platform designed to centralize patient history, consultations, exams, documents, medication and clinical evolution. The agent works over that context, identifies the information it needs, selects controlled tools, investigates the case and prepares structured responses for professional review.",
+      "OPINSY is a competitive-intelligence platform for digital marketing. It organizes public competitor content alongside a brand's own data, relates topics, intent and keywords to performance signals, and turns recurring observations into searchable evidence. Rather than stopping at view rankings, it aims to explain patterns and what they may mean for strategy. The Liio agent lets users query this knowledge base, inspect evidence and receive next steps with an explicit confidence level. The MVP is in development: AI-assisted analysis, CSV import, pattern detection, competitive comparison and the agent are represented in the code; direct official social integrations and connections to other systems remain planned.",
 
     overview: {
       role:
-        "AI Engineering / Product Architecture",
+        "Product development / AI and data",
       type:
-        "Clinical AI / Agentic Workspace",
+        "Competitive Intelligence / MarTech",
       status:
-        "In development",
+        "MVP in development",
     },
 
     problem: {
       title:
-        "The clinical information exists. The challenge is bringing it together in time to decide.",
+        "Dashboards show numbers. Strategy needs to explain the patterns.",
 
       description:
-        "Records, exams, PDFs, reports, notes, medication and previous consultations can be fragmented across different sources. ALTA transforms that material into structured, searchable clinical context.",
+        "Views, likes and engagement in isolation do not explain why certain topics, intents or formats recur, or whether a result is consistent. Without connecting a brand's own data with competitive evidence and historical context, an outlier can easily be mistaken for a repeatable opportunity. OPINSY aims to connect performance, context and evidence for more rigorous interpretation.",
     },
 
     product: {
       title:
-        "An agent that works on the case, not only on the question.",
+        "A competitive knowledge base that can be queried through evidence.",
 
       description:
-        "The agent interprets the request, retrieves patient context, selects specific tools, executes controlled operations and combines results before presenting a response. The professional retains final authority over sensitive decisions.",
+        "OPINSY structures content and metrics by profile and platform. Its analysis layer organizes available information into typed fields — topic, intent, audience, value proposition, CTA, and visual or audio signals when suitable evidence exists — and calculates indicators when the data supports them. Recurring patterns can be compared with a brand's own patterns; Liio lets users ask questions, inspect evidence and explore next steps. Findings guide investigation without treating correlation as proven causality.",
 
       visuals: [
         {
           number: "01",
           label:
-            "ALTA / AGENT ORCHESTRATION",
-          title: "ALTA",
+            "OPINSY / INTELLIGENCE WORKSPACE",
+          title: "OPINSY",
           description:
-            "The agent retrieves context, selects tools and investigates the case without unrestricted access to infrastructure or critical operations.",
-          image: "/images/alta-one.png",
+            "The platform brings content, metrics and competitive signals into a shared marketing-intelligence context.",
+          image: "/images/opin-1.png",
           alt:
-            "ALTA clinical AI agent orchestration",
+            "OPINSY competitive intelligence platform interface",
         },
-
         {
           number: "02",
           label:
-            "ALTA / CLINICAL FLOW",
-          title: "ALTA",
+            "OPINSY / CONTENT ANALYSIS",
+          title: "Content Intelligence",
           description:
-            "Clinical data moves through processing, structuring, context, agent tools, validation, professional review and audit.",
-          image: "/images/alta-two.png",
+            "Structured content analysis that preserves available data and distinguishes evidence from missing information.",
+          image: "/images/opin-2.png",
           alt:
-            "ALTA clinical intelligence flow",
+            "OPINSY content analysis interface",
         },
-
         {
           number: "03",
           label:
-            "ALTA / CLINICAL CONTEXT",
-          title: "ALTA",
+            "OPINSY / COMPETITOR INTELLIGENCE",
+          title: "Competitive Intelligence",
           description:
-            "History, consultations, exams, medication and documents form a longitudinal context the agent can investigate.",
-          image: "/images/alta-tree.png",
+            "Comparing observed competitor patterns with a brand's own content to identify similarities and gaps.",
+          image: "/images/opin-3.png",
           alt:
-            "ALTA longitudinal clinical context",
+            "OPINSY competitive intelligence comparison interface",
         },
-
         {
           number: "04",
           label:
-            "ALTA / AI ARCHITECTURE",
-          title: "ALTA",
+            "OPINSY / LIIO EVIDENCE ASSISTANT",
+          title: "Liio",
           description:
-            "Next.js communicates with FastAPI and a Python core responsible for agents, tools, RAG, embeddings, document processing, validation and workflows.",
-          image: "/images/alta-four.png",
+            "The Liio agent explores patterns and evidence through natural-language strategic questions.",
+          image: "/images/opin-4.png",
           alt:
-            "ALTA AI Engineering architecture",
+            "Liio agent interface within OPINSY",
         },
       ],
     },
 
     architecture: {
       title:
-        "The LLM interprets. Python executes and orchestrates.",
+        "A pipeline that separates data, analysis and interpretation.",
 
       description:
-        "The web application is the interaction layer. FastAPI exposes Python services; the agent coordinates controlled tools; RAG and embeddings retrieve context; PostgreSQL preserves data and history. Rules, permissions and validation remain outside the model.",
+        "The Next.js and TypeScript application uses Supabase for authentication and PostgreSQL to persist organizations, profiles, content, metrics, analyses, patterns, evidence and agent conversations, with Drizzle ORM as the data-access layer. Current analysis uses the Groq SDK and the openai/gpt-oss-20b model, with structured output validated by Zod. Derived indicators and pattern grouping are calculated in code, while Liio queries intelligence and evidence through controlled tools. The data model includes visual and audio fields, but the system should only claim what the available evidence supports.",
 
       flow: [
-        "Next.js / React / TypeScript",
-        "FastAPI",
-        "Python AI Engine",
-        "AI Agent + Tool Orchestration",
-        "RAG / Embeddings / Documents",
-        "PostgreSQL / Supabase / pgvector",
+        "Public profiles and CSV import",
+        "Content and metric normalization",
+        "PostgreSQL / Supabase + Drizzle ORM",
+        "Structured analysis: Groq + Zod",
+        "Indicators and patterns calculated in code",
+        "Comparison: competitors vs. brand",
+        "Liio: questions, evidence and next steps",
       ],
     },
 
     process: {
       title:
-        "From fragmented context to a structured, auditable response.",
+        "From raw content to informed decisions.",
 
       description:
-        "The flow separates clinical context, agent interpretation, tool execution, software validation and professional decision-making.",
+        "The workflow preserves data provenance and separates observations, indicators, patterns and recommendations. Direct OAuth collection and other integrations remain planned work, not completed MVP capabilities.",
 
       steps: [
         {
           number: "01",
           title:
-            "Patient context",
+            "Collect and import",
           description:
-            "History, consultations, exams, documents, medication, symptoms and clinical evolution are assembled into structured context.",
+            "Public profiles can be registered and content and metrics can be imported through CSV. Direct official connections to Instagram and TikTok are planned.",
         },
         {
           number: "02",
           title:
-            "Retrieval",
+            "Structure the context",
           description:
-            "The system identifies data and documents relevant to the current request.",
+            "Each record connects platform, profile, format, caption, publication date, permalink and available metrics, preserving relevant history.",
         },
         {
           number: "03",
           title:
-            "Interpretation",
+            "Analyze with evidence",
           description:
-            "The agent understands the request and determines what information still needs investigation.",
+            "The model returns structured analysis. The prompt and schema require missing information to be marked unavailable rather than invented.",
         },
         {
           number: "04",
           title:
-            "Tool selection",
+            "Calculate performance",
           description:
-            "The agent chooses context, timeline, document, search, medication, calculation or summary tools.",
+            "The software calculates engagement, reach, save and share indicators when enough data exists, and identifies missing metrics.",
         },
         {
           number: "05",
           title:
-            "Controlled execution",
+            "Detect and compare patterns",
           description:
-            "Python functions execute concrete operations. The LLM does not receive unrestricted control over infrastructure.",
+            "Recurring topics, intents and keywords are grouped and related to available metrics, enabling comparisons between brand and competitor signals.",
         },
         {
           number: "06",
           title:
-            "RAG + evidence",
+            "Query with Liio",
           description:
-            "Relevant documents and authorized sources can be retrieved semantically before generation.",
-        },
-        {
-          number: "07",
-          title:
-            "Validation",
-          description:
-            "Pydantic, Zod, rules, permissions and contracts check structure and boundaries.",
-        },
-        {
-          number: "08",
-          title:
-            "Professional review",
-          description:
-            "The professional confirms, edits or rejects information before any sensitive action.",
-        },
-        {
-          number: "09",
-          title:
-            "Audit",
-          description:
-            "Tool calls, sources, retrieved context, versions and decisions remain traceable.",
+            "The agent answers from recorded patterns and evidence, provides a confidence level and suggests a possible next action without replacing strategic judgment.",
         },
       ],
     },
 
     decisions: {
       title:
-        "Agent autonomy constrained by software.",
+        "Useful intelligence requires evidence, context and clear boundaries.",
 
       description:
-        "The LLM interprets and reasons; Python executes; tools have explicit boundaries; software validates; the professional retains final authority.",
+        "The goal is not another automated summary, but a comparable and traceable knowledge base that helps interpret competitive behavior.",
 
       items: [
         {
           number: "01",
           title:
-            "Python as the intelligence core",
+            "Evidence before interpretation",
           description:
-            "Agents, workflows, document processing, RAG, embeddings, calculations, evaluation and clinical tools primarily live in Python.",
+            "Analysis should use only supplied data and state when text, visual, audio or performance evidence is missing.",
         },
         {
           number: "02",
           title:
-            "Tools with explicit responsibilities",
+            "Metrics calculated by software",
           description:
-            "The agent decides which tool to use, while software defines exactly what each function is allowed to do.",
+            "Derived indicators are calculated deterministically instead of relying on free-form model estimates.",
         },
         {
           number: "03",
           title:
-            "Structured outputs before free text",
+            "Recurrence is not causality",
           description:
-            "Pydantic and Zod validate contracts before results enter the product.",
+            "Patterns are signals observed in a sample; they do not prove that a topic or format caused performance.",
         },
         {
           number: "04",
           title:
-            "Human-in-the-loop for critical actions",
+            "Compare against the brand",
           description:
-            "AI analyzes → AI suggests → software validates → professional confirms → system executes.",
+            "Competitive analysis relates competitor patterns to internal patterns to reveal similarities, differences and gaps.",
         },
         {
           number: "05",
           title:
-            "Model-agnostic architecture",
+            "Integrations have explicit status",
           description:
-            "Different models can be selected for extraction, classification, embeddings and reasoning without locking the product to one provider.",
-        },
-        {
-          number: "06",
-          title:
-            "AI observability",
-          description:
-            "Latency, cost, tokens, tool calls, errors, prompt versions, model versions and tool results remain observable.",
+            "The catalog distinguishes available sources, such as public profiles and CSV, from planned OAuth integrations with social networks, CRM, calendar and websites.",
         },
       ],
     },
 
     stack: {
       title:
-        "An AI Engineering architecture with Python at the core.",
+        "A web stack with AI-assisted analysis and structured data.",
 
       description:
-        "The stack separates the web application, Python services, agents, retrieval, data, validation and testing so the system remains controlled and evolvable.",
+        "The MVP combines a web application, relational persistence, contract validation and an analysis core that separates model interpretation from calculations and business rules.",
 
       items: [
-        "Python",
-        "FastAPI",
-        "Pydantic",
-        "LangGraph / state machine",
-        "Next.js + React",
-        "TypeScript + Zod",
+        "Next.js 16.3.6",
+        "React 19.2.8",
+        "TypeScript 5",
         "PostgreSQL + Supabase",
-        "pgvector",
-        "RAG + Embeddings",
-        "PyMuPDF / pypdf",
-        "Docker",
-        "Pytest + Vitest + Playwright",
+        "Drizzle ORM",
+        "Groq SDK · openai/gpt-oss-20b",
+        "Zod 4",
+        "csv-parse",
+        "Supabase SSR Auth",
+        "Tailwind CSS 4",
       ],
     },
 
     results: {
       title:
-        "ALTA's technical core is defined before full implementation.",
+        "What the current implementation demonstrates.",
 
       description:
-        "Because the project is currently in architecture and MVP construction, these indicators represent planned capabilities and engineering decisions rather than production metrics.",
+        "The project is still in development. These points describe components present in the code, not commercial outcomes or production metrics.",
 
       items: [
         {
-          value: "9 TOOLS",
+          value: "CSV",
           label:
-            "Planned tools for context, timeline, documents, evidence, calculations, medication, summaries, generation and audit",
+            "Validated import of historical content and metrics",
         },
         {
-          value: "HITL",
+          value: "GROQ + ZOD",
           label:
-            "Critical actions depend on professional confirmation",
+            "AI-assisted analysis with structured, validated output",
         },
         {
-          value:
-            "MODEL-AGNOSTIC",
+          value: "PATTERNS",
           label:
-            "Architecture prepared for different models and providers",
+            "Grouping recurring topics, intents and keywords",
         },
         {
-          value: "RAG",
+          value: "COMPARISON",
           label:
-            "Clinical and document context retrieval before generation",
+            "Structure for comparing brand patterns with competitor patterns",
         },
         {
-          value:
-            "AUDITABLE",
+          value: "LIIO",
           label:
-            "Tool calls, sources, versions and decisions remain traceable",
+            "Agent responses connected to evidence, confidence and next action",
+        },
+      ],
+    },
+
+    links: {
+      github: null,
+      live: null,
+    },
+  },
+
+  es: {
+    card: {
+      category: "",
+      description:
+        "Inteligencia competitiva para marketing digital: convierte contenidos y métricas en patrones, oportunidades y evidencias para orientar decisiones de marca.",
+      tags: [
+        "Competitive Intelligence",
+        "MarTech",
+        "AI / Data",
+      ],
+    },
+
+    eyebrow:
+      "MARTECH / COMPETITIVE INTELLIGENCE",
+
+    title: "OPINSY",
+
+    subtitle:
+      "Entender qué mueve el contenido y qué significa para la marca.",
+
+    summary:
+      "OPINSY es una plataforma de inteligencia competitiva para marketing digital. Organiza contenidos públicos de competidores junto con datos de la propia marca, relaciona temas, intención y palabras clave con señales de rendimiento y convierte observaciones recurrentes en evidencias consultables. En lugar de limitarse a clasificar visualizaciones, busca explicar patrones y su posible significado estratégico. El agente Liio permite consultar esta base, revisar evidencias y recibir próximos pasos con un nivel de confianza explícito. El MVP sigue en desarrollo: el código ya incluye análisis asistido por IA, importación CSV, detección de patrones, comparación competitiva y el agente; las integraciones sociales oficiales directas y las conexiones con otros sistemas siguen planificadas.",
+
+    overview: {
+      role:
+        "Desarrollo de producto / IA y datos",
+      type:
+        "Competitive Intelligence / MarTech",
+      status:
+        "MVP en desarrollo",
+    },
+
+    problem: {
+      title:
+        "Los dashboards muestran cifras. La estrategia necesita explicar los patrones.",
+
+      description:
+        "Las visualizaciones, los likes y el engagement por sí solos no explican por qué se repiten ciertos temas, intenciones o formatos, ni si el resultado es consistente. Sin conectar los datos de la marca con evidencias competitivas e histórico, es fácil confundir una publicación atípica con una oportunidad repetible. OPINSY busca conectar rendimiento, contexto y evidencia para una interpretación más rigurosa.",
+    },
+
+    product: {
+      title:
+        "Una base de conocimiento competitiva que se consulta mediante evidencias.",
+
+      description:
+        "OPINSY estructura contenidos y métricas por perfil y plataforma. Su capa de análisis organiza la información disponible en campos tipados —tema, intención, audiencia, propuesta de valor, CTA y señales visuales o de audio cuando existe evidencia adecuada— y calcula indicadores cuando los datos lo permiten. Los patrones recurrentes se pueden comparar con los de la propia marca; Liio permite hacer preguntas, consultar evidencias y explorar próximos pasos. Los hallazgos orientan la investigación sin tratar la correlación como causalidad demostrada.",
+
+      visuals: [
+        {
+          number: "01",
+          label:
+            "OPINSY / INTELLIGENCE WORKSPACE",
+          title: "OPINSY",
+          description:
+            "La plataforma reúne contenidos, métricas y señales competitivas en un contexto común de inteligencia de marketing.",
+          image: "/images/opin-1.png",
+          alt:
+            "Interfaz de la plataforma de inteligencia competitiva OPINSY",
+        },
+        {
+          number: "02",
+          label:
+            "OPINSY / CONTENT ANALYSIS",
+          title: "Content Intelligence",
+          description:
+            "Análisis estructurado de contenidos que conserva los datos disponibles y distingue evidencia de información ausente.",
+          image: "/images/opin-2.png",
+          alt:
+            "Interfaz de análisis de contenidos de OPINSY",
+        },
+        {
+          number: "03",
+          label:
+            "OPINSY / COMPETITOR INTELLIGENCE",
+          title: "Competitive Intelligence",
+          description:
+            "Comparación entre patrones observados en competidores y el contenido de la propia marca para identificar similitudes y brechas.",
+          image: "/images/opin-3.png",
+          alt:
+            "Interfaz de comparación de inteligencia competitiva de OPINSY",
+        },
+        {
+          number: "04",
+          label:
+            "OPINSY / LIIO EVIDENCE ASSISTANT",
+          title: "Liio",
+          description:
+            "El agente Liio explora patrones y evidencias mediante preguntas estratégicas en lenguaje natural.",
+          image: "/images/opin-4.png",
+          alt:
+            "Interfaz del agente Liio en OPINSY",
+        },
+      ],
+    },
+
+    architecture: {
+      title:
+        "Una pipeline que separa datos, análisis e interpretación.",
+
+      description:
+        "La aplicación Next.js con TypeScript utiliza Supabase para autenticación y PostgreSQL para almacenar organizaciones, perfiles, contenidos, métricas, análisis, patrones, evidencias y conversaciones del agente, con Drizzle ORM como capa de acceso a datos. El análisis actual usa el SDK de Groq y el modelo openai/gpt-oss-20b, con salida estructurada validada por Zod. Los indicadores derivados y la agrupación de patrones se calculan en código, mientras Liio consulta inteligencia y evidencias mediante herramientas controladas. El modelo de datos incluye campos visuales y de audio, pero el sistema solo debe afirmar lo que respalda la evidencia disponible.",
+
+      flow: [
+        "Perfiles públicos e importación CSV",
+        "Normalización de contenidos y métricas",
+        "PostgreSQL / Supabase + Drizzle ORM",
+        "Análisis estructurado: Groq + Zod",
+        "Indicadores y patrones calculados en código",
+        "Comparación: competidores vs. marca",
+        "Liio: preguntas, evidencias y próximos pasos",
+      ],
+    },
+
+    process: {
+      title:
+        "Del contenido bruto a decisiones informadas.",
+
+      description:
+        "El flujo conserva la procedencia de los datos y separa observación, indicador, patrón y recomendación. La recopilación directa por OAuth y otras integraciones siguen siendo trabajo planificado, no capacidades terminadas del MVP.",
+
+      steps: [
+        {
+          number: "01",
+          title:
+            "Recopilar e importar",
+          description:
+            "Se pueden registrar perfiles públicos e importar contenidos y métricas mediante CSV. Las conexiones oficiales directas con Instagram y TikTok están planificadas.",
+        },
+        {
+          number: "02",
+          title:
+            "Estructurar el contexto",
+          description:
+            "Cada registro conecta plataforma, perfil, formato, descripción, fecha, permalink y métricas disponibles, conservando el historial relevante.",
+        },
+        {
+          number: "03",
+          title:
+            "Analizar con evidencias",
+          description:
+            "El modelo devuelve un análisis estructurado. Las instrucciones y el esquema exigen marcar la información ausente como no disponible, en lugar de inventarla.",
+        },
+        {
+          number: "04",
+          title:
+            "Calcular el rendimiento",
+          description:
+            "El software calcula indicadores de engagement, alcance, guardados y compartidos cuando hay datos suficientes e identifica métricas ausentes.",
+        },
+        {
+          number: "05",
+          title:
+            "Detectar y comparar patrones",
+          description:
+            "Los temas, intenciones y palabras clave recurrentes se agrupan y relacionan con las métricas disponibles para comparar señales de la marca y de los competidores.",
+        },
+        {
+          number: "06",
+          title:
+            "Consultar con Liio",
+          description:
+            "El agente responde a partir de patrones y evidencias registradas, indica un nivel de confianza y sugiere un posible siguiente paso sin sustituir el criterio estratégico.",
+        },
+      ],
+    },
+
+    decisions: {
+      title:
+        "La inteligencia útil necesita evidencia, contexto y límites claros.",
+
+      description:
+        "El objetivo no es producir otro resumen automático, sino crear una base de conocimiento comparable y trazable para interpretar el comportamiento competitivo.",
+
+      items: [
+        {
+          number: "01",
+          title:
+            "Evidencia antes de interpretación",
+          description:
+            "El análisis debe usar solo los datos suministrados e indicar cuándo falta evidencia textual, visual, de audio o de rendimiento.",
+        },
+        {
+          number: "02",
+          title:
+            "Métricas calculadas por software",
+          description:
+            "Los indicadores derivados se calculan de forma determinista, sin depender de estimaciones libres del modelo.",
+        },
+        {
+          number: "03",
+          title:
+            "Recurrencia no significa causalidad",
+          description:
+            "Los patrones son señales observadas en una muestra; por sí solos no prueban que un tema o formato haya causado el rendimiento.",
+        },
+        {
+          number: "04",
+          title:
+            "Comparación con la propia marca",
+          description:
+            "El análisis relaciona patrones de competidores con patrones internos para revelar similitudes, diferencias y brechas.",
+        },
+        {
+          number: "05",
+          title:
+            "Estado explícito de las integraciones",
+          description:
+            "El catálogo distingue fuentes disponibles, como perfiles públicos y CSV, de las integraciones OAuth planificadas para redes sociales, CRM, calendario y sitios web.",
+        },
+      ],
+    },
+
+    stack: {
+      title:
+        "Una stack web con análisis asistido por IA y datos estructurados.",
+
+      description:
+        "El MVP combina una aplicación web, persistencia relacional, validación de contratos y un núcleo analítico que separa la interpretación del modelo de los cálculos y las reglas de negocio.",
+
+      items: [
+        "Next.js 16.3.6",
+        "React 19.2.8",
+        "TypeScript 5",
+        "PostgreSQL + Supabase",
+        "Drizzle ORM",
+        "Groq SDK · openai/gpt-oss-20b",
+        "Zod 4",
+        "csv-parse",
+        "Supabase SSR Auth",
+        "Tailwind CSS 4",
+      ],
+    },
+
+    results: {
+      title:
+        "Lo que demuestra la implementación actual.",
+
+      description:
+        "El proyecto sigue en desarrollo. Estos puntos describen componentes presentes en el código, no resultados comerciales ni métricas de producción.",
+
+      items: [
+        {
+          value: "CSV",
+          label:
+            "Importación validada de contenidos y métricas históricas",
+        },
+        {
+          value: "GROQ + ZOD",
+          label:
+            "Análisis asistido por IA con salida estructurada y validada",
+        },
+        {
+          value: "PATTERNS",
+          label:
+            "Agrupación de temas, intenciones y palabras clave recurrentes",
+        },
+        {
+          value: "COMPARACIÓN",
+          label:
+            "Estructura para comparar patrones de marca y competidores",
+        },
+        {
+          value: "LIIO",
+          label:
+            "Respuestas del agente vinculadas a evidencias, confianza y siguiente acción",
         },
       ],
     },
@@ -2926,302 +2789,267 @@ const alta: Record<
     card: {
       category: "",
       description:
-        "Plattform für klinische Intelligenz mit KI-Agent, die fragmentierten Kontext in strukturierte Untersuchung, Evidenz und professionell zu prüfende Arbeit überführt.",
+        "Wettbewerbsintelligenz für digitales Marketing: Inhalte und Kennzahlen werden zu Mustern, Chancen und nachvollziehbaren Entscheidungsgrundlagen.",
       tags: [
-        "Clinical AI",
-        "Agentic AI",
-        "Python",
-        "RAG",
+        "Competitive Intelligence",
+        "MarTech",
+        "AI / Data",
       ],
     },
 
     eyebrow:
-      "CLINICAL AI / AGENTIC WORKFLOWS",
+      "MARTECH / COMPETITIVE INTELLIGENCE",
 
-    title: "ALTA",
+    title: "OPINSY",
 
     subtitle:
-      "Klinische Intelligenz, die den Fall untersucht, bevor sie antwortet.",
+      "Verstehen, was Inhalte bewegt — und was das für die Marke bedeutet.",
 
     summary:
-      "ALTA ist eine Plattform für klinische Intelligenz, die Patientenhistorie, Konsultationen, Untersuchungen, Dokumente, Medikation und klinische Entwicklung zentralisiert. Der Agent arbeitet auf diesem Kontext, wählt kontrollierte Tools aus, untersucht den Fall und bereitet strukturierte Antworten zur professionellen Prüfung vor.",
+      "OPINSY ist eine Plattform für Wettbewerbsintelligenz im digitalen Marketing. Sie strukturiert öffentliche Wettbewerberinhalte und Daten der eigenen Marke, verknüpft Themen, Absichten und Keywords mit Leistungssignalen und macht wiederkehrende Beobachtungen als Evidenz abfragbar. Statt nur Aufrufzahlen zu sortieren, soll sie Muster und deren mögliche strategische Bedeutung erklären. Der Liio-Agent ermöglicht Fragen an diese Wissensbasis, den Zugriff auf Evidenz und nächste Schritte mit expliziter Konfidenz. Das MVP befindet sich in Entwicklung: KI-gestützte Analyse, CSV-Import, Mustererkennung, Wettbewerbsvergleich und der Agent sind im Code angelegt; direkte offizielle Social-Media-Integrationen und Verbindungen zu weiteren Systemen sind weiterhin geplant.",
 
     overview: {
       role:
-        "AI Engineering / Product Architecture",
+        "Produktentwicklung / KI und Daten",
       type:
-        "Clinical AI / Agentic Workspace",
+        "Competitive Intelligence / MarTech",
       status:
-        "In Entwicklung",
+        "MVP in Entwicklung",
     },
 
     problem: {
       title:
-        "Die klinischen Informationen existieren. Die Herausforderung ist, sie rechtzeitig für eine Entscheidung zusammenzuführen.",
+        "Dashboards zeigen Zahlen. Strategie muss Muster erklären.",
 
       description:
-        "Patientenakten, Untersuchungen, PDFs, Berichte, Notizen, Medikation und frühere Konsultationen können über verschiedene Quellen verteilt sein. ALTA überführt dieses Material in strukturierten, durchsuchbaren klinischen Kontext.",
+        "Aufrufe, Likes und Engagement allein erklären nicht, warum bestimmte Themen, Absichten oder Formate wiederkehren oder ob ein Ergebnis stabil ist. Ohne die Daten der eigenen Marke mit Wettbewerbsbelegen und historischem Kontext zu verbinden, wird ein Ausreißer leicht mit einer wiederholbaren Chance verwechselt. OPINSY soll Leistung, Kontext und Evidenz für eine fundiertere Interpretation verbinden.",
     },
 
     product: {
       title:
-        "Ein Agent, der am Fall arbeitet und nicht nur auf die Frage antwortet.",
+        "Eine Wettbewerbs-Wissensbasis, die über Evidenz abgefragt werden kann.",
 
       description:
-        "Der Agent interpretiert die Anfrage, ruft Patientenkontext ab, wählt spezifische Tools, führt kontrollierte Operationen aus und kombiniert Ergebnisse. Die endgültige Autorität bleibt beim medizinischen Fachpersonal.",
+        "OPINSY strukturiert Inhalte und Kennzahlen nach Profil und Plattform. Die Analyseschicht ordnet verfügbare Informationen in typisierte Felder ein — Thema, Absicht, Zielgruppe, Wertversprechen, CTA sowie visuelle oder Audio-Signale, wenn geeignete Evidenz vorliegt — und berechnet Kennzahlen, sofern die Daten dies erlauben. Wiederkehrende Muster können mit den Mustern der eigenen Marke verglichen werden; Liio beantwortet Fragen, erschließt Evidenz und zeigt mögliche nächste Schritte. Erkenntnisse unterstützen die Untersuchung, ohne Korrelation als bewiesene Kausalität auszugeben.",
 
       visuals: [
         {
           number: "01",
           label:
-            "ALTA / AGENT ORCHESTRATION",
-          title: "ALTA",
+            "OPINSY / INTELLIGENCE WORKSPACE",
+          title: "OPINSY",
           description:
-            "Der Agent ruft Kontext ab, wählt Tools und untersucht den Fall ohne uneingeschränkten Zugriff auf Infrastruktur oder kritische Operationen.",
-          image: "/images/alta-one.png",
+            "Die Plattform führt Inhalte, Kennzahlen und Wettbewerbssignale in einem gemeinsamen Marketing-Intelligence-Kontext zusammen.",
+          image: "/images/opin-1.png",
           alt:
-            "ALTA Orchestrierung des klinischen KI-Agenten",
+            "Oberfläche der Wettbewerbsintelligenz-Plattform OPINSY",
         },
-
         {
           number: "02",
           label:
-            "ALTA / CLINICAL FLOW",
-          title: "ALTA",
+            "OPINSY / CONTENT ANALYSIS",
+          title: "Content Intelligence",
           description:
-            "Klinische Daten durchlaufen Verarbeitung, Strukturierung, Kontext, Agent-Tools, Validierung, professionelle Prüfung und Audit.",
-          image: "/images/alta-two.png",
+            "Strukturierte Inhaltsanalyse, die verfügbare Daten bewahrt und Evidenz von fehlenden Informationen unterscheidet.",
+          image: "/images/opin-2.png",
           alt:
-            "ALTA Ablauf klinischer Intelligenz",
+            "Oberfläche der Inhaltsanalyse von OPINSY",
         },
-
         {
           number: "03",
           label:
-            "ALTA / CLINICAL CONTEXT",
-          title: "ALTA",
+            "OPINSY / COMPETITOR INTELLIGENCE",
+          title: "Competitive Intelligence",
           description:
-            "Historie, Konsultationen, Untersuchungen, Medikation und Dokumente bilden einen longitudinalen Kontext für die Untersuchung durch den Agenten.",
-          image: "/images/alta-tree.png",
+            "Vergleich beobachteter Wettbewerbermuster mit eigenen Inhalten, um Gemeinsamkeiten und Lücken zu erkennen.",
+          image: "/images/opin-3.png",
           alt:
-            "ALTA longitudinaler klinischer Kontext",
+            "Oberfläche des Wettbewerbsvergleichs in OPINSY",
         },
-
         {
           number: "04",
           label:
-            "ALTA / AI ARCHITECTURE",
-          title: "ALTA",
+            "OPINSY / LIIO EVIDENCE ASSISTANT",
+          title: "Liio",
           description:
-            "Next.js kommuniziert mit FastAPI und einem Python-Kern für Agenten, Tools, RAG, Embeddings, Dokumentverarbeitung, Validierung und Workflows.",
-          image: "/images/alta-four.png",
+            "Der Liio-Agent untersucht Muster und Evidenz anhand strategischer Fragen in natürlicher Sprache.",
+          image: "/images/opin-4.png",
           alt:
-            "ALTA AI-Engineering-Architektur",
+            "Oberfläche des Liio-Agenten in OPINSY",
         },
       ],
     },
 
     architecture: {
       title:
-        "Das LLM interpretiert. Python führt aus und orchestriert.",
+        "Eine Pipeline, die Daten, Analyse und Interpretation trennt.",
 
       description:
-        "Die Webanwendung ist die Interaktionsschicht. FastAPI stellt Python-Dienste bereit; der Agent koordiniert kontrollierte Tools; RAG und Embeddings rufen Kontext ab; PostgreSQL bewahrt Daten und Historie. Regeln, Berechtigungen und Validierung bleiben außerhalb des Modells.",
+        "Die Next.js- und TypeScript-Anwendung nutzt Supabase für Authentifizierung und PostgreSQL zur Speicherung von Organisationen, Profilen, Inhalten, Kennzahlen, Analysen, Mustern, Evidenz und Agentengesprächen; Drizzle ORM bildet die Datenzugriffsschicht. Die aktuelle Analyse verwendet das Groq SDK und das Modell openai/gpt-oss-20b mit strukturierter, durch Zod validierter Ausgabe. Abgeleitete Kennzahlen und Mustergruppen werden im Code berechnet, während Liio über kontrollierte Tools auf Intelligence und Evidenz zugreift. Das Datenmodell enthält Felder für visuelle und Audio-Daten, doch das System darf nur Aussagen treffen, die durch verfügbare Evidenz gestützt sind.",
 
       flow: [
-        "Next.js / React / TypeScript",
-        "FastAPI",
-        "Python AI Engine",
-        "AI Agent + Tool Orchestration",
-        "RAG / Embeddings / Documents",
-        "PostgreSQL / Supabase / pgvector",
+        "Öffentliche Profile und CSV-Import",
+        "Normalisierung von Inhalten und Kennzahlen",
+        "PostgreSQL / Supabase + Drizzle ORM",
+        "Strukturierte Analyse: Groq + Zod",
+        "Kennzahlen und Muster im Code berechnet",
+        "Vergleich: Wettbewerber vs. Marke",
+        "Liio: Fragen, Evidenz und nächste Schritte",
       ],
     },
 
     process: {
       title:
-        "Von fragmentiertem Kontext zu einer strukturierten und auditierbaren Antwort.",
+        "Von Rohinhalten zu fundierten Entscheidungen.",
 
       description:
-        "Der Ablauf trennt klinischen Kontext, Agenteninterpretation, Tool-Ausführung, Softwarevalidierung und professionelle Entscheidung.",
+        "Der Ablauf bewahrt die Datenherkunft und trennt Beobachtung, Kennzahl, Muster und Empfehlung. Direkte OAuth-Erfassung und weitere Integrationen sind geplante Arbeit und keine abgeschlossenen MVP-Funktionen.",
 
       steps: [
         {
           number: "01",
           title:
-            "Patientenkontext",
+            "Erfassen und importieren",
           description:
-            "Historie, Konsultationen, Untersuchungen, Dokumente, Medikation, Symptome und klinische Entwicklung werden strukturiert zusammengeführt.",
+            "Öffentliche Profile können registriert sowie Inhalte und Kennzahlen per CSV importiert werden. Direkte offizielle Verbindungen zu Instagram und TikTok sind geplant.",
         },
         {
           number: "02",
           title:
-            "Retrieval",
+            "Kontext strukturieren",
           description:
-            "Das System identifiziert relevante Daten und Dokumente für die aktuelle Anfrage.",
+            "Jeder Datensatz verknüpft Plattform, Profil, Format, Caption, Veröffentlichungsdatum, Permalink und verfügbare Kennzahlen.",
         },
         {
           number: "03",
           title:
-            "Interpretation",
+            "Evidenzbasiert analysieren",
           description:
-            "Der Agent versteht die Anfrage und bestimmt, welche Informationen noch untersucht werden müssen.",
+            "Das Modell liefert eine strukturierte Analyse. Prompt und Schema verlangen, fehlende Informationen als nicht verfügbar zu markieren, statt sie zu erfinden.",
         },
         {
           number: "04",
           title:
-            "Tool-Auswahl",
+            "Leistung berechnen",
           description:
-            "Der Agent wählt Tools für Kontext, Timeline, Dokumente, Suche, Medikation, Berechnung oder Zusammenfassung.",
+            "Die Software berechnet Engagement-, Reach-, Save- und Share-Indikatoren, sofern genügend Daten vorhanden sind, und weist fehlende Kennzahlen aus.",
         },
         {
           number: "05",
           title:
-            "Kontrollierte Ausführung",
+            "Muster erkennen und vergleichen",
           description:
-            "Python-Funktionen führen konkrete Operationen aus. Das LLM erhält keinen uneingeschränkten Zugriff auf die Infrastruktur.",
+            "Wiederkehrende Themen, Absichten und Keywords werden gruppiert und mit verfügbaren Kennzahlen verknüpft, um Marken- und Wettbewerbssignale zu vergleichen.",
         },
         {
           number: "06",
           title:
-            "RAG + Evidenz",
+            "Mit Liio abfragen",
           description:
-            "Relevante Dokumente und autorisierte Quellen können vor der Generierung semantisch abgerufen werden.",
-        },
-        {
-          number: "07",
-          title:
-            "Validierung",
-          description:
-            "Pydantic, Zod, Regeln, Berechtigungen und Verträge prüfen Struktur und Grenzen.",
-        },
-        {
-          number: "08",
-          title:
-            "Professionelle Prüfung",
-          description:
-            "Die Fachkraft bestätigt, bearbeitet oder verwirft Informationen vor sensiblen Aktionen.",
-        },
-        {
-          number: "09",
-          title:
-            "Audit",
-          description:
-            "Tool Calls, Quellen, abgerufener Kontext, Versionen und Entscheidungen bleiben nachvollziehbar.",
+            "Der Agent antwortet anhand gespeicherter Muster und Evidenz, nennt eine Konfidenzstufe und schlägt einen möglichen nächsten Schritt vor, ohne strategisches Urteil zu ersetzen.",
         },
       ],
     },
 
     decisions: {
       title:
-        "Agentenautonomie wird durch Software begrenzt.",
+        "Nützliche Intelligence braucht Evidenz, Kontext und klare Grenzen.",
 
       description:
-        "Das LLM interpretiert und schlussfolgert; Python führt aus; Tools haben explizite Grenzen; Software validiert; der Mensch behält die endgültige Autorität.",
+        "Das Ziel ist nicht eine weitere automatische Zusammenfassung, sondern eine vergleichbare und nachvollziehbare Wissensbasis zur Interpretation von Wettbewerbsverhalten.",
 
       items: [
         {
           number: "01",
           title:
-            "Python als Intelligenzkern",
+            "Evidenz vor Interpretation",
           description:
-            "Agenten, Workflows, Dokumentverarbeitung, RAG, Embeddings, Berechnungen, Evaluation und klinische Tools liegen primär in Python.",
+            "Die Analyse verwendet nur bereitgestellte Daten und weist fehlende Text-, Bild-, Audio- oder Leistungsbelege aus.",
         },
         {
           number: "02",
           title:
-            "Tools mit expliziter Verantwortung",
+            "Kennzahlen werden durch Software berechnet",
           description:
-            "Der Agent entscheidet, welches Tool verwendet wird, während die Software genau definiert, was jede Funktion tun darf.",
+            "Abgeleitete Indikatoren werden deterministisch berechnet, statt auf freien Modellschätzungen zu beruhen.",
         },
         {
           number: "03",
           title:
-            "Strukturierte Outputs vor freiem Text",
+            "Wiederholung ist keine Kausalität",
           description:
-            "Pydantic und Zod validieren Verträge, bevor Ergebnisse ins Produkt gelangen.",
+            "Muster sind Signale aus einer Stichprobe und beweisen für sich genommen nicht, dass ein Thema oder Format die Leistung verursacht hat.",
         },
         {
           number: "04",
           title:
-            "Human-in-the-loop für kritische Aktionen",
+            "Vergleich mit der eigenen Marke",
           description:
-            "KI analysiert → KI schlägt vor → Software validiert → Fachkraft bestätigt → System führt aus.",
+            "Die Wettbewerbsanalyse verbindet Muster der Konkurrenz mit internen Mustern, um Gemeinsamkeiten, Unterschiede und Lücken sichtbar zu machen.",
         },
         {
           number: "05",
           title:
-            "Model-agnostic Architektur",
+            "Integrationsstatus bleibt transparent",
           description:
-            "Verschiedene Modelle können für Extraktion, Klassifikation, Embeddings und Reasoning eingesetzt werden.",
-        },
-        {
-          number: "06",
-          title:
-            "KI-Observability",
-          description:
-            "Latenz, Kosten, Tokens, Tool Calls, Fehler, Prompt-Versionen, Modellversionen und Tool-Ergebnisse bleiben beobachtbar.",
+            "Der Katalog unterscheidet verfügbare Quellen wie öffentliche Profile und CSV von geplanten OAuth-Integrationen für soziale Netzwerke, CRM, Kalender und Websites.",
         },
       ],
     },
 
     stack: {
       title:
-        "Eine AI-Engineering-Architektur mit Python im Kern.",
+        "Ein Web-Stack mit KI-gestützter Analyse und strukturierten Daten.",
 
       description:
-        "Der Stack trennt Webanwendung, Python-Dienste, Agenten, Retrieval, Daten, Validierung und Tests.",
+        "Das MVP verbindet eine Webanwendung, relationale Persistenz, Vertragsvalidierung und einen Analyse-Kern, der Modellinterpretation von Berechnungen und Geschäftsregeln trennt.",
 
       items: [
-        "Python",
-        "FastAPI",
-        "Pydantic",
-        "LangGraph / state machine",
-        "Next.js + React",
-        "TypeScript + Zod",
+        "Next.js 16.3.6",
+        "React 19.2.8",
+        "TypeScript 5",
         "PostgreSQL + Supabase",
-        "pgvector",
-        "RAG + Embeddings",
-        "PyMuPDF / pypdf",
-        "Docker",
-        "Pytest + Vitest + Playwright",
+        "Drizzle ORM",
+        "Groq SDK · openai/gpt-oss-20b",
+        "Zod 4",
+        "csv-parse",
+        "Supabase SSR Auth",
+        "Tailwind CSS 4",
       ],
     },
 
     results: {
       title:
-        "Der technische Kern von ALTA ist vor der vollständigen Implementierung definiert.",
+        "Was die aktuelle Implementierung zeigt.",
 
       description:
-        "Da sich das Projekt in Architektur und MVP-Aufbau befindet, beschreiben diese Angaben geplante Fähigkeiten und Engineering-Entscheidungen statt Produktionsmetriken.",
+        "Das Projekt befindet sich weiterhin in Entwicklung. Diese Punkte beschreiben Komponenten im Code, keine kommerziellen Ergebnisse oder Produktionskennzahlen.",
 
       items: [
         {
-          value: "9 TOOLS",
+          value: "CSV",
           label:
-            "Geplante Tools für Kontext, Timeline, Dokumente, Evidenz, Berechnungen, Medikation, Zusammenfassung, Generierung und Audit",
+            "Validierter Import historischer Inhalte und Kennzahlen",
         },
         {
-          value: "HITL",
+          value: "GROQ + ZOD",
           label:
-            "Kritische Aktionen benötigen professionelle Bestätigung",
+            "KI-gestützte Analyse mit strukturierter und validierter Ausgabe",
         },
         {
-          value:
-            "MODEL-AGNOSTIC",
+          value: "PATTERNS",
           label:
-            "Architektur für verschiedene Modelle und Anbieter",
+            "Gruppierung wiederkehrender Themen, Absichten und Keywords",
         },
         {
-          value: "RAG",
+          value: "VERGLEICH",
           label:
-            "Klinischer und dokumentbasierter Kontext vor der Generierung",
+            "Struktur zum Vergleich eigener und konkurrierender Muster",
         },
         {
-          value:
-            "AUDITIERBAR",
+          value: "LIIO",
           label:
-            "Tool Calls, Quellen, Versionen und Entscheidungen bleiben nachvollziehbar",
+            "Agentenantworten mit Evidenz, Konfidenz und nächster Aktion",
         },
       ],
     },
@@ -3239,7 +3067,7 @@ const projectNumbers: Record<
 > = {
   paypart: "01",
   liio: "02",
-  alta: "03",
+  opinsy: "03",
 };
 
 export function isProjectSlug(
@@ -3282,7 +3110,7 @@ export function getProjectContent(
 
   return {
     number: "03",
-    ...alta[language],
+    ...opinsy[language],
   };
 }
 
