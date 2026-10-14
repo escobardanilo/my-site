@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url:
-        `${baseUrl}/projects/alta`,
+        `${baseUrl}/projects/opinsy`,
       changeFrequency: "monthly",
       priority: 0.9,
     },
