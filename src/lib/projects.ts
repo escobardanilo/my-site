@@ -1253,7 +1253,7 @@ const liio: Record<
     card: {
       category: "",
       description:
-        "Tutor de aprendizagem com IA para crianças e adolescentes, com política pedagógica explícita, avaliação antes da entrega e contexto de sessão.",
+        "Uma experiência de aprendizagem com IA que orienta crianças e jovens a pensar, em vez de entregar respostas prontas.",
       tags: [
         "AI Learning Tutor",
         "AI Engineering",
@@ -1267,10 +1267,10 @@ const liio: Record<
     title: "LIIO",
 
     subtitle:
-      "Um sistema de aprendizagem com IA desenhado para orientar raciocínio, preservar contexto e controlar o que chega ao aluno.",
+      "Menos respostas prontas. Mais raciocínio, pistas e descoberta — sobretudo em matemática, física e química.",
 
     summary:
-      "LIIO explora uma questão de produto concreta: como usar modelos generativos na aprendizagem sem transformar o tutor num gerador de respostas. O sistema combina contexto de sessão, política pedagógica e avaliação server-side para decidir como responder e quando bloquear, corrigir ou simplificar uma saída. A arquitetura foi pensada para evoluir com novas capacidades dos modelos e novas formas de interação educativa, sem depender de um único prompt ou comportamento fixo.",
+      "LIIO começou a tomar forma quando eu trabalhava com UI design e explorava experiências no Framer. A ideia evoluiu ao longo do tempo para um projeto de aprendizagem com IA: ajudar crianças e jovens a avançar quando encontram dificuldades, sobretudo em matemática, física e química, sem entregar imediatamente a solução. Em vez de responder como um LLM generalista, LIIO procura orientar o raciocínio com pistas, explicações e perguntas, ajudando a chegar à resposta por conta própria. O projeto já estava em desenvolvimento antes de eu conhecer abordagens semelhantes em produtos como o Grok; vê-las surgir foi uma surpresa positiva, não a origem do LIIO. O produto continua em construção, e esta forma de ajudar ainda está a ser testada e aperfeiçoada.",
 
     overview: {
       role:
@@ -1286,7 +1286,7 @@ const liio: Record<
         "Um chatbot responde. Um tutor precisa decidir como ensinar.",
 
       description:
-        "Em educação, a resposta mais provável nem sempre é a mais útil. Ela pode resolver o exercício pelo aluno, ignorar o nível de compreensão ou repetir uma estratégia que já falhou. O LIIO trata cada interação como parte de uma sessão de aprendizagem: identifica a intenção pedagógica, preserva o problema em contexto e separa a geração da decisão de entregar a resposta.",
+        "Uma resposta imediata pode resolver o exercício, mas não garante compreensão. O LIIO procura perceber onde a criança ou o jovem está com dificuldade e orientar o passo seguinte com pistas, explicações e perguntas, mantendo o contexto do problema. O foco inicial está em matemática, física e química, onde compreender o raciocínio é tão importante quanto chegar ao resultado.",
     },
 
     product: {
@@ -1294,7 +1294,7 @@ const liio: Record<
         "Homework Mode concentra a experiência funcional atual.",
 
       description:
-        "O núcleo trabalha com três comportamentos pedagógicos — EXPLAIN, GUIDE e CHECK — usados apenas como política interna para distinguir explicar um conceito, orientar um raciocínio e avaliar uma tentativa. A interface continua simples; a complexidade fica na camada de decisão.",
+        "A experiência funcional atual concentra-se no Homework Mode. A ajuda adapta-se à dificuldade apresentada: pode explicar um conceito, dar pistas para orientar o raciocínio ou rever uma tentativa, sem revelar a solução de imediato. Esta abordagem continua em desenvolvimento.",
 
       visuals: [
         {
@@ -1440,7 +1440,7 @@ const liio: Record<
     card: {
       category: "",
       description:
-        "AI learning tutor for children and teenagers with explicit pedagogical policy, pre-delivery evaluation and session context.",
+        "An AI learning experience that guides children and young people through reasoning instead of handing them ready-made answers.",
       tags: [
         "AI Learning Tutor",
         "AI Engineering",
@@ -1454,10 +1454,10 @@ const liio: Record<
     title: "LIIO",
 
     subtitle:
-      "An AI learning system designed to guide reasoning, preserve context and control what reaches the learner.",
+      "Fewer ready-made answers. More reasoning, hints and discovery — especially in mathematics, physics and chemistry.",
 
     summary:
-      "LIIO explores a concrete product problem: how to use generative models in learning without turning the tutor into an answer generator. The system combines session context, pedagogical policy and server-side evaluation to decide how to respond and when to block, correct or simplify an output. Its architecture is designed to evolve with new model capabilities and new forms of educational interaction without depending on a single prompt or fixed behavior.",
+      "LIIO began to take shape while I was working in UI design and exploring experiences in Framer. Over time, that idea evolved into an AI learning project: helping children and young people move forward when they struggle, especially with mathematics, physics and chemistry, without immediately giving away the solution. Rather than responding like a general-purpose LLM, LIIO aims to guide reasoning through hints, explanations and questions that help them reach an answer themselves. The project was already in development before I encountered similar approaches in products such as Grok; seeing them emerge was a positive surprise, not the origin of LIIO. The product is still being built, and this approach continues to be tested and refined.",
 
     overview: {
       role:
@@ -1473,7 +1473,7 @@ const liio: Record<
         "A chatbot answers. A tutor has to decide how to teach.",
 
       description:
-        "In education, the most likely answer is not always the most useful one. It may solve the exercise for the learner, miss their level of understanding or repeat a strategy that already failed. LIIO treats each interaction as part of a learning session: it identifies pedagogical intent, preserves the original problem in context and separates generation from the decision to deliver the response.",
+        "An immediate answer can solve an exercise without ensuring understanding. LIIO aims to identify where a child or young person is struggling and guide the next step with hints, explanations and questions, while keeping the original problem in context. Its initial focus is mathematics, physics and chemistry, where understanding the reasoning matters as much as reaching the result.",
     },
 
     product: {
@@ -1481,7 +1481,7 @@ const liio: Record<
         "Homework Mode is the current functional core.",
 
       description:
-        "The core uses three pedagogical behaviors — EXPLAIN, GUIDE and CHECK — only as internal policy for distinguishing concept explanation, guided reasoning and attempt review. The interface stays simple; the complexity lives in the decision layer.",
+        "The current functional experience centers on Homework Mode. Help adapts to the difficulty at hand: it can explain a concept, offer hints to guide reasoning or review an attempt without immediately revealing the solution. This approach is still in development.",
 
       visuals: [
         {
@@ -1627,7 +1627,7 @@ const liio: Record<
     card: {
       category: "",
       description:
-        "Tutor de aprendizaje con IA para niños y adolescentes con política pedagógica explícita, evaluación antes de la entrega y contexto de sesión.",
+        "Una experiencia de aprendizaje con IA que guía a niños y jóvenes en el razonamiento, en lugar de darles respuestas hechas.",
       tags: [
         "AI Learning Tutor",
         "AI Engineering",
@@ -1641,10 +1641,10 @@ const liio: Record<
     title: "LIIO",
 
     subtitle:
-      "Un sistema de aprendizaje con IA diseñado para guiar el razonamiento, preservar contexto y controlar lo que llega al alumno.",
+      "Menos respuestas hechas. Más razonamiento, pistas y descubrimiento — especialmente en matemáticas, física y química.",
 
     summary:
-      "LIIO explora un problema de producto concreto: cómo utilizar modelos generativos en aprendizaje sin convertir el tutor en un generador de respuestas. Combina contexto de sesión, política pedagógica y evaluación server-side, con una arquitectura preparada para evolucionar junto con nuevas capacidades de los modelos y nuevas formas de interacción educativa.",
+      "LIIO empezó a tomar forma cuando trabajaba en UI design y exploraba experiencias en Framer. Con el tiempo, la idea evolucionó hasta convertirse en un proyecto de aprendizaje con IA: ayudar a niños y jóvenes a avanzar cuando encuentran dificultades, especialmente en matemáticas, física y química, sin darles inmediatamente la solución. En lugar de responder como un LLM generalista, LIIO busca orientar el razonamiento con pistas, explicaciones y preguntas. El proyecto ya estaba en desarrollo antes de conocer enfoques similares en productos como Grok; verlos aparecer fue una sorpresa positiva, no el origen de LIIO. El producto sigue en construcción y esta forma de ayudar continúa probándose y perfeccionándose.",
 
     overview: {
       role:
@@ -1660,7 +1660,7 @@ const liio: Record<
         "Un chatbot responde. Un tutor debe decidir cómo enseñar.",
 
       description:
-        "En educación, la respuesta más probable no siempre es la más útil. LIIO trata cada interacción como parte de una sesión de aprendizaje, conserva el problema original en contexto y separa generación de entrega.",
+        "Una respuesta inmediata puede resolver un ejercicio sin garantizar la comprensión. LIIO busca identificar dónde tiene dificultades el niño o joven y orientar el siguiente paso con pistas, explicaciones y preguntas, manteniendo el contexto del problema. El foco inicial está en matemáticas, física y química, donde comprender el razonamiento importa tanto como llegar al resultado.",
     },
 
     product: {
@@ -1668,7 +1668,7 @@ const liio: Record<
         "Homework Mode es el núcleo funcional actual.",
 
       description:
-        "El sistema utiliza tres comportamientos pedagógicos — EXPLAIN, GUIDE y CHECK — como política interna para diferenciar explicación, orientación y revisión de intentos.",
+        "La experiencia funcional actual se centra en Homework Mode. La ayuda se adapta a la dificultad: puede explicar un concepto, ofrecer pistas para orientar el razonamiento o revisar un intento sin revelar la solución de inmediato. Este enfoque sigue en desarrollo.",
 
       visuals: [
         {
@@ -1793,7 +1793,7 @@ const liio: Record<
     card: {
       category: "",
       description:
-        "KI-Lerntutor für Kinder und Jugendliche mit expliziter pädagogischer Policy, Bewertung vor der Ausgabe und Sitzungskontext.",
+        "Ein KI-Lernerlebnis, das Kinder und Jugendliche beim Denken begleitet, statt fertige Antworten zu liefern.",
       tags: [
         "AI Learning Tutor",
         "AI Engineering",
@@ -1807,10 +1807,10 @@ const liio: Record<
     title: "LIIO",
 
     subtitle:
-      "Ein KI-Lernsystem, das Denken anleitet, Kontext bewahrt und kontrolliert, was den Lernenden erreicht.",
+      "Weniger fertige Antworten. Mehr Denken, Hinweise und Entdecken — besonders in Mathematik, Physik und Chemie.",
 
     summary:
-      "LIIO untersucht ein konkretes Produktproblem: Wie lassen sich generative Modelle beim Lernen einsetzen, ohne den Tutor zu einem Antwortgenerator zu machen? Das System verbindet Sitzungskontext, pädagogische Policy und serverseitige Bewertung und ist so aufgebaut, dass es mit neuen Modellfähigkeiten und neuen Formen digitaler Lerninteraktion weiterentwickelt werden kann.",
+      "LIIO nahm Gestalt an, als ich im UI Design arbeitete und Erfahrungen in Framer erkundete. Mit der Zeit entwickelte sich daraus ein KI-Lernprojekt: Kindern und Jugendlichen zu helfen, Schwierigkeiten zu überwinden — besonders in Mathematik, Physik und Chemie — ohne sofort die Lösung zu verraten. Anders als ein allgemeines LLM soll LIIO mit Hinweisen, Erklärungen und Fragen zum eigenen Lösungsweg führen. Das Projekt war bereits in Entwicklung, bevor ich auf ähnliche Ansätze in Produkten wie Grok stieß; sie zu sehen, war eine positive Überraschung und nicht der Ursprung von LIIO. Das Produkt wird weiterhin entwickelt und dieser Ansatz laufend getestet und verbessert.",
 
     overview: {
       role:
@@ -1826,7 +1826,7 @@ const liio: Record<
         "Ein Chatbot antwortet. Ein Tutor muss entscheiden, wie er lehrt.",
 
       description:
-        "Beim Lernen ist die wahrscheinlichste Antwort nicht immer die nützlichste. LIIO behandelt jede Interaktion als Teil einer Lernsitzung, bewahrt die ursprüngliche Aufgabe im Kontext und trennt Generierung von Ausgabe.",
+        "Eine sofortige Antwort kann eine Aufgabe lösen, ohne Verständnis zu garantieren. LIIO versucht zu erkennen, wo ein Kind oder Jugendlicher Schwierigkeiten hat, und mit Hinweisen, Erklärungen und Fragen zum nächsten Schritt zu führen. Der anfängliche Schwerpunkt liegt auf Mathematik, Physik und Chemie, wo der Lösungsweg genauso wichtig ist wie das Ergebnis.",
     },
 
     product: {
@@ -1834,7 +1834,7 @@ const liio: Record<
         "Homework Mode ist der aktuelle funktionale Kern.",
 
       description:
-        "Das System nutzt drei pädagogische Verhaltensweisen — EXPLAIN, GUIDE und CHECK — als interne Policy für Erklärung, angeleitetes Denken und Prüfung eines Versuchs.",
+        "Die aktuelle funktionale Erfahrung konzentriert sich auf Homework Mode. Die Hilfe passt sich der Schwierigkeit an: Sie kann einen Begriff erklären, Hinweise zum Denken geben oder einen Lösungsversuch prüfen, ohne sofort die Antwort zu verraten. Dieser Ansatz wird weiterentwickelt.",
 
       visuals: [
         {
