@@ -332,7 +332,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     footer: {
-      role: "AI Engineer",
+      role: "Produtos digitais · IA · Automação",
       location: "Portugal",
     },
   },
@@ -558,7 +558,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     footer: {
-      role: "AI Engineer",
+      role: "Digital products · AI · Automation",
       location: "Portugal",
     },
   },
@@ -784,7 +784,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     footer: {
-      role: "AI Engineer",
+      role: "Productos digitales · IA · Automatización",
       location: "Portugal",
     },
   },
@@ -1010,7 +1010,7 @@ export const translations: Record<Language, SiteCopy> = {
     },
 
     footer: {
-      role: "AI Engineer",
+      role: "Digitale Produkte · KI · Automatisierung",
       location: "Portugal",
     },
   },
