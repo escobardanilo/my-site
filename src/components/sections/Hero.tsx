@@ -16,7 +16,7 @@ const heroCopy: Record<
 > = {
   pt: {
     eyebrow: "IA / SOFTWARE / AUTOMAÇÃO",
-    titleLineOne: "Criando produtos.",
+    titleLineOne: "Criando produtos",
     titleLineTwo: "Que viabilizam o negócio.",
     description:
       "Passei por indústria, logística, manufatura, coordenação, produção, operações, marketing e design gráfico. Hoje, levo essa experiência prática para a criação de produtos digitais com IA e automação.",
@@ -24,7 +24,7 @@ const heroCopy: Record<
   },
   en: {
     eyebrow: "AI / SOFTWARE / AUTOMATION",
-    titleLineOne: "Building products.",
+    titleLineOne: "Building products",
     titleLineTwo: "That move business forward.",
     description:
       "My background spans industry, logistics, manufacturing, coordination, production, operations, marketing and graphic design. I bring that practical experience into digital products built with AI and automation.",
@@ -32,7 +32,7 @@ const heroCopy: Record<
   },
   es: {
     eyebrow: "IA / SOFTWARE / AUTOMATIZACIÓN",
-    titleLineOne: "Creando productos.",
+    titleLineOne: "Creando productos",
     titleLineTwo: "Que impulsan el negocio.",
     description:
       "Mi trayectoria abarca industria, logística, manufactura, coordinación, producción, operaciones, marketing y diseño gráfico. Hoy llevo esa experiencia práctica a la creación de productos digitales con IA y automatización.",
@@ -40,7 +40,7 @@ const heroCopy: Record<
   },
   de: {
     eyebrow: "KI / SOFTWARE / AUTOMATISIERUNG",
-    titleLineOne: "Produkte entwickeln.",
+    titleLineOne: "Produkte entwickeln",
     titleLineTwo: "Die Unternehmen voranbringen.",
     description:
       "Mein Weg führte durch Industrie, Logistik, Fertigung, Koordination, Produktion, operative Abläufe, Marketing und Grafikdesign. Diese praktische Erfahrung bringe ich heute in digitale Produkte mit KI und Automatisierung ein.",
