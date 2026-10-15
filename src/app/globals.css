@@ -4525,3 +4525,27 @@ body.screen-experience-site {
 .screen-panel--home {
   overflow-y: hidden;
 }
+
+
+/* Experience highlights — preserves the existing card dimensions and typography. */
+.experience-card__highlights {
+  margin: 22px 0 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.62;
+}
+
+.experience-card__highlights li {
+  padding-left: 2px;
+}
+
+@media (max-width: 560px) {
+  .experience-card__highlights {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
