@@ -106,7 +106,7 @@ const experienceCopy: Record<
         company: "Repsol · Prysmian · BA Glass",
         role: "Industrial Operations",
         description:
-          "Experiência prática em logística, armazém e produção, com contacto direto com materiais, processos de fabrico e execução no chão de fábrica. Na Prysmian, comecei na organização física e estratégica de bobinas de cabos em armazém e passei voluntariamente para a produção, para aprender as etapas de fabrico e trabalhar com condutores, isolamento e extrusão.",
+          "Experiência transversal em operações industriais, logística e produção, incluindo monitorização de equipamentos, apoio à manutenção técnica e colaboração com operadores, eletricistas e engenheiros para assegurar a continuidade e a segurança dos processos. Atuei também na organização e otimização da logística interna, no planeamento de receção e expedição, na utilização de sistemas WMS e na execução de tarefas de acordo com as especificações, os requisitos de qualidade e os prazos definidos.",
         focus: [
           "Logística e armazém",
           "Fluxo de materiais",
@@ -200,7 +200,7 @@ const experienceCopy: Record<
         company: "Repsol · Prysmian · BA Glass",
         role: "Industrial Operations",
         description:
-          "Hands-on experience in logistics, warehousing and production, with direct exposure to materials, manufacturing processes and shop-floor execution. At Prysmian, I started with the physical and strategic organization of cable reels in the warehouse, then voluntarily moved to production to learn manufacturing stages and work with conductors, insulation and extrusion.",
+          "Cross-functional experience across industrial operations, logistics and production, including equipment monitoring, technical maintenance support and collaboration with operators, electricians and engineers to maintain process continuity and safety. Also experienced in organizing and improving internal logistics, planning receiving and dispatch, working with WMS systems, and completing operational tasks to defined specifications, quality requirements and deadlines.",
         focus: [
           "Logistics and warehousing",
           "Material flow",
@@ -294,7 +294,7 @@ const experienceCopy: Record<
         company: "Repsol · Prysmian · BA Glass",
         role: "Industrial Operations",
         description:
-          "Experiencia práctica en logística, almacén y producción, con contacto directo con materiales, procesos de fabricación y trabajo en planta. En Prysmian, comencé con la organización física y estratégica de bobinas de cable en el almacén y después pasé voluntariamente a producción para aprender las etapas de fabricación y trabajar con conductores, aislamiento y extrusión.",
+          "Experiencia transversal en operaciones industriales, logística y producción, incluyendo la monitorización de equipos, el apoyo al mantenimiento técnico y la colaboración con operarios, electricistas e ingenieros para garantizar la continuidad y seguridad de los procesos. También trabajé en la organización y optimización de la logística interna, la planificación de recepción y expedición, el uso de sistemas WMS y la ejecución de tareas según especificaciones, requisitos de calidad y plazos establecidos.",
         focus: [
           "Logística y almacén",
           "Flujo de materiales",
@@ -388,7 +388,7 @@ const experienceCopy: Record<
         company: "Repsol · Prysmian · BA Glass",
         role: "Industrial Operations",
         description:
-          "Praktische Erfahrung in Logistik, Lager und Produktion mit direktem Einblick in Materialien, Fertigungsprozesse und die Arbeit in der Produktion. Bei Prysmian begann ich mit der physischen und strategischen Organisation von Kabeltrommeln im Lager und wechselte anschließend freiwillig in die Produktion, um Fertigungsstufen sowie Leiter, Isolierung und Extrusion kennenzulernen.",
+          "Branchenübergreifende Erfahrung in industriellen Abläufen, Logistik und Produktion, einschließlich Anlagenüberwachung, technischer Wartungsunterstützung und Zusammenarbeit mit Bedienern, Elektrikern und Ingenieuren zur Sicherstellung von Prozesskontinuität und Sicherheit. Außerdem Erfahrung in der Organisation und Optimierung der internen Logistik, der Planung von Wareneingang und Versand, im Umgang mit WMS-Systemen sowie in der Ausführung operativer Aufgaben nach Vorgaben, Qualitätsanforderungen und Fristen.",
         focus: [
           "Logistik und Lager",
           "Materialfluss",
