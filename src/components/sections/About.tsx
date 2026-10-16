@@ -17,7 +17,7 @@ const aboutCopy: Record<
 > = {
   pt: {
     title:
-      "Conheço o negócio por dentro. Construo o que o faz avançar.",
+      "Conheço o negócio por dentro. Transformo essa experiência em soluções digitais.",
     lead:
       "Quando comecei a estudar engenharia de IA, já tinha passado por várias áreas da indústria, logística e manufatura, além de marketing e design gráfico.",
     systems:
@@ -28,7 +28,7 @@ const aboutCopy: Record<
   },
   en: {
     title:
-      "I understand business from the inside. I build what moves it forward.",
+      "I understand business from the inside. I turn that experience into digital solutions.",
     lead:
       "When I started learning about AI engineering, I had already worked across industry, logistics and manufacturing, as well as marketing and graphic design.",
     systems:
@@ -39,7 +39,7 @@ const aboutCopy: Record<
   },
   es: {
     title:
-      "Conozco el negocio desde dentro. Construyo lo que lo hace avanzar.",
+      "Conozco el negocio desde dentro. Transformo esa experiencia en soluciones digitales.",
     lead:
       "Cuando empecé a aprender ingeniería de IA, ya había pasado por distintas áreas de la industria, la logística y la manufactura, además del marketing y el diseño gráfico.",
     systems:
@@ -50,7 +50,7 @@ const aboutCopy: Record<
   },
   de: {
     title:
-      "Ich kenne Unternehmen von innen. Ich entwickle, was sie voranbringt.",
+      "Ich kenne Unternehmen von innen. Ich mache daraus digitale Lösungen.",
     lead:
       "Als ich begann, mich mit KI-Engineering zu beschäftigen, hatte ich bereits in Industrie, Logistik und Fertigung sowie in Marketing und Grafikdesign gearbeitet.",
     systems:
